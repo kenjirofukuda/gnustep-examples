@@ -5,12 +5,10 @@ Calma GDSII feel polygon editor. and GPLII like interpriter. now beta quority an
 
 ## Server Environment
 
-current porting: Ssqueak
+current porting: Squeak
 
 <http://www.squeaksource.com/GdsFeel.html>
 
 ## Client Environment
 
 current porting: ruby
-
-gdsfeel-squeak
