@@ -3,9 +3,7 @@
 #-------------------------------------------------------------------------------
 # GdsFeel's input client
 #
-# $Id: gds.rb,v 1.11 2009/06/09 00:51:00 kenjiro Exp $
-#
-# @modified 2009/06/09
+# @modified 2012/10/28
 # @version  3
 # @auther   gdsfeel.com
 #-------------------------------------------------------------------------------
@@ -215,7 +213,18 @@ module Gds
         $complete_words = reply.split(SERVER_NL)
         return
       end
-      reply.each_line(SERVER_NL) { |line| puts line }
+      screen_rows = (Readline::get_screen_size)[0]
+      if reply.lines(SERVER_NL).count > screen_rows
+        IO.popen 'less', 'w' do | f |
+          reply.each_line(SERVER_NL) { |line| 
+            f.puts line
+          }
+        end
+      else
+        reply.each_line(SERVER_NL) { |line| 
+          puts line
+        }
+      end
       @session.reset_prompt
     end
   end # -- IoReply
