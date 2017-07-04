@@ -1,1 +1,6850 @@
-function sampleData(){return {  "timestamp": "NewTitle",	"nodes" : [		{			"number" : 0,			"tags" : [				"P1",				"B1"			],			"type" : "slope",			"position" : [				400.0,				-400.0,				9000.0			],			"legIndex" : 1,			"brick" : "P1",			"name" : "0",			"uuid" : "74ef8c95-621a-2446-8b9a-2d80ef6786c4",			"_clazz" : "TwkStanNode"		},		{			"number" : 1,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				-400.0,				9000.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "1",			"uuid" : "4ec2a0dc-5185-1344-ae99-8715c23cac25",			"_clazz" : "TwkStanNode"		},		{			"number" : 2,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				400.0,				9000.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "2",			"uuid" : "588742ff-1ec5-794f-9baf-2a43d5b8806a",			"_clazz" : "TwkStanNode"		},		{			"number" : 3,			"tags" : [				"P1",				"B1"			],			"type" : "slope",			"position" : [				400.0,				400.0,				9000.0			],			"legIndex" : 4,			"brick" : "P1",			"name" : "3",			"uuid" : "447c464b-44b3-0d49-8f3c-c4fb870cb9dc",			"_clazz" : "TwkStanNode"		},		{			"number" : 4,			"tags" : [				"P1",				"B1"			],			"type" : "slope",			"position" : [				400.0,				-400.0,				8200.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "4",			"uuid" : "2959abc8-e4df-9742-b63c-cc03b0a814e9",			"_clazz" : "TwkStanNode"		},		{			"number" : 5,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				-400.0,				8200.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "5",			"uuid" : "c9315b5c-5ca0-ca43-9ff0-ce8467a878bf",			"_clazz" : "TwkStanNode"		},		{			"number" : 6,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				400.0,				8200.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "6",			"uuid" : "deb69f96-400c-214d-87dc-f3575a44fa71",			"_clazz" : "TwkStanNode"		},		{			"number" : 7,			"tags" : [				"P1",				"B1"			],			"type" : "slope",			"position" : [				400.0,				400.0,				8200.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "7",			"uuid" : "caf40d42-9a67-8446-830c-920b0dfae38d",			"_clazz" : "TwkStanNode"		},		{			"number" : 8,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				-400.0,				7400.0			],			"legIndex" : 1,			"brick" : "P1",			"name" : "8",			"uuid" : "34513b97-7016-4048-86cc-72df5ff9dce4",			"_clazz" : "TwkStanNode"		},		{			"number" : 9,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				-400.0,				7400.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "9",			"uuid" : "8db3c764-fe9d-3d4e-9f0c-615cf9dbd9a7",			"_clazz" : "TwkStanNode"		},		{			"number" : 10,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				400.0,				7400.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "10",			"uuid" : "16ee2b6f-c432-334f-983b-2faa26c23f8a",			"_clazz" : "TwkStanNode"		},		{			"number" : 11,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				400.0,				7400.0			],			"legIndex" : 4,			"brick" : "P1",			"name" : "11",			"uuid" : "6970c4ad-413b-9b4a-bcf8-199bf8cbba0e",			"_clazz" : "TwkStanNode"		},		{			"number" : 12,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				-400.0,				6600.0			],			"legIndex" : 1,			"brick" : "P1",			"name" : "12",			"uuid" : "4608321d-1d39-0148-9224-8c864ab60d3b",			"_clazz" : "TwkStanNode"		},		{			"number" : 13,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				-400.0,				6600.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "13",			"uuid" : "6fe53c41-df9d-df46-9d9c-3e7624d81d47",			"_clazz" : "TwkStanNode"		},		{			"number" : 14,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				400.0,				6600.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "14",			"uuid" : "7f035cd3-b036-2848-b8b2-7159b4aabd8f",			"_clazz" : "TwkStanNode"		},		{			"number" : 15,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				400.0,				6600.0			],			"legIndex" : 4,			"brick" : "P1",			"name" : "15",			"uuid" : "1635d24a-6d0c-914d-a100-93cb20022cc7",			"_clazz" : "TwkStanNode"		},		{			"number" : 16,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				-400.0,				5800.0			],			"legIndex" : 1,			"brick" : "P1",			"name" : "16",			"uuid" : "a69b200d-484e-ae4d-b5f2-358f18bd0f62",			"_clazz" : "TwkStanNode"		},		{			"number" : 17,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				-400.0,				5800.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "17",			"uuid" : "cc12a249-06e9-e842-88fb-42d2ee1540ce",			"_clazz" : "TwkStanNode"		},		{			"number" : 18,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				400.0,				5800.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "18",			"uuid" : "5ae29a3c-42d3-c940-8ee4-957e67ce0e6d",			"_clazz" : "TwkStanNode"		},		{			"number" : 19,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				400.0,				5800.0			],			"legIndex" : 4,			"brick" : "P1",			"name" : "19",			"uuid" : "b4441bed-4ef8-2644-89ef-bfd6b4d54b47",			"_clazz" : "TwkStanNode"		},		{			"number" : 20,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				-400.0,				5000.0			],			"legIndex" : 1,			"brick" : "P1",			"name" : "20",			"uuid" : "a3261d21-88e5-b947-a34f-90e6b46346a5",			"_clazz" : "TwkStanNode"		},		{			"number" : 21,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				-400.0,				5000.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "21",			"uuid" : "447d9eda-6c9a-854b-87fd-5b16f72cdfeb",			"_clazz" : "TwkStanNode"		},		{			"number" : 22,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				400.0,				5000.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "22",			"uuid" : "a8d077a7-7996-0b49-925f-c701574779da",			"_clazz" : "TwkStanNode"		},		{			"number" : 23,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				400.0,				5000.0			],			"legIndex" : 4,			"brick" : "P1",			"name" : "23",			"uuid" : "6b66f424-3466-924f-844c-8646e9939f6f",			"_clazz" : "TwkStanNode"		},		{			"number" : 24,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				-400.0,				4200.0			],			"legIndex" : 1,			"brick" : "P1",			"name" : "24",			"uuid" : "09501bcc-c58e-7942-8b41-cc7793cfb0f4",			"_clazz" : "TwkStanNode"		},		{			"number" : 25,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				-400.0,				4200.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "25",			"uuid" : "9057773b-9e6d-5947-b16b-dffd12701695",			"_clazz" : "TwkStanNode"		},		{			"number" : 26,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				400.0,				4200.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "26",			"uuid" : "8fa29236-3d29-f440-bb34-ecbd2d6532b9",			"_clazz" : "TwkStanNode"		},		{			"number" : 27,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				400.0,				4200.0			],			"legIndex" : 4,			"brick" : "P1",			"name" : "27",			"uuid" : "73e7dc39-aba0-954c-8294-d868182cbc12",			"_clazz" : "TwkStanNode"		},		{			"number" : 28,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				-400.0,				3400.0			],			"legIndex" : 1,			"brick" : "P1",			"name" : "28",			"uuid" : "06e79664-48a3-4c44-b24e-8a6842eba220",			"_clazz" : "TwkStanNode"		},		{			"number" : 29,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				-400.0,				3400.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "29",			"uuid" : "bcfcf247-2671-6d47-a28c-67660fe53aad",			"_clazz" : "TwkStanNode"		},		{			"number" : 30,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				400.0,				3400.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "30",			"uuid" : "4d401d25-c72c-fd48-9368-a9f84d2bb987",			"_clazz" : "TwkStanNode"		},		{			"number" : 31,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				400.0,				3400.0			],			"legIndex" : 4,			"brick" : "P1",			"name" : "31",			"uuid" : "91b14ff1-a71c-5145-a603-7cd171e935a8",			"_clazz" : "TwkStanNode"		},		{			"number" : 32,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				-400.0,				2600.0			],			"legIndex" : 1,			"brick" : "P1",			"name" : "32",			"uuid" : "8810527c-86d6-a346-b285-c88934fc6a1b",			"_clazz" : "TwkStanNode"		},		{			"number" : 33,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				-400.0,				2600.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "33",			"uuid" : "bcf940f1-938f-494b-ac47-6e91b4e870df",			"_clazz" : "TwkStanNode"		},		{			"number" : 34,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				400.0,				2600.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "34",			"uuid" : "234f4e95-4d70-784a-a388-384e4e7818ee",			"_clazz" : "TwkStanNode"		},		{			"number" : 35,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				400.0,				2600.0			],			"legIndex" : 4,			"brick" : "P1",			"name" : "35",			"uuid" : "864e9514-727f-8d4a-beb6-01553c41b614",			"_clazz" : "TwkStanNode"		},		{			"number" : 36,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				-400.0,				1800.0			],			"legIndex" : 1,			"brick" : "P1",			"name" : "36",			"uuid" : "d733327c-9cc2-3c43-a09e-3ccce1833023",			"_clazz" : "TwkStanNode"		},		{			"number" : 37,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				-400.0,				1800.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "37",			"uuid" : "050797ad-a3e5-4b44-b8f7-a7ab2224deff",			"_clazz" : "TwkStanNode"		},		{			"number" : 38,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				400.0,				1800.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "38",			"uuid" : "dd7883a9-d528-764b-b0a3-eeace251c122",			"_clazz" : "TwkStanNode"		},		{			"number" : 39,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				400.0,				1800.0			],			"legIndex" : 4,			"brick" : "P1",			"name" : "39",			"uuid" : "dbe595e5-bf6b-3546-9ca5-86a974158d5f",			"_clazz" : "TwkStanNode"		},		{			"number" : 40,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				-400.0,				900.0			],			"legIndex" : 1,			"brick" : "P1",			"name" : "40",			"uuid" : "db4bfc23-d277-5b40-b511-ec1e5a939b90",			"_clazz" : "TwkStanNode"		},		{			"number" : 41,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				-400.0,				900.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "41",			"uuid" : "27f4df97-6c69-1143-94b2-0bc07e412636",			"_clazz" : "TwkStanNode"		},		{			"number" : 42,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				400.0,				900.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "42",			"uuid" : "86f64549-89f5-2c4f-b436-323916fe14ac",			"_clazz" : "TwkStanNode"		},		{			"number" : 43,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				400.0,				900.0			],			"legIndex" : 4,			"brick" : "P1",			"name" : "43",			"uuid" : "e5c71ca1-20b9-e847-b997-7d3e7710ca27",			"_clazz" : "TwkStanNode"		},		{			"number" : 44,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				-400.0,				0.0			],			"legIndex" : 1,			"brick" : "P1",			"name" : "44",			"uuid" : "89444188-75e4-6748-a545-2db03b2292d8",			"_clazz" : "TwkStanNode"		},		{			"number" : 45,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				-400.0,				0.0			],			"legIndex" : 2,			"brick" : "P1",			"name" : "45",			"uuid" : "e6db5208-480a-8245-ab78-cb4c4fac4b41",			"_clazz" : "TwkStanNode"		},		{			"number" : 46,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				-400.0,				400.0,				0.0			],			"legIndex" : 3,			"brick" : "P1",			"name" : "46",			"uuid" : "e64a9ad3-e565-cc42-b5de-bac5d5af4107",			"_clazz" : "TwkStanNode"		},		{			"number" : 47,			"tags" : [				"P1"			],			"type" : "slope",			"position" : [				400.0,				400.0,				0.0			],			"legIndex" : 4,			"brick" : "P1",			"name" : "47",			"uuid" : "339609bc-3883-0c4e-862e-5211ac1ab75b",			"_clazz" : "TwkStanNode"		},		{			"number" : 48,			"tags" : [				"P1"			],			"type" : "section",			"position" : [				0.0,				0.0,				9000.0			],			"legIndex" : -1,			"brick" : "P1",			"name" : "48",			"uuid" : "cf38ccc9-f02f-ac45-8491-159f39a2c2ff",			"_clazz" : "TwkStanNode"		},		{			"number" : 49,			"tags" : [				"P1"			],			"type" : "section",			"position" : [				0.0,				0.0,				8200.0			],			"legIndex" : -1,			"brick" : "P1",			"name" : "49",			"uuid" : "567ce0ce-9542-9e42-b08d-fc14f51679d2",			"_clazz" : "TwkStanNode"		},		{			"number" : 50,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				-400.0,				9000.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "50",			"uuid" : "b5dc0790-963d-e847-bccc-0b759567e53f",			"_clazz" : "TwkStanNode"		},		{			"number" : 51,			"tags" : [				"P2",				"B1"			],			"type" : "slope",			"position" : [				6600.0,				-400.0,				9000.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "51",			"uuid" : "42f4d245-119d-b341-a937-ab794db8f54a",			"_clazz" : "TwkStanNode"		},		{			"number" : 52,			"tags" : [				"P2",				"B1"			],			"type" : "slope",			"position" : [				6600.0,				400.0,				9000.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "52",			"uuid" : "eef63a60-ccfb-934c-9dd6-9de3a0deaef1",			"_clazz" : "TwkStanNode"		},		{			"number" : 53,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				400.0,				9000.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "53",			"uuid" : "27134bf9-a792-5f48-9bed-e3b03b71c812",			"_clazz" : "TwkStanNode"		},		{			"number" : 54,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				-400.0,				8200.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "54",			"uuid" : "3f6d8747-e7f9-be48-a3ea-832585949a48",			"_clazz" : "TwkStanNode"		},		{			"number" : 55,			"tags" : [				"P2",				"B1"			],			"type" : "slope",			"position" : [				6600.0,				-400.0,				8200.0			],			"legIndex" : 2,			"brick" : "P2",			"name" : "55",			"uuid" : "fb6a97af-5656-5043-bc4b-7bc35f14ce54",			"_clazz" : "TwkStanNode"		},		{			"number" : 56,			"tags" : [				"P2",				"B1"			],			"type" : "slope",			"position" : [				6600.0,				400.0,				8200.0			],			"legIndex" : 3,			"brick" : "P2",			"name" : "56",			"uuid" : "802c3aa5-5517-be4a-9e7e-2d013fb6b5fb",			"_clazz" : "TwkStanNode"		},		{			"number" : 57,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				400.0,				8200.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "57",			"uuid" : "38b5c7dd-0aad-1b45-a3d7-818a9fac55d0",			"_clazz" : "TwkStanNode"		},		{			"number" : 58,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				-400.0,				7400.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "58",			"uuid" : "053d3258-0981-744d-90a8-2942ea2fac55",			"_clazz" : "TwkStanNode"		},		{			"number" : 59,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				-400.0,				7400.0			],			"legIndex" : 2,			"brick" : "P2",			"name" : "59",			"uuid" : "319d7261-ebd8-f145-9c37-eaea9627e8d1",			"_clazz" : "TwkStanNode"		},		{			"number" : 60,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				400.0,				7400.0			],			"legIndex" : 3,			"brick" : "P2",			"name" : "60",			"uuid" : "8444b96a-07ad-6e41-96a4-39f016e6274c",			"_clazz" : "TwkStanNode"		},		{			"number" : 61,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				400.0,				7400.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "61",			"uuid" : "65b70a16-efce-7244-90d3-59a920054f03",			"_clazz" : "TwkStanNode"		},		{			"number" : 62,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				-400.0,				6600.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "62",			"uuid" : "cdc2bd27-7d19-c244-a8c1-dbf5849938f2",			"_clazz" : "TwkStanNode"		},		{			"number" : 63,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				-400.0,				6600.0			],			"legIndex" : 2,			"brick" : "P2",			"name" : "63",			"uuid" : "7145630c-f70f-e64a-9c2d-c27aca04ee03",			"_clazz" : "TwkStanNode"		},		{			"number" : 64,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				400.0,				6600.0			],			"legIndex" : 3,			"brick" : "P2",			"name" : "64",			"uuid" : "828e26ba-54e6-3d4e-8a7c-2f6752936111",			"_clazz" : "TwkStanNode"		},		{			"number" : 65,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				400.0,				6600.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "65",			"uuid" : "f65c9eec-3ad4-bf4c-836a-b10cee8b8224",			"_clazz" : "TwkStanNode"		},		{			"number" : 66,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				-400.0,				5800.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "66",			"uuid" : "d358fdbe-8e4e-884b-861b-cabdfaf02455",			"_clazz" : "TwkStanNode"		},		{			"number" : 67,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				-400.0,				5800.0			],			"legIndex" : 2,			"brick" : "P2",			"name" : "67",			"uuid" : "b8540839-5411-f348-b301-1b33759bec1f",			"_clazz" : "TwkStanNode"		},		{			"number" : 68,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				400.0,				5800.0			],			"legIndex" : 3,			"brick" : "P2",			"name" : "68",			"uuid" : "99573b7f-8b26-0644-aec0-0607f5e59667",			"_clazz" : "TwkStanNode"		},		{			"number" : 69,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				400.0,				5800.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "69",			"uuid" : "f4b5444e-e7b9-874a-af0d-adcb1d1e320e",			"_clazz" : "TwkStanNode"		},		{			"number" : 70,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				-400.0,				5000.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "70",			"uuid" : "e37bdff7-ecbb-3e4a-a8c6-a8268434ea2d",			"_clazz" : "TwkStanNode"		},		{			"number" : 71,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				-400.0,				5000.0			],			"legIndex" : 2,			"brick" : "P2",			"name" : "71",			"uuid" : "8b925661-011d-ce49-bdbf-bf65847dca1b",			"_clazz" : "TwkStanNode"		},		{			"number" : 72,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				400.0,				5000.0			],			"legIndex" : 3,			"brick" : "P2",			"name" : "72",			"uuid" : "870722af-69d6-6742-85ca-3da1506007d0",			"_clazz" : "TwkStanNode"		},		{			"number" : 73,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				400.0,				5000.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "73",			"uuid" : "79e4d625-c86e-774f-b16b-d7ccbc844c1d",			"_clazz" : "TwkStanNode"		},		{			"number" : 74,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				-400.0,				4200.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "74",			"uuid" : "7ac2c462-72f2-2b4c-bc2d-b365aed23c74",			"_clazz" : "TwkStanNode"		},		{			"number" : 75,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				-400.0,				4200.0			],			"legIndex" : 2,			"brick" : "P2",			"name" : "75",			"uuid" : "5d2b7484-f228-4345-8b87-de0e457ae1f0",			"_clazz" : "TwkStanNode"		},		{			"number" : 76,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				400.0,				4200.0			],			"legIndex" : 3,			"brick" : "P2",			"name" : "76",			"uuid" : "a6149cdb-a1b8-ac45-8317-106c8d4ad8ee",			"_clazz" : "TwkStanNode"		},		{			"number" : 77,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				400.0,				4200.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "77",			"uuid" : "703df319-701b-7b40-909d-2395f8c3ab2d",			"_clazz" : "TwkStanNode"		},		{			"number" : 78,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				-400.0,				3400.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "78",			"uuid" : "c6ab5e45-0662-3a41-a211-634b92314d60",			"_clazz" : "TwkStanNode"		},		{			"number" : 79,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				-400.0,				3400.0			],			"legIndex" : 2,			"brick" : "P2",			"name" : "79",			"uuid" : "a7059300-b8e7-af4e-b9ae-215316b9a5db",			"_clazz" : "TwkStanNode"		},		{			"number" : 80,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				400.0,				3400.0			],			"legIndex" : 3,			"brick" : "P2",			"name" : "80",			"uuid" : "dc455052-03d0-b542-b4b1-b8eb1c9a993a",			"_clazz" : "TwkStanNode"		},		{			"number" : 81,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				400.0,				3400.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "81",			"uuid" : "e644ac72-d185-e14d-a4a1-ac4cf5e21708",			"_clazz" : "TwkStanNode"		},		{			"number" : 82,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				-400.0,				2600.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "82",			"uuid" : "e7bd09c2-d7d0-e04d-b644-352d771dc898",			"_clazz" : "TwkStanNode"		},		{			"number" : 83,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				-400.0,				2600.0			],			"legIndex" : 2,			"brick" : "P2",			"name" : "83",			"uuid" : "26469b10-8747-d347-be58-1e9f4db0e8a8",			"_clazz" : "TwkStanNode"		},		{			"number" : 84,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				400.0,				2600.0			],			"legIndex" : 3,			"brick" : "P2",			"name" : "84",			"uuid" : "05b36f19-e38c-c140-9f3d-f47115efbee6",			"_clazz" : "TwkStanNode"		},		{			"number" : 85,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				400.0,				2600.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "85",			"uuid" : "90705d80-926d-e44f-a1e2-71e8f9889adc",			"_clazz" : "TwkStanNode"		},		{			"number" : 86,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				-400.0,				1800.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "86",			"uuid" : "e4a87300-a9fd-c24b-ac0e-e02d9621193d",			"_clazz" : "TwkStanNode"		},		{			"number" : 87,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				-400.0,				1800.0			],			"legIndex" : 2,			"brick" : "P2",			"name" : "87",			"uuid" : "3b51b9b5-2378-d74f-b401-26000f3eb364",			"_clazz" : "TwkStanNode"		},		{			"number" : 88,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				400.0,				1800.0			],			"legIndex" : 3,			"brick" : "P2",			"name" : "88",			"uuid" : "99fe2edc-3795-6448-969a-aea44c630316",			"_clazz" : "TwkStanNode"		},		{			"number" : 89,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				400.0,				1800.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "89",			"uuid" : "06116c54-28ef-8145-8de9-b2fd8f6d0759",			"_clazz" : "TwkStanNode"		},		{			"number" : 90,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				-400.0,				900.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "90",			"uuid" : "0af56c04-872d-7944-ba82-44660e64695e",			"_clazz" : "TwkStanNode"		},		{			"number" : 91,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				-400.0,				900.0			],			"legIndex" : 2,			"brick" : "P2",			"name" : "91",			"uuid" : "4030f185-3239-824b-b3af-08be7b01cc3a",			"_clazz" : "TwkStanNode"		},		{			"number" : 92,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				400.0,				900.0			],			"legIndex" : 3,			"brick" : "P2",			"name" : "92",			"uuid" : "64ad43f3-4fdc-c44e-86ed-26d0520b3d7a",			"_clazz" : "TwkStanNode"		},		{			"number" : 93,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				400.0,				900.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "93",			"uuid" : "8c3b70bf-d237-4741-ac84-5e018463c94d",			"_clazz" : "TwkStanNode"		},		{			"number" : 94,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				-400.0,				0.0			],			"legIndex" : 1,			"brick" : "P2",			"name" : "94",			"uuid" : "b3a7e66e-8c77-d74a-a572-bb922869f5f4",			"_clazz" : "TwkStanNode"		},		{			"number" : 95,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				-400.0,				0.0			],			"legIndex" : 2,			"brick" : "P2",			"name" : "95",			"uuid" : "6666c016-6ad1-6646-ab7b-e9cf87b4b551",			"_clazz" : "TwkStanNode"		},		{			"number" : 96,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				6600.0,				400.0,				0.0			],			"legIndex" : 3,			"brick" : "P2",			"name" : "96",			"uuid" : "09e33371-0625-9c4b-865e-633cfb7340c4",			"_clazz" : "TwkStanNode"		},		{			"number" : 97,			"tags" : [				"P2"			],			"type" : "slope",			"position" : [				7400.0,				400.0,				0.0			],			"legIndex" : 4,			"brick" : "P2",			"name" : "97",			"uuid" : "cda23559-98e5-ac48-b1f7-e9308dc00e21",			"_clazz" : "TwkStanNode"		},		{			"number" : 98,			"tags" : [				"P2"			],			"type" : "section",			"position" : [				7000.0,				0.0,				9000.0			],			"legIndex" : -1,			"brick" : "P2",			"name" : "98",			"uuid" : "506a17d3-580b-124c-95fd-945e5b3c67da",			"_clazz" : "TwkStanNode"		},		{			"number" : 99,			"tags" : [				"P2"			],			"type" : "section",			"position" : [				7000.0,				0.0,				8200.0			],			"legIndex" : -1,			"brick" : "P2",			"name" : "99",			"uuid" : "2f924dfc-da54-f34c-b655-1d86fb9c45a6",			"_clazz" : "TwkStanNode"		},		{			"number" : 100,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				950.0,				-400.0,				9000.0			],			"legIndex" : 1,			"brick" : "B1",			"name" : "100",			"uuid" : "816f4ab8-206e-c746-acba-da4ea9be9aff",			"_clazz" : "TwkStanNode"		},		{			"number" : 101,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				950.0,				-400.0,				8200.0			],			"legIndex" : 2,			"brick" : "B1",			"name" : "101",			"uuid" : "73076d0a-8d43-9e49-8675-6c9ca6d22f8e",			"_clazz" : "TwkStanNode"		},		{			"number" : 102,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				950.0,				400.0,				8200.0			],			"legIndex" : 3,			"brick" : "B1",			"name" : "102",			"uuid" : "ae8a254c-3468-7842-b7c5-96c983eedc7e",			"_clazz" : "TwkStanNode"		},		{			"number" : 103,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				950.0,				400.0,				9000.0			],			"legIndex" : 4,			"brick" : "B1",			"name" : "103",			"uuid" : "f40396fb-3e84-b14b-a480-fe7409f77d97",			"_clazz" : "TwkStanNode"		},		{			"number" : 104,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				1500.0,				-400.0,				9000.0			],			"legIndex" : 1,			"brick" : "B1",			"name" : "104",			"uuid" : "197ee0ef-0a0e-d046-b612-3cc940344617",			"_clazz" : "TwkStanNode"		},		{			"number" : 105,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				1500.0,				-400.0,				8200.0			],			"legIndex" : 2,			"brick" : "B1",			"name" : "105",			"uuid" : "694f1e0d-1d70-064e-8f73-22fc32fd2ce0",			"_clazz" : "TwkStanNode"		},		{			"number" : 106,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				1500.0,				400.0,				8200.0			],			"legIndex" : 3,			"brick" : "B1",			"name" : "106",			"uuid" : "5b3de2ff-d12b-d144-a38f-e9a09a9cfc99",			"_clazz" : "TwkStanNode"		},		{			"number" : 107,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				1500.0,				400.0,				9000.0			],			"legIndex" : 4,			"brick" : "B1",			"name" : "107",			"uuid" : "a3b6f2e1-3fab-2444-bb5b-3face8e637d2",			"_clazz" : "TwkStanNode"		},		{			"number" : 108,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				2166.6667,				-400.0,				9000.0			],			"legIndex" : 1,			"brick" : "B1",			"name" : "108",			"uuid" : "ceafa715-51d1-a341-9049-f92b8cceb154",			"_clazz" : "TwkStanNode"		},		{			"number" : 109,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				2166.6667,				-400.0,				8200.0			],			"legIndex" : 2,			"brick" : "B1",			"name" : "109",			"uuid" : "4f93a927-2079-8849-8dbb-e241efa83473",			"_clazz" : "TwkStanNode"		},		{			"number" : 110,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				2166.6667,				400.0,				8200.0			],			"legIndex" : 3,			"brick" : "B1",			"name" : "110",			"uuid" : "1f9afd44-4427-3d41-9638-b778ca880c08",			"_clazz" : "TwkStanNode"		},		{			"number" : 111,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				2166.6667,				400.0,				9000.0			],			"legIndex" : 4,			"brick" : "B1",			"name" : "111",			"uuid" : "7c5b807e-f34f-384e-8547-473110638cc7",			"_clazz" : "TwkStanNode"		},		{			"number" : 112,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				2833.3333000000002,				-400.0,				9000.0			],			"legIndex" : 1,			"brick" : "B1",			"name" : "112",			"uuid" : "3044f891-469e-b345-854d-5c4848406a64",			"_clazz" : "TwkStanNode"		},		{			"number" : 113,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				2833.3333000000002,				-400.0,				8200.0			],			"legIndex" : 2,			"brick" : "B1",			"name" : "113",			"uuid" : "cae65c63-f92a-a34d-889e-3c04e0c70a49",			"_clazz" : "TwkStanNode"		},		{			"number" : 114,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				2833.3333000000002,				400.0,				8200.0			],			"legIndex" : 3,			"brick" : "B1",			"name" : "114",			"uuid" : "0cfc17b8-dc7e-a14e-a038-733d62c80d78",			"_clazz" : "TwkStanNode"		},		{			"number" : 115,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				2833.3333000000002,				400.0,				9000.0			],			"legIndex" : 4,			"brick" : "B1",			"name" : "115",			"uuid" : "a1b598ce-277f-0b4f-8e99-1cdd12322df8",			"_clazz" : "TwkStanNode"		},		{			"number" : 116,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				3500.0,				-400.0,				9000.0			],			"legIndex" : 1,			"brick" : "B1",			"name" : "116",			"uuid" : "ac0d88db-d270-0044-8d5e-0c45bbcf4bbb",			"_clazz" : "TwkStanNode"		},		{			"number" : 117,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				3500.0,				-400.0,				8200.0			],			"legIndex" : 2,			"brick" : "B1",			"name" : "117",			"uuid" : "79a548eb-71e7-3047-b3e1-75bd01bff931",			"_clazz" : "TwkStanNode"		},		{			"number" : 118,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				3500.0,				400.0,				8200.0			],			"legIndex" : 3,			"brick" : "B1",			"name" : "118",			"uuid" : "b9662a7d-7409-d440-b539-a982c39b3cad",			"_clazz" : "TwkStanNode"		},		{			"number" : 119,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				3500.0,				400.0,				9000.0			],			"legIndex" : 4,			"brick" : "B1",			"name" : "119",			"uuid" : "47acfbf3-2ce8-3142-9d43-f1bb2f31f2a2",			"_clazz" : "TwkStanNode"		},		{			"number" : 120,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				4166.6667,				-400.0,				9000.0			],			"legIndex" : 1,			"brick" : "B1",			"name" : "120",			"uuid" : "991dc446-de01-c84b-a694-fe68270dbcff",			"_clazz" : "TwkStanNode"		},		{			"number" : 121,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				4166.6667,				-400.0,				8200.0			],			"legIndex" : 2,			"brick" : "B1",			"name" : "121",			"uuid" : "08a18cb7-64d9-4a46-9abf-8b5ce312b7bc",			"_clazz" : "TwkStanNode"		},		{			"number" : 122,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				4166.6667,				400.0,				8200.0			],			"legIndex" : 3,			"brick" : "B1",			"name" : "122",			"uuid" : "16f288fc-6a04-8847-a569-21427c8444b6",			"_clazz" : "TwkStanNode"		},		{			"number" : 123,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				4166.6667,				400.0,				9000.0			],			"legIndex" : 4,			"brick" : "B1",			"name" : "123",			"uuid" : "38e0d44a-ce52-d44e-91fa-38206f57fac7",			"_clazz" : "TwkStanNode"		},		{			"number" : 124,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				4833.3333,				-400.0,				9000.0			],			"legIndex" : 1,			"brick" : "B1",			"name" : "124",			"uuid" : "c649fe4d-e683-fc43-85b0-2efa60120619",			"_clazz" : "TwkStanNode"		},		{			"number" : 125,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				4833.3333,				-400.0,				8200.0			],			"legIndex" : 2,			"brick" : "B1",			"name" : "125",			"uuid" : "e81062f6-e1f8-6946-aca0-ee40b0be1986",			"_clazz" : "TwkStanNode"		},		{			"number" : 126,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				4833.3333,				400.0,				8200.0			],			"legIndex" : 3,			"brick" : "B1",			"name" : "126",			"uuid" : "3a8a9a8c-f912-d34b-94d3-a37b24cccfac",			"_clazz" : "TwkStanNode"		},		{			"number" : 127,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				4833.3333,				400.0,				9000.0			],			"legIndex" : 4,			"brick" : "B1",			"name" : "127",			"uuid" : "e5078f5a-fcc0-ce44-9642-b7030bab8853",			"_clazz" : "TwkStanNode"		},		{			"number" : 128,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				5500.0,				-400.0,				9000.0			],			"legIndex" : 1,			"brick" : "B1",			"name" : "128",			"uuid" : "817c3a00-06b5-7544-bbb8-afb0ac0c61c3",			"_clazz" : "TwkStanNode"		},		{			"number" : 129,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				5500.0,				-400.0,				8200.0			],			"legIndex" : 2,			"brick" : "B1",			"name" : "129",			"uuid" : "03cc9859-b656-c841-b3e5-2514af878710",			"_clazz" : "TwkStanNode"		},		{			"number" : 130,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				5500.0,				400.0,				8200.0			],			"legIndex" : 3,			"brick" : "B1",			"name" : "130",			"uuid" : "23d3a7ae-4ef3-1b4f-bcc1-1d25db917893",			"_clazz" : "TwkStanNode"		},		{			"number" : 131,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				5500.0,				400.0,				9000.0			],			"legIndex" : 4,			"brick" : "B1",			"name" : "131",			"uuid" : "8b52de4c-4e70-1c4c-84fa-a9dc3e3d5940",			"_clazz" : "TwkStanNode"		},		{			"number" : 132,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				6050.0,				-400.0,				9000.0			],			"legIndex" : 1,			"brick" : "B1",			"name" : "132",			"uuid" : "75cac66f-e769-8345-9fb7-9c11388915d0",			"_clazz" : "TwkStanNode"		},		{			"number" : 133,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				6050.0,				-400.0,				8200.0			],			"legIndex" : 2,			"brick" : "B1",			"name" : "133",			"uuid" : "7e4a6545-6261-8e48-a517-9501cbc44ebc",			"_clazz" : "TwkStanNode"		},		{			"number" : 134,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				6050.0,				400.0,				8200.0			],			"legIndex" : 3,			"brick" : "B1",			"name" : "134",			"uuid" : "52fd8c53-a7e0-a044-bb15-f84bec49987c",			"_clazz" : "TwkStanNode"		},		{			"number" : 135,			"tags" : [				"B1"			],			"type" : "slope",			"position" : [				6050.0,				400.0,				9000.0			],			"legIndex" : 4,			"brick" : "B1",			"name" : "135",			"uuid" : "d6b464a1-4526-0449-9ae3-a41b91fec4f9",			"_clazz" : "TwkStanNode"		},		{			"number" : 136,			"tags" : [				"B1"			],			"type" : "panel",			"position" : [				1500.0,				0.0,				8200.0			],			"legIndex" : -1,			"brick" : "B1",			"name" : "136",			"uuid" : "fd226208-72ea-114b-9dc2-5d96560e4b26",			"_clazz" : "TwkStanNode"		},		{			"number" : 137,			"tags" : [				"B1"			],			"type" : "panel",			"position" : [				3500.0,				0.0,				8200.0			],			"legIndex" : -1,			"brick" : "B1",			"name" : "137",			"uuid" : "7016e2d1-48d2-c845-980f-e6c5980e2f2d",			"_clazz" : "TwkStanNode"		},		{			"number" : 138,			"tags" : [				"B1"			],			"type" : "panel",			"position" : [				5500.0,				0.0,				8200.0			],			"legIndex" : -1,			"brick" : "B1",			"name" : "138",			"uuid" : "5f240ddb-11c6-b24f-867f-7dde270a60fd",			"_clazz" : "TwkStanNode"		},		{			"number" : 139,			"tags" : [				"B1"			],			"type" : "section",			"position" : [				1500.0,				0.0,				8600.0			],			"legIndex" : -1,			"brick" : "B1",			"name" : "139",			"uuid" : "492048f1-95e8-774c-b064-9b59998adc70",			"_clazz" : "TwkStanNode"		},		{			"number" : 140,			"tags" : [				"B1"			],			"type" : "section",			"position" : [				3500.0,				0.0,				8600.0			],			"legIndex" : -1,			"brick" : "B1",			"name" : "140",			"uuid" : "73eb15da-ac4b-2544-b703-7647a778454b",			"_clazz" : "TwkStanNode"		},		{			"number" : 141,			"tags" : [				"B1"			],			"type" : "section",			"position" : [				5500.0,				0.0,				8600.0			],			"legIndex" : -1,			"brick" : "B1",			"name" : "141",			"uuid" : "c431c7c5-ec91-1e4e-89e3-90062723ee4b",			"_clazz" : "TwkStanNode"		}	],	"segments" : [		{			"number" : 0,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 4,			"from" : 0,			"brick" : "P1",			"name" : "0",			"uuid" : "7e86643c-9d28-f643-ba16-3e511ed5bb06",			"_clazz" : "TwkSegment"		},		{			"number" : 1,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 5,			"from" : 1,			"brick" : "P1",			"name" : "1",			"uuid" : "f28564a0-4a3c-084c-8c84-f1d0864ccb05",			"_clazz" : "TwkSegment"		},		{			"number" : 2,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 6,			"from" : 2,			"brick" : "P1",			"name" : "2",			"uuid" : "c21076a5-f914-574d-8e8f-4ed3d643703b",			"_clazz" : "TwkSegment"		},		{			"number" : 3,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 7,			"from" : 3,			"brick" : "P1",			"name" : "3",			"uuid" : "7eb759e6-198b-b146-851b-502ac50c4da7",			"_clazz" : "TwkSegment"		},		{			"number" : 4,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 8,			"from" : 4,			"brick" : "P1",			"name" : "4",			"uuid" : "5d4ec279-8ac5-3142-8d42-41a2f45bda2a",			"_clazz" : "TwkSegment"		},		{			"number" : 5,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 9,			"from" : 5,			"brick" : "P1",			"name" : "5",			"uuid" : "3a6d336c-a075-fe44-9cea-34bf3b7786f0",			"_clazz" : "TwkSegment"		},		{			"number" : 6,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 10,			"from" : 6,			"brick" : "P1",			"name" : "6",			"uuid" : "212fcaa7-5db8-ad4a-a761-700dee73d3bb",			"_clazz" : "TwkSegment"		},		{			"number" : 7,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 11,			"from" : 7,			"brick" : "P1",			"name" : "7",			"uuid" : "01d43e1d-3a57-6a4d-a64d-ca4e7b87a1b1",			"_clazz" : "TwkSegment"		},		{			"number" : 8,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 12,			"from" : 8,			"brick" : "P1",			"name" : "8",			"uuid" : "bd67595c-c73f-464f-bc53-220ce088b6f8",			"_clazz" : "TwkSegment"		},		{			"number" : 9,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 13,			"from" : 9,			"brick" : "P1",			"name" : "9",			"uuid" : "c50924fd-c139-1744-8611-222a49f74568",			"_clazz" : "TwkSegment"		},		{			"number" : 10,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 14,			"from" : 10,			"brick" : "P1",			"name" : "10",			"uuid" : "5fa24f35-951f-904b-aa8c-a7e9c213c908",			"_clazz" : "TwkSegment"		},		{			"number" : 11,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 15,			"from" : 11,			"brick" : "P1",			"name" : "11",			"uuid" : "8c60b6b9-32e0-434b-8b61-41bce64ad5a7",			"_clazz" : "TwkSegment"		},		{			"number" : 12,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 16,			"from" : 12,			"brick" : "P1",			"name" : "12",			"uuid" : "b34007b0-4d06-494f-bd28-888f54b310a7",			"_clazz" : "TwkSegment"		},		{			"number" : 13,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 17,			"from" : 13,			"brick" : "P1",			"name" : "13",			"uuid" : "02738d8a-c22a-9847-9514-eee0ba09628a",			"_clazz" : "TwkSegment"		},		{			"number" : 14,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 18,			"from" : 14,			"brick" : "P1",			"name" : "14",			"uuid" : "e9827ab3-11cf-fc4d-bdaf-2343512bc28c",			"_clazz" : "TwkSegment"		},		{			"number" : 15,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 19,			"from" : 15,			"brick" : "P1",			"name" : "15",			"uuid" : "25828cd9-8e29-2945-8a8e-ded920931a54",			"_clazz" : "TwkSegment"		},		{			"number" : 16,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 20,			"from" : 16,			"brick" : "P1",			"name" : "16",			"uuid" : "1f56ba01-8694-f84f-b371-61422dccd9ef",			"_clazz" : "TwkSegment"		},		{			"number" : 17,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 21,			"from" : 17,			"brick" : "P1",			"name" : "17",			"uuid" : "9b3be040-fdda-2348-aa1b-90d1c556b0cd",			"_clazz" : "TwkSegment"		},		{			"number" : 18,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 22,			"from" : 18,			"brick" : "P1",			"name" : "18",			"uuid" : "db4c2db1-b1a6-ae40-90af-348370f507dc",			"_clazz" : "TwkSegment"		},		{			"number" : 19,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 23,			"from" : 19,			"brick" : "P1",			"name" : "19",			"uuid" : "eec27ee5-d2ab-a440-b1af-72d8486438c3",			"_clazz" : "TwkSegment"		},		{			"number" : 20,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 24,			"from" : 20,			"brick" : "P1",			"name" : "20",			"uuid" : "5d7c4c6d-c057-ef4a-88e0-e9acbadb738b",			"_clazz" : "TwkSegment"		},		{			"number" : 21,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 25,			"from" : 21,			"brick" : "P1",			"name" : "21",			"uuid" : "ba8c978a-690a-d84f-bf89-db0ead03c10f",			"_clazz" : "TwkSegment"		},		{			"number" : 22,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 26,			"from" : 22,			"brick" : "P1",			"name" : "22",			"uuid" : "1687d83d-25e3-8a49-93fb-0f2ee4396447",			"_clazz" : "TwkSegment"		},		{			"number" : 23,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 27,			"from" : 23,			"brick" : "P1",			"name" : "23",			"uuid" : "598ecb26-b7eb-bd44-967f-ab620d7d3ff7",			"_clazz" : "TwkSegment"		},		{			"number" : 24,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 28,			"from" : 24,			"brick" : "P1",			"name" : "24",			"uuid" : "e9f1c8d6-0d7e-3c4a-8b95-55ba31b3cc1e",			"_clazz" : "TwkSegment"		},		{			"number" : 25,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 29,			"from" : 25,			"brick" : "P1",			"name" : "25",			"uuid" : "cb5e956d-2586-ce42-a5c6-c23784caa056",			"_clazz" : "TwkSegment"		},		{			"number" : 26,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 30,			"from" : 26,			"brick" : "P1",			"name" : "26",			"uuid" : "4af033e7-5432-904d-bb88-3e2a81b90dec",			"_clazz" : "TwkSegment"		},		{			"number" : 27,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 31,			"from" : 27,			"brick" : "P1",			"name" : "27",			"uuid" : "a29c05c1-97dc-b641-bfea-be55f61c093d",			"_clazz" : "TwkSegment"		},		{			"number" : 28,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 32,			"from" : 28,			"brick" : "P1",			"name" : "28",			"uuid" : "2ebab272-43ad-6049-af3a-590c034359b9",			"_clazz" : "TwkSegment"		},		{			"number" : 29,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 33,			"from" : 29,			"brick" : "P1",			"name" : "29",			"uuid" : "e1ab5ae2-133c-664c-b39a-65f78741f42b",			"_clazz" : "TwkSegment"		},		{			"number" : 30,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 34,			"from" : 30,			"brick" : "P1",			"name" : "30",			"uuid" : "fd679ae8-f640-a240-adc1-dad7ab5dcf40",			"_clazz" : "TwkSegment"		},		{			"number" : 31,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 35,			"from" : 31,			"brick" : "P1",			"name" : "31",			"uuid" : "39e28888-7941-9343-acd4-5871aac8cdcc",			"_clazz" : "TwkSegment"		},		{			"number" : 32,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 36,			"from" : 32,			"brick" : "P1",			"name" : "32",			"uuid" : "fa91952c-b20a-1e49-afb7-2fdeb39ca86f",			"_clazz" : "TwkSegment"		},		{			"number" : 33,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 37,			"from" : 33,			"brick" : "P1",			"name" : "33",			"uuid" : "bcbfd869-d016-654c-ac2a-4c36a21bf2bd",			"_clazz" : "TwkSegment"		},		{			"number" : 34,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 38,			"from" : 34,			"brick" : "P1",			"name" : "34",			"uuid" : "2efee528-9cd2-254a-8680-c6c42e9a7f09",			"_clazz" : "TwkSegment"		},		{			"number" : 35,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 39,			"from" : 35,			"brick" : "P1",			"name" : "35",			"uuid" : "ec5d2672-55e3-0f4a-a4d4-d25ebbecefae",			"_clazz" : "TwkSegment"		},		{			"number" : 36,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 40,			"from" : 36,			"brick" : "P1",			"name" : "36",			"uuid" : "abd51770-aba9-524d-b31b-cfc4f61aa64b",			"_clazz" : "TwkSegment"		},		{			"number" : 37,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 41,			"from" : 37,			"brick" : "P1",			"name" : "37",			"uuid" : "386767de-c8ec-174f-aa68-b15f6c9e0cbd",			"_clazz" : "TwkSegment"		},		{			"number" : 38,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 42,			"from" : 38,			"brick" : "P1",			"name" : "38",			"uuid" : "fb5905cd-ad10-ce4d-aa27-6a08bfed4051",			"_clazz" : "TwkSegment"		},		{			"number" : 39,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 43,			"from" : 39,			"brick" : "P1",			"name" : "39",			"uuid" : "8569cb60-e77a-6f41-ad5f-8b148c7ee385",			"_clazz" : "TwkSegment"		},		{			"number" : 40,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 44,			"from" : 40,			"brick" : "P1",			"name" : "40",			"uuid" : "221a1c4a-a608-2b4b-8dea-cb6212a1e852",			"_clazz" : "TwkSegment"		},		{			"number" : 41,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 45,			"from" : 41,			"brick" : "P1",			"name" : "41",			"uuid" : "7012f09a-0730-0142-a097-7843232fdf01",			"_clazz" : "TwkSegment"		},		{			"number" : 42,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 46,			"from" : 42,			"brick" : "P1",			"name" : "42",			"uuid" : "e5b63daf-0e4c-a745-8fe2-347d5c635b0e",			"_clazz" : "TwkSegment"		},		{			"number" : 43,			"tags" : [				"P1"			],			"type" : "slope",			"to" : 47,			"from" : 43,			"brick" : "P1",			"name" : "43",			"uuid" : "fda1a758-2d34-f042-8927-d95de9bd4ff1",			"_clazz" : "TwkSegment"		},		{			"number" : 44,			"tags" : [				"P1"			],			"type" : "sectionRound",			"to" : 1,			"from" : 0,			"brick" : "P1",			"name" : "44",			"uuid" : "dbdb218f-1e4a-6a4c-b71e-c465f55966a2",			"_clazz" : "TwkSegment"		},		{			"number" : 45,			"tags" : [				"P1"			],			"type" : "sectionRound",			"to" : 2,			"from" : 1,			"brick" : "P1",			"name" : "45",			"uuid" : "5bb98bb5-7a2f-6e47-9a89-5e91df8f2de1",			"_clazz" : "TwkSegment"		},		{			"number" : 46,			"tags" : [				"P1"			],			"type" : "sectionRound",			"to" : 3,			"from" : 2,			"brick" : "P1",			"name" : "46",			"uuid" : "148f1575-6ba9-394a-96bc-6e98a0b719a0",			"_clazz" : "TwkSegment"		},		{			"number" : 47,			"tags" : [				"P1"			],			"type" : "sectionRound",			"to" : 0,			"from" : 3,			"brick" : "P1",			"name" : "47",			"uuid" : "04f48d30-ac5e-3b4d-87b6-2c18b611c5fa",			"_clazz" : "TwkSegment"		},		{			"number" : 48,			"tags" : [				"P1"			],			"type" : "sectionRound",			"to" : 5,			"from" : 4,			"brick" : "P1",			"name" : "48",			"uuid" : "f7aa749f-17a1-de4b-afd2-f1c529a9f8f2",			"_clazz" : "TwkSegment"		},		{			"number" : 49,			"tags" : [				"P1"			],			"type" : "sectionRound",			"to" : 6,			"from" : 5,			"brick" : "P1",			"name" : "49",			"uuid" : "3a8940ab-b74e-9847-a22f-69f56dea55d0",			"_clazz" : "TwkSegment"		},		{			"number" : 50,			"tags" : [				"P1"			],			"type" : "sectionRound",			"to" : 7,			"from" : 6,			"brick" : "P1",			"name" : "50",			"uuid" : "3aaf2e35-4273-4242-91a4-d99ccb4e6089",			"_clazz" : "TwkSegment"		},		{			"number" : 51,			"tags" : [				"P1"			],			"type" : "sectionRound",			"to" : 4,			"from" : 7,			"brick" : "P1",			"name" : "51",			"uuid" : "f0fd9e99-dc6d-cb4a-88ae-a0780a9a1d9b",			"_clazz" : "TwkSegment"		},		{			"number" : 52,			"tags" : [				"P1"			],			"type" : "sectionSlant",			"to" : 3,			"from" : 48,			"brick" : "P1",			"name" : "52",			"uuid" : "9917ff08-f1bb-064e-951b-698955ad8981",			"_clazz" : "TwkSegment"		},		{			"number" : 53,			"tags" : [				"P1"			],			"type" : "sectionSlant",			"to" : 48,			"from" : 1,			"brick" : "P1",			"name" : "53",			"uuid" : "b347018e-9c54-dd4e-9a5b-3250af2abfde",			"_clazz" : "TwkSegment"		},		{			"number" : 54,			"tags" : [				"P1"			],			"type" : "sectionSlant",			"to" : 2,			"from" : 48,			"brick" : "P1",			"name" : "54",			"uuid" : "e7df99b2-aa71-ca46-917d-b9fedbd26fc6",			"_clazz" : "TwkSegment"		},		{			"number" : 55,			"tags" : [				"P1"			],			"type" : "sectionSlant",			"to" : 48,			"from" : 0,			"brick" : "P1",			"name" : "55",			"uuid" : "998a8561-0195-4944-acb3-d41ef9d969de",			"_clazz" : "TwkSegment"		},		{			"number" : 56,			"tags" : [				"P1"			],			"type" : "sectionSlant",			"to" : 7,			"from" : 49,			"brick" : "P1",			"name" : "56",			"uuid" : "b582aeaa-ce13-3f47-aff3-a70546b53307",			"_clazz" : "TwkSegment"		},		{			"number" : 57,			"tags" : [				"P1"			],			"type" : "sectionSlant",			"to" : 49,			"from" : 5,			"brick" : "P1",			"name" : "57",			"uuid" : "a27da78e-873a-4f49-a389-309660ae9a91",			"_clazz" : "TwkSegment"		},		{			"number" : 58,			"tags" : [				"P1"			],			"type" : "sectionSlant",			"to" : 6,			"from" : 49,			"brick" : "P1",			"name" : "58",			"uuid" : "0e686c4c-5d96-f446-934d-fffd5127b110",			"_clazz" : "TwkSegment"		},		{			"number" : 59,			"tags" : [				"P1"			],			"type" : "sectionSlant",			"to" : 49,			"from" : 4,			"brick" : "P1",			"name" : "59",			"uuid" : "14a5d1cd-2b7b-cb4a-becc-e997c8807ceb",			"_clazz" : "TwkSegment"		},		{			"uuid" : "8e2543b2-e609-7e4f-847c-5189881715d1",			"name" : "60",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 5,			"face" : "front",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 0,			"number" : 60		},		{			"uuid" : "81134d46-ddb6-f049-a477-72aa2d6c39ff",			"name" : "61",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 6,			"face" : "left",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 1,			"number" : 61		},		{			"uuid" : "1b68872a-c679-3c47-80d5-b0dab5bf464a",			"name" : "62",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 7,			"face" : "back",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 2,			"number" : 62		},		{			"uuid" : "06fb84c0-5ba3-174f-9a26-4899f0c343bf",			"name" : "63",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 4,			"face" : "right",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 3,			"number" : 63		},		{			"uuid" : "c9e11f74-7a21-d243-96e7-ac838a52069d",			"name" : "64",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 8,			"face" : "front",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 5,			"number" : 64		},		{			"uuid" : "f7078d7f-7599-d844-b2bb-e1a9bc9143f8",			"name" : "65",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 9,			"face" : "left",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 6,			"number" : 65		},		{			"uuid" : "5186ee11-ac5b-af43-b009-3239a8dc4559",			"name" : "66",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 10,			"face" : "back",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 7,			"number" : 66		},		{			"uuid" : "fb9433dc-5a26-f840-807f-a886449015ab",			"name" : "67",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 11,			"face" : "right",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 4,			"number" : 67		},		{			"uuid" : "d5738e38-addf-6c45-94bd-2a0f416f11c8",			"name" : "68",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 13,			"face" : "front",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 8,			"number" : 68		},		{			"uuid" : "5f58a0bc-06dc-6b48-973b-f5a57b4900cb",			"name" : "69",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 14,			"face" : "left",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 9,			"number" : 69		},		{			"uuid" : "1344a1f9-d94a-f140-aebe-6645e108749d",			"name" : "70",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 15,			"face" : "back",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 10,			"number" : 70		},		{			"uuid" : "26084b2b-b6be-0841-bfa7-9cc0ae4a94d8",			"name" : "71",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 12,			"face" : "right",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 11,			"number" : 71		},		{			"uuid" : "d3ee8b81-3d38-934c-8a0b-3da1e0bc3d85",			"name" : "72",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 16,			"face" : "front",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 13,			"number" : 72		},		{			"uuid" : "7a43c16d-5ca5-9f45-bb73-df735148051e",			"name" : "73",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 17,			"face" : "left",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 14,			"number" : 73		},		{			"uuid" : "348cb86c-418f-fc43-af8b-a12a45825d18",			"name" : "74",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 18,			"face" : "back",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 15,			"number" : 74		},		{			"uuid" : "787fa8cc-30a1-514d-a163-c426d100d0e8",			"name" : "75",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 19,			"face" : "right",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 12,			"number" : 75		},		{			"uuid" : "96fa5280-3abd-5b46-92fa-b7ea17412ff6",			"name" : "76",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 21,			"face" : "front",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 16,			"number" : 76		},		{			"uuid" : "73789597-db63-4444-9edf-ed88e3574ca1",			"name" : "77",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 22,			"face" : "left",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 17,			"number" : 77		},		{			"uuid" : "5278c9fe-4e0a-514e-9786-68c5aa532a4b",			"name" : "78",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 23,			"face" : "back",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 18,			"number" : 78		},		{			"uuid" : "78e60e81-32e7-7b4a-b6f1-aeb433e8df21",			"name" : "79",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 20,			"face" : "right",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 19,			"number" : 79		},		{			"uuid" : "9c270b12-892d-f242-8a8b-b6b614a95a6e",			"name" : "80",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 24,			"face" : "front",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 21,			"number" : 80		},		{			"uuid" : "7ee4b8b1-b740-684d-972d-a5cc9e2b7255",			"name" : "81",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 25,			"face" : "left",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 22,			"number" : 81		},		{			"uuid" : "cfe7bf3b-3f80-594c-81ff-c027b5d9af2b",			"name" : "82",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 26,			"face" : "back",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 23,			"number" : 82		},		{			"uuid" : "2a43a004-84de-934d-9792-7dd90bec907c",			"name" : "83",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 27,			"face" : "right",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 20,			"number" : 83		},		{			"uuid" : "8baccd7f-d94a-e145-801c-139b1ce3bc08",			"name" : "84",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 29,			"face" : "front",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 24,			"number" : 84		},		{			"uuid" : "216c5af2-fefa-b64e-973b-5b59e8108a97",			"name" : "85",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 30,			"face" : "left",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 25,			"number" : 85		},		{			"uuid" : "49e5d2cb-0059-484c-b5ba-7b6ca78c717a",			"name" : "86",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 31,			"face" : "back",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 26,			"number" : 86		},		{			"uuid" : "a4c89d97-5bc8-6345-8144-4f6ce931d614",			"name" : "87",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 28,			"face" : "right",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 27,			"number" : 87		},		{			"uuid" : "1ca72fc2-79bb-bd45-bfff-abf68ba7a54c",			"name" : "88",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 32,			"face" : "front",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 29,			"number" : 88		},		{			"uuid" : "f77a0a8f-62f4-5241-a713-13d14384a239",			"name" : "89",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 33,			"face" : "left",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 30,			"number" : 89		},		{			"uuid" : "2ccdd076-1e97-5c49-84f5-230d5b9e74da",			"name" : "90",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 34,			"face" : "back",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 31,			"number" : 90		},		{			"uuid" : "4d6d1fd6-153d-e749-b07f-ae3bf8ca9f75",			"name" : "91",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 35,			"face" : "right",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 28,			"number" : 91		},		{			"uuid" : "2d7c015c-55a8-b34c-9aed-7c41571ebaa9",			"name" : "92",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 37,			"face" : "front",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 32,			"number" : 92		},		{			"uuid" : "b7ff95bb-4f81-fe4d-9b78-ddfa8b0ba93a",			"name" : "93",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 38,			"face" : "left",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 33,			"number" : 93		},		{			"uuid" : "306d5eca-4ea5-7846-baa8-fecd125c11e8",			"name" : "94",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 39,			"face" : "back",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 34,			"number" : 94		},		{			"uuid" : "ffac79c0-25c9-304f-baf6-832d17736f37",			"name" : "95",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 36,			"face" : "right",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 35,			"number" : 95		},		{			"uuid" : "4a6dbbc1-5313-d941-ac5c-4b11888d4e0b",			"name" : "96",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 40,			"face" : "front",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 37,			"number" : 96		},		{			"uuid" : "d2e7707c-d9a8-8c44-8c4d-3c882c453d35",			"name" : "97",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 41,			"face" : "left",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 38,			"number" : 97		},		{			"uuid" : "92365a2b-eb5c-e64e-bd2c-397731d7c4b1",			"name" : "98",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 42,			"face" : "back",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 39,			"number" : 98		},		{			"uuid" : "8030e6a9-3b8c-2348-aaf5-a27d1b413633",			"name" : "99",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 43,			"face" : "right",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 36,			"number" : 99		},		{			"uuid" : "55a69dd6-86fc-db4d-85c9-63a767e350de",			"name" : "100",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 45,			"face" : "front",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 40,			"number" : 100		},		{			"uuid" : "f7c5caa9-2cff-1a41-bc04-1de6cd6b8946",			"name" : "101",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 46,			"face" : "left",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 41,			"number" : 101		},		{			"uuid" : "7d8fcf19-1f9c-0b41-a2fa-811b349be0af",			"name" : "102",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 47,			"face" : "back",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 42,			"number" : 102		},		{			"uuid" : "f0927fc3-2a30-4940-9fbb-b103e12d1840",			"name" : "103",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 44,			"face" : "right",			"tags" : [				"P1"			],			"type" : "panel",			"to" : 43,			"number" : 103		},		{			"number" : 104,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 54,			"from" : 50,			"brick" : "P2",			"name" : "104",			"uuid" : "f9b17f41-12dc-0543-b906-de8307f49419",			"_clazz" : "TwkSegment"		},		{			"number" : 105,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 55,			"from" : 51,			"brick" : "P2",			"name" : "105",			"uuid" : "1fea4880-3afb-1243-b237-36246bb1e642",			"_clazz" : "TwkSegment"		},		{			"number" : 106,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 56,			"from" : 52,			"brick" : "P2",			"name" : "106",			"uuid" : "ab33d850-562b-c446-91dd-7ab781b4ef9e",			"_clazz" : "TwkSegment"		},		{			"number" : 107,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 57,			"from" : 53,			"brick" : "P2",			"name" : "107",			"uuid" : "975d6355-c1a3-ca4b-af6c-6eb5f90ca9d4",			"_clazz" : "TwkSegment"		},		{			"number" : 108,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 58,			"from" : 54,			"brick" : "P2",			"name" : "108",			"uuid" : "04fbafde-0d6e-dc45-a815-fa6312b9c39d",			"_clazz" : "TwkSegment"		},		{			"number" : 109,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 59,			"from" : 55,			"brick" : "P2",			"name" : "109",			"uuid" : "83974996-983f-7242-89cc-7005f0c7b724",			"_clazz" : "TwkSegment"		},		{			"number" : 110,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 60,			"from" : 56,			"brick" : "P2",			"name" : "110",			"uuid" : "ebe6132a-c37f-9640-9818-fa353bf3f5c0",			"_clazz" : "TwkSegment"		},		{			"number" : 111,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 61,			"from" : 57,			"brick" : "P2",			"name" : "111",			"uuid" : "28c7d4dc-02bf-db4e-bb0f-918c560549ae",			"_clazz" : "TwkSegment"		},		{			"number" : 112,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 62,			"from" : 58,			"brick" : "P2",			"name" : "112",			"uuid" : "b2cec76b-8cad-224b-b2d3-b469d0319196",			"_clazz" : "TwkSegment"		},		{			"number" : 113,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 63,			"from" : 59,			"brick" : "P2",			"name" : "113",			"uuid" : "dd3bca96-a962-b745-be1f-68bb55d7ebf9",			"_clazz" : "TwkSegment"		},		{			"number" : 114,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 64,			"from" : 60,			"brick" : "P2",			"name" : "114",			"uuid" : "91a72ab1-bafb-b444-a51e-a3a0fff6b23c",			"_clazz" : "TwkSegment"		},		{			"number" : 115,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 65,			"from" : 61,			"brick" : "P2",			"name" : "115",			"uuid" : "c12d5b73-0a83-c04f-b33f-5b80669e90ed",			"_clazz" : "TwkSegment"		},		{			"number" : 116,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 66,			"from" : 62,			"brick" : "P2",			"name" : "116",			"uuid" : "c49cda34-9582-044d-ab80-ba4fdda5062a",			"_clazz" : "TwkSegment"		},		{			"number" : 117,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 67,			"from" : 63,			"brick" : "P2",			"name" : "117",			"uuid" : "59fc5180-5b63-1d4b-934a-9369d8ae58b0",			"_clazz" : "TwkSegment"		},		{			"number" : 118,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 68,			"from" : 64,			"brick" : "P2",			"name" : "118",			"uuid" : "4bcb3664-e91c-a046-aa54-aa35c20e2a55",			"_clazz" : "TwkSegment"		},		{			"number" : 119,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 69,			"from" : 65,			"brick" : "P2",			"name" : "119",			"uuid" : "c83e48cf-d3de-324a-8ba0-6fe42cce4757",			"_clazz" : "TwkSegment"		},		{			"number" : 120,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 70,			"from" : 66,			"brick" : "P2",			"name" : "120",			"uuid" : "ecb0a239-4e7c-3045-8c48-52b04637a96f",			"_clazz" : "TwkSegment"		},		{			"number" : 121,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 71,			"from" : 67,			"brick" : "P2",			"name" : "121",			"uuid" : "735bc9e9-e864-e94f-90a4-a95b0277a5fd",			"_clazz" : "TwkSegment"		},		{			"number" : 122,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 72,			"from" : 68,			"brick" : "P2",			"name" : "122",			"uuid" : "d908b06e-e686-ed4e-94da-d874b4ce7b21",			"_clazz" : "TwkSegment"		},		{			"number" : 123,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 73,			"from" : 69,			"brick" : "P2",			"name" : "123",			"uuid" : "720044c0-c89c-b045-8b2a-99c88683016d",			"_clazz" : "TwkSegment"		},		{			"number" : 124,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 74,			"from" : 70,			"brick" : "P2",			"name" : "124",			"uuid" : "64ab0a0a-3de5-5e46-b03d-e40a564252a3",			"_clazz" : "TwkSegment"		},		{			"number" : 125,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 75,			"from" : 71,			"brick" : "P2",			"name" : "125",			"uuid" : "018e897d-b14f-2247-92c6-8b00f8a9a9bd",			"_clazz" : "TwkSegment"		},		{			"number" : 126,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 76,			"from" : 72,			"brick" : "P2",			"name" : "126",			"uuid" : "ddbb4d23-4da4-2e47-8b9d-83da9b37f9ab",			"_clazz" : "TwkSegment"		},		{			"number" : 127,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 77,			"from" : 73,			"brick" : "P2",			"name" : "127",			"uuid" : "97880b6e-905a-3946-ba2d-4f85803b3319",			"_clazz" : "TwkSegment"		},		{			"number" : 128,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 78,			"from" : 74,			"brick" : "P2",			"name" : "128",			"uuid" : "e3404c07-4abe-5a47-bac8-2abcbc97ceba",			"_clazz" : "TwkSegment"		},		{			"number" : 129,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 79,			"from" : 75,			"brick" : "P2",			"name" : "129",			"uuid" : "ecfd7e7f-2a91-5346-9a66-c789bdccc362",			"_clazz" : "TwkSegment"		},		{			"number" : 130,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 80,			"from" : 76,			"brick" : "P2",			"name" : "130",			"uuid" : "7b29bcbf-1d81-de47-ac99-64fad79baeac",			"_clazz" : "TwkSegment"		},		{			"number" : 131,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 81,			"from" : 77,			"brick" : "P2",			"name" : "131",			"uuid" : "ed6f1f2b-ce60-c841-8c2e-20f5ee69860d",			"_clazz" : "TwkSegment"		},		{			"number" : 132,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 82,			"from" : 78,			"brick" : "P2",			"name" : "132",			"uuid" : "ab8ca126-6574-c94b-b954-5e8261addcb0",			"_clazz" : "TwkSegment"		},		{			"number" : 133,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 83,			"from" : 79,			"brick" : "P2",			"name" : "133",			"uuid" : "344b1679-5530-e241-838a-c6b8be86e369",			"_clazz" : "TwkSegment"		},		{			"number" : 134,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 84,			"from" : 80,			"brick" : "P2",			"name" : "134",			"uuid" : "21672030-af5e-f943-9ea4-fc9c38bfa72f",			"_clazz" : "TwkSegment"		},		{			"number" : 135,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 85,			"from" : 81,			"brick" : "P2",			"name" : "135",			"uuid" : "7e91d5c3-d7b8-8b42-83e7-57d68f974464",			"_clazz" : "TwkSegment"		},		{			"number" : 136,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 86,			"from" : 82,			"brick" : "P2",			"name" : "136",			"uuid" : "ecf5ff33-05bf-4649-9c54-6614ddc3457b",			"_clazz" : "TwkSegment"		},		{			"number" : 137,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 87,			"from" : 83,			"brick" : "P2",			"name" : "137",			"uuid" : "ffbb505c-1afa-4b4b-beca-7dfb573eb042",			"_clazz" : "TwkSegment"		},		{			"number" : 138,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 88,			"from" : 84,			"brick" : "P2",			"name" : "138",			"uuid" : "f9d468b2-f8ed-8040-8991-47dd84403e98",			"_clazz" : "TwkSegment"		},		{			"number" : 139,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 89,			"from" : 85,			"brick" : "P2",			"name" : "139",			"uuid" : "11093e80-07c9-304f-9a48-8869263a4eb0",			"_clazz" : "TwkSegment"		},		{			"number" : 140,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 90,			"from" : 86,			"brick" : "P2",			"name" : "140",			"uuid" : "d2807cbe-5eff-7049-865b-8b1c5401b605",			"_clazz" : "TwkSegment"		},		{			"number" : 141,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 91,			"from" : 87,			"brick" : "P2",			"name" : "141",			"uuid" : "fbab580d-4ca9-114f-94c8-0c2949206fba",			"_clazz" : "TwkSegment"		},		{			"number" : 142,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 92,			"from" : 88,			"brick" : "P2",			"name" : "142",			"uuid" : "4f2f3e3d-cecb-824b-9b25-ebeceef52483",			"_clazz" : "TwkSegment"		},		{			"number" : 143,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 93,			"from" : 89,			"brick" : "P2",			"name" : "143",			"uuid" : "c1b86651-e088-584e-b09e-d41f201b4e43",			"_clazz" : "TwkSegment"		},		{			"number" : 144,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 94,			"from" : 90,			"brick" : "P2",			"name" : "144",			"uuid" : "ebacdd82-6d40-3747-bcd0-0d0d7bb97e03",			"_clazz" : "TwkSegment"		},		{			"number" : 145,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 95,			"from" : 91,			"brick" : "P2",			"name" : "145",			"uuid" : "e037964a-a59b-3346-a57b-589b1565d708",			"_clazz" : "TwkSegment"		},		{			"number" : 146,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 96,			"from" : 92,			"brick" : "P2",			"name" : "146",			"uuid" : "30e820d0-43b9-e948-b258-581ec57227cf",			"_clazz" : "TwkSegment"		},		{			"number" : 147,			"tags" : [				"P2"			],			"type" : "slope",			"to" : 97,			"from" : 93,			"brick" : "P2",			"name" : "147",			"uuid" : "8a1aecfd-e5de-654a-92c6-285a4aa469ba",			"_clazz" : "TwkSegment"		},		{			"number" : 148,			"tags" : [				"P2"			],			"type" : "sectionRound",			"to" : 51,			"from" : 50,			"brick" : "P2",			"name" : "148",			"uuid" : "0ece63ed-edf4-6d4c-9ca7-19befd30ea87",			"_clazz" : "TwkSegment"		},		{			"number" : 149,			"tags" : [				"P2"			],			"type" : "sectionRound",			"to" : 52,			"from" : 51,			"brick" : "P2",			"name" : "149",			"uuid" : "80962329-9044-f04e-91d0-c9d2fef72c64",			"_clazz" : "TwkSegment"		},		{			"number" : 150,			"tags" : [				"P2"			],			"type" : "sectionRound",			"to" : 53,			"from" : 52,			"brick" : "P2",			"name" : "150",			"uuid" : "d7268d55-dc17-c742-8852-6449539f8573",			"_clazz" : "TwkSegment"		},		{			"number" : 151,			"tags" : [				"P2"			],			"type" : "sectionRound",			"to" : 50,			"from" : 53,			"brick" : "P2",			"name" : "151",			"uuid" : "7e2179e2-6dae-414a-a143-7bb201d81cc1",			"_clazz" : "TwkSegment"		},		{			"number" : 152,			"tags" : [				"P2"			],			"type" : "sectionRound",			"to" : 55,			"from" : 54,			"brick" : "P2",			"name" : "152",			"uuid" : "7751a11f-a4a5-e645-9a9c-b16af795226f",			"_clazz" : "TwkSegment"		},		{			"number" : 153,			"tags" : [				"P2"			],			"type" : "sectionRound",			"to" : 56,			"from" : 55,			"brick" : "P2",			"name" : "153",			"uuid" : "52070ca0-615c-4944-8f13-0602abd9de9b",			"_clazz" : "TwkSegment"		},		{			"number" : 154,			"tags" : [				"P2"			],			"type" : "sectionRound",			"to" : 57,			"from" : 56,			"brick" : "P2",			"name" : "154",			"uuid" : "8544adb6-619c-3a46-95e6-9b4086a56853",			"_clazz" : "TwkSegment"		},		{			"number" : 155,			"tags" : [				"P2"			],			"type" : "sectionRound",			"to" : 54,			"from" : 57,			"brick" : "P2",			"name" : "155",			"uuid" : "2106ef65-2cf5-3247-9510-53a52a7d2efe",			"_clazz" : "TwkSegment"		},		{			"number" : 156,			"tags" : [				"P2"			],			"type" : "sectionSlant",			"to" : 53,			"from" : 98,			"brick" : "P2",			"name" : "156",			"uuid" : "0718b0cd-b316-374e-abb3-2b6dd661d21c",			"_clazz" : "TwkSegment"		},		{			"number" : 157,			"tags" : [				"P2"			],			"type" : "sectionSlant",			"to" : 98,			"from" : 51,			"brick" : "P2",			"name" : "157",			"uuid" : "0ad6c330-9530-dc46-8f65-b3454337c69a",			"_clazz" : "TwkSegment"		},		{			"number" : 158,			"tags" : [				"P2"			],			"type" : "sectionSlant",			"to" : 52,			"from" : 98,			"brick" : "P2",			"name" : "158",			"uuid" : "07bd30b6-e05f-9f4c-926e-75121745eb78",			"_clazz" : "TwkSegment"		},		{			"number" : 159,			"tags" : [				"P2"			],			"type" : "sectionSlant",			"to" : 98,			"from" : 50,			"brick" : "P2",			"name" : "159",			"uuid" : "3181fd2d-68e1-df45-b1b7-26d18de979d2",			"_clazz" : "TwkSegment"		},		{			"number" : 160,			"tags" : [				"P2"			],			"type" : "sectionSlant",			"to" : 57,			"from" : 99,			"brick" : "P2",			"name" : "160",			"uuid" : "7e109f7d-6427-6b47-88e1-c0a0467259d1",			"_clazz" : "TwkSegment"		},		{			"number" : 161,			"tags" : [				"P2"			],			"type" : "sectionSlant",			"to" : 99,			"from" : 55,			"brick" : "P2",			"name" : "161",			"uuid" : "49392111-86bf-de4b-9def-a4eebea17c48",			"_clazz" : "TwkSegment"		},		{			"number" : 162,			"tags" : [				"P2"			],			"type" : "sectionSlant",			"to" : 56,			"from" : 99,			"brick" : "P2",			"name" : "162",			"uuid" : "5d82b99f-82d6-664d-9bd6-d82029d84f34",			"_clazz" : "TwkSegment"		},		{			"number" : 163,			"tags" : [				"P2"			],			"type" : "sectionSlant",			"to" : 99,			"from" : 54,			"brick" : "P2",			"name" : "163",			"uuid" : "3cab48cc-6389-f14f-93f0-d8af77c0a92f",			"_clazz" : "TwkSegment"		},		{			"uuid" : "8a3a6626-71e2-c74d-98a0-d9d9ad203474",			"name" : "164",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 55,			"face" : "front",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 50,			"number" : 164		},		{			"uuid" : "36594296-95c8-f64a-8640-9ba3c090f330",			"name" : "165",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 56,			"face" : "left",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 51,			"number" : 165		},		{			"uuid" : "07ca121f-cb50-bb4b-966a-b4fc28e7ca80",			"name" : "166",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 57,			"face" : "back",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 52,			"number" : 166		},		{			"uuid" : "7a1b9f2a-708c-6b41-a80e-a1b95d0f4168",			"name" : "167",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 54,			"face" : "right",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 53,			"number" : 167		},		{			"uuid" : "ea1d1c43-1e5f-6648-b409-ce346a18536f",			"name" : "168",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 58,			"face" : "front",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 55,			"number" : 168		},		{			"uuid" : "08a955b7-483a-a04a-ba9a-a6b4a30e4616",			"name" : "169",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 59,			"face" : "left",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 56,			"number" : 169		},		{			"uuid" : "085b76c7-862b-ab4b-b61a-e96465af93d4",			"name" : "170",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 60,			"face" : "back",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 57,			"number" : 170		},		{			"uuid" : "530e4ef3-2223-504b-8a17-facb93421b0f",			"name" : "171",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 61,			"face" : "right",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 54,			"number" : 171		},		{			"uuid" : "475576e5-71bf-ab4b-98bc-9a54a765c401",			"name" : "172",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 63,			"face" : "front",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 58,			"number" : 172		},		{			"uuid" : "8d39404a-0ae2-ae43-8c2d-a71ef9755cd6",			"name" : "173",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 64,			"face" : "left",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 59,			"number" : 173		},		{			"uuid" : "cb430689-c934-fa49-a82a-56ecbb682d56",			"name" : "174",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 65,			"face" : "back",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 60,			"number" : 174		},		{			"uuid" : "78b15d17-cf4f-0b49-8501-4008ce1b80e3",			"name" : "175",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 62,			"face" : "right",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 61,			"number" : 175		},		{			"uuid" : "154e39dd-4e0d-404d-b28f-a706cd142ec1",			"name" : "176",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 66,			"face" : "front",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 63,			"number" : 176		},		{			"uuid" : "6c763420-6498-f74d-87ed-b915ebdcd8d9",			"name" : "177",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 67,			"face" : "left",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 64,			"number" : 177		},		{			"uuid" : "9d0158ae-e712-5949-ad45-3a1b1b8b03d8",			"name" : "178",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 68,			"face" : "back",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 65,			"number" : 178		},		{			"uuid" : "622fe5fa-a5d7-de4c-abd9-15d4f5f41130",			"name" : "179",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 69,			"face" : "right",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 62,			"number" : 179		},		{			"uuid" : "7753b377-0bdd-104f-9475-89520dc8113d",			"name" : "180",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 71,			"face" : "front",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 66,			"number" : 180		},		{			"uuid" : "aae72693-085d-3d44-9a37-b70df666e630",			"name" : "181",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 72,			"face" : "left",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 67,			"number" : 181		},		{			"uuid" : "f35ba8c0-4867-144b-a872-81d17f8fbbc2",			"name" : "182",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 73,			"face" : "back",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 68,			"number" : 182		},		{			"uuid" : "1fe7227a-b321-3f43-bdc9-f5f9aa81665a",			"name" : "183",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 70,			"face" : "right",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 69,			"number" : 183		},		{			"uuid" : "ecc88d77-c819-3249-b51a-d8a71f8bac3d",			"name" : "184",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 74,			"face" : "front",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 71,			"number" : 184		},		{			"uuid" : "1245077e-e0e8-8844-b0e3-2489b2a5fd05",			"name" : "185",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 75,			"face" : "left",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 72,			"number" : 185		},		{			"uuid" : "01ac2259-a6f5-4f4b-86e6-796029d2e598",			"name" : "186",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 76,			"face" : "back",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 73,			"number" : 186		},		{			"uuid" : "16b9c824-76bd-5d4c-9e7d-b71cbf5af6fc",			"name" : "187",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 77,			"face" : "right",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 70,			"number" : 187		},		{			"uuid" : "5ff39693-08a1-a542-9fbe-7056de6c6b9f",			"name" : "188",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 79,			"face" : "front",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 74,			"number" : 188		},		{			"uuid" : "216f425b-b185-8746-8ab2-626f602eeead",			"name" : "189",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 80,			"face" : "left",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 75,			"number" : 189		},		{			"uuid" : "41820a45-981b-684a-b281-3815e4d90458",			"name" : "190",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 81,			"face" : "back",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 76,			"number" : 190		},		{			"uuid" : "bd079e1e-c143-ab43-9a9a-1d02cb1da882",			"name" : "191",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 78,			"face" : "right",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 77,			"number" : 191		},		{			"uuid" : "6d523694-8dc9-3c4d-aa7f-adc264e60ebd",			"name" : "192",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 82,			"face" : "front",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 79,			"number" : 192		},		{			"uuid" : "3b7237eb-857c-be44-854d-021a322e7381",			"name" : "193",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 83,			"face" : "left",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 80,			"number" : 193		},		{			"uuid" : "1bda8b21-fc2a-0c4b-ba4d-4c43afc8eff2",			"name" : "194",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 84,			"face" : "back",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 81,			"number" : 194		},		{			"uuid" : "16fb25ad-7deb-734d-b025-c6a4ee73d519",			"name" : "195",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 85,			"face" : "right",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 78,			"number" : 195		},		{			"uuid" : "e0e81cb0-f789-244c-81f0-f93aff3955be",			"name" : "196",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 87,			"face" : "front",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 82,			"number" : 196		},		{			"uuid" : "10fa6cf5-442b-b643-acc4-398aa9d77208",			"name" : "197",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 88,			"face" : "left",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 83,			"number" : 197		},		{			"uuid" : "cbe6d17f-9ea0-884d-923a-6679556a9ad1",			"name" : "198",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 89,			"face" : "back",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 84,			"number" : 198		},		{			"uuid" : "5ae691b0-b1e9-b24c-8460-164fbf4a7946",			"name" : "199",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 86,			"face" : "right",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 85,			"number" : 199		},		{			"uuid" : "de4011ba-a581-b54c-8006-a3476108c6e4",			"name" : "200",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 90,			"face" : "front",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 87,			"number" : 200		},		{			"uuid" : "9ffc1d6a-b53a-9642-83e7-6025a51053e3",			"name" : "201",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 91,			"face" : "left",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 88,			"number" : 201		},		{			"uuid" : "201fed10-d06b-8140-add5-5fd97336d97a",			"name" : "202",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 92,			"face" : "back",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 89,			"number" : 202		},		{			"uuid" : "08f149b4-e478-d441-83e8-52da98c7a51c",			"name" : "203",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 93,			"face" : "right",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 86,			"number" : 203		},		{			"uuid" : "129b0c16-bceb-b549-8c20-583f6e04c74c",			"name" : "204",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 95,			"face" : "front",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 90,			"number" : 204		},		{			"uuid" : "cfe17d6c-3aec-0d47-b188-522496b78126",			"name" : "205",			"_clazz" : "TwkSegment",			"brick" : "LEFT",			"from" : 96,			"face" : "left",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 91,			"number" : 205		},		{			"uuid" : "50c5e50b-cc8a-294e-bfce-41fe1d49bce4",			"name" : "206",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 97,			"face" : "back",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 92,			"number" : 206		},		{			"uuid" : "1b76e6e3-9df7-894f-acc2-a74593cacd7f",			"name" : "207",			"_clazz" : "TwkSegment",			"brick" : "RIGHT",			"from" : 94,			"face" : "right",			"tags" : [				"P2"			],			"type" : "panel",			"to" : 93,			"number" : 207		},		{			"number" : 208,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 100,			"from" : 0,			"brick" : "B1",			"name" : "208",			"uuid" : "be5dfdc5-6255-b54c-a0df-8ca5263f9fcd",			"_clazz" : "TwkSegment"		},		{			"number" : 209,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 101,			"from" : 4,			"brick" : "B1",			"name" : "209",			"uuid" : "264e2086-5e08-d444-979f-646a9a46a033",			"_clazz" : "TwkSegment"		},		{			"number" : 210,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 102,			"from" : 7,			"brick" : "B1",			"name" : "210",			"uuid" : "0161d7de-aeae-374c-897f-cc7465997f97",			"_clazz" : "TwkSegment"		},		{			"number" : 211,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 103,			"from" : 3,			"brick" : "B1",			"name" : "211",			"uuid" : "d1ab204c-5efe-174f-aa96-85273ccdfc0e",			"_clazz" : "TwkSegment"		},		{			"number" : 212,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 104,			"from" : 100,			"brick" : "B1",			"name" : "212",			"uuid" : "c1524f89-3c5b-a046-b2f4-c4d126e2cfcb",			"_clazz" : "TwkSegment"		},		{			"number" : 213,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 105,			"from" : 101,			"brick" : "B1",			"name" : "213",			"uuid" : "a4411331-7865-da43-9a49-1d3bef1f1b52",			"_clazz" : "TwkSegment"		},		{			"number" : 214,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 106,			"from" : 102,			"brick" : "B1",			"name" : "214",			"uuid" : "995eadc7-ce4e-2449-a872-6c5d755ac97e",			"_clazz" : "TwkSegment"		},		{			"number" : 215,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 107,			"from" : 103,			"brick" : "B1",			"name" : "215",			"uuid" : "21051b69-f049-cb43-a1cd-41e5c7c7c202",			"_clazz" : "TwkSegment"		},		{			"number" : 216,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 108,			"from" : 104,			"brick" : "B1",			"name" : "216",			"uuid" : "3d3fb8f6-8e9a-b64c-ba52-040a83d81c43",			"_clazz" : "TwkSegment"		},		{			"number" : 217,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 109,			"from" : 105,			"brick" : "B1",			"name" : "217",			"uuid" : "195c51a2-4ce6-2c46-945f-13014242e332",			"_clazz" : "TwkSegment"		},		{			"number" : 218,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 110,			"from" : 106,			"brick" : "B1",			"name" : "218",			"uuid" : "d48fb5cc-9b37-874a-948d-41331f60d8d3",			"_clazz" : "TwkSegment"		},		{			"number" : 219,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 111,			"from" : 107,			"brick" : "B1",			"name" : "219",			"uuid" : "54c3ed37-4147-9049-b7c6-13307692593c",			"_clazz" : "TwkSegment"		},		{			"number" : 220,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 112,			"from" : 108,			"brick" : "B1",			"name" : "220",			"uuid" : "9b905a29-9366-cb46-943e-b9a5585d0621",			"_clazz" : "TwkSegment"		},		{			"number" : 221,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 113,			"from" : 109,			"brick" : "B1",			"name" : "221",			"uuid" : "7d899879-465a-ad45-8bad-a2490e54786c",			"_clazz" : "TwkSegment"		},		{			"number" : 222,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 114,			"from" : 110,			"brick" : "B1",			"name" : "222",			"uuid" : "1392ea96-dee5-fa4c-803f-6bf43333c6bf",			"_clazz" : "TwkSegment"		},		{			"number" : 223,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 115,			"from" : 111,			"brick" : "B1",			"name" : "223",			"uuid" : "c6b7e39b-4306-ea48-bc32-4f69c19b8eb6",			"_clazz" : "TwkSegment"		},		{			"number" : 224,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 116,			"from" : 112,			"brick" : "B1",			"name" : "224",			"uuid" : "df2f2575-b1b6-2d4f-b79e-c1b19a5863b2",			"_clazz" : "TwkSegment"		},		{			"number" : 225,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 117,			"from" : 113,			"brick" : "B1",			"name" : "225",			"uuid" : "a7180c56-cc7a-3141-8ced-dae11f942b73",			"_clazz" : "TwkSegment"		},		{			"number" : 226,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 118,			"from" : 114,			"brick" : "B1",			"name" : "226",			"uuid" : "1e2bcb64-199b-cb45-877c-0e0b7cb3d84e",			"_clazz" : "TwkSegment"		},		{			"number" : 227,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 119,			"from" : 115,			"brick" : "B1",			"name" : "227",			"uuid" : "f25058e3-b2b8-544c-93e6-07904217ee3b",			"_clazz" : "TwkSegment"		},		{			"number" : 228,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 120,			"from" : 116,			"brick" : "B1",			"name" : "228",			"uuid" : "74d63564-ca36-414a-83bb-0f15e4bdc00d",			"_clazz" : "TwkSegment"		},		{			"number" : 229,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 121,			"from" : 117,			"brick" : "B1",			"name" : "229",			"uuid" : "6c2ce9d2-d04a-f748-b608-ad5b9af721b0",			"_clazz" : "TwkSegment"		},		{			"number" : 230,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 122,			"from" : 118,			"brick" : "B1",			"name" : "230",			"uuid" : "0545d733-1ea1-ee4d-9553-d668c18e0b2e",			"_clazz" : "TwkSegment"		},		{			"number" : 231,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 123,			"from" : 119,			"brick" : "B1",			"name" : "231",			"uuid" : "8b3afc39-e0a1-124d-a6c0-3fc21ba990a5",			"_clazz" : "TwkSegment"		},		{			"number" : 232,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 124,			"from" : 120,			"brick" : "B1",			"name" : "232",			"uuid" : "ca606a46-66f2-dc4e-be1d-2124e9172ed9",			"_clazz" : "TwkSegment"		},		{			"number" : 233,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 125,			"from" : 121,			"brick" : "B1",			"name" : "233",			"uuid" : "fb6c5c71-80af-8540-a144-3cb48b12b89f",			"_clazz" : "TwkSegment"		},		{			"number" : 234,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 126,			"from" : 122,			"brick" : "B1",			"name" : "234",			"uuid" : "3fdb5fa3-f305-3f4f-bcab-7729d08ed1c0",			"_clazz" : "TwkSegment"		},		{			"number" : 235,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 127,			"from" : 123,			"brick" : "B1",			"name" : "235",			"uuid" : "15073f16-4f88-6147-b984-4454338225de",			"_clazz" : "TwkSegment"		},		{			"number" : 236,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 128,			"from" : 124,			"brick" : "B1",			"name" : "236",			"uuid" : "b12163f5-573e-8044-ab56-bd107b5b0d7d",			"_clazz" : "TwkSegment"		},		{			"number" : 237,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 129,			"from" : 125,			"brick" : "B1",			"name" : "237",			"uuid" : "cc1c2606-6255-fe42-9344-572f8b9b29a8",			"_clazz" : "TwkSegment"		},		{			"number" : 238,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 130,			"from" : 126,			"brick" : "B1",			"name" : "238",			"uuid" : "82dd6661-8be8-cf4d-bb09-690034920e7b",			"_clazz" : "TwkSegment"		},		{			"number" : 239,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 131,			"from" : 127,			"brick" : "B1",			"name" : "239",			"uuid" : "2c03ff0b-730e-0045-817b-f6d41e82536c",			"_clazz" : "TwkSegment"		},		{			"number" : 240,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 132,			"from" : 128,			"brick" : "B1",			"name" : "240",			"uuid" : "31b4ab83-3528-8a4e-8443-d2f3b337b234",			"_clazz" : "TwkSegment"		},		{			"number" : 241,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 133,			"from" : 129,			"brick" : "B1",			"name" : "241",			"uuid" : "befea813-75e3-5247-8a58-f037a9e58817",			"_clazz" : "TwkSegment"		},		{			"number" : 242,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 134,			"from" : 130,			"brick" : "B1",			"name" : "242",			"uuid" : "a8efe07d-00af-a142-9acd-fadd272d6b7f",			"_clazz" : "TwkSegment"		},		{			"number" : 243,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 135,			"from" : 131,			"brick" : "B1",			"name" : "243",			"uuid" : "b5c6da01-0776-ae47-b398-d762ee767559",			"_clazz" : "TwkSegment"		},		{			"number" : 244,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 51,			"from" : 132,			"brick" : "B1",			"name" : "244",			"uuid" : "920dd7d8-0acb-194f-95af-44f852a2b788",			"_clazz" : "TwkSegment"		},		{			"number" : 245,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 55,			"from" : 133,			"brick" : "B1",			"name" : "245",			"uuid" : "d9c1be95-279c-0448-a119-064fead220f4",			"_clazz" : "TwkSegment"		},		{			"number" : 246,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 56,			"from" : 134,			"brick" : "B1",			"name" : "246",			"uuid" : "e3b56eff-9e90-1143-a817-f1592a990763",			"_clazz" : "TwkSegment"		},		{			"number" : 247,			"tags" : [				"B1"			],			"type" : "slope",			"to" : 52,			"from" : 135,			"brick" : "B1",			"name" : "247",			"uuid" : "7bb5cc3d-b8b8-e74c-a54f-9e61cdd2c0eb",			"_clazz" : "TwkSegment"		},		{			"number" : 248,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 105,			"from" : 104,			"brick" : "B1",			"name" : "248",			"uuid" : "482909bb-61ea-0c41-8f24-ef1dbee310af",			"_clazz" : "TwkSegment"		},		{			"number" : 249,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 136,			"from" : 105,			"brick" : "B1",			"name" : "249",			"uuid" : "88f50960-89e3-d343-ad1a-f32e48163816",			"_clazz" : "TwkSegment"		},		{			"number" : 250,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 106,			"from" : 136,			"brick" : "B1",			"name" : "250",			"uuid" : "81f29dda-cf8b-bf4b-8397-7b12115fa7a7",			"_clazz" : "TwkSegment"		},		{			"number" : 251,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 107,			"from" : 106,			"brick" : "B1",			"name" : "251",			"uuid" : "7f2c6b3f-973a-cb42-a8c8-b1cb5e8da0bd",			"_clazz" : "TwkSegment"		},		{			"number" : 252,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 104,			"from" : 107,			"brick" : "B1",			"name" : "252",			"uuid" : "96458f97-a4cd-5e4a-b2f9-02f9cf1dc9de",			"_clazz" : "TwkSegment"		},		{			"number" : 253,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 117,			"from" : 116,			"brick" : "B1",			"name" : "253",			"uuid" : "4aa4dd01-09bc-dd44-beaa-33fd7dfb964d",			"_clazz" : "TwkSegment"		},		{			"number" : 254,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 137,			"from" : 117,			"brick" : "B1",			"name" : "254",			"uuid" : "cd69d3f7-7d05-0043-a944-4f7d93671799",			"_clazz" : "TwkSegment"		},		{			"number" : 255,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 118,			"from" : 137,			"brick" : "B1",			"name" : "255",			"uuid" : "00b73051-3a6b-c242-a77f-28391e86a99e",			"_clazz" : "TwkSegment"		},		{			"number" : 256,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 119,			"from" : 118,			"brick" : "B1",			"name" : "256",			"uuid" : "0648c103-dd7b-464d-9e1e-f986cefc306e",			"_clazz" : "TwkSegment"		},		{			"number" : 257,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 116,			"from" : 119,			"brick" : "B1",			"name" : "257",			"uuid" : "e4eea9be-ae87-344f-8e47-aaa4063cffd6",			"_clazz" : "TwkSegment"		},		{			"number" : 258,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 129,			"from" : 128,			"brick" : "B1",			"name" : "258",			"uuid" : "2415623d-8a52-1448-9381-4679a0bf3f4f",			"_clazz" : "TwkSegment"		},		{			"number" : 259,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 138,			"from" : 129,			"brick" : "B1",			"name" : "259",			"uuid" : "833b43ca-dfee-ec4b-a9db-862dd9a1ecb0",			"_clazz" : "TwkSegment"		},		{			"number" : 260,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 130,			"from" : 138,			"brick" : "B1",			"name" : "260",			"uuid" : "b80e4709-58fe-244a-9660-a270ab4ca3ba",			"_clazz" : "TwkSegment"		},		{			"number" : 261,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 131,			"from" : 130,			"brick" : "B1",			"name" : "261",			"uuid" : "682be62e-1102-2344-86f7-c726ae6f8787",			"_clazz" : "TwkSegment"		},		{			"number" : 262,			"tags" : [				"B1"			],			"type" : "sectionRound",			"to" : 128,			"from" : 131,			"brick" : "B1",			"name" : "262",			"uuid" : "869f19d9-fc0f-3244-bfaf-32e754fd8caa",			"_clazz" : "TwkSegment"		},		{			"number" : 263,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 104,			"from" : 139,			"brick" : "B1",			"name" : "263",			"uuid" : "05fad3a8-fcaf-8e49-b638-fc189d2b1690",			"_clazz" : "TwkSegment"		},		{			"number" : 263,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 104,			"from" : 139,			"brick" : "B1",			"name" : "263",			"uuid" : "05fad3a8-fcaf-8e49-b638-fc189d2b1690",			"_clazz" : "TwkSegment"		},		{			"number" : 264,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 139,			"from" : 106,			"brick" : "B1",			"name" : "264",			"uuid" : "54d9b6d3-f598-0742-85a7-74e1d1616717",			"_clazz" : "TwkSegment"		},		{			"number" : 264,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 139,			"from" : 106,			"brick" : "B1",			"name" : "264",			"uuid" : "54d9b6d3-f598-0742-85a7-74e1d1616717",			"_clazz" : "TwkSegment"		},		{			"number" : 265,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 107,			"from" : 139,			"brick" : "B1",			"name" : "265",			"uuid" : "3a8ddf8d-061e-fa4e-b90a-2347d6aa3964",			"_clazz" : "TwkSegment"		},		{			"number" : 265,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 107,			"from" : 139,			"brick" : "B1",			"name" : "265",			"uuid" : "3a8ddf8d-061e-fa4e-b90a-2347d6aa3964",			"_clazz" : "TwkSegment"		},		{			"number" : 266,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 139,			"from" : 105,			"brick" : "B1",			"name" : "266",			"uuid" : "091cc1bf-a242-e943-a644-29a36d3f94cf",			"_clazz" : "TwkSegment"		},		{			"number" : 266,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 139,			"from" : 105,			"brick" : "B1",			"name" : "266",			"uuid" : "091cc1bf-a242-e943-a644-29a36d3f94cf",			"_clazz" : "TwkSegment"		},		{			"number" : 267,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 116,			"from" : 140,			"brick" : "B1",			"name" : "267",			"uuid" : "9f04675a-a50a-a244-b0f6-e805599f38e8",			"_clazz" : "TwkSegment"		},		{			"number" : 267,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 116,			"from" : 140,			"brick" : "B1",			"name" : "267",			"uuid" : "9f04675a-a50a-a244-b0f6-e805599f38e8",			"_clazz" : "TwkSegment"		},		{			"number" : 268,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 140,			"from" : 118,			"brick" : "B1",			"name" : "268",			"uuid" : "9513e49a-fbfd-ea44-bde3-0f4ff644d930",			"_clazz" : "TwkSegment"		},		{			"number" : 268,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 140,			"from" : 118,			"brick" : "B1",			"name" : "268",			"uuid" : "9513e49a-fbfd-ea44-bde3-0f4ff644d930",			"_clazz" : "TwkSegment"		},		{			"number" : 269,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 119,			"from" : 140,			"brick" : "B1",			"name" : "269",			"uuid" : "428872eb-bdfa-7849-8981-7beef610d8ae",			"_clazz" : "TwkSegment"		},		{			"number" : 269,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 119,			"from" : 140,			"brick" : "B1",			"name" : "269",			"uuid" : "428872eb-bdfa-7849-8981-7beef610d8ae",			"_clazz" : "TwkSegment"		},		{			"number" : 270,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 140,			"from" : 117,			"brick" : "B1",			"name" : "270",			"uuid" : "9a738e0e-e94c-874c-98c8-e32912f4b158",			"_clazz" : "TwkSegment"		},		{			"number" : 270,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 140,			"from" : 117,			"brick" : "B1",			"name" : "270",			"uuid" : "9a738e0e-e94c-874c-98c8-e32912f4b158",			"_clazz" : "TwkSegment"		},		{			"number" : 271,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 128,			"from" : 141,			"brick" : "B1",			"name" : "271",			"uuid" : "66b096ab-8fe4-c743-92fb-72026e0106c2",			"_clazz" : "TwkSegment"		},		{			"number" : 271,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 128,			"from" : 141,			"brick" : "B1",			"name" : "271",			"uuid" : "66b096ab-8fe4-c743-92fb-72026e0106c2",			"_clazz" : "TwkSegment"		},		{			"number" : 272,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 141,			"from" : 130,			"brick" : "B1",			"name" : "272",			"uuid" : "c87dc4e3-cbb7-a945-9d5f-b946a0e44fc7",			"_clazz" : "TwkSegment"		},		{			"number" : 272,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 141,			"from" : 130,			"brick" : "B1",			"name" : "272",			"uuid" : "c87dc4e3-cbb7-a945-9d5f-b946a0e44fc7",			"_clazz" : "TwkSegment"		},		{			"number" : 273,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 131,			"from" : 141,			"brick" : "B1",			"name" : "273",			"uuid" : "f96cdcd3-4297-e348-b830-690c8cff4257",			"_clazz" : "TwkSegment"		},		{			"number" : 273,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 131,			"from" : 141,			"brick" : "B1",			"name" : "273",			"uuid" : "f96cdcd3-4297-e348-b830-690c8cff4257",			"_clazz" : "TwkSegment"		},		{			"number" : 274,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 141,			"from" : 129,			"brick" : "B1",			"name" : "274",			"uuid" : "8aee3121-4787-9544-b89a-d389dfea2895",			"_clazz" : "TwkSegment"		},		{			"number" : 274,			"tags" : [				"B1"			],			"type" : "sectionSlant",			"to" : 141,			"from" : 129,			"brick" : "B1",			"name" : "274",			"uuid" : "8aee3121-4787-9544-b89a-d389dfea2895",			"_clazz" : "TwkSegment"		},		{			"number" : 275,			"tags" : [				"B1"			],			"type" : "sectionVertical",			"to" : 136,			"from" : 139,			"brick" : "B1",			"name" : "275",			"uuid" : "ef67a9c1-2dea-ce48-91e2-6f07256ee4c9",			"_clazz" : "TwkSegment"		},		{			"number" : 276,			"tags" : [				"B1"			],			"type" : "sectionVertical",			"to" : 137,			"from" : 140,			"brick" : "B1",			"name" : "276",			"uuid" : "b72cebb8-b61b-d848-8634-b90dd21d3c09",			"_clazz" : "TwkSegment"		},		{			"number" : 277,			"tags" : [				"B1"			],			"type" : "sectionVertical",			"to" : 138,			"from" : 141,			"brick" : "B1",			"name" : "277",			"uuid" : "ceef45ba-cacd-4947-8f33-78324dd868e6",			"_clazz" : "TwkSegment"		},		{			"uuid" : "8820ae52-1053-3242-bdfa-98058f19e1a6",			"name" : "278",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 0,			"face" : "front",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 101,			"number" : 278		},		{			"uuid" : "cc8e3185-2338-b04e-8e07-1523eb63a2a7",			"name" : "279",			"_clazz" : "TwkSegment",			"brick" : "BOTTOM",			"from" : 4,			"face" : "bottom",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 102,			"number" : 279		},		{			"uuid" : "e3c670f4-6c91-ab4b-be6e-02e9e8adc094",			"name" : "280",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 7,			"face" : "back",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 103,			"number" : 280		},		{			"uuid" : "11366902-e629-0c44-a5b6-167f69d204a2",			"name" : "281",			"_clazz" : "TwkSegment",			"brick" : "TOP",			"from" : 3,			"face" : "top",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 100,			"number" : 281		},		{			"uuid" : "b23a02df-0994-5048-9cba-d7a9ee7472f7",			"name" : "282",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 101,			"face" : "front",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 104,			"number" : 282		},		{			"uuid" : "ee044a3b-eb1d-2e45-97d9-dea02d9388e3",			"name" : "283",			"_clazz" : "TwkSegment",			"brick" : "BOTTOM",			"from" : 102,			"face" : "bottom",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 105,			"number" : 283		},		{			"uuid" : "2a0d2997-987a-1148-a126-8cf84413962a",			"name" : "284",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 103,			"face" : "back",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 106,			"number" : 284		},		{			"uuid" : "c3011e3c-5c4a-174a-b4ec-ac0087b55a8c",			"name" : "285",			"_clazz" : "TwkSegment",			"brick" : "TOP",			"from" : 100,			"face" : "top",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 107,			"number" : 285		},		{			"uuid" : "a0864d88-ec0f-564c-b764-affd6e776c13",			"name" : "286",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 104,			"face" : "front",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 109,			"number" : 286		},		{			"uuid" : "25f6b66b-4ecc-4543-9d3b-bf14a92fb716",			"name" : "287",			"_clazz" : "TwkSegment",			"brick" : "BOTTOM",			"from" : 105,			"face" : "bottom",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 110,			"number" : 287		},		{			"uuid" : "7889aea9-c641-a241-bcf6-5864dfb64691",			"name" : "288",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 106,			"face" : "back",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 111,			"number" : 288		},		{			"uuid" : "901d1c6c-3d6e-b24c-b430-79e657565c25",			"name" : "289",			"_clazz" : "TwkSegment",			"brick" : "TOP",			"from" : 107,			"face" : "top",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 108,			"number" : 289		},		{			"uuid" : "a692f210-86b1-1b4b-9330-e347543a4a70",			"name" : "290",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 109,			"face" : "front",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 112,			"number" : 290		},		{			"uuid" : "e9fb3c23-6f16-f842-9879-e06a18210dcd",			"name" : "291",			"_clazz" : "TwkSegment",			"brick" : "BOTTOM",			"from" : 110,			"face" : "bottom",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 113,			"number" : 291		},		{			"uuid" : "c68ca467-db16-9742-b9fb-fac38808c566",			"name" : "292",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 111,			"face" : "back",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 114,			"number" : 292		},		{			"uuid" : "8ac4f70f-d18e-a748-8d38-acf981da725f",			"name" : "293",			"_clazz" : "TwkSegment",			"brick" : "TOP",			"from" : 108,			"face" : "top",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 115,			"number" : 293		},		{			"uuid" : "82e9c7d6-94b2-0744-a0f4-383e001fc317",			"name" : "294",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 112,			"face" : "front",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 117,			"number" : 294		},		{			"uuid" : "b8a60d74-a57e-1642-b223-05d40b57cef6",			"name" : "295",			"_clazz" : "TwkSegment",			"brick" : "BOTTOM",			"from" : 113,			"face" : "bottom",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 118,			"number" : 295		},		{			"uuid" : "34158c74-ddf9-3641-b2be-39fdb9ded19b",			"name" : "296",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 114,			"face" : "back",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 119,			"number" : 296		},		{			"uuid" : "39696e11-afca-dd47-8baf-2b8773d135da",			"name" : "297",			"_clazz" : "TwkSegment",			"brick" : "TOP",			"from" : 115,			"face" : "top",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 116,			"number" : 297		},		{			"uuid" : "0abeaec8-29de-d643-a560-2b55f32d3551",			"name" : "298",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 117,			"face" : "front",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 120,			"number" : 298		},		{			"uuid" : "6300c70a-5ecd-d240-a4ab-335c9017600f",			"name" : "299",			"_clazz" : "TwkSegment",			"brick" : "BOTTOM",			"from" : 118,			"face" : "bottom",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 121,			"number" : 299		},		{			"uuid" : "90b97a57-4efd-a742-ab1a-6462a556a721",			"name" : "300",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 119,			"face" : "back",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 122,			"number" : 300		},		{			"uuid" : "12e3a7b2-5efb-a840-a0ed-b029779b1844",			"name" : "301",			"_clazz" : "TwkSegment",			"brick" : "TOP",			"from" : 116,			"face" : "top",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 123,			"number" : 301		},		{			"uuid" : "8437385a-eec4-2f4c-b4ba-7c92a02ed6c1",			"name" : "302",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 120,			"face" : "front",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 125,			"number" : 302		},		{			"uuid" : "66e1a68d-d8f9-5d46-b3ee-b9a964d83ebc",			"name" : "303",			"_clazz" : "TwkSegment",			"brick" : "BOTTOM",			"from" : 121,			"face" : "bottom",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 126,			"number" : 303		},		{			"uuid" : "db734d31-0b4a-d346-bd8c-c26f0dfc43bb",			"name" : "304",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 122,			"face" : "back",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 127,			"number" : 304		},		{			"uuid" : "ebd82689-5a5c-e24b-a089-c8ca2b1282fe",			"name" : "305",			"_clazz" : "TwkSegment",			"brick" : "TOP",			"from" : 123,			"face" : "top",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 124,			"number" : 305		},		{			"uuid" : "f494c343-81e9-8d4d-be40-67bec78a44e4",			"name" : "306",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 125,			"face" : "front",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 128,			"number" : 306		},		{			"uuid" : "0a513a79-b128-ac43-9089-e994c840978e",			"name" : "307",			"_clazz" : "TwkSegment",			"brick" : "BOTTOM",			"from" : 126,			"face" : "bottom",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 129,			"number" : 307		},		{			"uuid" : "8b7d202f-4569-f34f-bdf9-bc65bd9d77a0",			"name" : "308",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 127,			"face" : "back",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 130,			"number" : 308		},		{			"uuid" : "57ce442b-8388-6e48-8fed-7b46d1fb7070",			"name" : "309",			"_clazz" : "TwkSegment",			"brick" : "TOP",			"from" : 124,			"face" : "top",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 131,			"number" : 309		},		{			"uuid" : "251c5951-ff30-9e48-896f-dd4273130d88",			"name" : "310",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 128,			"face" : "front",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 133,			"number" : 310		},		{			"uuid" : "aee0b95d-9036-e547-be8e-35c291d289fa",			"name" : "311",			"_clazz" : "TwkSegment",			"brick" : "BOTTOM",			"from" : 129,			"face" : "bottom",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 134,			"number" : 311		},		{			"uuid" : "ccb9af62-31c7-1c4e-97c1-475b2cc9d7e7",			"name" : "312",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 130,			"face" : "back",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 135,			"number" : 312		},		{			"uuid" : "1229c6c5-b34b-9a46-a77d-a1c932f95733",			"name" : "313",			"_clazz" : "TwkSegment",			"brick" : "TOP",			"from" : 131,			"face" : "top",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 132,			"number" : 313		},		{			"uuid" : "e5956cfd-e15c-e642-be8e-3d4bbcca42dd",			"name" : "314",			"_clazz" : "TwkSegment",			"brick" : "FRONT",			"from" : 133,			"face" : "front",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 51,			"number" : 314		},		{			"uuid" : "e92af49e-4b0b-f043-ab20-35041de7b46c",			"name" : "315",			"_clazz" : "TwkSegment",			"brick" : "BOTTOM",			"from" : 134,			"face" : "bottom",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 55,			"number" : 315		},		{			"uuid" : "c056e27f-d131-e042-9c58-58da87a67070",			"name" : "316",			"_clazz" : "TwkSegment",			"brick" : "BACK",			"from" : 135,			"face" : "back",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 56,			"number" : 316		},		{			"uuid" : "d5639fdd-d56e-8147-98b8-269d8b040c45",			"name" : "317",			"_clazz" : "TwkSegment",			"brick" : "TOP",			"from" : 132,			"face" : "top",			"tags" : [				"B1"			],			"type" : "panel",			"to" : 52,			"number" : 317		}	]};}
+// data generated by: Pharo GdsFeel 
+function sampleData(){
+return {
+  "timestamp": "NewTitle",
+	"nodes" : [
+		{
+			"number" : 0,
+			"tags" : [
+				"P1",
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 1,
+			"brick" : "P1",
+			"name" : "0",
+			"uuid" : "74ef8c95-621a-2446-8b9a-2d80ef6786c4",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 1,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "1",
+			"uuid" : "4ec2a0dc-5185-1344-ae99-8715c23cac25",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 2,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "2",
+			"uuid" : "588742ff-1ec5-794f-9baf-2a43d5b8806a",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 3,
+			"tags" : [
+				"P1",
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 4,
+			"brick" : "P1",
+			"name" : "3",
+			"uuid" : "447c464b-44b3-0d49-8f3c-c4fb870cb9dc",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 4,
+			"tags" : [
+				"P1",
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "4",
+			"uuid" : "2959abc8-e4df-9742-b63c-cc03b0a814e9",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 5,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "5",
+			"uuid" : "c9315b5c-5ca0-ca43-9ff0-ce8467a878bf",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 6,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "6",
+			"uuid" : "deb69f96-400c-214d-87dc-f3575a44fa71",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 7,
+			"tags" : [
+				"P1",
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "7",
+			"uuid" : "caf40d42-9a67-8446-830c-920b0dfae38d",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 8,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				-400.0,
+				7400.0
+			],
+			"legIndex" : 1,
+			"brick" : "P1",
+			"name" : "8",
+			"uuid" : "34513b97-7016-4048-86cc-72df5ff9dce4",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 9,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				-400.0,
+				7400.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "9",
+			"uuid" : "8db3c764-fe9d-3d4e-9f0c-615cf9dbd9a7",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 10,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				400.0,
+				7400.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "10",
+			"uuid" : "16ee2b6f-c432-334f-983b-2faa26c23f8a",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 11,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				400.0,
+				7400.0
+			],
+			"legIndex" : 4,
+			"brick" : "P1",
+			"name" : "11",
+			"uuid" : "6970c4ad-413b-9b4a-bcf8-199bf8cbba0e",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 12,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				-400.0,
+				6600.0
+			],
+			"legIndex" : 1,
+			"brick" : "P1",
+			"name" : "12",
+			"uuid" : "4608321d-1d39-0148-9224-8c864ab60d3b",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 13,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				-400.0,
+				6600.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "13",
+			"uuid" : "6fe53c41-df9d-df46-9d9c-3e7624d81d47",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 14,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				400.0,
+				6600.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "14",
+			"uuid" : "7f035cd3-b036-2848-b8b2-7159b4aabd8f",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 15,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				400.0,
+				6600.0
+			],
+			"legIndex" : 4,
+			"brick" : "P1",
+			"name" : "15",
+			"uuid" : "1635d24a-6d0c-914d-a100-93cb20022cc7",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 16,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				-400.0,
+				5800.0
+			],
+			"legIndex" : 1,
+			"brick" : "P1",
+			"name" : "16",
+			"uuid" : "a69b200d-484e-ae4d-b5f2-358f18bd0f62",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 17,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				-400.0,
+				5800.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "17",
+			"uuid" : "cc12a249-06e9-e842-88fb-42d2ee1540ce",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 18,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				400.0,
+				5800.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "18",
+			"uuid" : "5ae29a3c-42d3-c940-8ee4-957e67ce0e6d",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 19,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				400.0,
+				5800.0
+			],
+			"legIndex" : 4,
+			"brick" : "P1",
+			"name" : "19",
+			"uuid" : "b4441bed-4ef8-2644-89ef-bfd6b4d54b47",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 20,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				-400.0,
+				5000.0
+			],
+			"legIndex" : 1,
+			"brick" : "P1",
+			"name" : "20",
+			"uuid" : "a3261d21-88e5-b947-a34f-90e6b46346a5",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 21,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				-400.0,
+				5000.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "21",
+			"uuid" : "447d9eda-6c9a-854b-87fd-5b16f72cdfeb",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 22,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				400.0,
+				5000.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "22",
+			"uuid" : "a8d077a7-7996-0b49-925f-c701574779da",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 23,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				400.0,
+				5000.0
+			],
+			"legIndex" : 4,
+			"brick" : "P1",
+			"name" : "23",
+			"uuid" : "6b66f424-3466-924f-844c-8646e9939f6f",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 24,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				-400.0,
+				4200.0
+			],
+			"legIndex" : 1,
+			"brick" : "P1",
+			"name" : "24",
+			"uuid" : "09501bcc-c58e-7942-8b41-cc7793cfb0f4",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 25,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				-400.0,
+				4200.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "25",
+			"uuid" : "9057773b-9e6d-5947-b16b-dffd12701695",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 26,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				400.0,
+				4200.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "26",
+			"uuid" : "8fa29236-3d29-f440-bb34-ecbd2d6532b9",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 27,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				400.0,
+				4200.0
+			],
+			"legIndex" : 4,
+			"brick" : "P1",
+			"name" : "27",
+			"uuid" : "73e7dc39-aba0-954c-8294-d868182cbc12",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 28,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				-400.0,
+				3400.0
+			],
+			"legIndex" : 1,
+			"brick" : "P1",
+			"name" : "28",
+			"uuid" : "06e79664-48a3-4c44-b24e-8a6842eba220",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 29,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				-400.0,
+				3400.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "29",
+			"uuid" : "bcfcf247-2671-6d47-a28c-67660fe53aad",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 30,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				400.0,
+				3400.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "30",
+			"uuid" : "4d401d25-c72c-fd48-9368-a9f84d2bb987",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 31,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				400.0,
+				3400.0
+			],
+			"legIndex" : 4,
+			"brick" : "P1",
+			"name" : "31",
+			"uuid" : "91b14ff1-a71c-5145-a603-7cd171e935a8",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 32,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				-400.0,
+				2600.0
+			],
+			"legIndex" : 1,
+			"brick" : "P1",
+			"name" : "32",
+			"uuid" : "8810527c-86d6-a346-b285-c88934fc6a1b",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 33,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				-400.0,
+				2600.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "33",
+			"uuid" : "bcf940f1-938f-494b-ac47-6e91b4e870df",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 34,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				400.0,
+				2600.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "34",
+			"uuid" : "234f4e95-4d70-784a-a388-384e4e7818ee",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 35,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				400.0,
+				2600.0
+			],
+			"legIndex" : 4,
+			"brick" : "P1",
+			"name" : "35",
+			"uuid" : "864e9514-727f-8d4a-beb6-01553c41b614",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 36,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				-400.0,
+				1800.0
+			],
+			"legIndex" : 1,
+			"brick" : "P1",
+			"name" : "36",
+			"uuid" : "d733327c-9cc2-3c43-a09e-3ccce1833023",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 37,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				-400.0,
+				1800.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "37",
+			"uuid" : "050797ad-a3e5-4b44-b8f7-a7ab2224deff",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 38,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				400.0,
+				1800.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "38",
+			"uuid" : "dd7883a9-d528-764b-b0a3-eeace251c122",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 39,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				400.0,
+				1800.0
+			],
+			"legIndex" : 4,
+			"brick" : "P1",
+			"name" : "39",
+			"uuid" : "dbe595e5-bf6b-3546-9ca5-86a974158d5f",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 40,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				-400.0,
+				900.0
+			],
+			"legIndex" : 1,
+			"brick" : "P1",
+			"name" : "40",
+			"uuid" : "db4bfc23-d277-5b40-b511-ec1e5a939b90",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 41,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				-400.0,
+				900.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "41",
+			"uuid" : "27f4df97-6c69-1143-94b2-0bc07e412636",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 42,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				400.0,
+				900.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "42",
+			"uuid" : "86f64549-89f5-2c4f-b436-323916fe14ac",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 43,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				400.0,
+				900.0
+			],
+			"legIndex" : 4,
+			"brick" : "P1",
+			"name" : "43",
+			"uuid" : "e5c71ca1-20b9-e847-b997-7d3e7710ca27",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 44,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				-400.0,
+				0.0
+			],
+			"legIndex" : 1,
+			"brick" : "P1",
+			"name" : "44",
+			"uuid" : "89444188-75e4-6748-a545-2db03b2292d8",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 45,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				-400.0,
+				0.0
+			],
+			"legIndex" : 2,
+			"brick" : "P1",
+			"name" : "45",
+			"uuid" : "e6db5208-480a-8245-ab78-cb4c4fac4b41",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 46,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				-400.0,
+				400.0,
+				0.0
+			],
+			"legIndex" : 3,
+			"brick" : "P1",
+			"name" : "46",
+			"uuid" : "e64a9ad3-e565-cc42-b5de-bac5d5af4107",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 47,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"position" : [
+				400.0,
+				400.0,
+				0.0
+			],
+			"legIndex" : 4,
+			"brick" : "P1",
+			"name" : "47",
+			"uuid" : "339609bc-3883-0c4e-862e-5211ac1ab75b",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 48,
+			"tags" : [
+				"P1"
+			],
+			"type" : "section",
+			"position" : [
+				0.0,
+				0.0,
+				9000.0
+			],
+			"legIndex" : -1,
+			"brick" : "P1",
+			"name" : "48",
+			"uuid" : "cf38ccc9-f02f-ac45-8491-159f39a2c2ff",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 49,
+			"tags" : [
+				"P1"
+			],
+			"type" : "section",
+			"position" : [
+				0.0,
+				0.0,
+				8200.0
+			],
+			"legIndex" : -1,
+			"brick" : "P1",
+			"name" : "49",
+			"uuid" : "567ce0ce-9542-9e42-b08d-fc14f51679d2",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 50,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "50",
+			"uuid" : "b5dc0790-963d-e847-bccc-0b759567e53f",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 51,
+			"tags" : [
+				"P2",
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "51",
+			"uuid" : "42f4d245-119d-b341-a937-ab794db8f54a",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 52,
+			"tags" : [
+				"P2",
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "52",
+			"uuid" : "eef63a60-ccfb-934c-9dd6-9de3a0deaef1",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 53,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "53",
+			"uuid" : "27134bf9-a792-5f48-9bed-e3b03b71c812",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 54,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "54",
+			"uuid" : "3f6d8747-e7f9-be48-a3ea-832585949a48",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 55,
+			"tags" : [
+				"P2",
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 2,
+			"brick" : "P2",
+			"name" : "55",
+			"uuid" : "fb6a97af-5656-5043-bc4b-7bc35f14ce54",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 56,
+			"tags" : [
+				"P2",
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 3,
+			"brick" : "P2",
+			"name" : "56",
+			"uuid" : "802c3aa5-5517-be4a-9e7e-2d013fb6b5fb",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 57,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "57",
+			"uuid" : "38b5c7dd-0aad-1b45-a3d7-818a9fac55d0",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 58,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				-400.0,
+				7400.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "58",
+			"uuid" : "053d3258-0981-744d-90a8-2942ea2fac55",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 59,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				-400.0,
+				7400.0
+			],
+			"legIndex" : 2,
+			"brick" : "P2",
+			"name" : "59",
+			"uuid" : "319d7261-ebd8-f145-9c37-eaea9627e8d1",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 60,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				400.0,
+				7400.0
+			],
+			"legIndex" : 3,
+			"brick" : "P2",
+			"name" : "60",
+			"uuid" : "8444b96a-07ad-6e41-96a4-39f016e6274c",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 61,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				400.0,
+				7400.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "61",
+			"uuid" : "65b70a16-efce-7244-90d3-59a920054f03",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 62,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				-400.0,
+				6600.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "62",
+			"uuid" : "cdc2bd27-7d19-c244-a8c1-dbf5849938f2",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 63,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				-400.0,
+				6600.0
+			],
+			"legIndex" : 2,
+			"brick" : "P2",
+			"name" : "63",
+			"uuid" : "7145630c-f70f-e64a-9c2d-c27aca04ee03",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 64,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				400.0,
+				6600.0
+			],
+			"legIndex" : 3,
+			"brick" : "P2",
+			"name" : "64",
+			"uuid" : "828e26ba-54e6-3d4e-8a7c-2f6752936111",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 65,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				400.0,
+				6600.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "65",
+			"uuid" : "f65c9eec-3ad4-bf4c-836a-b10cee8b8224",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 66,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				-400.0,
+				5800.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "66",
+			"uuid" : "d358fdbe-8e4e-884b-861b-cabdfaf02455",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 67,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				-400.0,
+				5800.0
+			],
+			"legIndex" : 2,
+			"brick" : "P2",
+			"name" : "67",
+			"uuid" : "b8540839-5411-f348-b301-1b33759bec1f",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 68,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				400.0,
+				5800.0
+			],
+			"legIndex" : 3,
+			"brick" : "P2",
+			"name" : "68",
+			"uuid" : "99573b7f-8b26-0644-aec0-0607f5e59667",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 69,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				400.0,
+				5800.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "69",
+			"uuid" : "f4b5444e-e7b9-874a-af0d-adcb1d1e320e",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 70,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				-400.0,
+				5000.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "70",
+			"uuid" : "e37bdff7-ecbb-3e4a-a8c6-a8268434ea2d",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 71,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				-400.0,
+				5000.0
+			],
+			"legIndex" : 2,
+			"brick" : "P2",
+			"name" : "71",
+			"uuid" : "8b925661-011d-ce49-bdbf-bf65847dca1b",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 72,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				400.0,
+				5000.0
+			],
+			"legIndex" : 3,
+			"brick" : "P2",
+			"name" : "72",
+			"uuid" : "870722af-69d6-6742-85ca-3da1506007d0",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 73,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				400.0,
+				5000.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "73",
+			"uuid" : "79e4d625-c86e-774f-b16b-d7ccbc844c1d",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 74,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				-400.0,
+				4200.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "74",
+			"uuid" : "7ac2c462-72f2-2b4c-bc2d-b365aed23c74",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 75,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				-400.0,
+				4200.0
+			],
+			"legIndex" : 2,
+			"brick" : "P2",
+			"name" : "75",
+			"uuid" : "5d2b7484-f228-4345-8b87-de0e457ae1f0",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 76,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				400.0,
+				4200.0
+			],
+			"legIndex" : 3,
+			"brick" : "P2",
+			"name" : "76",
+			"uuid" : "a6149cdb-a1b8-ac45-8317-106c8d4ad8ee",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 77,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				400.0,
+				4200.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "77",
+			"uuid" : "703df319-701b-7b40-909d-2395f8c3ab2d",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 78,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				-400.0,
+				3400.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "78",
+			"uuid" : "c6ab5e45-0662-3a41-a211-634b92314d60",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 79,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				-400.0,
+				3400.0
+			],
+			"legIndex" : 2,
+			"brick" : "P2",
+			"name" : "79",
+			"uuid" : "a7059300-b8e7-af4e-b9ae-215316b9a5db",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 80,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				400.0,
+				3400.0
+			],
+			"legIndex" : 3,
+			"brick" : "P2",
+			"name" : "80",
+			"uuid" : "dc455052-03d0-b542-b4b1-b8eb1c9a993a",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 81,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				400.0,
+				3400.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "81",
+			"uuid" : "e644ac72-d185-e14d-a4a1-ac4cf5e21708",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 82,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				-400.0,
+				2600.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "82",
+			"uuid" : "e7bd09c2-d7d0-e04d-b644-352d771dc898",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 83,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				-400.0,
+				2600.0
+			],
+			"legIndex" : 2,
+			"brick" : "P2",
+			"name" : "83",
+			"uuid" : "26469b10-8747-d347-be58-1e9f4db0e8a8",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 84,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				400.0,
+				2600.0
+			],
+			"legIndex" : 3,
+			"brick" : "P2",
+			"name" : "84",
+			"uuid" : "05b36f19-e38c-c140-9f3d-f47115efbee6",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 85,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				400.0,
+				2600.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "85",
+			"uuid" : "90705d80-926d-e44f-a1e2-71e8f9889adc",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 86,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				-400.0,
+				1800.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "86",
+			"uuid" : "e4a87300-a9fd-c24b-ac0e-e02d9621193d",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 87,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				-400.0,
+				1800.0
+			],
+			"legIndex" : 2,
+			"brick" : "P2",
+			"name" : "87",
+			"uuid" : "3b51b9b5-2378-d74f-b401-26000f3eb364",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 88,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				400.0,
+				1800.0
+			],
+			"legIndex" : 3,
+			"brick" : "P2",
+			"name" : "88",
+			"uuid" : "99fe2edc-3795-6448-969a-aea44c630316",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 89,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				400.0,
+				1800.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "89",
+			"uuid" : "06116c54-28ef-8145-8de9-b2fd8f6d0759",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 90,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				-400.0,
+				900.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "90",
+			"uuid" : "0af56c04-872d-7944-ba82-44660e64695e",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 91,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				-400.0,
+				900.0
+			],
+			"legIndex" : 2,
+			"brick" : "P2",
+			"name" : "91",
+			"uuid" : "4030f185-3239-824b-b3af-08be7b01cc3a",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 92,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				400.0,
+				900.0
+			],
+			"legIndex" : 3,
+			"brick" : "P2",
+			"name" : "92",
+			"uuid" : "64ad43f3-4fdc-c44e-86ed-26d0520b3d7a",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 93,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				400.0,
+				900.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "93",
+			"uuid" : "8c3b70bf-d237-4741-ac84-5e018463c94d",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 94,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				-400.0,
+				0.0
+			],
+			"legIndex" : 1,
+			"brick" : "P2",
+			"name" : "94",
+			"uuid" : "b3a7e66e-8c77-d74a-a572-bb922869f5f4",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 95,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				-400.0,
+				0.0
+			],
+			"legIndex" : 2,
+			"brick" : "P2",
+			"name" : "95",
+			"uuid" : "6666c016-6ad1-6646-ab7b-e9cf87b4b551",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 96,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				6600.0,
+				400.0,
+				0.0
+			],
+			"legIndex" : 3,
+			"brick" : "P2",
+			"name" : "96",
+			"uuid" : "09e33371-0625-9c4b-865e-633cfb7340c4",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 97,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"position" : [
+				7400.0,
+				400.0,
+				0.0
+			],
+			"legIndex" : 4,
+			"brick" : "P2",
+			"name" : "97",
+			"uuid" : "cda23559-98e5-ac48-b1f7-e9308dc00e21",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 98,
+			"tags" : [
+				"P2"
+			],
+			"type" : "section",
+			"position" : [
+				7000.0,
+				0.0,
+				9000.0
+			],
+			"legIndex" : -1,
+			"brick" : "P2",
+			"name" : "98",
+			"uuid" : "506a17d3-580b-124c-95fd-945e5b3c67da",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 99,
+			"tags" : [
+				"P2"
+			],
+			"type" : "section",
+			"position" : [
+				7000.0,
+				0.0,
+				8200.0
+			],
+			"legIndex" : -1,
+			"brick" : "P2",
+			"name" : "99",
+			"uuid" : "2f924dfc-da54-f34c-b655-1d86fb9c45a6",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 100,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				950.0,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 1,
+			"brick" : "B1",
+			"name" : "100",
+			"uuid" : "816f4ab8-206e-c746-acba-da4ea9be9aff",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 101,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				950.0,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 2,
+			"brick" : "B1",
+			"name" : "101",
+			"uuid" : "73076d0a-8d43-9e49-8675-6c9ca6d22f8e",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 102,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				950.0,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 3,
+			"brick" : "B1",
+			"name" : "102",
+			"uuid" : "ae8a254c-3468-7842-b7c5-96c983eedc7e",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 103,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				950.0,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 4,
+			"brick" : "B1",
+			"name" : "103",
+			"uuid" : "f40396fb-3e84-b14b-a480-fe7409f77d97",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 104,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				1500.0,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 1,
+			"brick" : "B1",
+			"name" : "104",
+			"uuid" : "197ee0ef-0a0e-d046-b612-3cc940344617",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 105,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				1500.0,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 2,
+			"brick" : "B1",
+			"name" : "105",
+			"uuid" : "694f1e0d-1d70-064e-8f73-22fc32fd2ce0",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 106,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				1500.0,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 3,
+			"brick" : "B1",
+			"name" : "106",
+			"uuid" : "5b3de2ff-d12b-d144-a38f-e9a09a9cfc99",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 107,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				1500.0,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 4,
+			"brick" : "B1",
+			"name" : "107",
+			"uuid" : "a3b6f2e1-3fab-2444-bb5b-3face8e637d2",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 108,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				2166.6667,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 1,
+			"brick" : "B1",
+			"name" : "108",
+			"uuid" : "ceafa715-51d1-a341-9049-f92b8cceb154",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 109,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				2166.6667,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 2,
+			"brick" : "B1",
+			"name" : "109",
+			"uuid" : "4f93a927-2079-8849-8dbb-e241efa83473",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 110,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				2166.6667,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 3,
+			"brick" : "B1",
+			"name" : "110",
+			"uuid" : "1f9afd44-4427-3d41-9638-b778ca880c08",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 111,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				2166.6667,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 4,
+			"brick" : "B1",
+			"name" : "111",
+			"uuid" : "7c5b807e-f34f-384e-8547-473110638cc7",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 112,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				2833.3333000000002,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 1,
+			"brick" : "B1",
+			"name" : "112",
+			"uuid" : "3044f891-469e-b345-854d-5c4848406a64",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 113,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				2833.3333000000002,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 2,
+			"brick" : "B1",
+			"name" : "113",
+			"uuid" : "cae65c63-f92a-a34d-889e-3c04e0c70a49",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 114,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				2833.3333000000002,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 3,
+			"brick" : "B1",
+			"name" : "114",
+			"uuid" : "0cfc17b8-dc7e-a14e-a038-733d62c80d78",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 115,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				2833.3333000000002,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 4,
+			"brick" : "B1",
+			"name" : "115",
+			"uuid" : "a1b598ce-277f-0b4f-8e99-1cdd12322df8",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 116,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				3500.0,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 1,
+			"brick" : "B1",
+			"name" : "116",
+			"uuid" : "ac0d88db-d270-0044-8d5e-0c45bbcf4bbb",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 117,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				3500.0,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 2,
+			"brick" : "B1",
+			"name" : "117",
+			"uuid" : "79a548eb-71e7-3047-b3e1-75bd01bff931",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 118,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				3500.0,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 3,
+			"brick" : "B1",
+			"name" : "118",
+			"uuid" : "b9662a7d-7409-d440-b539-a982c39b3cad",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 119,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				3500.0,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 4,
+			"brick" : "B1",
+			"name" : "119",
+			"uuid" : "47acfbf3-2ce8-3142-9d43-f1bb2f31f2a2",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 120,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				4166.6667,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 1,
+			"brick" : "B1",
+			"name" : "120",
+			"uuid" : "991dc446-de01-c84b-a694-fe68270dbcff",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 121,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				4166.6667,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 2,
+			"brick" : "B1",
+			"name" : "121",
+			"uuid" : "08a18cb7-64d9-4a46-9abf-8b5ce312b7bc",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 122,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				4166.6667,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 3,
+			"brick" : "B1",
+			"name" : "122",
+			"uuid" : "16f288fc-6a04-8847-a569-21427c8444b6",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 123,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				4166.6667,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 4,
+			"brick" : "B1",
+			"name" : "123",
+			"uuid" : "38e0d44a-ce52-d44e-91fa-38206f57fac7",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 124,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				4833.3333,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 1,
+			"brick" : "B1",
+			"name" : "124",
+			"uuid" : "c649fe4d-e683-fc43-85b0-2efa60120619",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 125,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				4833.3333,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 2,
+			"brick" : "B1",
+			"name" : "125",
+			"uuid" : "e81062f6-e1f8-6946-aca0-ee40b0be1986",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 126,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				4833.3333,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 3,
+			"brick" : "B1",
+			"name" : "126",
+			"uuid" : "3a8a9a8c-f912-d34b-94d3-a37b24cccfac",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 127,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				4833.3333,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 4,
+			"brick" : "B1",
+			"name" : "127",
+			"uuid" : "e5078f5a-fcc0-ce44-9642-b7030bab8853",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 128,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				5500.0,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 1,
+			"brick" : "B1",
+			"name" : "128",
+			"uuid" : "817c3a00-06b5-7544-bbb8-afb0ac0c61c3",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 129,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				5500.0,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 2,
+			"brick" : "B1",
+			"name" : "129",
+			"uuid" : "03cc9859-b656-c841-b3e5-2514af878710",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 130,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				5500.0,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 3,
+			"brick" : "B1",
+			"name" : "130",
+			"uuid" : "23d3a7ae-4ef3-1b4f-bcc1-1d25db917893",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 131,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				5500.0,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 4,
+			"brick" : "B1",
+			"name" : "131",
+			"uuid" : "8b52de4c-4e70-1c4c-84fa-a9dc3e3d5940",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 132,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				6050.0,
+				-400.0,
+				9000.0
+			],
+			"legIndex" : 1,
+			"brick" : "B1",
+			"name" : "132",
+			"uuid" : "75cac66f-e769-8345-9fb7-9c11388915d0",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 133,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				6050.0,
+				-400.0,
+				8200.0
+			],
+			"legIndex" : 2,
+			"brick" : "B1",
+			"name" : "133",
+			"uuid" : "7e4a6545-6261-8e48-a517-9501cbc44ebc",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 134,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				6050.0,
+				400.0,
+				8200.0
+			],
+			"legIndex" : 3,
+			"brick" : "B1",
+			"name" : "134",
+			"uuid" : "52fd8c53-a7e0-a044-bb15-f84bec49987c",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 135,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"position" : [
+				6050.0,
+				400.0,
+				9000.0
+			],
+			"legIndex" : 4,
+			"brick" : "B1",
+			"name" : "135",
+			"uuid" : "d6b464a1-4526-0449-9ae3-a41b91fec4f9",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 136,
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"position" : [
+				1500.0,
+				0.0,
+				8200.0
+			],
+			"legIndex" : -1,
+			"brick" : "B1",
+			"name" : "136",
+			"uuid" : "fd226208-72ea-114b-9dc2-5d96560e4b26",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 137,
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"position" : [
+				3500.0,
+				0.0,
+				8200.0
+			],
+			"legIndex" : -1,
+			"brick" : "B1",
+			"name" : "137",
+			"uuid" : "7016e2d1-48d2-c845-980f-e6c5980e2f2d",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 138,
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"position" : [
+				5500.0,
+				0.0,
+				8200.0
+			],
+			"legIndex" : -1,
+			"brick" : "B1",
+			"name" : "138",
+			"uuid" : "5f240ddb-11c6-b24f-867f-7dde270a60fd",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 139,
+			"tags" : [
+				"B1"
+			],
+			"type" : "section",
+			"position" : [
+				1500.0,
+				0.0,
+				8600.0
+			],
+			"legIndex" : -1,
+			"brick" : "B1",
+			"name" : "139",
+			"uuid" : "492048f1-95e8-774c-b064-9b59998adc70",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 140,
+			"tags" : [
+				"B1"
+			],
+			"type" : "section",
+			"position" : [
+				3500.0,
+				0.0,
+				8600.0
+			],
+			"legIndex" : -1,
+			"brick" : "B1",
+			"name" : "140",
+			"uuid" : "73eb15da-ac4b-2544-b703-7647a778454b",
+			"_clazz" : "TwkStanNode"
+		},
+		{
+			"number" : 141,
+			"tags" : [
+				"B1"
+			],
+			"type" : "section",
+			"position" : [
+				5500.0,
+				0.0,
+				8600.0
+			],
+			"legIndex" : -1,
+			"brick" : "B1",
+			"name" : "141",
+			"uuid" : "c431c7c5-ec91-1e4e-89e3-90062723ee4b",
+			"_clazz" : "TwkStanNode"
+		}
+	],
+	"segments" : [
+		{
+			"number" : 0,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 4,
+			"from" : 0,
+			"brick" : "P1",
+			"name" : "0",
+			"uuid" : "7e86643c-9d28-f643-ba16-3e511ed5bb06",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 1,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 5,
+			"from" : 1,
+			"brick" : "P1",
+			"name" : "1",
+			"uuid" : "f28564a0-4a3c-084c-8c84-f1d0864ccb05",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 2,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 6,
+			"from" : 2,
+			"brick" : "P1",
+			"name" : "2",
+			"uuid" : "c21076a5-f914-574d-8e8f-4ed3d643703b",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 3,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 7,
+			"from" : 3,
+			"brick" : "P1",
+			"name" : "3",
+			"uuid" : "7eb759e6-198b-b146-851b-502ac50c4da7",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 4,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 8,
+			"from" : 4,
+			"brick" : "P1",
+			"name" : "4",
+			"uuid" : "5d4ec279-8ac5-3142-8d42-41a2f45bda2a",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 5,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 9,
+			"from" : 5,
+			"brick" : "P1",
+			"name" : "5",
+			"uuid" : "3a6d336c-a075-fe44-9cea-34bf3b7786f0",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 6,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 10,
+			"from" : 6,
+			"brick" : "P1",
+			"name" : "6",
+			"uuid" : "212fcaa7-5db8-ad4a-a761-700dee73d3bb",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 7,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 11,
+			"from" : 7,
+			"brick" : "P1",
+			"name" : "7",
+			"uuid" : "01d43e1d-3a57-6a4d-a64d-ca4e7b87a1b1",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 8,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 12,
+			"from" : 8,
+			"brick" : "P1",
+			"name" : "8",
+			"uuid" : "bd67595c-c73f-464f-bc53-220ce088b6f8",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 9,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 13,
+			"from" : 9,
+			"brick" : "P1",
+			"name" : "9",
+			"uuid" : "c50924fd-c139-1744-8611-222a49f74568",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 10,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 14,
+			"from" : 10,
+			"brick" : "P1",
+			"name" : "10",
+			"uuid" : "5fa24f35-951f-904b-aa8c-a7e9c213c908",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 11,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 15,
+			"from" : 11,
+			"brick" : "P1",
+			"name" : "11",
+			"uuid" : "8c60b6b9-32e0-434b-8b61-41bce64ad5a7",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 12,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 16,
+			"from" : 12,
+			"brick" : "P1",
+			"name" : "12",
+			"uuid" : "b34007b0-4d06-494f-bd28-888f54b310a7",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 13,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 17,
+			"from" : 13,
+			"brick" : "P1",
+			"name" : "13",
+			"uuid" : "02738d8a-c22a-9847-9514-eee0ba09628a",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 14,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 18,
+			"from" : 14,
+			"brick" : "P1",
+			"name" : "14",
+			"uuid" : "e9827ab3-11cf-fc4d-bdaf-2343512bc28c",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 15,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 19,
+			"from" : 15,
+			"brick" : "P1",
+			"name" : "15",
+			"uuid" : "25828cd9-8e29-2945-8a8e-ded920931a54",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 16,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 20,
+			"from" : 16,
+			"brick" : "P1",
+			"name" : "16",
+			"uuid" : "1f56ba01-8694-f84f-b371-61422dccd9ef",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 17,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 21,
+			"from" : 17,
+			"brick" : "P1",
+			"name" : "17",
+			"uuid" : "9b3be040-fdda-2348-aa1b-90d1c556b0cd",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 18,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 22,
+			"from" : 18,
+			"brick" : "P1",
+			"name" : "18",
+			"uuid" : "db4c2db1-b1a6-ae40-90af-348370f507dc",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 19,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 23,
+			"from" : 19,
+			"brick" : "P1",
+			"name" : "19",
+			"uuid" : "eec27ee5-d2ab-a440-b1af-72d8486438c3",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 20,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 24,
+			"from" : 20,
+			"brick" : "P1",
+			"name" : "20",
+			"uuid" : "5d7c4c6d-c057-ef4a-88e0-e9acbadb738b",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 21,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 25,
+			"from" : 21,
+			"brick" : "P1",
+			"name" : "21",
+			"uuid" : "ba8c978a-690a-d84f-bf89-db0ead03c10f",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 22,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 26,
+			"from" : 22,
+			"brick" : "P1",
+			"name" : "22",
+			"uuid" : "1687d83d-25e3-8a49-93fb-0f2ee4396447",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 23,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 27,
+			"from" : 23,
+			"brick" : "P1",
+			"name" : "23",
+			"uuid" : "598ecb26-b7eb-bd44-967f-ab620d7d3ff7",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 24,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 28,
+			"from" : 24,
+			"brick" : "P1",
+			"name" : "24",
+			"uuid" : "e9f1c8d6-0d7e-3c4a-8b95-55ba31b3cc1e",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 25,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 29,
+			"from" : 25,
+			"brick" : "P1",
+			"name" : "25",
+			"uuid" : "cb5e956d-2586-ce42-a5c6-c23784caa056",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 26,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 30,
+			"from" : 26,
+			"brick" : "P1",
+			"name" : "26",
+			"uuid" : "4af033e7-5432-904d-bb88-3e2a81b90dec",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 27,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 31,
+			"from" : 27,
+			"brick" : "P1",
+			"name" : "27",
+			"uuid" : "a29c05c1-97dc-b641-bfea-be55f61c093d",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 28,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 32,
+			"from" : 28,
+			"brick" : "P1",
+			"name" : "28",
+			"uuid" : "2ebab272-43ad-6049-af3a-590c034359b9",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 29,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 33,
+			"from" : 29,
+			"brick" : "P1",
+			"name" : "29",
+			"uuid" : "e1ab5ae2-133c-664c-b39a-65f78741f42b",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 30,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 34,
+			"from" : 30,
+			"brick" : "P1",
+			"name" : "30",
+			"uuid" : "fd679ae8-f640-a240-adc1-dad7ab5dcf40",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 31,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 35,
+			"from" : 31,
+			"brick" : "P1",
+			"name" : "31",
+			"uuid" : "39e28888-7941-9343-acd4-5871aac8cdcc",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 32,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 36,
+			"from" : 32,
+			"brick" : "P1",
+			"name" : "32",
+			"uuid" : "fa91952c-b20a-1e49-afb7-2fdeb39ca86f",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 33,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 37,
+			"from" : 33,
+			"brick" : "P1",
+			"name" : "33",
+			"uuid" : "bcbfd869-d016-654c-ac2a-4c36a21bf2bd",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 34,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 38,
+			"from" : 34,
+			"brick" : "P1",
+			"name" : "34",
+			"uuid" : "2efee528-9cd2-254a-8680-c6c42e9a7f09",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 35,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 39,
+			"from" : 35,
+			"brick" : "P1",
+			"name" : "35",
+			"uuid" : "ec5d2672-55e3-0f4a-a4d4-d25ebbecefae",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 36,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 40,
+			"from" : 36,
+			"brick" : "P1",
+			"name" : "36",
+			"uuid" : "abd51770-aba9-524d-b31b-cfc4f61aa64b",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 37,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 41,
+			"from" : 37,
+			"brick" : "P1",
+			"name" : "37",
+			"uuid" : "386767de-c8ec-174f-aa68-b15f6c9e0cbd",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 38,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 42,
+			"from" : 38,
+			"brick" : "P1",
+			"name" : "38",
+			"uuid" : "fb5905cd-ad10-ce4d-aa27-6a08bfed4051",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 39,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 43,
+			"from" : 39,
+			"brick" : "P1",
+			"name" : "39",
+			"uuid" : "8569cb60-e77a-6f41-ad5f-8b148c7ee385",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 40,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 44,
+			"from" : 40,
+			"brick" : "P1",
+			"name" : "40",
+			"uuid" : "221a1c4a-a608-2b4b-8dea-cb6212a1e852",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 41,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 45,
+			"from" : 41,
+			"brick" : "P1",
+			"name" : "41",
+			"uuid" : "7012f09a-0730-0142-a097-7843232fdf01",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 42,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 46,
+			"from" : 42,
+			"brick" : "P1",
+			"name" : "42",
+			"uuid" : "e5b63daf-0e4c-a745-8fe2-347d5c635b0e",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 43,
+			"tags" : [
+				"P1"
+			],
+			"type" : "slope",
+			"to" : 47,
+			"from" : 43,
+			"brick" : "P1",
+			"name" : "43",
+			"uuid" : "fda1a758-2d34-f042-8927-d95de9bd4ff1",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 44,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionRound",
+			"to" : 1,
+			"from" : 0,
+			"brick" : "P1",
+			"name" : "44",
+			"uuid" : "dbdb218f-1e4a-6a4c-b71e-c465f55966a2",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 45,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionRound",
+			"to" : 2,
+			"from" : 1,
+			"brick" : "P1",
+			"name" : "45",
+			"uuid" : "5bb98bb5-7a2f-6e47-9a89-5e91df8f2de1",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 46,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionRound",
+			"to" : 3,
+			"from" : 2,
+			"brick" : "P1",
+			"name" : "46",
+			"uuid" : "148f1575-6ba9-394a-96bc-6e98a0b719a0",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 47,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionRound",
+			"to" : 0,
+			"from" : 3,
+			"brick" : "P1",
+			"name" : "47",
+			"uuid" : "04f48d30-ac5e-3b4d-87b6-2c18b611c5fa",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 48,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionRound",
+			"to" : 5,
+			"from" : 4,
+			"brick" : "P1",
+			"name" : "48",
+			"uuid" : "f7aa749f-17a1-de4b-afd2-f1c529a9f8f2",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 49,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionRound",
+			"to" : 6,
+			"from" : 5,
+			"brick" : "P1",
+			"name" : "49",
+			"uuid" : "3a8940ab-b74e-9847-a22f-69f56dea55d0",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 50,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionRound",
+			"to" : 7,
+			"from" : 6,
+			"brick" : "P1",
+			"name" : "50",
+			"uuid" : "3aaf2e35-4273-4242-91a4-d99ccb4e6089",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 51,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionRound",
+			"to" : 4,
+			"from" : 7,
+			"brick" : "P1",
+			"name" : "51",
+			"uuid" : "f0fd9e99-dc6d-cb4a-88ae-a0780a9a1d9b",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 52,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionSlant",
+			"to" : 3,
+			"from" : 48,
+			"brick" : "P1",
+			"name" : "52",
+			"uuid" : "9917ff08-f1bb-064e-951b-698955ad8981",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 53,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionSlant",
+			"to" : 48,
+			"from" : 1,
+			"brick" : "P1",
+			"name" : "53",
+			"uuid" : "b347018e-9c54-dd4e-9a5b-3250af2abfde",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 54,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionSlant",
+			"to" : 2,
+			"from" : 48,
+			"brick" : "P1",
+			"name" : "54",
+			"uuid" : "e7df99b2-aa71-ca46-917d-b9fedbd26fc6",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 55,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionSlant",
+			"to" : 48,
+			"from" : 0,
+			"brick" : "P1",
+			"name" : "55",
+			"uuid" : "998a8561-0195-4944-acb3-d41ef9d969de",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 56,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionSlant",
+			"to" : 7,
+			"from" : 49,
+			"brick" : "P1",
+			"name" : "56",
+			"uuid" : "b582aeaa-ce13-3f47-aff3-a70546b53307",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 57,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionSlant",
+			"to" : 49,
+			"from" : 5,
+			"brick" : "P1",
+			"name" : "57",
+			"uuid" : "a27da78e-873a-4f49-a389-309660ae9a91",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 58,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionSlant",
+			"to" : 6,
+			"from" : 49,
+			"brick" : "P1",
+			"name" : "58",
+			"uuid" : "0e686c4c-5d96-f446-934d-fffd5127b110",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 59,
+			"tags" : [
+				"P1"
+			],
+			"type" : "sectionSlant",
+			"to" : 49,
+			"from" : 4,
+			"brick" : "P1",
+			"name" : "59",
+			"uuid" : "14a5d1cd-2b7b-cb4a-becc-e997c8807ceb",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"uuid" : "8e2543b2-e609-7e4f-847c-5189881715d1",
+			"name" : "60",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 5,
+			"face" : "front",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 0,
+			"number" : 60
+		},
+		{
+			"uuid" : "81134d46-ddb6-f049-a477-72aa2d6c39ff",
+			"name" : "61",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 6,
+			"face" : "left",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 1,
+			"number" : 61
+		},
+		{
+			"uuid" : "1b68872a-c679-3c47-80d5-b0dab5bf464a",
+			"name" : "62",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 7,
+			"face" : "back",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 2,
+			"number" : 62
+		},
+		{
+			"uuid" : "06fb84c0-5ba3-174f-9a26-4899f0c343bf",
+			"name" : "63",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 4,
+			"face" : "right",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 3,
+			"number" : 63
+		},
+		{
+			"uuid" : "c9e11f74-7a21-d243-96e7-ac838a52069d",
+			"name" : "64",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 8,
+			"face" : "front",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 5,
+			"number" : 64
+		},
+		{
+			"uuid" : "f7078d7f-7599-d844-b2bb-e1a9bc9143f8",
+			"name" : "65",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 9,
+			"face" : "left",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 6,
+			"number" : 65
+		},
+		{
+			"uuid" : "5186ee11-ac5b-af43-b009-3239a8dc4559",
+			"name" : "66",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 10,
+			"face" : "back",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 7,
+			"number" : 66
+		},
+		{
+			"uuid" : "fb9433dc-5a26-f840-807f-a886449015ab",
+			"name" : "67",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 11,
+			"face" : "right",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 4,
+			"number" : 67
+		},
+		{
+			"uuid" : "d5738e38-addf-6c45-94bd-2a0f416f11c8",
+			"name" : "68",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 13,
+			"face" : "front",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 8,
+			"number" : 68
+		},
+		{
+			"uuid" : "5f58a0bc-06dc-6b48-973b-f5a57b4900cb",
+			"name" : "69",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 14,
+			"face" : "left",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 9,
+			"number" : 69
+		},
+		{
+			"uuid" : "1344a1f9-d94a-f140-aebe-6645e108749d",
+			"name" : "70",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 15,
+			"face" : "back",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 10,
+			"number" : 70
+		},
+		{
+			"uuid" : "26084b2b-b6be-0841-bfa7-9cc0ae4a94d8",
+			"name" : "71",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 12,
+			"face" : "right",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 11,
+			"number" : 71
+		},
+		{
+			"uuid" : "d3ee8b81-3d38-934c-8a0b-3da1e0bc3d85",
+			"name" : "72",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 16,
+			"face" : "front",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 13,
+			"number" : 72
+		},
+		{
+			"uuid" : "7a43c16d-5ca5-9f45-bb73-df735148051e",
+			"name" : "73",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 17,
+			"face" : "left",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 14,
+			"number" : 73
+		},
+		{
+			"uuid" : "348cb86c-418f-fc43-af8b-a12a45825d18",
+			"name" : "74",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 18,
+			"face" : "back",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 15,
+			"number" : 74
+		},
+		{
+			"uuid" : "787fa8cc-30a1-514d-a163-c426d100d0e8",
+			"name" : "75",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 19,
+			"face" : "right",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 12,
+			"number" : 75
+		},
+		{
+			"uuid" : "96fa5280-3abd-5b46-92fa-b7ea17412ff6",
+			"name" : "76",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 21,
+			"face" : "front",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 16,
+			"number" : 76
+		},
+		{
+			"uuid" : "73789597-db63-4444-9edf-ed88e3574ca1",
+			"name" : "77",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 22,
+			"face" : "left",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 17,
+			"number" : 77
+		},
+		{
+			"uuid" : "5278c9fe-4e0a-514e-9786-68c5aa532a4b",
+			"name" : "78",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 23,
+			"face" : "back",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 18,
+			"number" : 78
+		},
+		{
+			"uuid" : "78e60e81-32e7-7b4a-b6f1-aeb433e8df21",
+			"name" : "79",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 20,
+			"face" : "right",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 19,
+			"number" : 79
+		},
+		{
+			"uuid" : "9c270b12-892d-f242-8a8b-b6b614a95a6e",
+			"name" : "80",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 24,
+			"face" : "front",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 21,
+			"number" : 80
+		},
+		{
+			"uuid" : "7ee4b8b1-b740-684d-972d-a5cc9e2b7255",
+			"name" : "81",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 25,
+			"face" : "left",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 22,
+			"number" : 81
+		},
+		{
+			"uuid" : "cfe7bf3b-3f80-594c-81ff-c027b5d9af2b",
+			"name" : "82",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 26,
+			"face" : "back",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 23,
+			"number" : 82
+		},
+		{
+			"uuid" : "2a43a004-84de-934d-9792-7dd90bec907c",
+			"name" : "83",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 27,
+			"face" : "right",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 20,
+			"number" : 83
+		},
+		{
+			"uuid" : "8baccd7f-d94a-e145-801c-139b1ce3bc08",
+			"name" : "84",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 29,
+			"face" : "front",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 24,
+			"number" : 84
+		},
+		{
+			"uuid" : "216c5af2-fefa-b64e-973b-5b59e8108a97",
+			"name" : "85",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 30,
+			"face" : "left",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 25,
+			"number" : 85
+		},
+		{
+			"uuid" : "49e5d2cb-0059-484c-b5ba-7b6ca78c717a",
+			"name" : "86",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 31,
+			"face" : "back",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 26,
+			"number" : 86
+		},
+		{
+			"uuid" : "a4c89d97-5bc8-6345-8144-4f6ce931d614",
+			"name" : "87",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 28,
+			"face" : "right",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 27,
+			"number" : 87
+		},
+		{
+			"uuid" : "1ca72fc2-79bb-bd45-bfff-abf68ba7a54c",
+			"name" : "88",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 32,
+			"face" : "front",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 29,
+			"number" : 88
+		},
+		{
+			"uuid" : "f77a0a8f-62f4-5241-a713-13d14384a239",
+			"name" : "89",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 33,
+			"face" : "left",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 30,
+			"number" : 89
+		},
+		{
+			"uuid" : "2ccdd076-1e97-5c49-84f5-230d5b9e74da",
+			"name" : "90",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 34,
+			"face" : "back",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 31,
+			"number" : 90
+		},
+		{
+			"uuid" : "4d6d1fd6-153d-e749-b07f-ae3bf8ca9f75",
+			"name" : "91",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 35,
+			"face" : "right",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 28,
+			"number" : 91
+		},
+		{
+			"uuid" : "2d7c015c-55a8-b34c-9aed-7c41571ebaa9",
+			"name" : "92",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 37,
+			"face" : "front",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 32,
+			"number" : 92
+		},
+		{
+			"uuid" : "b7ff95bb-4f81-fe4d-9b78-ddfa8b0ba93a",
+			"name" : "93",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 38,
+			"face" : "left",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 33,
+			"number" : 93
+		},
+		{
+			"uuid" : "306d5eca-4ea5-7846-baa8-fecd125c11e8",
+			"name" : "94",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 39,
+			"face" : "back",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 34,
+			"number" : 94
+		},
+		{
+			"uuid" : "ffac79c0-25c9-304f-baf6-832d17736f37",
+			"name" : "95",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 36,
+			"face" : "right",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 35,
+			"number" : 95
+		},
+		{
+			"uuid" : "4a6dbbc1-5313-d941-ac5c-4b11888d4e0b",
+			"name" : "96",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 40,
+			"face" : "front",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 37,
+			"number" : 96
+		},
+		{
+			"uuid" : "d2e7707c-d9a8-8c44-8c4d-3c882c453d35",
+			"name" : "97",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 41,
+			"face" : "left",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 38,
+			"number" : 97
+		},
+		{
+			"uuid" : "92365a2b-eb5c-e64e-bd2c-397731d7c4b1",
+			"name" : "98",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 42,
+			"face" : "back",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 39,
+			"number" : 98
+		},
+		{
+			"uuid" : "8030e6a9-3b8c-2348-aaf5-a27d1b413633",
+			"name" : "99",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 43,
+			"face" : "right",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 36,
+			"number" : 99
+		},
+		{
+			"uuid" : "55a69dd6-86fc-db4d-85c9-63a767e350de",
+			"name" : "100",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 45,
+			"face" : "front",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 40,
+			"number" : 100
+		},
+		{
+			"uuid" : "f7c5caa9-2cff-1a41-bc04-1de6cd6b8946",
+			"name" : "101",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 46,
+			"face" : "left",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 41,
+			"number" : 101
+		},
+		{
+			"uuid" : "7d8fcf19-1f9c-0b41-a2fa-811b349be0af",
+			"name" : "102",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 47,
+			"face" : "back",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 42,
+			"number" : 102
+		},
+		{
+			"uuid" : "f0927fc3-2a30-4940-9fbb-b103e12d1840",
+			"name" : "103",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 44,
+			"face" : "right",
+			"tags" : [
+				"P1"
+			],
+			"type" : "panel",
+			"to" : 43,
+			"number" : 103
+		},
+		{
+			"number" : 104,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 54,
+			"from" : 50,
+			"brick" : "P2",
+			"name" : "104",
+			"uuid" : "f9b17f41-12dc-0543-b906-de8307f49419",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 105,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 55,
+			"from" : 51,
+			"brick" : "P2",
+			"name" : "105",
+			"uuid" : "1fea4880-3afb-1243-b237-36246bb1e642",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 106,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 56,
+			"from" : 52,
+			"brick" : "P2",
+			"name" : "106",
+			"uuid" : "ab33d850-562b-c446-91dd-7ab781b4ef9e",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 107,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 57,
+			"from" : 53,
+			"brick" : "P2",
+			"name" : "107",
+			"uuid" : "975d6355-c1a3-ca4b-af6c-6eb5f90ca9d4",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 108,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 58,
+			"from" : 54,
+			"brick" : "P2",
+			"name" : "108",
+			"uuid" : "04fbafde-0d6e-dc45-a815-fa6312b9c39d",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 109,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 59,
+			"from" : 55,
+			"brick" : "P2",
+			"name" : "109",
+			"uuid" : "83974996-983f-7242-89cc-7005f0c7b724",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 110,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 60,
+			"from" : 56,
+			"brick" : "P2",
+			"name" : "110",
+			"uuid" : "ebe6132a-c37f-9640-9818-fa353bf3f5c0",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 111,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 61,
+			"from" : 57,
+			"brick" : "P2",
+			"name" : "111",
+			"uuid" : "28c7d4dc-02bf-db4e-bb0f-918c560549ae",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 112,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 62,
+			"from" : 58,
+			"brick" : "P2",
+			"name" : "112",
+			"uuid" : "b2cec76b-8cad-224b-b2d3-b469d0319196",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 113,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 63,
+			"from" : 59,
+			"brick" : "P2",
+			"name" : "113",
+			"uuid" : "dd3bca96-a962-b745-be1f-68bb55d7ebf9",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 114,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 64,
+			"from" : 60,
+			"brick" : "P2",
+			"name" : "114",
+			"uuid" : "91a72ab1-bafb-b444-a51e-a3a0fff6b23c",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 115,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 65,
+			"from" : 61,
+			"brick" : "P2",
+			"name" : "115",
+			"uuid" : "c12d5b73-0a83-c04f-b33f-5b80669e90ed",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 116,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 66,
+			"from" : 62,
+			"brick" : "P2",
+			"name" : "116",
+			"uuid" : "c49cda34-9582-044d-ab80-ba4fdda5062a",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 117,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 67,
+			"from" : 63,
+			"brick" : "P2",
+			"name" : "117",
+			"uuid" : "59fc5180-5b63-1d4b-934a-9369d8ae58b0",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 118,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 68,
+			"from" : 64,
+			"brick" : "P2",
+			"name" : "118",
+			"uuid" : "4bcb3664-e91c-a046-aa54-aa35c20e2a55",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 119,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 69,
+			"from" : 65,
+			"brick" : "P2",
+			"name" : "119",
+			"uuid" : "c83e48cf-d3de-324a-8ba0-6fe42cce4757",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 120,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 70,
+			"from" : 66,
+			"brick" : "P2",
+			"name" : "120",
+			"uuid" : "ecb0a239-4e7c-3045-8c48-52b04637a96f",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 121,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 71,
+			"from" : 67,
+			"brick" : "P2",
+			"name" : "121",
+			"uuid" : "735bc9e9-e864-e94f-90a4-a95b0277a5fd",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 122,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 72,
+			"from" : 68,
+			"brick" : "P2",
+			"name" : "122",
+			"uuid" : "d908b06e-e686-ed4e-94da-d874b4ce7b21",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 123,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 73,
+			"from" : 69,
+			"brick" : "P2",
+			"name" : "123",
+			"uuid" : "720044c0-c89c-b045-8b2a-99c88683016d",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 124,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 74,
+			"from" : 70,
+			"brick" : "P2",
+			"name" : "124",
+			"uuid" : "64ab0a0a-3de5-5e46-b03d-e40a564252a3",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 125,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 75,
+			"from" : 71,
+			"brick" : "P2",
+			"name" : "125",
+			"uuid" : "018e897d-b14f-2247-92c6-8b00f8a9a9bd",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 126,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 76,
+			"from" : 72,
+			"brick" : "P2",
+			"name" : "126",
+			"uuid" : "ddbb4d23-4da4-2e47-8b9d-83da9b37f9ab",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 127,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 77,
+			"from" : 73,
+			"brick" : "P2",
+			"name" : "127",
+			"uuid" : "97880b6e-905a-3946-ba2d-4f85803b3319",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 128,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 78,
+			"from" : 74,
+			"brick" : "P2",
+			"name" : "128",
+			"uuid" : "e3404c07-4abe-5a47-bac8-2abcbc97ceba",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 129,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 79,
+			"from" : 75,
+			"brick" : "P2",
+			"name" : "129",
+			"uuid" : "ecfd7e7f-2a91-5346-9a66-c789bdccc362",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 130,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 80,
+			"from" : 76,
+			"brick" : "P2",
+			"name" : "130",
+			"uuid" : "7b29bcbf-1d81-de47-ac99-64fad79baeac",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 131,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 81,
+			"from" : 77,
+			"brick" : "P2",
+			"name" : "131",
+			"uuid" : "ed6f1f2b-ce60-c841-8c2e-20f5ee69860d",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 132,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 82,
+			"from" : 78,
+			"brick" : "P2",
+			"name" : "132",
+			"uuid" : "ab8ca126-6574-c94b-b954-5e8261addcb0",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 133,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 83,
+			"from" : 79,
+			"brick" : "P2",
+			"name" : "133",
+			"uuid" : "344b1679-5530-e241-838a-c6b8be86e369",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 134,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 84,
+			"from" : 80,
+			"brick" : "P2",
+			"name" : "134",
+			"uuid" : "21672030-af5e-f943-9ea4-fc9c38bfa72f",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 135,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 85,
+			"from" : 81,
+			"brick" : "P2",
+			"name" : "135",
+			"uuid" : "7e91d5c3-d7b8-8b42-83e7-57d68f974464",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 136,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 86,
+			"from" : 82,
+			"brick" : "P2",
+			"name" : "136",
+			"uuid" : "ecf5ff33-05bf-4649-9c54-6614ddc3457b",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 137,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 87,
+			"from" : 83,
+			"brick" : "P2",
+			"name" : "137",
+			"uuid" : "ffbb505c-1afa-4b4b-beca-7dfb573eb042",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 138,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 88,
+			"from" : 84,
+			"brick" : "P2",
+			"name" : "138",
+			"uuid" : "f9d468b2-f8ed-8040-8991-47dd84403e98",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 139,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 89,
+			"from" : 85,
+			"brick" : "P2",
+			"name" : "139",
+			"uuid" : "11093e80-07c9-304f-9a48-8869263a4eb0",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 140,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 90,
+			"from" : 86,
+			"brick" : "P2",
+			"name" : "140",
+			"uuid" : "d2807cbe-5eff-7049-865b-8b1c5401b605",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 141,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 91,
+			"from" : 87,
+			"brick" : "P2",
+			"name" : "141",
+			"uuid" : "fbab580d-4ca9-114f-94c8-0c2949206fba",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 142,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 92,
+			"from" : 88,
+			"brick" : "P2",
+			"name" : "142",
+			"uuid" : "4f2f3e3d-cecb-824b-9b25-ebeceef52483",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 143,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 93,
+			"from" : 89,
+			"brick" : "P2",
+			"name" : "143",
+			"uuid" : "c1b86651-e088-584e-b09e-d41f201b4e43",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 144,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 94,
+			"from" : 90,
+			"brick" : "P2",
+			"name" : "144",
+			"uuid" : "ebacdd82-6d40-3747-bcd0-0d0d7bb97e03",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 145,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 95,
+			"from" : 91,
+			"brick" : "P2",
+			"name" : "145",
+			"uuid" : "e037964a-a59b-3346-a57b-589b1565d708",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 146,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 96,
+			"from" : 92,
+			"brick" : "P2",
+			"name" : "146",
+			"uuid" : "30e820d0-43b9-e948-b258-581ec57227cf",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 147,
+			"tags" : [
+				"P2"
+			],
+			"type" : "slope",
+			"to" : 97,
+			"from" : 93,
+			"brick" : "P2",
+			"name" : "147",
+			"uuid" : "8a1aecfd-e5de-654a-92c6-285a4aa469ba",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 148,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionRound",
+			"to" : 51,
+			"from" : 50,
+			"brick" : "P2",
+			"name" : "148",
+			"uuid" : "0ece63ed-edf4-6d4c-9ca7-19befd30ea87",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 149,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionRound",
+			"to" : 52,
+			"from" : 51,
+			"brick" : "P2",
+			"name" : "149",
+			"uuid" : "80962329-9044-f04e-91d0-c9d2fef72c64",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 150,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionRound",
+			"to" : 53,
+			"from" : 52,
+			"brick" : "P2",
+			"name" : "150",
+			"uuid" : "d7268d55-dc17-c742-8852-6449539f8573",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 151,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionRound",
+			"to" : 50,
+			"from" : 53,
+			"brick" : "P2",
+			"name" : "151",
+			"uuid" : "7e2179e2-6dae-414a-a143-7bb201d81cc1",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 152,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionRound",
+			"to" : 55,
+			"from" : 54,
+			"brick" : "P2",
+			"name" : "152",
+			"uuid" : "7751a11f-a4a5-e645-9a9c-b16af795226f",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 153,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionRound",
+			"to" : 56,
+			"from" : 55,
+			"brick" : "P2",
+			"name" : "153",
+			"uuid" : "52070ca0-615c-4944-8f13-0602abd9de9b",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 154,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionRound",
+			"to" : 57,
+			"from" : 56,
+			"brick" : "P2",
+			"name" : "154",
+			"uuid" : "8544adb6-619c-3a46-95e6-9b4086a56853",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 155,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionRound",
+			"to" : 54,
+			"from" : 57,
+			"brick" : "P2",
+			"name" : "155",
+			"uuid" : "2106ef65-2cf5-3247-9510-53a52a7d2efe",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 156,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionSlant",
+			"to" : 53,
+			"from" : 98,
+			"brick" : "P2",
+			"name" : "156",
+			"uuid" : "0718b0cd-b316-374e-abb3-2b6dd661d21c",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 157,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionSlant",
+			"to" : 98,
+			"from" : 51,
+			"brick" : "P2",
+			"name" : "157",
+			"uuid" : "0ad6c330-9530-dc46-8f65-b3454337c69a",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 158,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionSlant",
+			"to" : 52,
+			"from" : 98,
+			"brick" : "P2",
+			"name" : "158",
+			"uuid" : "07bd30b6-e05f-9f4c-926e-75121745eb78",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 159,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionSlant",
+			"to" : 98,
+			"from" : 50,
+			"brick" : "P2",
+			"name" : "159",
+			"uuid" : "3181fd2d-68e1-df45-b1b7-26d18de979d2",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 160,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionSlant",
+			"to" : 57,
+			"from" : 99,
+			"brick" : "P2",
+			"name" : "160",
+			"uuid" : "7e109f7d-6427-6b47-88e1-c0a0467259d1",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 161,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionSlant",
+			"to" : 99,
+			"from" : 55,
+			"brick" : "P2",
+			"name" : "161",
+			"uuid" : "49392111-86bf-de4b-9def-a4eebea17c48",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 162,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionSlant",
+			"to" : 56,
+			"from" : 99,
+			"brick" : "P2",
+			"name" : "162",
+			"uuid" : "5d82b99f-82d6-664d-9bd6-d82029d84f34",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 163,
+			"tags" : [
+				"P2"
+			],
+			"type" : "sectionSlant",
+			"to" : 99,
+			"from" : 54,
+			"brick" : "P2",
+			"name" : "163",
+			"uuid" : "3cab48cc-6389-f14f-93f0-d8af77c0a92f",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"uuid" : "8a3a6626-71e2-c74d-98a0-d9d9ad203474",
+			"name" : "164",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 55,
+			"face" : "front",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 50,
+			"number" : 164
+		},
+		{
+			"uuid" : "36594296-95c8-f64a-8640-9ba3c090f330",
+			"name" : "165",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 56,
+			"face" : "left",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 51,
+			"number" : 165
+		},
+		{
+			"uuid" : "07ca121f-cb50-bb4b-966a-b4fc28e7ca80",
+			"name" : "166",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 57,
+			"face" : "back",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 52,
+			"number" : 166
+		},
+		{
+			"uuid" : "7a1b9f2a-708c-6b41-a80e-a1b95d0f4168",
+			"name" : "167",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 54,
+			"face" : "right",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 53,
+			"number" : 167
+		},
+		{
+			"uuid" : "ea1d1c43-1e5f-6648-b409-ce346a18536f",
+			"name" : "168",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 58,
+			"face" : "front",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 55,
+			"number" : 168
+		},
+		{
+			"uuid" : "08a955b7-483a-a04a-ba9a-a6b4a30e4616",
+			"name" : "169",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 59,
+			"face" : "left",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 56,
+			"number" : 169
+		},
+		{
+			"uuid" : "085b76c7-862b-ab4b-b61a-e96465af93d4",
+			"name" : "170",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 60,
+			"face" : "back",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 57,
+			"number" : 170
+		},
+		{
+			"uuid" : "530e4ef3-2223-504b-8a17-facb93421b0f",
+			"name" : "171",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 61,
+			"face" : "right",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 54,
+			"number" : 171
+		},
+		{
+			"uuid" : "475576e5-71bf-ab4b-98bc-9a54a765c401",
+			"name" : "172",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 63,
+			"face" : "front",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 58,
+			"number" : 172
+		},
+		{
+			"uuid" : "8d39404a-0ae2-ae43-8c2d-a71ef9755cd6",
+			"name" : "173",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 64,
+			"face" : "left",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 59,
+			"number" : 173
+		},
+		{
+			"uuid" : "cb430689-c934-fa49-a82a-56ecbb682d56",
+			"name" : "174",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 65,
+			"face" : "back",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 60,
+			"number" : 174
+		},
+		{
+			"uuid" : "78b15d17-cf4f-0b49-8501-4008ce1b80e3",
+			"name" : "175",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 62,
+			"face" : "right",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 61,
+			"number" : 175
+		},
+		{
+			"uuid" : "154e39dd-4e0d-404d-b28f-a706cd142ec1",
+			"name" : "176",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 66,
+			"face" : "front",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 63,
+			"number" : 176
+		},
+		{
+			"uuid" : "6c763420-6498-f74d-87ed-b915ebdcd8d9",
+			"name" : "177",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 67,
+			"face" : "left",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 64,
+			"number" : 177
+		},
+		{
+			"uuid" : "9d0158ae-e712-5949-ad45-3a1b1b8b03d8",
+			"name" : "178",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 68,
+			"face" : "back",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 65,
+			"number" : 178
+		},
+		{
+			"uuid" : "622fe5fa-a5d7-de4c-abd9-15d4f5f41130",
+			"name" : "179",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 69,
+			"face" : "right",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 62,
+			"number" : 179
+		},
+		{
+			"uuid" : "7753b377-0bdd-104f-9475-89520dc8113d",
+			"name" : "180",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 71,
+			"face" : "front",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 66,
+			"number" : 180
+		},
+		{
+			"uuid" : "aae72693-085d-3d44-9a37-b70df666e630",
+			"name" : "181",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 72,
+			"face" : "left",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 67,
+			"number" : 181
+		},
+		{
+			"uuid" : "f35ba8c0-4867-144b-a872-81d17f8fbbc2",
+			"name" : "182",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 73,
+			"face" : "back",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 68,
+			"number" : 182
+		},
+		{
+			"uuid" : "1fe7227a-b321-3f43-bdc9-f5f9aa81665a",
+			"name" : "183",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 70,
+			"face" : "right",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 69,
+			"number" : 183
+		},
+		{
+			"uuid" : "ecc88d77-c819-3249-b51a-d8a71f8bac3d",
+			"name" : "184",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 74,
+			"face" : "front",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 71,
+			"number" : 184
+		},
+		{
+			"uuid" : "1245077e-e0e8-8844-b0e3-2489b2a5fd05",
+			"name" : "185",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 75,
+			"face" : "left",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 72,
+			"number" : 185
+		},
+		{
+			"uuid" : "01ac2259-a6f5-4f4b-86e6-796029d2e598",
+			"name" : "186",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 76,
+			"face" : "back",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 73,
+			"number" : 186
+		},
+		{
+			"uuid" : "16b9c824-76bd-5d4c-9e7d-b71cbf5af6fc",
+			"name" : "187",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 77,
+			"face" : "right",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 70,
+			"number" : 187
+		},
+		{
+			"uuid" : "5ff39693-08a1-a542-9fbe-7056de6c6b9f",
+			"name" : "188",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 79,
+			"face" : "front",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 74,
+			"number" : 188
+		},
+		{
+			"uuid" : "216f425b-b185-8746-8ab2-626f602eeead",
+			"name" : "189",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 80,
+			"face" : "left",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 75,
+			"number" : 189
+		},
+		{
+			"uuid" : "41820a45-981b-684a-b281-3815e4d90458",
+			"name" : "190",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 81,
+			"face" : "back",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 76,
+			"number" : 190
+		},
+		{
+			"uuid" : "bd079e1e-c143-ab43-9a9a-1d02cb1da882",
+			"name" : "191",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 78,
+			"face" : "right",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 77,
+			"number" : 191
+		},
+		{
+			"uuid" : "6d523694-8dc9-3c4d-aa7f-adc264e60ebd",
+			"name" : "192",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 82,
+			"face" : "front",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 79,
+			"number" : 192
+		},
+		{
+			"uuid" : "3b7237eb-857c-be44-854d-021a322e7381",
+			"name" : "193",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 83,
+			"face" : "left",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 80,
+			"number" : 193
+		},
+		{
+			"uuid" : "1bda8b21-fc2a-0c4b-ba4d-4c43afc8eff2",
+			"name" : "194",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 84,
+			"face" : "back",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 81,
+			"number" : 194
+		},
+		{
+			"uuid" : "16fb25ad-7deb-734d-b025-c6a4ee73d519",
+			"name" : "195",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 85,
+			"face" : "right",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 78,
+			"number" : 195
+		},
+		{
+			"uuid" : "e0e81cb0-f789-244c-81f0-f93aff3955be",
+			"name" : "196",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 87,
+			"face" : "front",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 82,
+			"number" : 196
+		},
+		{
+			"uuid" : "10fa6cf5-442b-b643-acc4-398aa9d77208",
+			"name" : "197",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 88,
+			"face" : "left",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 83,
+			"number" : 197
+		},
+		{
+			"uuid" : "cbe6d17f-9ea0-884d-923a-6679556a9ad1",
+			"name" : "198",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 89,
+			"face" : "back",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 84,
+			"number" : 198
+		},
+		{
+			"uuid" : "5ae691b0-b1e9-b24c-8460-164fbf4a7946",
+			"name" : "199",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 86,
+			"face" : "right",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 85,
+			"number" : 199
+		},
+		{
+			"uuid" : "de4011ba-a581-b54c-8006-a3476108c6e4",
+			"name" : "200",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 90,
+			"face" : "front",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 87,
+			"number" : 200
+		},
+		{
+			"uuid" : "9ffc1d6a-b53a-9642-83e7-6025a51053e3",
+			"name" : "201",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 91,
+			"face" : "left",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 88,
+			"number" : 201
+		},
+		{
+			"uuid" : "201fed10-d06b-8140-add5-5fd97336d97a",
+			"name" : "202",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 92,
+			"face" : "back",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 89,
+			"number" : 202
+		},
+		{
+			"uuid" : "08f149b4-e478-d441-83e8-52da98c7a51c",
+			"name" : "203",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 93,
+			"face" : "right",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 86,
+			"number" : 203
+		},
+		{
+			"uuid" : "129b0c16-bceb-b549-8c20-583f6e04c74c",
+			"name" : "204",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 95,
+			"face" : "front",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 90,
+			"number" : 204
+		},
+		{
+			"uuid" : "cfe17d6c-3aec-0d47-b188-522496b78126",
+			"name" : "205",
+			"_clazz" : "TwkSegment",
+			"brick" : "LEFT",
+			"from" : 96,
+			"face" : "left",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 91,
+			"number" : 205
+		},
+		{
+			"uuid" : "50c5e50b-cc8a-294e-bfce-41fe1d49bce4",
+			"name" : "206",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 97,
+			"face" : "back",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 92,
+			"number" : 206
+		},
+		{
+			"uuid" : "1b76e6e3-9df7-894f-acc2-a74593cacd7f",
+			"name" : "207",
+			"_clazz" : "TwkSegment",
+			"brick" : "RIGHT",
+			"from" : 94,
+			"face" : "right",
+			"tags" : [
+				"P2"
+			],
+			"type" : "panel",
+			"to" : 93,
+			"number" : 207
+		},
+		{
+			"number" : 208,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 100,
+			"from" : 0,
+			"brick" : "B1",
+			"name" : "208",
+			"uuid" : "be5dfdc5-6255-b54c-a0df-8ca5263f9fcd",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 209,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 101,
+			"from" : 4,
+			"brick" : "B1",
+			"name" : "209",
+			"uuid" : "264e2086-5e08-d444-979f-646a9a46a033",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 210,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 102,
+			"from" : 7,
+			"brick" : "B1",
+			"name" : "210",
+			"uuid" : "0161d7de-aeae-374c-897f-cc7465997f97",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 211,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 103,
+			"from" : 3,
+			"brick" : "B1",
+			"name" : "211",
+			"uuid" : "d1ab204c-5efe-174f-aa96-85273ccdfc0e",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 212,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 104,
+			"from" : 100,
+			"brick" : "B1",
+			"name" : "212",
+			"uuid" : "c1524f89-3c5b-a046-b2f4-c4d126e2cfcb",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 213,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 105,
+			"from" : 101,
+			"brick" : "B1",
+			"name" : "213",
+			"uuid" : "a4411331-7865-da43-9a49-1d3bef1f1b52",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 214,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 106,
+			"from" : 102,
+			"brick" : "B1",
+			"name" : "214",
+			"uuid" : "995eadc7-ce4e-2449-a872-6c5d755ac97e",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 215,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 107,
+			"from" : 103,
+			"brick" : "B1",
+			"name" : "215",
+			"uuid" : "21051b69-f049-cb43-a1cd-41e5c7c7c202",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 216,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 108,
+			"from" : 104,
+			"brick" : "B1",
+			"name" : "216",
+			"uuid" : "3d3fb8f6-8e9a-b64c-ba52-040a83d81c43",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 217,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 109,
+			"from" : 105,
+			"brick" : "B1",
+			"name" : "217",
+			"uuid" : "195c51a2-4ce6-2c46-945f-13014242e332",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 218,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 110,
+			"from" : 106,
+			"brick" : "B1",
+			"name" : "218",
+			"uuid" : "d48fb5cc-9b37-874a-948d-41331f60d8d3",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 219,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 111,
+			"from" : 107,
+			"brick" : "B1",
+			"name" : "219",
+			"uuid" : "54c3ed37-4147-9049-b7c6-13307692593c",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 220,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 112,
+			"from" : 108,
+			"brick" : "B1",
+			"name" : "220",
+			"uuid" : "9b905a29-9366-cb46-943e-b9a5585d0621",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 221,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 113,
+			"from" : 109,
+			"brick" : "B1",
+			"name" : "221",
+			"uuid" : "7d899879-465a-ad45-8bad-a2490e54786c",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 222,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 114,
+			"from" : 110,
+			"brick" : "B1",
+			"name" : "222",
+			"uuid" : "1392ea96-dee5-fa4c-803f-6bf43333c6bf",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 223,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 115,
+			"from" : 111,
+			"brick" : "B1",
+			"name" : "223",
+			"uuid" : "c6b7e39b-4306-ea48-bc32-4f69c19b8eb6",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 224,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 116,
+			"from" : 112,
+			"brick" : "B1",
+			"name" : "224",
+			"uuid" : "df2f2575-b1b6-2d4f-b79e-c1b19a5863b2",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 225,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 117,
+			"from" : 113,
+			"brick" : "B1",
+			"name" : "225",
+			"uuid" : "a7180c56-cc7a-3141-8ced-dae11f942b73",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 226,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 118,
+			"from" : 114,
+			"brick" : "B1",
+			"name" : "226",
+			"uuid" : "1e2bcb64-199b-cb45-877c-0e0b7cb3d84e",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 227,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 119,
+			"from" : 115,
+			"brick" : "B1",
+			"name" : "227",
+			"uuid" : "f25058e3-b2b8-544c-93e6-07904217ee3b",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 228,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 120,
+			"from" : 116,
+			"brick" : "B1",
+			"name" : "228",
+			"uuid" : "74d63564-ca36-414a-83bb-0f15e4bdc00d",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 229,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 121,
+			"from" : 117,
+			"brick" : "B1",
+			"name" : "229",
+			"uuid" : "6c2ce9d2-d04a-f748-b608-ad5b9af721b0",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 230,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 122,
+			"from" : 118,
+			"brick" : "B1",
+			"name" : "230",
+			"uuid" : "0545d733-1ea1-ee4d-9553-d668c18e0b2e",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 231,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 123,
+			"from" : 119,
+			"brick" : "B1",
+			"name" : "231",
+			"uuid" : "8b3afc39-e0a1-124d-a6c0-3fc21ba990a5",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 232,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 124,
+			"from" : 120,
+			"brick" : "B1",
+			"name" : "232",
+			"uuid" : "ca606a46-66f2-dc4e-be1d-2124e9172ed9",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 233,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 125,
+			"from" : 121,
+			"brick" : "B1",
+			"name" : "233",
+			"uuid" : "fb6c5c71-80af-8540-a144-3cb48b12b89f",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 234,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 126,
+			"from" : 122,
+			"brick" : "B1",
+			"name" : "234",
+			"uuid" : "3fdb5fa3-f305-3f4f-bcab-7729d08ed1c0",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 235,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 127,
+			"from" : 123,
+			"brick" : "B1",
+			"name" : "235",
+			"uuid" : "15073f16-4f88-6147-b984-4454338225de",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 236,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 128,
+			"from" : 124,
+			"brick" : "B1",
+			"name" : "236",
+			"uuid" : "b12163f5-573e-8044-ab56-bd107b5b0d7d",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 237,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 129,
+			"from" : 125,
+			"brick" : "B1",
+			"name" : "237",
+			"uuid" : "cc1c2606-6255-fe42-9344-572f8b9b29a8",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 238,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 130,
+			"from" : 126,
+			"brick" : "B1",
+			"name" : "238",
+			"uuid" : "82dd6661-8be8-cf4d-bb09-690034920e7b",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 239,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 131,
+			"from" : 127,
+			"brick" : "B1",
+			"name" : "239",
+			"uuid" : "2c03ff0b-730e-0045-817b-f6d41e82536c",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 240,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 132,
+			"from" : 128,
+			"brick" : "B1",
+			"name" : "240",
+			"uuid" : "31b4ab83-3528-8a4e-8443-d2f3b337b234",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 241,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 133,
+			"from" : 129,
+			"brick" : "B1",
+			"name" : "241",
+			"uuid" : "befea813-75e3-5247-8a58-f037a9e58817",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 242,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 134,
+			"from" : 130,
+			"brick" : "B1",
+			"name" : "242",
+			"uuid" : "a8efe07d-00af-a142-9acd-fadd272d6b7f",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 243,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 135,
+			"from" : 131,
+			"brick" : "B1",
+			"name" : "243",
+			"uuid" : "b5c6da01-0776-ae47-b398-d762ee767559",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 244,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 51,
+			"from" : 132,
+			"brick" : "B1",
+			"name" : "244",
+			"uuid" : "920dd7d8-0acb-194f-95af-44f852a2b788",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 245,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 55,
+			"from" : 133,
+			"brick" : "B1",
+			"name" : "245",
+			"uuid" : "d9c1be95-279c-0448-a119-064fead220f4",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 246,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 56,
+			"from" : 134,
+			"brick" : "B1",
+			"name" : "246",
+			"uuid" : "e3b56eff-9e90-1143-a817-f1592a990763",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 247,
+			"tags" : [
+				"B1"
+			],
+			"type" : "slope",
+			"to" : 52,
+			"from" : 135,
+			"brick" : "B1",
+			"name" : "247",
+			"uuid" : "7bb5cc3d-b8b8-e74c-a54f-9e61cdd2c0eb",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 248,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 105,
+			"from" : 104,
+			"brick" : "B1",
+			"name" : "248",
+			"uuid" : "482909bb-61ea-0c41-8f24-ef1dbee310af",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 249,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 136,
+			"from" : 105,
+			"brick" : "B1",
+			"name" : "249",
+			"uuid" : "88f50960-89e3-d343-ad1a-f32e48163816",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 250,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 106,
+			"from" : 136,
+			"brick" : "B1",
+			"name" : "250",
+			"uuid" : "81f29dda-cf8b-bf4b-8397-7b12115fa7a7",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 251,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 107,
+			"from" : 106,
+			"brick" : "B1",
+			"name" : "251",
+			"uuid" : "7f2c6b3f-973a-cb42-a8c8-b1cb5e8da0bd",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 252,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 104,
+			"from" : 107,
+			"brick" : "B1",
+			"name" : "252",
+			"uuid" : "96458f97-a4cd-5e4a-b2f9-02f9cf1dc9de",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 253,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 117,
+			"from" : 116,
+			"brick" : "B1",
+			"name" : "253",
+			"uuid" : "4aa4dd01-09bc-dd44-beaa-33fd7dfb964d",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 254,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 137,
+			"from" : 117,
+			"brick" : "B1",
+			"name" : "254",
+			"uuid" : "cd69d3f7-7d05-0043-a944-4f7d93671799",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 255,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 118,
+			"from" : 137,
+			"brick" : "B1",
+			"name" : "255",
+			"uuid" : "00b73051-3a6b-c242-a77f-28391e86a99e",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 256,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 119,
+			"from" : 118,
+			"brick" : "B1",
+			"name" : "256",
+			"uuid" : "0648c103-dd7b-464d-9e1e-f986cefc306e",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 257,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 116,
+			"from" : 119,
+			"brick" : "B1",
+			"name" : "257",
+			"uuid" : "e4eea9be-ae87-344f-8e47-aaa4063cffd6",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 258,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 129,
+			"from" : 128,
+			"brick" : "B1",
+			"name" : "258",
+			"uuid" : "2415623d-8a52-1448-9381-4679a0bf3f4f",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 259,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 138,
+			"from" : 129,
+			"brick" : "B1",
+			"name" : "259",
+			"uuid" : "833b43ca-dfee-ec4b-a9db-862dd9a1ecb0",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 260,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 130,
+			"from" : 138,
+			"brick" : "B1",
+			"name" : "260",
+			"uuid" : "b80e4709-58fe-244a-9660-a270ab4ca3ba",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 261,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 131,
+			"from" : 130,
+			"brick" : "B1",
+			"name" : "261",
+			"uuid" : "682be62e-1102-2344-86f7-c726ae6f8787",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 262,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionRound",
+			"to" : 128,
+			"from" : 131,
+			"brick" : "B1",
+			"name" : "262",
+			"uuid" : "869f19d9-fc0f-3244-bfaf-32e754fd8caa",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 263,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 104,
+			"from" : 139,
+			"brick" : "B1",
+			"name" : "263",
+			"uuid" : "05fad3a8-fcaf-8e49-b638-fc189d2b1690",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 263,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 104,
+			"from" : 139,
+			"brick" : "B1",
+			"name" : "263",
+			"uuid" : "05fad3a8-fcaf-8e49-b638-fc189d2b1690",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 264,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 139,
+			"from" : 106,
+			"brick" : "B1",
+			"name" : "264",
+			"uuid" : "54d9b6d3-f598-0742-85a7-74e1d1616717",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 264,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 139,
+			"from" : 106,
+			"brick" : "B1",
+			"name" : "264",
+			"uuid" : "54d9b6d3-f598-0742-85a7-74e1d1616717",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 265,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 107,
+			"from" : 139,
+			"brick" : "B1",
+			"name" : "265",
+			"uuid" : "3a8ddf8d-061e-fa4e-b90a-2347d6aa3964",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 265,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 107,
+			"from" : 139,
+			"brick" : "B1",
+			"name" : "265",
+			"uuid" : "3a8ddf8d-061e-fa4e-b90a-2347d6aa3964",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 266,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 139,
+			"from" : 105,
+			"brick" : "B1",
+			"name" : "266",
+			"uuid" : "091cc1bf-a242-e943-a644-29a36d3f94cf",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 266,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 139,
+			"from" : 105,
+			"brick" : "B1",
+			"name" : "266",
+			"uuid" : "091cc1bf-a242-e943-a644-29a36d3f94cf",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 267,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 116,
+			"from" : 140,
+			"brick" : "B1",
+			"name" : "267",
+			"uuid" : "9f04675a-a50a-a244-b0f6-e805599f38e8",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 267,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 116,
+			"from" : 140,
+			"brick" : "B1",
+			"name" : "267",
+			"uuid" : "9f04675a-a50a-a244-b0f6-e805599f38e8",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 268,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 140,
+			"from" : 118,
+			"brick" : "B1",
+			"name" : "268",
+			"uuid" : "9513e49a-fbfd-ea44-bde3-0f4ff644d930",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 268,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 140,
+			"from" : 118,
+			"brick" : "B1",
+			"name" : "268",
+			"uuid" : "9513e49a-fbfd-ea44-bde3-0f4ff644d930",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 269,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 119,
+			"from" : 140,
+			"brick" : "B1",
+			"name" : "269",
+			"uuid" : "428872eb-bdfa-7849-8981-7beef610d8ae",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 269,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 119,
+			"from" : 140,
+			"brick" : "B1",
+			"name" : "269",
+			"uuid" : "428872eb-bdfa-7849-8981-7beef610d8ae",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 270,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 140,
+			"from" : 117,
+			"brick" : "B1",
+			"name" : "270",
+			"uuid" : "9a738e0e-e94c-874c-98c8-e32912f4b158",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 270,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 140,
+			"from" : 117,
+			"brick" : "B1",
+			"name" : "270",
+			"uuid" : "9a738e0e-e94c-874c-98c8-e32912f4b158",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 271,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 128,
+			"from" : 141,
+			"brick" : "B1",
+			"name" : "271",
+			"uuid" : "66b096ab-8fe4-c743-92fb-72026e0106c2",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 271,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 128,
+			"from" : 141,
+			"brick" : "B1",
+			"name" : "271",
+			"uuid" : "66b096ab-8fe4-c743-92fb-72026e0106c2",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 272,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 141,
+			"from" : 130,
+			"brick" : "B1",
+			"name" : "272",
+			"uuid" : "c87dc4e3-cbb7-a945-9d5f-b946a0e44fc7",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 272,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 141,
+			"from" : 130,
+			"brick" : "B1",
+			"name" : "272",
+			"uuid" : "c87dc4e3-cbb7-a945-9d5f-b946a0e44fc7",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 273,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 131,
+			"from" : 141,
+			"brick" : "B1",
+			"name" : "273",
+			"uuid" : "f96cdcd3-4297-e348-b830-690c8cff4257",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 273,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 131,
+			"from" : 141,
+			"brick" : "B1",
+			"name" : "273",
+			"uuid" : "f96cdcd3-4297-e348-b830-690c8cff4257",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 274,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 141,
+			"from" : 129,
+			"brick" : "B1",
+			"name" : "274",
+			"uuid" : "8aee3121-4787-9544-b89a-d389dfea2895",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 274,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionSlant",
+			"to" : 141,
+			"from" : 129,
+			"brick" : "B1",
+			"name" : "274",
+			"uuid" : "8aee3121-4787-9544-b89a-d389dfea2895",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 275,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionVertical",
+			"to" : 136,
+			"from" : 139,
+			"brick" : "B1",
+			"name" : "275",
+			"uuid" : "ef67a9c1-2dea-ce48-91e2-6f07256ee4c9",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 276,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionVertical",
+			"to" : 137,
+			"from" : 140,
+			"brick" : "B1",
+			"name" : "276",
+			"uuid" : "b72cebb8-b61b-d848-8634-b90dd21d3c09",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"number" : 277,
+			"tags" : [
+				"B1"
+			],
+			"type" : "sectionVertical",
+			"to" : 138,
+			"from" : 141,
+			"brick" : "B1",
+			"name" : "277",
+			"uuid" : "ceef45ba-cacd-4947-8f33-78324dd868e6",
+			"_clazz" : "TwkSegment"
+		},
+		{
+			"uuid" : "8820ae52-1053-3242-bdfa-98058f19e1a6",
+			"name" : "278",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 0,
+			"face" : "front",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 101,
+			"number" : 278
+		},
+		{
+			"uuid" : "cc8e3185-2338-b04e-8e07-1523eb63a2a7",
+			"name" : "279",
+			"_clazz" : "TwkSegment",
+			"brick" : "BOTTOM",
+			"from" : 4,
+			"face" : "bottom",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 102,
+			"number" : 279
+		},
+		{
+			"uuid" : "e3c670f4-6c91-ab4b-be6e-02e9e8adc094",
+			"name" : "280",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 7,
+			"face" : "back",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 103,
+			"number" : 280
+		},
+		{
+			"uuid" : "11366902-e629-0c44-a5b6-167f69d204a2",
+			"name" : "281",
+			"_clazz" : "TwkSegment",
+			"brick" : "TOP",
+			"from" : 3,
+			"face" : "top",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 100,
+			"number" : 281
+		},
+		{
+			"uuid" : "b23a02df-0994-5048-9cba-d7a9ee7472f7",
+			"name" : "282",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 101,
+			"face" : "front",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 104,
+			"number" : 282
+		},
+		{
+			"uuid" : "ee044a3b-eb1d-2e45-97d9-dea02d9388e3",
+			"name" : "283",
+			"_clazz" : "TwkSegment",
+			"brick" : "BOTTOM",
+			"from" : 102,
+			"face" : "bottom",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 105,
+			"number" : 283
+		},
+		{
+			"uuid" : "2a0d2997-987a-1148-a126-8cf84413962a",
+			"name" : "284",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 103,
+			"face" : "back",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 106,
+			"number" : 284
+		},
+		{
+			"uuid" : "c3011e3c-5c4a-174a-b4ec-ac0087b55a8c",
+			"name" : "285",
+			"_clazz" : "TwkSegment",
+			"brick" : "TOP",
+			"from" : 100,
+			"face" : "top",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 107,
+			"number" : 285
+		},
+		{
+			"uuid" : "a0864d88-ec0f-564c-b764-affd6e776c13",
+			"name" : "286",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 104,
+			"face" : "front",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 109,
+			"number" : 286
+		},
+		{
+			"uuid" : "25f6b66b-4ecc-4543-9d3b-bf14a92fb716",
+			"name" : "287",
+			"_clazz" : "TwkSegment",
+			"brick" : "BOTTOM",
+			"from" : 105,
+			"face" : "bottom",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 110,
+			"number" : 287
+		},
+		{
+			"uuid" : "7889aea9-c641-a241-bcf6-5864dfb64691",
+			"name" : "288",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 106,
+			"face" : "back",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 111,
+			"number" : 288
+		},
+		{
+			"uuid" : "901d1c6c-3d6e-b24c-b430-79e657565c25",
+			"name" : "289",
+			"_clazz" : "TwkSegment",
+			"brick" : "TOP",
+			"from" : 107,
+			"face" : "top",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 108,
+			"number" : 289
+		},
+		{
+			"uuid" : "a692f210-86b1-1b4b-9330-e347543a4a70",
+			"name" : "290",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 109,
+			"face" : "front",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 112,
+			"number" : 290
+		},
+		{
+			"uuid" : "e9fb3c23-6f16-f842-9879-e06a18210dcd",
+			"name" : "291",
+			"_clazz" : "TwkSegment",
+			"brick" : "BOTTOM",
+			"from" : 110,
+			"face" : "bottom",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 113,
+			"number" : 291
+		},
+		{
+			"uuid" : "c68ca467-db16-9742-b9fb-fac38808c566",
+			"name" : "292",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 111,
+			"face" : "back",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 114,
+			"number" : 292
+		},
+		{
+			"uuid" : "8ac4f70f-d18e-a748-8d38-acf981da725f",
+			"name" : "293",
+			"_clazz" : "TwkSegment",
+			"brick" : "TOP",
+			"from" : 108,
+			"face" : "top",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 115,
+			"number" : 293
+		},
+		{
+			"uuid" : "82e9c7d6-94b2-0744-a0f4-383e001fc317",
+			"name" : "294",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 112,
+			"face" : "front",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 117,
+			"number" : 294
+		},
+		{
+			"uuid" : "b8a60d74-a57e-1642-b223-05d40b57cef6",
+			"name" : "295",
+			"_clazz" : "TwkSegment",
+			"brick" : "BOTTOM",
+			"from" : 113,
+			"face" : "bottom",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 118,
+			"number" : 295
+		},
+		{
+			"uuid" : "34158c74-ddf9-3641-b2be-39fdb9ded19b",
+			"name" : "296",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 114,
+			"face" : "back",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 119,
+			"number" : 296
+		},
+		{
+			"uuid" : "39696e11-afca-dd47-8baf-2b8773d135da",
+			"name" : "297",
+			"_clazz" : "TwkSegment",
+			"brick" : "TOP",
+			"from" : 115,
+			"face" : "top",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 116,
+			"number" : 297
+		},
+		{
+			"uuid" : "0abeaec8-29de-d643-a560-2b55f32d3551",
+			"name" : "298",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 117,
+			"face" : "front",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 120,
+			"number" : 298
+		},
+		{
+			"uuid" : "6300c70a-5ecd-d240-a4ab-335c9017600f",
+			"name" : "299",
+			"_clazz" : "TwkSegment",
+			"brick" : "BOTTOM",
+			"from" : 118,
+			"face" : "bottom",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 121,
+			"number" : 299
+		},
+		{
+			"uuid" : "90b97a57-4efd-a742-ab1a-6462a556a721",
+			"name" : "300",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 119,
+			"face" : "back",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 122,
+			"number" : 300
+		},
+		{
+			"uuid" : "12e3a7b2-5efb-a840-a0ed-b029779b1844",
+			"name" : "301",
+			"_clazz" : "TwkSegment",
+			"brick" : "TOP",
+			"from" : 116,
+			"face" : "top",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 123,
+			"number" : 301
+		},
+		{
+			"uuid" : "8437385a-eec4-2f4c-b4ba-7c92a02ed6c1",
+			"name" : "302",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 120,
+			"face" : "front",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 125,
+			"number" : 302
+		},
+		{
+			"uuid" : "66e1a68d-d8f9-5d46-b3ee-b9a964d83ebc",
+			"name" : "303",
+			"_clazz" : "TwkSegment",
+			"brick" : "BOTTOM",
+			"from" : 121,
+			"face" : "bottom",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 126,
+			"number" : 303
+		},
+		{
+			"uuid" : "db734d31-0b4a-d346-bd8c-c26f0dfc43bb",
+			"name" : "304",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 122,
+			"face" : "back",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 127,
+			"number" : 304
+		},
+		{
+			"uuid" : "ebd82689-5a5c-e24b-a089-c8ca2b1282fe",
+			"name" : "305",
+			"_clazz" : "TwkSegment",
+			"brick" : "TOP",
+			"from" : 123,
+			"face" : "top",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 124,
+			"number" : 305
+		},
+		{
+			"uuid" : "f494c343-81e9-8d4d-be40-67bec78a44e4",
+			"name" : "306",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 125,
+			"face" : "front",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 128,
+			"number" : 306
+		},
+		{
+			"uuid" : "0a513a79-b128-ac43-9089-e994c840978e",
+			"name" : "307",
+			"_clazz" : "TwkSegment",
+			"brick" : "BOTTOM",
+			"from" : 126,
+			"face" : "bottom",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 129,
+			"number" : 307
+		},
+		{
+			"uuid" : "8b7d202f-4569-f34f-bdf9-bc65bd9d77a0",
+			"name" : "308",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 127,
+			"face" : "back",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 130,
+			"number" : 308
+		},
+		{
+			"uuid" : "57ce442b-8388-6e48-8fed-7b46d1fb7070",
+			"name" : "309",
+			"_clazz" : "TwkSegment",
+			"brick" : "TOP",
+			"from" : 124,
+			"face" : "top",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 131,
+			"number" : 309
+		},
+		{
+			"uuid" : "251c5951-ff30-9e48-896f-dd4273130d88",
+			"name" : "310",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 128,
+			"face" : "front",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 133,
+			"number" : 310
+		},
+		{
+			"uuid" : "aee0b95d-9036-e547-be8e-35c291d289fa",
+			"name" : "311",
+			"_clazz" : "TwkSegment",
+			"brick" : "BOTTOM",
+			"from" : 129,
+			"face" : "bottom",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 134,
+			"number" : 311
+		},
+		{
+			"uuid" : "ccb9af62-31c7-1c4e-97c1-475b2cc9d7e7",
+			"name" : "312",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 130,
+			"face" : "back",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 135,
+			"number" : 312
+		},
+		{
+			"uuid" : "1229c6c5-b34b-9a46-a77d-a1c932f95733",
+			"name" : "313",
+			"_clazz" : "TwkSegment",
+			"brick" : "TOP",
+			"from" : 131,
+			"face" : "top",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 132,
+			"number" : 313
+		},
+		{
+			"uuid" : "e5956cfd-e15c-e642-be8e-3d4bbcca42dd",
+			"name" : "314",
+			"_clazz" : "TwkSegment",
+			"brick" : "FRONT",
+			"from" : 133,
+			"face" : "front",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 51,
+			"number" : 314
+		},
+		{
+			"uuid" : "e92af49e-4b0b-f043-ab20-35041de7b46c",
+			"name" : "315",
+			"_clazz" : "TwkSegment",
+			"brick" : "BOTTOM",
+			"from" : 134,
+			"face" : "bottom",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 55,
+			"number" : 315
+		},
+		{
+			"uuid" : "c056e27f-d131-e042-9c58-58da87a67070",
+			"name" : "316",
+			"_clazz" : "TwkSegment",
+			"brick" : "BACK",
+			"from" : 135,
+			"face" : "back",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 56,
+			"number" : 316
+		},
+		{
+			"uuid" : "d5639fdd-d56e-8147-98b8-269d8b040c45",
+			"name" : "317",
+			"_clazz" : "TwkSegment",
+			"brick" : "TOP",
+			"from" : 132,
+			"face" : "top",
+			"tags" : [
+				"B1"
+			],
+			"type" : "panel",
+			"to" : 52,
+			"number" : 317
+		}
+	]
+};
+}
