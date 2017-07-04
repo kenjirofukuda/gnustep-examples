@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <title>Gds Canvas</title>
+    <link rel="stylesheet" href="canvas.css" type="text/css"/>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/libs/EaselJS/easeljs.min.js"></script>
+    <script src="js/libs/sprintf/sprintf.min.js"></script>
+    <script src="js/libs/snap.svg/snap.svg.js"></script>
+
+    <script src="./geo.js"></script>
+    <script src="./gds.js"></script>
+    <script src="./gds-elements.js"></script>
+    <script src="./gds-container.js"></script>
+    <script src="./gds-canvas.js"></script>
+    <script src="./sample-data.js"></script>
+    <script src="./canvas.js"></script>
+  </head>
+
+  <body onload="loadIt()">
+    <div>
+      <input type="button" value="2.0" onclick="gStructureView.zoomDouble()" >
+      <input type="button" value="0.5" onclick="gStructureView.zoomHalf()" >
+      <input type="button" value="Fit" onclick="gStructureView.fit()" >
+    </div>
+    <div>
+      <code>
+        h: <span id="deviceX">0</span>, v: <span id="deviceY">0</span>
+      </code>
+      <code>
+        x: <span id="worldX">0.0000</span>, y: <span id="worldY">0.0000</span>
+      </code>
+    </div>
+
+    <div id="canvas-wrapper">
+      <canvas id="canvas" style="display: block">
+      </canvas>
+    </div>
+  </body>
+</html>
