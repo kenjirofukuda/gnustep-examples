@@ -10,7 +10,7 @@
 var gStructure = null;
 var gStructureView = null;
 var gQueue = null;
-var gWaitMSecs = 300;
+var gWaitMSecs = 10;
 
 function loadIt() {
   $("#canvas-wrapper").css("display", "block");
@@ -47,7 +47,9 @@ function loadIt() {
 }
 
 function adjustPortSize() {
+  var topbarHeight = $("#topbar").height();
   var w = $("#canvas-wrapper").width();
+  $("#canvas-wrapper").css("height", $("html").height() - topbarHeight);
   var h = $("#canvas-wrapper").height();
   $("#canvas").attr("width", w);
   $("#canvas").attr("height", h);
