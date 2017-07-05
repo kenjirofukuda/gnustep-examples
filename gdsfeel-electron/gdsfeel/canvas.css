@@ -20,6 +20,11 @@ html, body {
   min-height: 80%;
 }
 
+#topToolbar {
+  display: none;
+  visibility: hidden;
+}
+
 #canvas {
   display: block;
   border-color: rgb(79, 133, 37);

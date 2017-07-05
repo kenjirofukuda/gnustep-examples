@@ -4,7 +4,7 @@
 
 
 GDS.Element.prototype.drawOn = function (ctx, port) {
-  
+
 };
 
 
@@ -58,6 +58,7 @@ GDS.Tracking = function (view) {
   this.view = view;
   this.element = view.context().canvas;
   this.down = false;
+  this.panning = false;
   this.registerHandler();
   this.registerWheel();
 };
@@ -84,10 +85,14 @@ GDS.Tracking.prototype.registerHandler = function () {
     self.down = true;
     self.points = [];
     self.downPoint = GEO.MakePoint(evt.offsetX, evt.offsetY);
+    self.panning = GDS.detectMiddleButton(evt);
     console.log(["d", self.downPoint + ""]);
   });
   this.element.addEventListener("mousemove", function (evt) {
-    if (!self.down) {
+    if (! self.down) {
+      return;
+    }
+    if (! self.panning) {
       return;
     }
     var p = GEO.MakePoint(evt.offsetX, evt.offsetY);

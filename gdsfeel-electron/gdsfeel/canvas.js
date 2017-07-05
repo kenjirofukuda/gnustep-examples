@@ -14,6 +14,7 @@ var gWaitMSecs = 10;
 
 function loadIt() {
   $("#canvas-wrapper").css("display", "block");
+  setupRuntimeBrowser();
   window.addEventListener("resize", function () {
     clearTimeout(gQueue);
     gQueue = setTimeout(function () {
@@ -47,7 +48,7 @@ function loadIt() {
 }
 
 function adjustPortSize() {
-  var topbarHeight = $("#topbar").height();
+  var topbarHeight = $("#topbar").css("display") === "none" ? 0 : $("#topbar").height();
   var w = $("#canvas-wrapper").width();
   $("#canvas-wrapper").css("height", $("html").height() - topbarHeight);
   var h = $("#canvas-wrapper").height();
@@ -66,4 +67,29 @@ function msg(s) {
     msgTag.innerHTML = s;
   }
   console.log(s);
+}
+
+function setTopbarVisible(visible) {
+  if (visible) {
+    $("#topbar").show();
+  }
+  else {
+    $("#topbar").hide();
+  }
+  adjustPortSize();
+}
+
+function hideTopbar() {
+  setTopbarVisible(false);
+}
+
+
+function inElectron() {
+  // FIXME: adhook
+  return navigator.userAgent.toLowerCase().indexOf("electron") > 0 ;
+}
+
+
+function setupRuntimeBrowser() {
+  setTopbarVisible(! inElectron());
 }
