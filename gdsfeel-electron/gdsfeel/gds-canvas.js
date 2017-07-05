@@ -59,6 +59,7 @@ GDS.Tracking = function (view) {
   this.element = view.context().canvas;
   this.down = false;
   this.panning = false;
+  this.action = false;
   this.registerHandler();
   this.registerWheel();
 };
@@ -86,6 +87,7 @@ GDS.Tracking.prototype.registerHandler = function () {
     self.points = [];
     self.downPoint = GEO.MakePoint(evt.offsetX, evt.offsetY);
     self.panning = GDS.detectMiddleButton(evt);
+    self.action = GDS.detectLeftButton(evt);
     console.log(["d", self.downPoint + ""]);
   });
   this.element.addEventListener("mousemove", function (evt) {
@@ -119,7 +121,18 @@ GDS.Tracking.prototype.registerHandler = function () {
     self.down = false;
     self.upPoint = GEO.MakePoint(evt.offsetX, evt.offsetY);
     $(self.view.portId).css("cursor", "default");
+    console.log(self);
     console.log(["u", self.upPoint + ""]);
+    if (self.action) {
+      var wp = self.view.port.deviceToWorld(self.upPoint.x, self.upPoint.y);
+      var np = GDS.Element.NewPoint(wp.x, wp.y);
+      // console.log(["np", np + ""]);
+      self.view.structure().addElement(np);
+      // TODO: redraw automatic. catch structure damage event.
+      // TODO: implement damage recorder. and redraw minimum area
+      self.view.repaint();
+      // console.log(["wp", wp + ""]);
+    }
   });
 };
 
@@ -131,11 +144,18 @@ GDS.StructureView = function (portId, structure) {
   this.ctx = this.context();
   this.port = new GEO.Viewport(this.ctx.canvas.width, this.ctx.canvas.height);
   this.tack = new GDS.Tracking(self);
-  var self = this;
   this.port.portDamageFunction = function (port) {
     self.redraw(port);
   };
+  this.repaint = function () {
+    self.redraw(self.port);
+  };
 };
+
+
+GDS.StructureView.prototype.structure = function () {
+  return this._structure;
+}
 
 
 GDS.StructureView.prototype.context = function () {

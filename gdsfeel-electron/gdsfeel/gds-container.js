@@ -33,3 +33,7 @@ GDS.Structure.prototype.dataExtent = function () {
   var ext = GEO.calcExtentBounds(points);
   return ext;
 };
+
+GDS.Structure.prototype.addElement = function (aGdsElement) {
+  this._elements.push(aGdsElement);
+};

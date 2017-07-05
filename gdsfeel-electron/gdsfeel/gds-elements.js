@@ -44,26 +44,34 @@ GDS.Element.fromObject = function (hash) {
 };
 
 
+GDS.Element.NewPoint = function (x, y) {
+  var hash = {type: "point", vertices: [[x, y]]};
+  return GDS.Element.fromObject(hash);
+}
+
 
 GDS.Point = function (hash) {
    GDS.Element.call(this, hash);
 };
 
 GDS.Point.prototype = Object.create(GDS.Element.prototype);
-GDS.Point.prototype.constructor = GDS.Segment;
+GDS.Point.prototype.constructor = GDS.Point;
 
+GDS.Point.prototype.x = function () {
+  return this.hash.vertices[0][0];
+};
 
+GDS.Point.prototype.y = function () {
+  return this.hash.vertices[0][1];
+};
 
 GDS.Point.prototype.toString = function () {
   return "Point(" + this.hash.vertices[0] + ")";
 };
 
-
 GDS.Point.prototype.dataExtent = function () {
   return GEO.MakeRect(this.hash.vertices[0][0], this.hash.vertices[0][1]);
 };
-
-
 
 
 GDS.Segment = function (hash) {
@@ -93,7 +101,7 @@ GDS.Segment.prototype.dataExtent = function () {
 
 
 GDS.Boundary = function (hash) {
-  GDS.Element.call(this, hash); 
+  GDS.Element.call(this, hash);
 };
 
 
@@ -116,7 +124,7 @@ GDS.Boundary.prototype.dataExtent = function () {
 
 
 GDS.BoxText = function (hash) {
-  GDS.Element.call(this, hash); 
+  GDS.Element.call(this, hash);
 };
 
 

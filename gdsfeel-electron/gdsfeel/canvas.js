@@ -48,9 +48,11 @@ function loadIt() {
 }
 
 function adjustPortSize() {
+  // FIXME: use box.. flex...
   var topbarHeight = $("#topbar").css("display") === "none" ? 0 : $("#topbar").height();
+  var statusbarHeight = $("#statusbar").height();
   var w = $("#canvas-wrapper").width();
-  $("#canvas-wrapper").css("height", $("html").height() - topbarHeight);
+  $("#canvas-wrapper").css("height", $("html").height() - (topbarHeight + statusbarHeight));
   var h = $("#canvas-wrapper").height();
   $("#canvas").attr("width", w);
   $("#canvas").attr("height", h);
