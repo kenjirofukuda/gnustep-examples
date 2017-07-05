@@ -6,6 +6,7 @@ const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
+const Menu = electron.Menu
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -33,7 +34,74 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+  installMyMenus();
 }
+
+function installMyMenus () {
+  const MenuItem = electron.MenuItem
+  const appMenu = Menu.getApplicationMenu();
+  const dialog = electron.dialog
+  const debugMenu = new MenuItem (
+    {
+      label: 'Debug',
+      submenu: [
+        {
+          label: 'Open AppConfigPath',
+          click: function (item, focusedWindow) {
+            dialog.showMessageBox(mainWindow, {
+              message: 'Hage'
+            })
+          }
+        },
+        {
+          type: 'separator'
+        },
+        {
+          label: 'Show Axis line',
+          click: function (item, focusedWindow) {
+            dialog.showMessageBox(mainWindow, {
+              message: 'Show Axis line'
+            })
+          }
+        },
+        {
+          label: 'Show Extent bounds',
+          click: function (item, focusedWindow) {
+            dialog.showMessageBox(mainWindow, {
+              message: 'Show Extent bounds'
+            })
+          }
+        },
+      ]
+    }
+  )
+  const viewMenu = new MenuItem (
+    {
+      label: 'View',
+      submenu: [
+        {
+          label: 'Fit',
+          click: function (item, focusedWindow) {
+            dialog.showMessageBox(mainWindow, {
+              message: 'Fit'
+            })
+          }
+        }
+      ]
+    }
+  )
+  appMenu.append(debugMenu)
+  appMenu.items.forEach ( function (menuItem) {
+    if (menuItem.label === 'View') {
+      menuItem.submenu.append(new MenuItem({type: 'separator'}))
+      viewMenu.submenu.items.forEach (function (e) {
+        menuItem.submenu.append(e)
+      })
+    }
+  })
+  Menu.setApplicationMenu(appMenu)
+}
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
