@@ -2,8 +2,6 @@
 
 /* global GEO, GDS */
 
-
-
 GDS.Element = function (jsonMap) {
   this.hash = jsonMap;
 };
