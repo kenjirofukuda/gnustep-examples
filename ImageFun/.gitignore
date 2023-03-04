@@ -1,0 +1,15 @@
+# Build products
+obj
+config.*
+*.log
+*.sum
+*.app
+*.backup
+
+# Editor byproducts
+*.orig
+*.swp
+*~
+
+# MacOS Desktop Services Store
+.DS_Store
