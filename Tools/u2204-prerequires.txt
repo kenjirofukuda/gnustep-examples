@@ -1,0 +1,31 @@
+# post os install
+git
+build-essential
+
+# manuals
+texlive-latex-base
+texinfo
+
+# libdispatch
+cmake
+ninja-build
+clang
+systemtap-sdt-dev
+libbsd-dev
+linux-libc-dev
+
+# libs-base
+libavahi-client-dev
+libcurl4-gnutls-dev
+gnutls-bin
+
+# libs-gui
+libsndfile1-dev
+libao4
+libao-dev
+flite
+flite-dev
+libcups2-dev
+libicns-dev
+libpocketsphinx-dev
+libsphinxbase-dev
