@@ -11,5 +11,11 @@ config.*
 *.swp
 *~
 
+# ccls
+.ccls-cache/
+.ccls_root
+.ccls
+compile_commands.json
+
 # MacOS Desktop Services Store
 .DS_Store

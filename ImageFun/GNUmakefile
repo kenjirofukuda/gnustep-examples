@@ -22,10 +22,11 @@ include $(GNUSTEP_MAKEFILES)/common.make
 #
 # Application
 #
-VERSION = 0.1
+VERSION = 0.2
 PACKAGE_NAME = ImageFun
 APP_NAME = ImageFun
 ImageFun_APPLICATION_ICON = 
+GNUSTEP_INSTALLATION_DOMAIN = USER
 
 
 #

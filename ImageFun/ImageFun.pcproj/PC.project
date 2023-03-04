@@ -29,6 +29,7 @@
     IMAGES = (
     );
     INSTALLDIR = "$(HOME)/GNUstep";
+    INSTALLDOMAIN = User;
     INTERFACES = (
 	"ImageFun.gorm"
     );
@@ -61,7 +62,7 @@
     "PROJECT_GROUP" = "No group avaliable!";
     "PROJECT_MAINTAINER" = "Kenjiro Fukuda,,,";
     "PROJECT_NAME" = ImageFun;
-    "PROJECT_RELEASE" = "0.1";
+    "PROJECT_RELEASE" = "0.2";
     "PROJECT_SUMMARY" = "No summary avaliable!";
     "PROJECT_TYPE" = Application;
     "PROJECT_URL" = "";
