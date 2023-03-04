@@ -4,7 +4,8 @@
     "APP_TYPE" = GORM;
     "BUNDLE_IDENTIFIER" = "";
     "CLASS_FILES" = (
-	"AppController.m"
+	"AppController.m",
+	"StreatchView.m"
     );
     COMPILEROPTIONS = "";
     CPPOPTIONS = "";
@@ -14,7 +15,8 @@
     FRAMEWORKS = (
     );
     "HEADER_FILES" = (
-	"AppController.h"
+	"AppController.h",
+	"StreatchView.h"
     );
     IMAGES = (
     );

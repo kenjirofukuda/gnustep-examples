@@ -39,13 +39,15 @@ Resources/ImageFun.gorm \
 # Header files
 #
 ImageFun_HEADER_FILES = \
-AppController.h
+AppController.h \
+StreatchView.h
 
 #
 # Objective-C Class files
 #
 ImageFun_OBJC_FILES = \
-AppController.m
+AppController.m \
+StreatchView.m
 
 #
 # Other sources

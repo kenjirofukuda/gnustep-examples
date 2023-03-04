@@ -10,9 +10,17 @@
     };
     FirstResponder = {
 	Actions = (
+	    "[NSBezierPath fillRect:",
 	    "orderFrontFontPanel:",
 	    "showPrefPanel:"
 	);
 	Super = NSObject;
+    };
+    StreatchView = {
+	Actions = (
+	);
+	Outlets = (
+	);
+	Super = NSView;
     };
 }
