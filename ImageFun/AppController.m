@@ -49,6 +49,24 @@
 {
 // Uncomment if your application is Renaissance-based
 //  [NSBundle loadGSMarkupNamed: @"Main" owner: self];
+  NSWindow *panel = [[NSApp mainMenu] window];
+  NSRect bounds = [panel frame];
+  NSLog(@"bounds = %@", NSStringFromRect(bounds));
+  NSLog(@"[[NSScreen mainScreen] frame] = %@", NSStringFromRect([[NSScreen mainScreen] frame]));
+  NSLog(@"[[NSScreen mainScreen] visibleFrame] = %@", NSStringFromRect([[NSScreen mainScreen] visibleFrame]));
+  
+  [panel setFrameOrigin: 
+       NSMakePoint(bounds.origin.x + 100, 
+                   bounds.origin.y - 100)];
+  NSLog(@"menu panel = %@", panel);
+  NSArray *allWindows = GSAllWindows();
+  NSEnumerator *e = [allWindows objectEnumerator];
+  NSWindow *each;
+  while (each = [e nextObject])
+    {
+      NSLog(@"win = %@", each);
+    }
+  
 }
 
 - (NSApplicationTerminateReply) applicationShouldTerminate: (id)sender
