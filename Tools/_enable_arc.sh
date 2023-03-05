@@ -15,7 +15,7 @@ if [ $CNT -ge 1 ]; then
   echo "already specify -fobjc-arc"
   exit 1
 fi
-sed -i 's/\s*$//' "$FILE"
+sed -i -e 's/\s*$//' "$FILE"
 sed -i -e 's/OBJCFLAGS += \(.*\)$/& -fobjc-arc/g' "$FILE" 
 echo "success"
 exit 0
