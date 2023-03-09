@@ -21,15 +21,14 @@ fi
 db_file="$target_dir/compile_commands.json"
 if [ -f "$db_file" ]; then
   echo "%compile_commands.json" > "$target_file"
-  echo "%objective-c" >> "$target_file"
-  echo "%objective-cpp" >> "$target_file"
-  gnustep-config --objc-flags | tr ' ' "\n" >> "$target_file"
 else
   echo "clang" > "$target_file"
-  echo "%objective-c" >> "$target_file"
-  echo "%objective-cpp" >> "$target_file"
-  gnustep-config --objc-flags  | tr ' ' "\n" >> "$target_file"
 fi
+echo "%objective-c" >> "$target_file"
+echo "%objective-cpp" >> "$target_file"
+gnustep-config --objc-flags | \
+  tr ' ' "\n"  | \
+  sed 's/^-I/-isystem/g' >> "$target_file"
 
 settings_file="$target_dir/.vscode/settings.json"
 mkdir -p $(dirname "$settings_file")

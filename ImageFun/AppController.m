@@ -1,14 +1,61 @@
-/* 
+/*
    Project: ImageFun
 
    Author: Kenjiro Fukuda,,,
 
    Created: 2023-03-04 17:04:01 +0900 by kenjiro
-   
+
    Application Controller
 */
 
 #import "AppController.h"
+
+@interface NSString(Repeat)
+
+- (NSString *) repeatTimes: (NSUInteger)times;
+
+@end
+
+@implementation NSString(Repeat)
+
+- (NSString *) repeatTimes: (NSUInteger)times
+{
+  return [@"" stringByPaddingToLength: times * [self length] withString: self startingAtIndex: 0];
+}
+
+@end
+
+@interface AppController(Debug)
+- (void) printWindows;
+- (void) printMainScreenInfo;
+@end
+
+@implementation AppController(Debug)
+- (void) printWindows
+{
+  NSArray *allWindows = GSAllWindows();
+  NSEnumerator *e = [allWindows objectEnumerator];
+  NSWindow *each;
+  NSLog(@"%@", [@"-" repeatTimes: 80]);
+  while (each = [e nextObject])
+    {
+      NSLog(@"win = %@", each);
+    }
+  NSLog(@"%@", [@"-" repeatTimes: 80]);
+
+}
+
+- (void) printMainScreenInfo
+{
+  NSLog(@"[[NSScreen mainScreen] frame] = %@",
+        NSStringFromRect([[NSScreen mainScreen] frame]));
+  NSLog(@"[[NSScreen mainScreen] visibleFrame] = %@",
+        NSStringFromRect([[NSScreen mainScreen] visibleFrame]));
+}
+
+
+@end
+
 
 @implementation AppController
 
@@ -23,7 +70,7 @@
    * [defaults setObject:anObject forKey:keyForThatObject];
    *
    */
-  
+
   [[NSUserDefaults standardUserDefaults] registerDefaults: defaults];
   [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -49,24 +96,7 @@
 {
 // Uncomment if your application is Renaissance-based
 //  [NSBundle loadGSMarkupNamed: @"Main" owner: self];
-  NSWindow *panel = [[NSApp mainMenu] window];
-  NSRect bounds = [panel frame];
-  NSLog(@"bounds = %@", NSStringFromRect(bounds));
-  NSLog(@"[[NSScreen mainScreen] frame] = %@", NSStringFromRect([[NSScreen mainScreen] frame]));
-  NSLog(@"[[NSScreen mainScreen] visibleFrame] = %@", NSStringFromRect([[NSScreen mainScreen] visibleFrame]));
-  
-  [panel setFrameOrigin: 
-       NSMakePoint(bounds.origin.x + 100, 
-                   bounds.origin.y - 100)];
-  NSLog(@"menu panel = %@", panel);
-  NSArray *allWindows = GSAllWindows();
-  NSEnumerator *e = [allWindows objectEnumerator];
-  NSWindow *each;
-  while (each = [e nextObject])
-    {
-      NSLog(@"win = %@", each);
-    }
-  
+  [self printMainScreenInfo];
 }
 
 - (NSApplicationTerminateReply) applicationShouldTerminate: (id)sender
@@ -79,13 +109,14 @@
 }
 
 - (BOOL) application: (NSApplication *)application
-	    openFile: (NSString *)fileName
+            openFile: (NSString *)fileName
 {
   return NO;
 }
 
 - (void) showPrefPanel: (id)sender
 {
+  [self printWindows];
 }
 
 @end
