@@ -2,21 +2,24 @@
     "## Comment" = "Do NOT change this file, Gorm maintains it";
     AppController = {
 	Actions = (
-	    "showPrefPanel:"
+	    "showPrefPanel:",
+	    "fade:",
+	    "open:"
 	);
 	Outlets = (
+	    stretchView,
+	    slider
 	);
 	Super = NSObject;
     };
     FirstResponder = {
 	Actions = (
-	    "[NSBezierPath fillRect:",
 	    "orderFrontFontPanel:",
 	    "showPrefPanel:"
 	);
 	Super = NSObject;
     };
-    StreatchView = {
+    StretchView = {
 	Actions = (
 	);
 	Outlets = (

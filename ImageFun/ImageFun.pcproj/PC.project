@@ -13,7 +13,7 @@
     "BUNDLE_IDENTIFIER" = "";
     "CLASS_FILES" = (
 	"AppController.m",
-	"StreatchView.m"
+	"StretchView.m"
     );
     COMPILEROPTIONS = "";
     CPPOPTIONS = "";
@@ -24,7 +24,7 @@
     );
     "HEADER_FILES" = (
 	"AppController.h",
-	"StreatchView.h"
+	"StretchView.h"
     );
     IMAGES = (
     );

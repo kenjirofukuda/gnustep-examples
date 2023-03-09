@@ -1,9 +1,9 @@
 /* All rights reserved */
 
 #import <AppKit/AppKit.h>
-#import "StreatchView.h"
+#import "StretchView.h"
 
-@implementation StreatchView
+@implementation StretchView
 
 - (id) initWithFrame: (NSRect)rect
 {
@@ -46,19 +46,39 @@
 - (void) drawRect: (NSRect)rect
 {
   NSRect bounds = [self bounds];
-
+  NSPoint p = bounds.origin;
   [[NSColor greenColor] set];
   [NSBezierPath fillRect: bounds];
 
   [[NSColor whiteColor] set];
   [_path stroke];
+  if (_image)
+    {
+      [_image dissolveToPoint: p fraction: _opacity];
+    }
 }
 
 
 - (void) dealloc
 {
+  RELEASE(_image);
   RELEASE(_path);
   DEALLOC
 }
+
+
+- (void) setOpacity: (float)x
+{
+  _opacity = x;
+  [self setNeedsDisplay: YES];
+}
+
+- (void) setImage: (NSImage *)x
+{
+  ASSIGN(_image, x);
+  [self setNeedsDisplay: YES];
+}
+
+
 
 @end

@@ -90,6 +90,9 @@
 
 - (void) awakeFromNib
 {
+  NSLog(@"awakeFromNib");
+  [slider setFloatValue: 0.5];
+  [stretchView setOpacity: 0.5];
 }
 
 - (void) applicationDidFinishLaunching: (NSNotification *)aNotif
@@ -114,9 +117,45 @@
   return NO;
 }
 
-- (void) showPrefPanel: (id)sender
+- (IBAction) showPrefPanel: (id)sender
 {
   [self printWindows];
 }
+
+- (IBAction) fade: (id)sender
+{
+  NSLog(@"fade: %6.4f", [slider floatValue]);
+  [stretchView setOpacity: [slider floatValue]];
+}
+
+- (IBAction) open: (id)sender
+{
+  NSOpenPanel *panel = [NSOpenPanel openPanel];
+  [panel beginSheetForDirectory: nil
+                           file: nil
+                          types: [NSImage imageFileTypes]
+                 modalForWindow: [stretchView window]
+                  modalDelegate: self
+                 didEndSelector:
+      @selector(openPanelDidEnd: returnCode: contextInfo:)
+                    contextInfo: nil];
+}
+
+- (void) openPanelDidEnd: (NSOpenPanel *)openPanel
+              returnCode: (int)returnCode
+             contextInfo: (void *)contextInfo
+{
+  NSLog(@"openPanelDidEnd:returnCode:contextInfo:");
+  NSString *path;
+  NSImage *image;
+  if (returnCode == NSOKButton)
+    {
+      path = [openPanel filename];
+      image = [[NSImage alloc] initWithContentsOfFile: path];
+      [stretchView setImage: image];
+      RELEASE(image);
+    }
+}
+
 
 @end
