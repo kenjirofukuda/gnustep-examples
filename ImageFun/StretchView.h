@@ -7,13 +7,19 @@
   NSBezierPath *_path;
   NSImage *_image;
   float _opacity;
+  NSPoint _downPoint;
+  NSPoint _currentPoint;
 }
 
 - (id) initWithFrame: (NSRect)rect;
-- (NSPoint) randomPoint;
 - (void) drawRect: (NSRect)rect;
+- (void) mouseDown: (NSEvent *)event;
+- (void) mouseDragged: (NSEvent *)event;
+- (void) mouseUp: (NSEvent *)event;
 - (void) dealloc;
 
+- (NSPoint) randomPoint;
 - (void) setImage: (NSImage *)x;
 - (void) setOpacity: (float)x;
+- (NSRect) currentRect;
 @end

@@ -46,7 +46,6 @@
 - (void) drawRect: (NSRect)rect
 {
   NSRect bounds = [self bounds];
-  NSPoint p = bounds.origin;
   [[NSColor greenColor] set];
   [NSBezierPath fillRect: bounds];
 
@@ -54,7 +53,16 @@
   [_path stroke];
   if (_image)
     {
-      [_image dissolveToPoint: p fraction: _opacity];
+      NSRect imageRect;
+      NSRect drawingRect;
+      imageRect.origin.x = 0;
+      imageRect.origin.y = 0;
+      imageRect.size = [_image size];
+      drawingRect = [self currentRect];
+      [_image drawInRect: drawingRect
+                fromRect: imageRect
+               operation: NSCompositeSourceOver
+                fraction: _opacity];
     }
 }
 
@@ -63,7 +71,7 @@
 {
   RELEASE(_image);
   RELEASE(_path);
-  DEALLOC
+  DEALLOC;
 }
 
 
@@ -77,6 +85,40 @@
 {
   ASSIGN(_image, x);
   [self setNeedsDisplay: YES];
+}
+
+
+- (void) mouseDown: (NSEvent *)event
+{
+  NSPoint windowPoint = [event locationInWindow];
+  _downPoint = [self convertPoint: windowPoint fromView: nil];
+  _currentPoint = _downPoint;
+  [self setNeedsDisplay: YES];
+}
+
+
+- (void) mouseDragged: (NSEvent *)event
+{
+  NSPoint windowPoint = [event locationInWindow];
+  _currentPoint = [self convertPoint: windowPoint fromView: nil];
+  [self setNeedsDisplay: YES];
+}
+
+
+- (void) mouseUp: (NSEvent *)event
+{
+  NSPoint windowPoint = [event locationInWindow];
+  _currentPoint = [self convertPoint: windowPoint fromView: nil];
+  [self setNeedsDisplay: YES];
+}
+
+- (NSRect) currentRect
+{
+  CGFloat minX = MIN(_downPoint.x, _currentPoint.x);
+  CGFloat minY = MIN(_downPoint.y, _currentPoint.y);
+  CGFloat maxX = MAX(_downPoint.x, _currentPoint.x);
+  CGFloat maxY = MAX(_downPoint.y, _currentPoint.y);
+  return NSMakeRect(minX, minY, maxX - minX, maxY - minY);
 }
 
 
