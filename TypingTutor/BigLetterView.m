@@ -33,18 +33,47 @@
 }
 
 
+#if GNUSTEP
+- (void) setFrameSize: (NSSize)newSize
+{
+  [super setFrameSize: newSize];
+//  NSLog(@"setFrameSize: %@", NSStringFromSize(newSize));
+  [self prepareAttributes];
+}
+
+
+- (void) setFrame: (NSRect)newRect
+{
+  [super setFrame: newRect];
+//  NSLog(@"setFrame: %@", NSStringFromRect(newRect));
+  [self prepareAttributes];
+}
+
+
+#else
+- (void) viewDidEndLiveResize
+{
+  NSLog(@"viewDidEndLiveResize");
+  [self prepareAttributes];
+  [self setNeedsDisplay: YES];
+}
+
+
+#endif
+
 - (void) prepareAttributes
 {
-  attributes = [[NSMutableDictionary alloc] init];
+  ASSIGN(attributes, [[NSMutableDictionary alloc] init]);
 
-  [attributes setObject: [NSFont fontWithName: @"IPAGothic"
-                   size: [self bounds].size.height * 0.9]
+  NSRect bounds = [self bounds];
+  CGFloat minSize = MIN(bounds.size.width, bounds.size.height);
+  [attributes setObject: [NSFont fontWithName: @"FreeMono"
+                   size: minSize]
                  forKey: NSFontAttributeName];
 
   [attributes setObject: [NSColor redColor]
                  forKey: NSForegroundColorAttributeName];
 }
-
 
 - (void) drawStringCenteredIn: (NSRect)r
 {
@@ -52,10 +81,10 @@
   NSSize stringSize;
 
   stringSize = [string sizeWithAttributes: attributes];
-  NSLog(@"stringSize = %@", NSStringFromSize(stringSize));
+  // NSLog(@"stringSize = %@", NSStringFromSize(stringSize));
   stringOrigin.x = r.origin.x + (r.size.width - stringSize.width) / 2;
   stringOrigin.y = r.origin.y + (r.size.height - stringSize.height) / 2;
-  NSLog(@"stringOrigin = %@", NSStringFromPoint(stringOrigin));
+  // NSLog(@"stringOrigin = %@", NSStringFromPoint(stringOrigin));
   [string drawAtPoint: stringOrigin withAttributes: attributes];
 }
 
@@ -78,6 +107,35 @@
   [self setString: input];
 }
 
+
+- (IBAction) savePDF: (id)sender
+{
+  NSSavePanel *panel = [NSSavePanel savePanel];
+  [panel setRequiredFileType: @"pdf"];
+  [panel beginSheetForDirectory: nil
+                           file: nil
+                 modalForWindow: [self window]
+                  modalDelegate: self
+                 didEndSelector:
+               @selector(didEnd: returnCode: contextInfo:)
+                    contextInfo: nil];
+}
+
+
+- (void) didEnd: (NSSavePanel *)sheet
+     returnCode: (int)code
+    contextInfo: (void *)contextInfo
+{
+  NSLog(@"didEnd:returnCode:contextInfo:");
+  NSRect r;
+  NSData *data;
+  if (code == NSOKButton)
+    {
+      r = [self bounds];
+      data = [self dataWithPDFInsideRect: r];
+      [data writeToFile: [sheet filename] atomically: YES];
+    }
+}
 
 - (void) setBgColor: (NSColor *)c;
 {

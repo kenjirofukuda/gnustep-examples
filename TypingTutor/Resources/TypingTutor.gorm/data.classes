@@ -10,6 +10,7 @@
     };
     BigLetterView = {
 	Actions = (
+	    "savePDF:"
 	);
 	Outlets = (
 	    bgColor,
@@ -20,6 +21,7 @@
     FirstResponder = {
 	Actions = (
 	    "orderFrontFontPanel:",
+	    "savePDF:",
 	    "showPrefPanel:"
 	);
 	Super = NSObject;
