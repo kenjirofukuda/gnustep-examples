@@ -18,8 +18,8 @@
 
 @interface AppController : NSObject
 {
-  NSSlider *slider;
-  StretchView *stretchView;
+  IBOutlet NSSlider *slider;
+  IBOutlet StretchView *stretchView;
 }
 
 + (void) initialize;

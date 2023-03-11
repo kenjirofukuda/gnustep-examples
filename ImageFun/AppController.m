@@ -90,9 +90,14 @@
 
 - (void) awakeFromNib
 {
-  NSLog(@"awakeFromNib");
-  [slider setFloatValue: 0.5];
+  NSLog(@"StretchView>>awakeFromNib");
+  NSSize frameSize = [[NSScreen mainScreen] frame].size;
+  frameSize.width *= 0.95;
+  frameSize.height *= 0.95;
+  [stretchView setFrameSize: frameSize];
   [stretchView setOpacity: 0.5];
+  [[stretchView window] center];
+  [slider setFloatValue: 0.5];
 }
 
 - (void) applicationDidFinishLaunching: (NSNotification *)aNotif
