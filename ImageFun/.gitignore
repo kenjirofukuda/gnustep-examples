@@ -19,3 +19,6 @@ compile_commands.json
 
 # MacOS Desktop Services Store
 .DS_Store
+
+# prefs
+ImageFun.pcproj/kenjiro.project
