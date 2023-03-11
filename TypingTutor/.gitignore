@@ -1,0 +1,24 @@
+# Build products
+obj
+config.*
+*.log
+*.sum
+*.app
+*.backup
+
+# Editor byproducts
+*.orig
+*.swp
+*~
+
+# ccls
+.ccls-cache/
+.ccls_root
+.ccls
+compile_commands.json
+
+# MacOS Desktop Services Store
+.DS_Store
+
+# prefs
+TypingTutor.pcproj/kenjiro.project
