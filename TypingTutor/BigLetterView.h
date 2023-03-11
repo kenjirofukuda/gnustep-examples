@@ -8,6 +8,7 @@
   IBOutlet NSString *string;
 }
 
+- (instancetype) initWithFrame: (NSRect)rect;
 - (void) setBgColor: (NSColor *)c;
 - (NSColor *) bgColor;
 - (void) setString: (NSString *)s;
