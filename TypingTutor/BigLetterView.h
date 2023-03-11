@@ -6,11 +6,17 @@
 {
   IBOutlet NSColor *bgColor;
   IBOutlet NSString *string;
+  NSMutableDictionary *attributes;
 }
 
 - (instancetype) initWithFrame: (NSRect)rect;
+
 - (void) setBgColor: (NSColor *)c;
 - (NSColor *) bgColor;
 - (void) setString: (NSString *)s;
 - (NSString *) string;
+
+- (void) prepareAttributes;
+- (void) drawStringCenteredIn: (NSRect)r;
+
 @end
