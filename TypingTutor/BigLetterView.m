@@ -14,6 +14,7 @@
       [self setBgColor: [NSColor yellowColor]];
       [self setString: @" "];
     }
+
   return self;
 }
 
@@ -23,8 +24,8 @@
   NSRect bounds = [self bounds];
   [bgColor set];
   [NSBezierPath fillRect: bounds];
-
   [self drawStringCenteredIn: bounds];
+
   if ([[self window] firstResponder] == self)
     {
       [[NSColor blackColor] set];
@@ -65,14 +66,12 @@
 - (void) prepareAttributes
 {
   ASSIGN(attributes, [[NSMutableDictionary alloc] init]);
-
   NSRect bounds = [self bounds];
   CGFloat minSize = MIN(bounds.size.width, bounds.size.height);
   // *INDENT-OFF*
   [attributes setObject: [NSFont fontWithName: @"FreeMono"
                                          size: minSize]
                  forKey: NSFontAttributeName];
-
   [attributes setObject: [NSColor redColor]
                  forKey: NSForegroundColorAttributeName];
   // *INDENT-ON*
@@ -82,7 +81,6 @@
 {
   NSPoint stringOrigin;
   NSSize stringSize;
-
   stringSize = [string sizeWithAttributes: attributes];
   // NSLog(@"stringSize = %@", NSStringFromSize(stringSize));
   stringOrigin.x = r.origin.x + (r.size.width - stringSize.width) / 2;
@@ -95,18 +93,21 @@
 - (void) keyDown: (NSEvent *)event
 {
   NSString *input = [event characters];
+
   // Tab ?
   if ([input isEqual: @"\t"])
     {
       [[self window] selectNextKeyView: nil];
       return;
     }
+
   // Shift + Tab ?
   if ([input isEqual: @"\031"])
     {
       [[self window] selectPreviousKeyView: nil];
       return;
     }
+
   [self setString: input];
 }
 
@@ -132,6 +133,7 @@
   NSLog(@"didEnd:returnCode:contextInfo:");
   NSRect r;
   NSData *data;
+
   if (code == NSOKButton)
     {
       r = [self bounds];
@@ -139,6 +141,58 @@
       [data writeToFile: [sheet filename] atomically: YES];
     }
 }
+
+
+- (void) writeStringToPasteboard: (NSPasteboard *)pb
+{
+  [pb declareTypes: @[NSStringPboardType] owner: self];
+  [pb setString: string forType: NSStringPboardType];
+}
+
+
+- (BOOL) readStringFromPasteboard: (NSPasteboard *)pb
+{
+  NSString *value;
+  NSString *type;
+  type = [pb availableTypeFromArray: @[NSStringPboardType]];
+
+  if (type)
+    {
+      value = [pb stringForType: NSStringPboardType];
+
+      if ([value length] == 1)
+        {
+          [self setString: value];
+          return YES;
+        }
+    }
+  return NO;
+}
+
+
+- (IBAction) cut: (id)sender
+{
+  [self copy: sender];
+  [self setString: @" "];
+}
+
+
+- (IBAction) copy: (id)sender
+{
+  NSPasteboard *pb = [NSPasteboard generalPasteboard];
+  [self writeStringToPasteboard: pb];
+}
+
+
+- (IBAction) paste: (id)sender
+{
+  NSPasteboard *pb = [NSPasteboard generalPasteboard];
+  if (! [self readStringFromPasteboard: pb])
+    {
+      NSBeep();
+    }
+}
+
 
 - (void) setBgColor: (NSColor *)c;
 {

@@ -19,6 +19,11 @@
 
 - (void) prepareAttributes;
 - (void) drawStringCenteredIn: (NSRect)r;
+- (void) writeStringToPasteboard: (NSPasteboard *)pb;
+- (BOOL) readStringFromPasteboard: (NSPasteboard *)pb;
 
 - (IBAction) savePDF: (id)sender;
+- (IBAction) cut: (id)sender;
+- (IBAction) copy: (id)sender;
+- (IBAction) paste: (id)sender;
 @end
