@@ -122,7 +122,7 @@
                  modalForWindow: [self window]
                   modalDelegate: self
                  didEndSelector:
-               @selector(didEnd: returnCode: contextInfo:)
+               @selector(didEnd:returnCode:contextInfo:)
                     contextInfo: nil];
 }
 

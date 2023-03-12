@@ -3,5 +3,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (FirstLetter)
-- (NSString*) firstLetter;
+- (NSString *) firstLetter;
 @end

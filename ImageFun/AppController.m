@@ -10,13 +10,13 @@
 
 #import "AppController.h"
 
-@interface NSString(Repeat)
+@interface NSString (Repeat)
 
 - (NSString *) repeatTimes: (NSUInteger)times;
 
 @end
 
-@implementation NSString(Repeat)
+@implementation NSString (Repeat)
 
 - (NSString *) repeatTimes: (NSUInteger)times
 {
@@ -25,12 +25,12 @@
 
 @end
 
-@interface AppController(Debug)
+@interface AppController (Debug)
 - (void) printWindows;
 - (void) printMainScreenInfo;
 @end
 
-@implementation AppController(Debug)
+@implementation AppController (Debug)
 - (void) printWindows
 {
   NSArray *allWindows = GSAllWindows();
@@ -142,7 +142,7 @@
                  modalForWindow: [stretchView window]
                   modalDelegate: self
                  didEndSelector:
-      @selector(openPanelDidEnd: returnCode: contextInfo:)
+      @selector(openPanelDidEnd:returnCode:contextInfo:)
                     contextInfo: nil];
 }
 

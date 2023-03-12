@@ -1,8 +1,9 @@
 #!/bin/bash
  
-astyle_options="$(dirname $0)/_astyle_gnustep"
-if [ ! -f "$astyle_options" ]; then
-  echo "not found: $astyle_options"
+script="$(dirname $0)/_reformat.sh"
+
+if [ ! -f "$script" ]; then
+  echo "not found: $script"
   exit 1
 fi
 
@@ -21,4 +22,4 @@ find "$target_dir" -type f \
        -name "*.h" -or \
        -name "*.mm" -or \
        -name "*.c" -or \
-       -name "*.cpp" \) | grep -v '@' | xargs -n 1 -I{}  astyle {} "--options=${astyle_options}" --suffix=none
+       -name "*.cpp" \) | grep -v '@' | xargs -n 1 -I{} "$script" {}
