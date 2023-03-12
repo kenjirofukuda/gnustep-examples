@@ -40,14 +40,16 @@ Resources/TypingTutor.gorm \
 #
 TypingTutor_HEADER_FILES = \
 AppController.h \
-BigLetterView.h
+BigLetterView.h \
+FirstLetter.h
 
 #
 # Objective-C Class files
 #
 TypingTutor_OBJC_FILES = \
 AppController.m \
-BigLetterView.m
+BigLetterView.m \
+FirstLetter.m
 
 #
 # Other sources

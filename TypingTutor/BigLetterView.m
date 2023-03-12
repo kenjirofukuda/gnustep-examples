@@ -1,8 +1,9 @@
-// -*- mode: objc -*-
+/* -*- mode: objc; coding: utf-8 -*- */
 /* All rights reserved */
 
 #import <AppKit/AppKit.h>
 #import "BigLetterView.h"
+#import "FirstLetter.h"
 
 @implementation BigLetterView
 
@@ -159,12 +160,8 @@
   if (type)
     {
       value = [pb stringForType: NSStringPboardType];
-
-      if ([value length] == 1)
-        {
-          [self setString: value];
-          return YES;
-        }
+      [self setString: [value firstLetter]];
+      return YES;
     }
   return NO;
 }
