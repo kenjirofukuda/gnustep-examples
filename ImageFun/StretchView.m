@@ -5,7 +5,7 @@
 
 @implementation StretchView
 
-- (id) initWithFrame: (NSRect)rect
+- (instancetype) initWithFrame: (NSRect)rect
 {
   int i;
   NSPoint p;
@@ -113,6 +113,7 @@
   [self setNeedsDisplay: YES];
 }
 
+
 - (NSRect) currentRect
 {
   CGFloat minX = MIN(_downPoint.x, _currentPoint.x);
@@ -121,7 +122,5 @@
   CGFloat maxY = MAX(_downPoint.y, _currentPoint.y);
   return NSMakeRect(minX, minY, maxX - minX, maxY - minY);
 }
-
-
 
 @end

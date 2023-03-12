@@ -1,3 +1,4 @@
+// -*- mode: objc -*-
 /* All rights reserved */
 
 #import <AppKit/AppKit.h>
@@ -67,12 +68,14 @@
 
   NSRect bounds = [self bounds];
   CGFloat minSize = MIN(bounds.size.width, bounds.size.height);
+  // *INDENT-OFF*
   [attributes setObject: [NSFont fontWithName: @"FreeMono"
-                   size: minSize]
+                                         size: minSize]
                  forKey: NSFontAttributeName];
 
   [attributes setObject: [NSColor redColor]
                  forKey: NSForegroundColorAttributeName];
+  // *INDENT-ON*
 }
 
 - (void) drawStringCenteredIn: (NSRect)r

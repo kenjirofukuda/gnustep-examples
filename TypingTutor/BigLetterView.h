@@ -1,3 +1,4 @@
+/* -*- mode: objc -*- */
 /* All rights reserved */
 
 #import <AppKit/AppKit.h>

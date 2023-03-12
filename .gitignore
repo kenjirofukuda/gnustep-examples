@@ -2,6 +2,10 @@
 *.class
 *.log
 
+**/.ccls
+**/.ccls-cache/*
+
+
 # sbt specific
 dist/*
 target/
