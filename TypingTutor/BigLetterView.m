@@ -70,8 +70,7 @@
   NSRect bounds = [self bounds];
   CGFloat minSize = MIN(bounds.size.width, bounds.size.height);
   // *INDENT-OFF*
-  [attributes setObject: [NSFont fontWithName: @"FreeMono"
-                                         size: minSize]
+  [attributes setObject: [NSFont userFontOfSize: minSize]
                  forKey: NSFontAttributeName];
   [attributes setObject: [NSColor redColor]
                  forKey: NSForegroundColorAttributeName];
@@ -146,7 +145,7 @@
 
 - (void) writeStringToPasteboard: (NSPasteboard *)pb
 {
-  [pb declareTypes: @[NSStringPboardType] owner: self];
+  [pb declareTypes: @[NSPasteboardTypeString] owner: self];
   [pb setString: string forType: NSStringPboardType];
 }
 
@@ -155,16 +154,62 @@
 {
   NSString *value;
   NSString *type;
-  type = [pb availableTypeFromArray: @[NSStringPboardType]];
+  type = [pb availableTypeFromArray: @[NSPasteboardTypeString]];
 
   if (type)
     {
-      value = [pb stringForType: NSStringPboardType];
+      value = [pb stringForType: NSPasteboardTypeString];
       [self setString: [value firstLetter]];
       return YES;
     }
   return NO;
 }
+
+
+- (NSUInteger) draggingSourceOperationMaskForLocal: (BOOL)flag
+{
+  return NSDragOperationCopy;
+}
+
+
+- (void) mouseDragged: (NSEvent *)event
+{
+  NSRect imageBounds;
+  NSPasteboard *pb;
+  NSImage *anImage;
+  NSSize s;
+  NSPoint p;
+
+  anImage = [[NSImage alloc] init];
+
+  s = [string sizeWithAttributes: attributes];
+
+  imageBounds.origin = NSMakePoint(0, 0);
+  imageBounds.size = s;
+  [anImage setSize: s];
+
+  [anImage lockFocus];
+  [self drawStringCenteredIn: imageBounds];
+  [anImage unlockFocus];
+
+  p = [self convertPoint: [event locationInWindow] fromView: nil];
+
+  p.x = p.x - s.width / 2;
+  p.y = p.y - s.height / 2;
+
+  pb = [NSPasteboard pasteboardWithName: NSDragPboard];
+
+  [self writeStringToPasteboard: pb];
+  [self dragImage: anImage
+               at: p
+           offset: NSMakeSize(0, 0)
+            event: event
+       pasteboard: pb
+           source: self
+        slideBack: YES];
+  RELEASE(anImage);
+}
+
 
 
 - (IBAction) cut: (id)sender

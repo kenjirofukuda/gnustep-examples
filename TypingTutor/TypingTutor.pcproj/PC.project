@@ -2,10 +2,19 @@
     APPLICATIONICON = "";
     "APP_DOCUMENT_BASED" = NO;
     "APP_TYPE" = GORM;
+    "BUILDER_TARGETS" = (
+	all,
+	install,
+	uninstall,
+	clean,
+	distclean,
+	dist
+    );
     "BUNDLE_IDENTIFIER" = "";
     "CLASS_FILES" = (
 	"AppController.m",
-	"BigLetterView.m"
+	"BigLetterView.m",
+	"FirstLetter.m"
     );
     COMPILEROPTIONS = "";
     CPPOPTIONS = "";
@@ -16,7 +25,8 @@
     );
     "HEADER_FILES" = (
 	"AppController.h",
-	"BigLetterView.h"
+	"BigLetterView.h",
+	"FirstLetter.h"
     );
     IMAGES = (
     );
