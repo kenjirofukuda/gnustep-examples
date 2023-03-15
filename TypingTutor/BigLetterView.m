@@ -11,9 +11,11 @@
 {
   if (self = [super initWithFrame: rect])
     {
+      highlighted = NO;
       [self prepareAttributes];
       [self setBgColor: [NSColor yellowColor]];
       [self setString: @" "];
+      [self registerForDraggedTypes: @[NSPasteboardTypeString]];
     }
 
   return self;
@@ -23,7 +25,14 @@
 - (void) drawRect: (NSRect)rect
 {
   NSRect bounds = [self bounds];
-  [bgColor set];
+  if (highlighted)
+    {
+      [[NSColor whiteColor] set];
+    }
+  else
+    {
+      [bgColor set];
+    }
   [NSBezierPath fillRect: bounds];
   [self drawStringCenteredIn: bounds];
 
@@ -146,7 +155,7 @@
 - (void) writeStringToPasteboard: (NSPasteboard *)pb
 {
   [pb declareTypes: @[NSPasteboardTypeString] owner: self];
-  [pb setString: string forType: NSStringPboardType];
+  [pb setString: string forType: NSPasteboardTypeString];
 }
 
 
@@ -166,7 +175,7 @@
 }
 
 
-- (NSUInteger) draggingSourceOperationMaskForLocal: (BOOL)flag
+- (NSDragOperation) draggingSourceOperationMaskForLocal: (BOOL)flag
 {
   return NSDragOperationCopy;
 }
@@ -210,6 +219,56 @@
   RELEASE(anImage);
 }
 
+- (NSDragOperation) draggingEntered: (id <NSDraggingInfo>)sender
+{
+  NSLog(@"draggingEntered:");
+  if ([sender draggingSource] != self)
+    {
+      NSPasteboard *pb = [sender draggingPasteboard];
+      NSString *type = [pb availableTypeFromArray: @[NSPasteboardTypeString]];
+      if (type != nil)
+        {
+          highlighted = YES;
+          [self setNeedsDisplay: YES];
+          return NSDragOperationCopy;
+        }
+    }
+  return NSDragOperationNone;
+}
+
+
+- (void) draggingExited: (id <NSDraggingInfo>)sender
+{
+  NSLog(@"draggingExited:");
+  highlighted = NO;
+  [self setNeedsDisplay: YES];
+}
+
+
+- (BOOL) prepareForDragOperation: (id <NSDraggingInfo>)sender
+{
+  return YES;
+}
+
+
+- (BOOL) performDragOperation: (id <NSDraggingInfo>)sender
+{
+  NSPasteboard *pb = [sender draggingPasteboard];
+  if (![self readStringFromPasteboard: pb])
+    {
+      NSLog(@"Error: COuld not read from dragging pasteboard");
+      return NO;
+    }
+  return YES;
+}
+
+
+- (void) concludeDragOperation: (id <NSDraggingInfo>)sender
+{
+  NSLog(@"concludeDragOperation:");
+  highlighted = NO;
+  [self setNeedsDisplay: YES];
+}
 
 
 - (IBAction) cut: (id)sender

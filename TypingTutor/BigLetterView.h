@@ -8,6 +8,7 @@
   IBOutlet NSColor *bgColor;
   IBOutlet NSString *string;
   NSMutableDictionary *attributes;
+  BOOL highlighted;
 }
 
 - (instancetype) initWithFrame: (NSRect)rect;
