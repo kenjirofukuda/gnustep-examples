@@ -3,12 +3,16 @@
     AppController = {
 	Actions = (
 	    "showPrefPanel:",
-	    "stopGo:"
+	    "stopGo:",
+	    "raiseSpeedWindow:",
+	    "endSpeedWindow:"
 	);
 	Outlets = (
 	    inLetterView,
 	    outLetterView,
-	    progressView
+	    progressView,
+	    speedWindow,
+	    speedSlider
 	);
 	Super = NSObject;
     };
@@ -24,7 +28,9 @@
     };
     FirstResponder = {
 	Actions = (
+	    "endSpeedWindow:",
 	    "orderFrontFontPanel:",
+	    "raiseSpeedWindow:",
 	    "savePDF:",
 	    "showPrefPanel:",
 	    "stopGo:"

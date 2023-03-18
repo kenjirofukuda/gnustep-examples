@@ -10,8 +10,6 @@
 
 #import "AppController.h"
 
-#define TICKS 10
-
 @implementation AppController
 
 + (void) initialize
@@ -30,10 +28,12 @@
   [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+
 - (id) init
 {
   if ((self = [super init]))
     {
+      ticks = 10;
       letters = @[@"a", @"s", @"d", @"f", @"j", @"k", @"l", @";"];
       RETAIN(letters);
       lastIndex = 0;
@@ -42,31 +42,42 @@
   return self;
 }
 
+
 - (void) dealloc
 {
   RELEASE(letters);
   DEALLOC;
 }
 
+
 - (void) awakeFromNib
 {
   [self showAnotherLetter];
 }
 
+
 - (void) applicationDidFinishLaunching: (NSNotification *)aNotif
 {
   NSLog(@"applicationDidFinishLaunching:");
+  NSWindow *mainWindow = [NSApp mainWindow];
+  if (mainWindow)
+    {
+      [mainWindow center];
+    }
 }
+
 
 - (NSApplicationTerminateReply) applicationShouldTerminate: (id)sender
 {
   return YES;
 }
 
+
 - (void) applicationWillTerminate: (NSNotification *)aNotif
 {
   NSLog(@"applicationWillTerminate:");
 }
+
 
 - (BOOL) application: (NSApplication *)application
             openFile: (NSString *)fileName
@@ -104,12 +115,12 @@
       [self showAnotherLetter];
     }
   count++;
-  if (count > TICKS)
+  if (count > ticks)
     {
       NSBeep();
       count = 0;
     }
-  [progressView setDoubleValue: (100.0 * count) / TICKS];
+  [progressView setDoubleValue: (100.0 * count) / ticks];
 }
 
 
@@ -117,6 +128,7 @@
 {
   NSLog(@"showPrefPanel:");
 }
+
 
 - (void) showAnotherLetter
 {
@@ -129,6 +141,35 @@
   lastIndex = x;
   [outLetterView setString: [letters objectAtIndex: x]];
   [progressView setDoubleValue: 0.0];
+}
+
+
+- (IBAction) raiseSpeedWindow: (id)sender
+{
+  NSLog(@"raiseSpeedWindow");
+  [speedSlider setIntValue: ticks];
+  [NSApp beginSheet: speedWindow
+     modalForWindow: [inLetterView window]
+      modalDelegate: self
+     didEndSelector: @selector(sheetDidEnd:returnCode:contextInfo:)
+        contextInfo: nil];
+}
+
+
+- (IBAction) endSpeedWindow: (id)sender
+{
+  [speedWindow orderOut: sender];
+  [NSApp endSheet: speedWindow returnCode: 1];
+}
+
+
+- (void) sheetDidEnd: (NSWindow *)sheet
+          returnCode: (int)returnCode
+         contextInfo: (void *)contextInfo
+{
+  ticks = [speedSlider intValue];
+  count = 0;
+  NSLog(@"sheetDidEnd: return code = %d", returnCode);
 }
 
 @end

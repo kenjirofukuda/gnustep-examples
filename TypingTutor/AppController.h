@@ -21,7 +21,10 @@
   IBOutlet BigLetterView *inLetterView;
   IBOutlet BigLetterView *outLetterView;
   IBOutlet NSProgressIndicator *progressView;
+  IBOutlet NSWindow *speedWindow;
+  IBOutlet NSSlider *speedSlider;
   int count;
+  int ticks;
   NSTimer *timer;
   NSArray *letters;
   int lastIndex;
@@ -42,9 +45,14 @@
 
 - (IBAction) showPrefPanel: (id)sender;
 - (IBAction) stopGo: (id)sender;
+- (IBAction) raiseSpeedWindow: (id)sender;
+- (IBAction) endSpeedWindow: (id)sender;
 
 - (void) checkThem: (NSTimer *)timer;
 - (void) showAnotherLetter;
+- (void) sheetDidEnd: (NSWindow *)sheet
+          returnCode: (int)returnCode
+         contextInfo: (void *)contextInfo;
 
 @end
 
