@@ -2,9 +2,13 @@
     "## Comment" = "Do NOT change this file, Gorm maintains it";
     AppController = {
 	Actions = (
-	    "showPrefPanel:"
+	    "showPrefPanel:",
+	    "stopGo:"
 	);
 	Outlets = (
+	    inLetterView,
+	    outLetterView,
+	    progressView
 	);
 	Super = NSObject;
     };
@@ -22,7 +26,8 @@
 	Actions = (
 	    "orderFrontFontPanel:",
 	    "savePDF:",
-	    "showPrefPanel:"
+	    "showPrefPanel:",
+	    "stopGo:"
 	);
 	Super = NSObject;
     };

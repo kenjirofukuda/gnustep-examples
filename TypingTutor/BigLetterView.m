@@ -46,18 +46,9 @@
 
 
 #if GNUSTEP
-- (void) setFrameSize: (NSSize)newSize
-{
-  [super setFrameSize: newSize];
-//  NSLog(@"setFrameSize: %@", NSStringFromSize(newSize));
-  [self prepareAttributes];
-}
-
-
 - (void) setFrame: (NSRect)newRect
 {
   [super setFrame: newRect];
-//  NSLog(@"setFrame: %@", NSStringFromRect(newRect));
   [self prepareAttributes];
 }
 
@@ -91,10 +82,8 @@
   NSPoint stringOrigin;
   NSSize stringSize;
   stringSize = [string sizeWithAttributes: attributes];
-  // NSLog(@"stringSize = %@", NSStringFromSize(stringSize));
   stringOrigin.x = r.origin.x + (r.size.width - stringSize.width) / 2;
   stringOrigin.y = r.origin.y + (r.size.height - stringSize.height) / 2;
-  // NSLog(@"stringOrigin = %@", NSStringFromPoint(stringOrigin));
   [string drawAtPoint: stringOrigin withAttributes: attributes];
 }
 

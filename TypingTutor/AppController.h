@@ -1,3 +1,4 @@
+/* -*- mode: objc; coding: utf-8 -*- */
 /*
    Project: TypingTutor
 
@@ -12,11 +13,18 @@
 #define _PCAPPPROJ_APPCONTROLLER_H
 
 #import <AppKit/AppKit.h>
-// Uncomment if your application is Renaissance-based
-//#import <Renaissance/Renaissance.h>
+
+@class BigLetterView;
 
 @interface AppController : NSObject
 {
+  IBOutlet BigLetterView *inLetterView;
+  IBOutlet BigLetterView *outLetterView;
+  IBOutlet NSProgressIndicator *progressView;
+  int count;
+  NSTimer *timer;
+  NSArray *letters;
+  int lastIndex;
 }
 
 + (void) initialize;
@@ -32,7 +40,11 @@
 - (BOOL) application: (NSApplication *)application
             openFile: (NSString *)fileName;
 
-- (void) showPrefPanel: (id)sender;
+- (IBAction) showPrefPanel: (id)sender;
+- (IBAction) stopGo: (id)sender;
+
+- (void) checkThem: (NSTimer *)timer;
+- (void) showAnotherLetter;
 
 @end
 

@@ -10,6 +10,8 @@
 
 #import "AppController.h"
 
+#define TICKS 10
+
 @implementation AppController
 
 + (void) initialize
@@ -32,23 +34,28 @@
 {
   if ((self = [super init]))
     {
+      letters = @[@"a", @"s", @"d", @"f", @"j", @"k", @"l", @";"];
+      RETAIN(letters);
+      lastIndex = 0;
+      srandom(time(NULL));
     }
   return self;
 }
 
 - (void) dealloc
 {
+  RELEASE(letters);
   DEALLOC;
 }
 
 - (void) awakeFromNib
 {
+  [self showAnotherLetter];
 }
 
 - (void) applicationDidFinishLaunching: (NSNotification *)aNotif
 {
-// Uncomment if your application is Renaissance-based
-//  [NSBundle loadGSMarkupNamed: @"Main" owner: self];
+  NSLog(@"applicationDidFinishLaunching:");
 }
 
 - (NSApplicationTerminateReply) applicationShouldTerminate: (id)sender
@@ -58,6 +65,7 @@
 
 - (void) applicationWillTerminate: (NSNotification *)aNotif
 {
+  NSLog(@"applicationWillTerminate:");
 }
 
 - (BOOL) application: (NSApplication *)application
@@ -66,8 +74,61 @@
   return NO;
 }
 
-- (void) showPrefPanel: (id)sender
+
+- (IBAction) stopGo: (id)sender
 {
+  NSLog(@"stopGo:");
+  if ([sender state] == 1)
+    {
+      NSLog(@"Starting");
+      timer = [NSTimer scheduledTimerWithTimeInterval: 0.2
+                                               target: self
+                                             selector: @selector(checkThem:)
+                                             userInfo: nil
+                                              repeats: YES];
+      RETAIN(timer);
+    }
+  else
+    {
+      NSLog(@"Stopping");
+      [timer invalidate];
+      RELEASE(timer);
+    }
+}
+
+
+- (void) checkThem: (NSTimer *)timer
+{
+  if ([[inLetterView string] isEqual: [outLetterView string]])
+    {
+      [self showAnotherLetter];
+    }
+  count++;
+  if (count > TICKS)
+    {
+      NSBeep();
+      count = 0;
+    }
+  [progressView setDoubleValue: (100.0 * count) / TICKS];
+}
+
+
+- (IBAction) showPrefPanel: (id)sender
+{
+  NSLog(@"showPrefPanel:");
+}
+
+- (void) showAnotherLetter
+{
+  int x;
+  x = lastIndex;
+  while (x == lastIndex)
+    {
+      x = random() % [letters count];
+    }
+  lastIndex = x;
+  [outLetterView setString: [letters objectAtIndex: x]];
+  [progressView setDoubleValue: 0.0];
 }
 
 @end
