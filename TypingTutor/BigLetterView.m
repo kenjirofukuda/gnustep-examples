@@ -38,9 +38,9 @@
 
   if ([[self window] firstResponder] == self)
     {
-      [[NSColor keyboradFocusIndicatorColor] set];
+      [[NSColor keyboardFocusIndicatorColor] set];
       [NSBezierPath setDefaultLineWidth: 4.0];
-      [NSBezirPath strokeRect: bounds];
+      [NSBezierPath strokeRect: bounds];
     }
 }
 
