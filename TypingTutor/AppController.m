@@ -141,6 +141,7 @@
   lastIndex = x;
   [outLetterView setString: [letters objectAtIndex: x]];
   [progressView setDoubleValue: 0.0];
+  count = 0;
 }
 
 
