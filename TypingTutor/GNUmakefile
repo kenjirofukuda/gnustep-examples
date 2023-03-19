@@ -41,7 +41,8 @@ Resources/TypingTutor.gorm \
 TypingTutor_HEADER_FILES = \
 AppController.h \
 BigLetterView.h \
-FirstLetter.h
+FirstLetter.h \
+ColorFormatter.h
 
 #
 # Objective-C Class files
@@ -49,7 +50,8 @@ FirstLetter.h
 TypingTutor_OBJC_FILES = \
 AppController.m \
 BigLetterView.m \
-FirstLetter.m
+FirstLetter.m \
+ColorFormatter.m
 
 #
 # Other sources

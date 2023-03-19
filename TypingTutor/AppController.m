@@ -9,6 +9,8 @@
 */
 
 #import "AppController.h"
+#import "ColorFormatter.h"
+#import "BigLetterView.h"
 
 @implementation AppController
 
@@ -52,6 +54,12 @@
 
 - (void) awakeFromNib
 {
+  NSLog(@"awakeFromNib:");
+  ColorFormatter *colorFormatter = [[ColorFormatter alloc] init];
+  [textField setFormatter: colorFormatter];
+  RELEASE(colorFormatter);
+  [textField setObjectValue: [inLetterView bgColor]];
+  [colorWell setColor: [inLetterView bgColor]];
   [self showAnotherLetter];
 }
 
@@ -63,6 +71,7 @@
   if (mainWindow)
     {
       [mainWindow center];
+      [mainWindow makeKeyAndOrderFront: self];
     }
 }
 
@@ -152,7 +161,7 @@
   [NSApp beginSheet: speedWindow
      modalForWindow: [inLetterView window]
       modalDelegate: self
-     didEndSelector: @selector(sheetDidEnd:returnCode:contextInfo:)
+     didEndSelector: @selector(sheetDidEnd: returnCode: contextInfo:)
         contextInfo: nil];
 }
 
@@ -172,5 +181,24 @@
   count = 0;
   NSLog(@"sheetDidEnd: return code = %d", returnCode);
 }
+
+
+- (IBAction) tackeColorFromTextField: (id)sender
+{
+  NSColor *c = [sender objectValue];
+  NSLog(@"taking color form text field");
+  [inLetterView setBgColor: c];
+  [colorWell setColor: c];
+}
+
+
+- (IBAction) tackeColorFromColorWell: (id)sender
+{
+  NSColor *c = [sender color];
+  NSLog(@"taking color form color well");
+  [inLetterView setBgColor: c];
+  [colorWell setColor: c];
+}
+
 
 @end

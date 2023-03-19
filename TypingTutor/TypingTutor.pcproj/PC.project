@@ -14,7 +14,8 @@
     "CLASS_FILES" = (
 	"AppController.m",
 	"BigLetterView.m",
-	"FirstLetter.m"
+	"FirstLetter.m",
+	"ColorFormatter.m"
     );
     COMPILEROPTIONS = "";
     CPPOPTIONS = "";
@@ -26,7 +27,8 @@
     "HEADER_FILES" = (
 	"AppController.h",
 	"BigLetterView.h",
-	"FirstLetter.h"
+	"FirstLetter.h",
+	"ColorFormatter.h"
     );
     IMAGES = (
     );

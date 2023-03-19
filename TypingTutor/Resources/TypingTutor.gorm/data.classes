@@ -5,14 +5,18 @@
 	    "showPrefPanel:",
 	    "stopGo:",
 	    "raiseSpeedWindow:",
-	    "endSpeedWindow:"
+	    "endSpeedWindow:",
+	    "tackeColorFromTextField:",
+	    "tackeColorFromColorWell:"
 	);
 	Outlets = (
 	    inLetterView,
 	    outLetterView,
 	    progressView,
 	    speedWindow,
-	    speedSlider
+	    speedSlider,
+	    colorWell,
+	    textField
 	);
 	Super = NSObject;
     };
@@ -33,7 +37,9 @@
 	    "raiseSpeedWindow:",
 	    "savePDF:",
 	    "showPrefPanel:",
-	    "stopGo:"
+	    "stopGo:",
+	    "tackeColorFromColorWell:",
+	    "tackeColorFromTextField:"
 	);
 	Super = NSObject;
     };

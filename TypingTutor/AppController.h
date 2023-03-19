@@ -23,6 +23,8 @@
   IBOutlet NSProgressIndicator *progressView;
   IBOutlet NSWindow *speedWindow;
   IBOutlet NSSlider *speedSlider;
+  IBOutlet NSColorWell *colorWell;
+  IBOutlet NSTextField *textField;
   int count;
   int ticks;
   NSTimer *timer;
@@ -47,6 +49,8 @@
 - (IBAction) stopGo: (id)sender;
 - (IBAction) raiseSpeedWindow: (id)sender;
 - (IBAction) endSpeedWindow: (id)sender;
+- (IBAction) tackeColorFromTextField: (id)sender;
+- (IBAction) tackeColorFromColorWell: (id)sender;
 
 - (void) checkThem: (NSTimer *)timer;
 - (void) showAnotherLetter;
