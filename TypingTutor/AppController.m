@@ -185,6 +185,7 @@
 
 - (IBAction) tackeColorFromTextField: (id)sender
 {
+  NSLog(@"tackeColorFromTextField: %@", sender);
   NSColor *c = [sender objectValue];
   NSLog(@"taking color form text field");
   [inLetterView setBgColor: c];

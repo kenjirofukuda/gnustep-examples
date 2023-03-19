@@ -67,8 +67,10 @@
 
   if (! [obj isKindOfClass: [NSColor class]])
     return nil;
-
-  [obj getRed: &red green: &green blue: &blue alpha: &alpha];
+    
+  NSColor *color;
+  color = [obj colorUsingColorSpaceName: NSCalibratedRGBColorSpace];
+  [color getRed: &red green: &green blue: &blue alpha: &alpha];
   keys = [colorList allKeys];
   keyCount = [keys count];
   howClose = 3;
@@ -83,12 +85,13 @@
       float distance;
 
       key = [keys objectAtIndex: i];
-      color2 = [colorList colorWithKey: key];
+      color2 = [[colorList colorWithKey: key] 
+                   colorUsingColorSpaceName: NSCalibratedRGBColorSpace];
 
       [color2 getRed: &red2 green: &green2 blue: &blue2 alpha: &alpha2];
-      distance = fabs(red2 - red) +
-                 fabs(green2 - green) +
-                 fabs(blue2 - blue);
+      distance = pow(red - red2, 2) +
+                 pow(green - green2, 2) +
+                 pow(blue - blue2, 2);
       if (distance < howClose)
         {
           howClose = distance;
