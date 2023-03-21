@@ -49,8 +49,8 @@
 - (IBAction) stopGo: (id)sender;
 - (IBAction) raiseSpeedWindow: (id)sender;
 - (IBAction) endSpeedWindow: (id)sender;
-- (IBAction) tackeColorFromTextField: (id)sender;
-- (IBAction) tackeColorFromColorWell: (id)sender;
+- (IBAction) takeColorFromTextField: (id)sender;
+- (IBAction) takeColorFromColorWell: (id)sender;
 
 - (void) checkThem: (NSTimer *)timer;
 - (void) showAnotherLetter;

@@ -6,8 +6,8 @@
 	    "stopGo:",
 	    "raiseSpeedWindow:",
 	    "endSpeedWindow:",
-	    "tackeColorFromTextField:",
-	    "tackeColorFromColorWell:"
+	    "takeColorFromTextField:",
+	    "takeColorFromColorWell:"
 	);
 	Outlets = (
 	    inLetterView,
@@ -39,7 +39,9 @@
 	    "showPrefPanel:",
 	    "stopGo:",
 	    "tackeColorFromColorWell:",
-	    "tackeColorFromTextField:"
+	    "tackeColorFromTextField:",
+	    "takeColorFromColorWell:",
+	    "takeColorFromTextField:"
 	);
 	Super = NSObject;
     };

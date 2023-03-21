@@ -183,7 +183,7 @@
 }
 
 
-- (IBAction) tackeColorFromTextField: (id)sender
+- (IBAction) takeColorFromTextField: (id)sender
 {
   NSLog(@"tackeColorFromTextField: %@", sender);
   NSColor *c = [sender objectValue];
@@ -193,7 +193,7 @@
 }
 
 
-- (IBAction) tackeColorFromColorWell: (id)sender
+- (IBAction) takeColorFromColorWell: (id)sender
 {
   NSColor *c = [sender color];
   NSLog(@"taking color form color well");
