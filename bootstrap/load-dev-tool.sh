@@ -3,10 +3,12 @@
 echo "Hello dev tool"
 echo $(uname)
 INSTALL_CMD="sudo apt install -y"
+NIX_ID="linux"
 case $(uname) in
   *Linux)
     ;;
   *BSD)
+    NIX_ID="bsd"
     INSTALL_CMD="sudo pkg install -y"
     ;;
   *)
@@ -52,6 +54,13 @@ ensure_cmd curl
 ensure_cmd git
 ensure_cmd gh
 ensure_cmd clang
+if [ $NIX_ID = "bsd" ]; then
+  ensure_cmd make gmake
+else
+  ensure_cmd make build-essential
+fi
+ensure_cmd cmake
+ensure_cmd ninja
 
 # editor
 ensure_cmd vim
