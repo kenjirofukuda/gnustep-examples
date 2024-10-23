@@ -60,7 +60,7 @@ else
   ensure_cmd make build-essential
 fi
 ensure_cmd cmake
-ensure_cmd ninja
+ensure_cmd ninja ninja-build
 
 # editor
 ensure_cmd vim
