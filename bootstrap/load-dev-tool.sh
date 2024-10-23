@@ -15,7 +15,7 @@ case $(uname) in
     ;;
 esac
 
-function check_cmd {
+function ensure_cmd {
   local cmd=$1
   local pkg=$2
   if [ -z "$pkg" ]; then
@@ -27,7 +27,7 @@ function check_cmd {
   # echo "reply -> [$reply]"
   if [ -z "$reply" ]; then
     echo "$cmd not found"
-    echo "$INSTALL_CMD $pkg"
+    $INSTALL_CMD "$pkg"
   else
     echo "$cmd --> [${reply}]"
   fi
@@ -47,13 +47,13 @@ EOF_VIMRC
 fi
 }
 
-check_cmd git
-check_cmd gh
-check_cmd clang
-check_cmd vim
-check_cmd emacs
-check_cmd curl
-check_cmd locate2 plocate
+ensure_cmd git
+ensure_cmd gh
+ensure_cmd clang
+ensure_cmd vim
+ensure_cmd emacs
+ensure_cmd curl
+ensure_cmd locate plocate
 install_vimrc
 
 cat <<EOF > /dev/null
