@@ -2,6 +2,8 @@
 
 echo "Hello dev tool"
 echo $(uname)
+INSTALL_CMD="sudo apt install -y"
+
 
 cat <<EOF > /dev/null
 Usage: uname [OPTION]...
