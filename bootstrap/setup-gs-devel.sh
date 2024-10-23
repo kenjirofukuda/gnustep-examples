@@ -29,6 +29,8 @@ ensure_repo () {
 
 # kenjirofukuda
 ensure_repo "kenjirofukuda" "sandbox"
+ensure_repo "kenjirofukuda" "libs-renaissance"
+ensure_repo "kenjirofukuda" "gdsfeel-gnustep"
 
 # swiftlang
 ensure_repo "swiftlang" "swift-corelibs-libdispatch"
@@ -39,6 +41,7 @@ ensure_repo "gnustep" "libobjc2"
 ensure_repo "gnustep" "libs-base"
 ensure_repo "gnustep" "libs-gui"
 ensure_repo "gnustep" "libs-back"
+ensure_repo "gnustep" "libs-renaissance"
 
 # trunkmaster
 ensure_repo "trunkmaster" "nextspace"
