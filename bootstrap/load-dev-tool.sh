@@ -47,12 +47,17 @@ EOF_VIMRC
 fi
 }
 
+# network
+ensure_cmd curl
 ensure_cmd git
 ensure_cmd gh
 ensure_cmd clang
+
+# editor
 ensure_cmd vim
 ensure_cmd emacs
-ensure_cmd curl
+
+#other
 ensure_cmd locate plocate
 install_vimrc
 
