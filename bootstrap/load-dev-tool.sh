@@ -50,6 +50,7 @@ fi
 }
 
 # network
+ensure_cmd unzip
 ensure_cmd curl
 ensure_cmd git
 ensure_cmd gh
