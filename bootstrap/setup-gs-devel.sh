@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
 
+my_echo () {
+  echo $@
+  eval $@
+}
+
+
 ensure_repo () {
   local owner=$1
   local repo=$2
   local my_base="${HOME}/Documents/github/${owner}"
   local my_repo="${my_base}/${repo}"
   local remote_repo="https://github.com/${owner}/${repo}.git"
-  local debug="echo"
+  local debug="my_echo"
   "$debug" mkdir -p "$my_base"
   if [ -d "$my_repo" ]; then
     "$debug" cd "$my_repo"
@@ -25,7 +31,7 @@ ensure_repo () {
 ensure_repo "kenjirofukuda" "sandbox"
 
 # swiftlang
-ensure_repo "swiftlangs" "swift-corelibs-libdispatch"
+ensure_repo "swiftlang" "swift-corelibs-libdispatch"
 
 # gnustep
 ensure_repo "gnustep" "tools-make"
