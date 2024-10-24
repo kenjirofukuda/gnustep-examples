@@ -48,3 +48,7 @@ ensure_repo "trunkmaster" "nextspace"
 
 # onflapp
 ensure_repo "onflapp" "gs-desktop"
+
+# agora
+ensure_repo "AgoraDesktop" "AgoraInstaller"
+
