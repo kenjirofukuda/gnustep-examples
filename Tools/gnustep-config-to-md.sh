@@ -26,6 +26,11 @@ print_pre() {
   echo "\`\`\`"
 }
 
+print_table_header () {
+  echo "|key|value|"
+  echo "|---|---|"
+}
+
 print_flags() {
   local flag=$1
   echo "## $flag"
@@ -38,10 +43,14 @@ print_flags() {
 
 echo ""
 echo "# GNUstep config"
+reply=$(which gnustep-config)
+if [ -z "$reply" ]; then
+  echo "Solly not a GNUstep envitonment"
+  exit 1
+fi
 echo "## Variables"
 echo ""
-echo "|   |   |"
-echo "|---|---|"
+print_table_header
 for key in CC CXX OBJCXX LDFLAGS EXEEXT DEBUGGER GNUMAKE GNUSTEP_MAKEFILES GNUSTEP_USER_DEFAULTS_DIR GNUSTEP_HOST GNUSTEP_HOST_CPU GNUSTEP_HOST_VENDER GNUSTEP_HOST_OS GNUSTEP_IS_FLATTEND
 do
   print_key "$key"
@@ -56,8 +65,7 @@ do
   else
     echo "### Doamin($key)"
     echo ""
-    echo "|   |   |"
-    echo "|---|---|"
+    print_table_header
   fi	
 done
 
