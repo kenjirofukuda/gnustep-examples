@@ -15,3 +15,4 @@ cd "$fullpath"
 rm -rf "$archive"
 zip -q -r "$archive" . -i *.plist 
 cd "$OLD_CWD"
+echo "$archive"
