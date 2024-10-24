@@ -49,12 +49,17 @@ EOF_VIMRC
 fi
 }
 
-# network
+# archiver
 ensure_cmd zip
 ensure_cmd unzip
+
+# network
 ensure_cmd curl
 ensure_cmd git
 ensure_cmd gh
+ensure_cmd avahi-browse avahi-utils
+
+# building
 ensure_cmd clang
 if [ $NIX_ID = "bsd" ]; then
   ensure_cmd make gmake
