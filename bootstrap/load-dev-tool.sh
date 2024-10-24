@@ -63,11 +63,12 @@ ensure_cmd avahi-browse avahi-utils
 ensure_cmd clang
 if [ $NIX_ID = "bsd" ]; then
   ensure_cmd make gmake
+  ensure_cmd ninja
 else
   ensure_cmd make build-essential
+  ensure_cmd ninja ninja-build
 fi
 ensure_cmd cmake
-ensure_cmd ninja ninja-build
 
 # editor
 ensure_cmd vim
