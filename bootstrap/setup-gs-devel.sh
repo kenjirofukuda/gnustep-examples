@@ -13,6 +13,7 @@ ensure_repo () {
   local my_repo="${my_base}/${repo}"
   local remote_repo="https://github.com/${owner}/${repo}.git"
   local debug="my_echo"
+
   "$debug" mkdir -p "$my_base"
   if [ -d "$my_repo" ]; then
     "$debug" cd "$my_repo"
@@ -29,6 +30,7 @@ ensure_repo () {
 
 # kenjirofukuda
 ensure_repo "kenjirofukuda" "sandbox"
+ensure_repo "kenjirofukuda" "libs-gui"
 ensure_repo "kenjirofukuda" "libs-renaissance"
 ensure_repo "kenjirofukuda" "gdsfeel-gnustep"
 
@@ -36,12 +38,27 @@ ensure_repo "kenjirofukuda" "gdsfeel-gnustep"
 ensure_repo "swiftlang" "swift-corelibs-libdispatch"
 
 # gnustep
-ensure_repo "gnustep" "tools-make"
-ensure_repo "gnustep" "libobjc2"
-ensure_repo "gnustep" "libs-base"
-ensure_repo "gnustep" "libs-gui"
-ensure_repo "gnustep" "libs-back"
-ensure_repo "gnustep" "libs-renaissance"
+reps=$(cat <<EOF_REPS
+apps-gorm
+apps-gworkspace
+apps-projectcenter
+apps-systempreferences
+gap
+libobjc2
+libs-back
+libs-base
+libs-corebase
+libs-gui
+libs-renaissance
+tests-examples
+tools-make
+EOF_REPS
+)
+
+for rep in $reps;
+do
+  ensure_repo "gnustep" $rep
+done
 
 # trunkmaster
 ensure_repo "trunkmaster" "nextspace"
