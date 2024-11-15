@@ -15,7 +15,11 @@
       [self prepareAttributes];
       [self setBgColor: [NSColor yellowColor]];
       [self setString: @" "];
+#if defined (__OBJC2__)
       [self registerForDraggedTypes: @[NSPasteboardTypeString]];
+#else
+      [self registerForDraggedTypes: [NSArray arrayWithObject: NSPasteboardTypeString]];
+#endif
     }
 
   return self;
@@ -143,7 +147,11 @@
 
 - (void) writeStringToPasteboard: (NSPasteboard *)pb
 {
+#if defined (__OBJC2__)
   [pb declareTypes: @[NSPasteboardTypeString] owner: self];
+#else
+  [pb declareTypes: [NSArray arrayWithObject: NSPasteboardTypeString] owner: self];
+#endif
   [pb setString: string forType: NSPasteboardTypeString];
 }
 
@@ -152,8 +160,11 @@
 {
   NSString *value;
   NSString *type;
+#if defined (__OBJC2__)
   type = [pb availableTypeFromArray: @[NSPasteboardTypeString]];
-
+#else
+  type = [pb availableTypeFromArray: [NSArray arrayWithObject: NSPasteboardTypeString]];
+#endif
   if (type)
     {
       value = [pb stringForType: NSPasteboardTypeString];
@@ -214,7 +225,12 @@
   if ([sender draggingSource] != self)
     {
       NSPasteboard *pb = [sender draggingPasteboard];
+#if defined (__OBJC2__)
       NSString *type = [pb availableTypeFromArray: @[NSPasteboardTypeString]];
+#else
+      NSString *type = [pb availableTypeFromArray:
+			     [NSArray arrayWithObject: NSPasteboardTypeString]];
+#endif
       if (type != nil)
         {
           highlighted = YES;

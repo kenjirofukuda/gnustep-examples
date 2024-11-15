@@ -36,8 +36,13 @@
   if ((self = [super init]))
     {
       ticks = 10;
+#if defined(__OBJC2__)
       letters = @[@"a", @"s", @"d", @"f", @"j", @"k", @"l", @";"];
       RETAIN(letters);
+#else
+      letters = [[NSArray alloc] initWithObjects:
+				   @"a", @"s", @"d", @"f", @"j", @"k", @"l", @";", nil];
+#endif
       lastIndex = 0;
       srandom(time(NULL));
     }
