@@ -22,39 +22,36 @@ include $(GNUSTEP_MAKEFILES)/common.make
 #
 # Application
 #
-VERSION = 0.2
-PACKAGE_NAME = ImageFun
-APP_NAME = ImageFun
-ImageFun_APPLICATION_ICON = 
-GNUSTEP_INSTALLATION_DOMAIN = USER
+VERSION = 0.1
+PACKAGE_NAME = NewApp2
+APP_NAME = NewApp2
+NewApp2_APPLICATION_ICON = 
 
 
 #
 # Resource files
 #
-ImageFun_RESOURCE_FILES = \
-Resources/ImageFun.gorm \
+NewApp2_RESOURCE_FILES = \
+Resources/NewApp2.gorm \
 
 
 #
 # Header files
 #
-ImageFun_HEADER_FILES = \
-AppController.h \
-StretchView.h
+NewApp2_HEADER_FILES = \
+AppController.h
 
 #
 # Objective-C Class files
 #
-ImageFun_OBJC_FILES = \
-AppController.m \
-StretchView.m
+NewApp2_OBJC_FILES = \
+AppController.m
 
 #
 # Other sources
 #
-ImageFun_OBJC_FILES += \
-ImageFun_main.m 
+NewApp2_OBJC_FILES += \
+NewApp2_main.m 
 
 #
 # Makefiles

@@ -17,8 +17,6 @@ ifeq ($(GNUSTEP_MAKEFILES),)
  $(error You need to set GNUSTEP_MAKEFILES before compiling!)
 endif
 
-GNUSTEP_INSTALLATION_DOMAIN = USER
-
 include $(GNUSTEP_MAKEFILES)/common.make
 
 #
