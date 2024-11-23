@@ -68,6 +68,20 @@
 
 - (void) showPrefPanel: (id)sender
 {
+  NSLog(@"showPrefPanel: %@", sender);
 }
+
+- (void) showMainWIndow: (id)sender
+{
+  NSLog(@"showMainWIndow: %@", sender);
+  [myWindow setIsVisible: YES];
+}
+
+- (void) hideMainWIndow: (id)sender
+{
+  NSLog(@"hideMainWIndow: %@", sender);
+  [myWindow setIsVisible: NO];
+}
+
 
 @end

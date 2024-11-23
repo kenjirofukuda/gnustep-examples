@@ -15,8 +15,12 @@
 // Uncomment if your application is Renaissance-based
 //#import <Renaissance/Renaissance.h>
 
+#import "MyView.h"
+
 @interface AppController : NSObject
 {
+  IBOutlet NSWindow *myWindow;
+  IBOutlet MyView *myView; 
 }
 
 + (void)  initialize;
@@ -33,7 +37,8 @@
 	    openFile: (NSString *)fileName;
 
 - (void) showPrefPanel: (id)sender;
-
+- (void) showMainWIndow: (id)sender;
+- (void) hideMainWIndow: (id)sender;
 @end
 
 #endif

@@ -39,13 +39,15 @@ Resources/NewApp.gorm \
 # Header files
 #
 NewApp_HEADER_FILES = \
-AppController.h
+AppController.h \
+MyView.h
 
 #
 # Objective-C Class files
 #
 NewApp_OBJC_FILES = \
-AppController.m
+AppController.m \
+MyView.m
 
 #
 # Other sources

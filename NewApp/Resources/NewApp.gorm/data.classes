@@ -2,17 +2,32 @@
     "## Comment" = "Do NOT change this file, Gorm maintains it";
     AppController = {
 	Actions = (
-	    "showPrefPanel:"
+	    "showPrefPanel:",
+	    "showMainWIndow:",
+	    "hideMainWIndow:"
 	);
 	Outlets = (
+	    myWindow,
+	    myView
 	);
 	Super = NSObject;
     };
     FirstResponder = {
 	Actions = (
+	    "hideMainWIndow:",
+	    "hideMainWindow:",
 	    "orderFrontFontPanel:",
+	    "showMainWIndow:",
+	    "showMainWindow:",
 	    "showPrefPanel:"
 	);
 	Super = NSObject;
+    };
+    MyView = {
+	Actions = (
+	);
+	Outlets = (
+	);
+	Super = NSView;
     };
 }

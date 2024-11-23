@@ -2,9 +2,18 @@
     APPLICATIONICON = "";
     "APP_DOCUMENT_BASED" = NO;
     "APP_TYPE" = GORM;
+    "BUILDER_TARGETS" = (
+	all,
+	install,
+	uninstall,
+	clean,
+	distclean,
+	dist
+    );
     "BUNDLE_IDENTIFIER" = "";
     "CLASS_FILES" = (
-	"AppController.m"
+	"AppController.m",
+	"MyView.m"
     );
     COMPILEROPTIONS = "";
     CPPOPTIONS = "";
@@ -14,7 +23,8 @@
     FRAMEWORKS = (
     );
     "HEADER_FILES" = (
-	"AppController.h"
+	"AppController.h",
+	"MyView.h"
     );
     IMAGES = (
     );
