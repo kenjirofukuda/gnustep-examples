@@ -1,12 +1,12 @@
 /* All rights reserved */
 
-#import "MyView.h"
+#import "PointsView.h"
 
-@interface MyView (SimpleDrawing)
+@interface PointsView (SimpleDrawing)
 - (NSBezierPath *) circlePathWithCenter: (NSPoint)center radius: (CGFloat)radius;
 @end
 
-@implementation MyView (SimpleDrawing)
+@implementation PointsView (SimpleDrawing)
 
 - (NSBezierPath *) circlePathWithCenter: (NSPoint)center radius: (CGFloat)radius
 {
@@ -25,7 +25,7 @@
 @end
 
 
-@implementation MyView
+@implementation PointsView
 - (instancetype) initWithFrame: (NSRect)frameRect
 {
   self = [super initWithFrame: frameRect];
