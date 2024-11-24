@@ -29,6 +29,7 @@
     IMAGES = (
     );
     INSTALLDIR = "$(HOME)/GNUstep";
+    INSTALLDOMAIN = User;
     INTERFACES = (
 	"PointsView.gorm"
     );
