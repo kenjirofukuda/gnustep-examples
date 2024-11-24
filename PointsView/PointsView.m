@@ -8,12 +8,14 @@
 @end
 
 @interface PointsView (SimpleDrawing)
-- (NSBezierPath *) circlePathWithCenter: (NSPoint)center radius: (CGFloat)radius;
+- (NSBezierPath *) circlePathWithCenter: (NSPoint)center
+                                 radius: (CGFloat)radius;
 @end
 
 @implementation PointsView (SimpleDrawing)
 
-- (NSBezierPath *) circlePathWithCenter: (NSPoint)center radius: (CGFloat)radius
+- (NSBezierPath *) circlePathWithCenter: (NSPoint)center
+                                 radius: (CGFloat)radius
 {
   CGFloat size = radius + radius;
   NSRect bounds = NSMakeRect(
@@ -78,8 +80,9 @@
 - (void) viewDidMoveToWindow
 {
   [super viewDidMoveToWindow];
-  [[NSNotificationCenter defaultCenter] postNotificationName: NSViewFrameDidChangeNotification
-                                                      object: self];
+  [[NSNotificationCenter defaultCenter]
+    postNotificationName: NSViewFrameDidChangeNotification
+                  object: self];
 
 }
 
