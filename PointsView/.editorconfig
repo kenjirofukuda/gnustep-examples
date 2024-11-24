@@ -15,6 +15,12 @@ indent_style = tab
 [**.plist]
 insert_final_newline = false
 
+[**.h]
+trim_trailing_whitespace = true
+
+[**.m]
+trim_trailing_whitespace = true
+
 [**.md]
 trim_trailing_whitespace = true
 x-soft-wrap-text = true

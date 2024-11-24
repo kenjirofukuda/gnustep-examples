@@ -3,7 +3,7 @@
 #import "PointsView.h"
 
 @interface PointsView (Tracking)
-- (void) _frameChanged: (NSNotification *) aNot;
+- (void) _frameChanged: (NSNotification *)aNot;
 - (void) _removeTrack;
 @end
 
@@ -40,12 +40,12 @@
 #ifndef GNUSTEP
       _trackingArea = nil;
 #endif
-      [[NSNotificationCenter defaultCenter] 
-        addObserver: self
-           selector: @selector(_frameChanged:)
-               name: NSViewFrameDidChangeNotification
-             object: self];
-      _trackId = 0;      
+      [[NSNotificationCenter defaultCenter]
+       addObserver: self
+          selector: @selector(_frameChanged:)
+              name: NSViewFrameDidChangeNotification
+            object: self];
+      _trackId = 0;
     }
   return self;
 }
@@ -105,7 +105,7 @@
   [[NSCursor arrowCursor] set];
 }
 
-#ifndef GNUSTEP  
+#ifndef GNUSTEP
 - (void) updateTrackingAreas
 {
   [super updateTrackingAreas];
@@ -126,7 +126,7 @@
 @end
 
 @implementation PointsView (Tracking)
-- (void) _frameChanged: (NSNotification *) aNot
+- (void) _frameChanged: (NSNotification *)aNot
 {
   [self _removeTrack];
   _trackId = [self addTrackingRect: [self bounds]
