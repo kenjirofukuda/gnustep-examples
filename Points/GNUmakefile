@@ -23,38 +23,38 @@ include $(GNUSTEP_MAKEFILES)/common.make
 # Application
 #
 VERSION = 0.1
-PACKAGE_NAME = PointsView
-APP_NAME = PointsView
-PointsView_APPLICATION_ICON = 
+PACKAGE_NAME = Points
+APP_NAME = Points
+Points_APPLICATION_ICON = 
 GNUSTEP_INSTALLATION_DOMAIN = USER
 
 
 #
 # Resource files
 #
-PointsView_RESOURCE_FILES = \
-Resources/PointsView.gorm \
+Points_RESOURCE_FILES = \
+Resources/Points.gorm \
 
 
 #
 # Header files
 #
-PointsView_HEADER_FILES = \
+Points_HEADER_FILES = \
 AppController.h \
 PointsView.h
 
 #
 # Objective-C Class files
 #
-PointsView_OBJC_FILES = \
+Points_OBJC_FILES = \
 AppController.m \
 PointsView.m
 
 #
 # Other sources
 #
-PointsView_OBJC_FILES += \
-PointsView_main.m 
+Points_OBJC_FILES += \
+Points_main.m 
 
 #
 # Makefiles

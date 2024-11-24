@@ -31,7 +31,7 @@
     INSTALLDIR = "$(HOME)/GNUstep";
     INSTALLDOMAIN = User;
     INTERFACES = (
-	"PointsView.gorm"
+	"Points.gorm"
     );
     LANGUAGE = English;
     LIBRARIES = (
@@ -41,27 +41,27 @@
     LINKEROPTIONS = "";
     "LOCALIZED_RESOURCES" = (
     );
-    MAININTERFACE = "PointsView.gorm";
+    MAININTERFACE = "Points.gorm";
     MAKEFILEDIR = "$(GNUSTEP_MAKEFILES)";
     "OBJC_COMPILEROPTIONS" = "";
     "OTHER_RESOURCES" = (
     );
     "OTHER_SOURCES" = (
-	"PointsView_main.m"
+	"Points_main.m"
     );
     "PRINCIPAL_CLASS" = NSApplication;
     "PROJECT_AUTHORS" = (
-	"kenjirofukudaa@gmail.com"
+	"kenjirofukuda@gmail.com"
     );
     "PROJECT_COPYRIGHT" = "Copyright (C) 2024";
-    "PROJECT_COPYRIGHT_DESC" = "Released under ... GPL";
+    "PROJECT_COPYRIGHT_DESC" = "Released under ... MIT";
     "PROJECT_CREATOR" = "Kenjiro Fukuda";
     "PROJECT_DESCRIPTION" = "display points";
     "PROJECT_DOCUMENTTYPES" = (
     );
     "PROJECT_GROUP" = "No group avaliable!";
     "PROJECT_MAINTAINER" = "Kenjiro Fukuda";
-    "PROJECT_NAME" = PointsView;
+    "PROJECT_NAME" = Points;
     "PROJECT_RELEASE" = "0.1";
     "PROJECT_SUMMARY" = "No summary avaliable!";
     "PROJECT_TYPE" = Application;
@@ -76,7 +76,7 @@
 	"GNUmakefile.preamble",
 	GNUmakefile,
 	"GNUmakefile.postamble",
-	"PointsViewInfo.plist"
+	"PointsInfo.plist"
     );
     "USER_LANGUAGES" = (
 	AmericanEnglish,

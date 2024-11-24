@@ -1,10 +1,10 @@
-/* 
-   Project: NewApp
+/*
+   Project: Points
 
    Author: Kenjiro Fukuda
 
    Created: 2024-11-22 16:55:30 +0900 by kenjiro
-   
+
    Application Controller
 */
 
@@ -23,7 +23,7 @@
    * [defaults setObject:anObject forKey:keyForThatObject];
    *
    */
-  
+
   [[NSUserDefaults standardUserDefaults] registerDefaults: defaults];
   [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -70,18 +70,5 @@
 {
   NSLog(@"showPrefPanel: %@", sender);
 }
-
-- (void) showMainWIndow: (id)sender
-{
-  NSLog(@"showMainWIndow: %@", sender);
-  [myWindow setIsVisible: YES];
-}
-
-- (void) hideMainWIndow: (id)sender
-{
-  NSLog(@"hideMainWIndow: %@", sender);
-  [myWindow setIsVisible: NO];
-}
-
 
 @end
