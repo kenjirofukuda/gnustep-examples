@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE gsmarkup>
+<gsmarkup>
+  <objects>
+    <window id="mainWindow" title="2D Adventure"
+	    center="yes"
+	    closable="no"
+	    resizable="no">
+        <view instanceOf="GameView" id="gameView"
+                  valign="expand" halign="expand"
+                  width="640" height="480" >
+	</view>
+    </window>
+  </objects>
+</gsmarkup>

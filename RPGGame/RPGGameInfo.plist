@@ -1,0 +1,12 @@
+{
+    ApplicationName = RPGGame;
+    ApplicationDescription = "2d adventure game";
+    ApplicationRelease = "0.1";
+    Authors = ("kenjirofukuda@gmail.com");
+    Copyright = "Copyright (C) 2024";
+    CopyrightDescription = "Released under ... MIT";
+    FullVersionID = "0.1";
+    NSExecutable = RPGGame;
+    NSPrincipalClass = NSApplication;
+    NSRole = Application;
+}

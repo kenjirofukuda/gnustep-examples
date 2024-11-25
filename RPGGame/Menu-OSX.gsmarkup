@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE gsmarkup>
+<gsmarkup>
+  <objects>
+    <menu type="main">
+      <menuItem title="WindowApp">
+         <menu title="WindowApp" type="apple">
+           <menuItem title="Quit WindowApp" keyEquivalent="q" action="terminate:" />
+         </menu>
+      </menuItem>
+    </menu>
+  </objects>
+</gsmarkup>
