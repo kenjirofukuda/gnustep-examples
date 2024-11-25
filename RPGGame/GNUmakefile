@@ -12,7 +12,10 @@ $(APP_NAME)_HEADER_FILES = \
 $(APP_NAME)_RESOURCE_FILES = \
   Menu-GNUstep.gsmarkup \
   Menu-OSX.gsmarkup \
-  Window.gsmarkup
+  Window.gsmarkup \
+
+$(APP_NAME)_RESOURCE_FILES += $(wildcard ./Resources/Walking-sprites/*.png)
+
 $(APP_NAME)_LOCALIZED_RESOURCE_FILES = \
   Window.strings
 $(APP_NAME)_LANGUAGES = Italian

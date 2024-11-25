@@ -16,6 +16,17 @@ const NSInteger FPS = 60;
   NSInteger _x;
   NSInteger _y;
   NSInteger _speed;
+
+  NSImage *_up1;
+  NSImage *_up2;
+  NSImage *_down1;
+  NSImage *_down2;
+  NSImage *_left1;
+  NSImage *_left2;
+  NSImage *_right1;
+  NSImage *_right2;
+  NSString *_direction;
+
 }
 @end
 
@@ -30,7 +41,7 @@ const NSInteger FPS = 60;
   KeyState *_keyState;
 }
 - (instancetype) initWithView: (GameView *)view keyState: (KeyState *)keyState;
-- (void) setDefaultValues;
+- (void) dealloc;
 - (void) update;
 - (void) draw;
 @end
@@ -43,35 +54,115 @@ const NSInteger FPS = 60;
     {
       _view = view;
       _keyState = keyState;
-      [self setDefaultValues];
+      [self _setDefaultValues];
+      [self _loadImages];
     }
   return self;
 }
+- (void) dealloc
+{
+  RELEASE(_up1);
+  RELEASE(_up2);
+  RELEASE(_down1);
+  RELEASE(_down2);
+  RELEASE(_left1);
+  RELEASE(_left2);
+  RELEASE(_right1);
+  RELEASE(_right2);
+  DEALLOC;
+}
 
-- (void) setDefaultValues
+- (void) _setDefaultValues
 {
   _x = 100;
   _y = 100;
   _speed = 4;
+  _direction = @"down";
 }
+
+- (void) _loadImages
+{
+  NSBundle *bundle = [NSBundle mainBundle];
+  _up1 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_up_1"]];
+  _up2 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_up_2"]];
+  _down1 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_down_1"]];
+  _down2 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_down_2"]];
+  _left1 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_left_1"]];
+  _left2 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_left_2"]];
+  _right1 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_right_1"]];
+  _right2 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_right_2"]];
+}
+
 
 - (void) update
 {
   if (_keyState->up == YES)
-    _y += _speed;
+    {
+      _direction = @"up";
+      _y += _speed;
+    }
+
   if (_keyState->down == YES)
-    _y -= _speed;
+    {
+      _direction = @"down";
+      _y -= _speed;
+    }
+
   if (_keyState->left == YES)
-    _x -= _speed;
+    {
+      _direction = @"left";
+      _x -= _speed;
+    }
+
   if (_keyState->right == YES)
-    _x += _speed;
+    {
+      _direction = @"right";
+      _x += _speed;
+    }
 }
 
 - (void) draw
 {
-  NSRect bounds = NSMakeRect(_x, _y, TILE_SIZE, TILE_SIZE);
-  [[NSColor whiteColor] set];
-  NSRectFill(bounds);
+  NSImage *image = nil;
+
+  if ([_direction isEqualToString: @"up"])
+    {
+      image = _up1;
+    }
+  else if ([_direction isEqualToString: @"down"])
+    {
+      image = _down1;
+    }
+  else if ([_direction isEqualToString: @"left"])
+    {
+      image = _left1;
+    }
+  else if ([_direction isEqualToString: @"right"])
+    {
+      image = _right1;
+    }
+  if (image != nil)
+    {
+      NSRect imageRect;
+      NSRect drawRect;
+
+      imageRect.origin = NSMakePoint(0, 0);
+      imageRect.size = [image size];
+      drawRect.origin = NSMakePoint(_x, _y);
+      drawRect.size = NSMakeSize(TILE_SIZE, TILE_SIZE);
+
+      [image drawInRect: drawRect
+               fromRect: imageRect
+              operation: NSCompositeSourceOver
+               fraction: 1.0];
+    }
+  else
+    {
+      // error occured fallbuck!!!
+      NSRect bounds = NSMakeRect(_x, _y, TILE_SIZE, TILE_SIZE);
+      [[NSColor whiteColor] set];
+      NSRectFill(bounds);
+    }
 }
 
 @end
