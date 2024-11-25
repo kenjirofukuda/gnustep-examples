@@ -3,13 +3,9 @@
 <gsmarkup>
   <objects>
     <menu type="main">
-    <menu title="Info">
-      <menuItem title="Info..." action="orderFrontStandardInfoPanel:" />
-      <!--
-      <menuItem title="Help..." 
-               action="orderFrontHelpPanel:" keyEquivalent="?" />
-      -->
-    </menu>
+      <menu title="Info">
+        <menuItem title="Info..." action="orderFrontStandardInfoPanel:" />
+      </menu>
       <menuItem title="Quit" keyEquivalent="q" action="terminate:" />
     </menu>
   </objects>

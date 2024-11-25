@@ -3,7 +3,12 @@
 include $(GNUSTEP_MAKEFILES)/common.make
 
 APP_NAME = RPGGame
-$(APP_NAME)_OBJC_FILES = RPGGame.m
+$(APP_NAME)_OBJC_FILES = RPGGame.m \
+	GameView.m
+
+$(APP_NAME)_HEADER_FILES = \
+	GameView.h
+
 $(APP_NAME)_RESOURCE_FILES = \
   Menu-GNUstep.gsmarkup \
   Menu-OSX.gsmarkup \
