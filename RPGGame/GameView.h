@@ -5,12 +5,6 @@
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
 
-typedef struct GPlayer
-{
-  NSRect bounds;
-  NSInteger speed;
-} GPlayer;
-
 typedef struct KeyState
 {
   BOOL up;
@@ -32,14 +26,14 @@ typedef struct KeyState
 }
 - (instancetype) initWithFrame: (NSRect)frameRect;
 - (void) dealloc;
-- (NSString *) name;
-- (void) setName: (NSString *)name;
 - (BOOL) acceptsFirstResponder;
 - (BOOL) acceptsFirstMouse: (NSEvent *)event;
 - (void) drawRect: (NSRect)rect;
 - (void) step: (NSTimer *)timer;
 - (void) keyDown: (NSEvent *)theEvent;
 - (void) keyUp: (NSEvent *)theEvent;
+
+- (BOOL) anyKeyPressed;
 
 - (IBAction) startStepping: (id)sender;
 

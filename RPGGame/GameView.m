@@ -27,11 +27,26 @@ const NSInteger FPS = 60;
   NSImage *_right2;
   NSString *_direction;
 
+  NSInteger _spliteCounter;
+  NSInteger _spliteNumber;
 }
+
+- (instancetype) init;
 @end
 
 
 @implementation Entity
+- (instancetype) init
+{
+  self = [super init];
+  if (self != nil)
+    {
+      _spliteCounter = 0;
+      _spliteNumber = 1;
+    }
+  return self;
+}
+
 @end
 
 
@@ -96,28 +111,34 @@ const NSInteger FPS = 60;
 
 - (void) update
 {
-  if (_keyState->up == YES)
+  if ([_view anyKeyPressed] == YES)
     {
-      _direction = @"up";
-      _y += _speed;
-    }
-
-  if (_keyState->down == YES)
-    {
-      _direction = @"down";
-      _y -= _speed;
-    }
-
-  if (_keyState->left == YES)
-    {
-      _direction = @"left";
-      _x -= _speed;
-    }
-
-  if (_keyState->right == YES)
-    {
-      _direction = @"right";
-      _x += _speed;
+      if (_keyState->up == YES)
+        {
+          _direction = @"up";
+          _y += _speed;
+        }
+      if (_keyState->down == YES)
+        {
+          _direction = @"down";
+          _y -= _speed;
+        }
+      if (_keyState->left == YES)
+        {
+          _direction = @"left";
+          _x -= _speed;
+        }
+      if (_keyState->right == YES)
+        {
+          _direction = @"right";
+          _x += _speed;
+        }
+      _spliteCounter++;
+      if (_spliteCounter > 10)
+        {
+          _spliteNumber = (_spliteNumber == 1) ? 2 : 1;
+          _spliteCounter = 0;
+        }
     }
 }
 
@@ -127,19 +148,47 @@ const NSInteger FPS = 60;
 
   if ([_direction isEqualToString: @"up"])
     {
-      image = _up1;
+      if (_spliteNumber == 1)
+        {
+          image = _up1;
+        }
+      if (_spliteNumber == 2)
+        {
+          image = _up2;
+        }
     }
   else if ([_direction isEqualToString: @"down"])
     {
-      image = _down1;
+      if (_spliteNumber == 1)
+        {
+          image = _down1;
+        }
+      if (_spliteNumber == 2)
+        {
+          image = _down2;
+        }
     }
   else if ([_direction isEqualToString: @"left"])
     {
-      image = _left1;
+      if (_spliteNumber == 1)
+        {
+          image = _left1;
+        }
+      if (_spliteNumber == 2)
+        {
+          image = _left2;
+        }
     }
   else if ([_direction isEqualToString: @"right"])
     {
-      image = _right1;
+      if (_spliteNumber == 1)
+        {
+          image = _right1;
+        }
+      if (_spliteNumber == 2)
+        {
+          image = _right2;
+        }
     }
   if (image != nil)
     {
@@ -187,16 +236,6 @@ const NSInteger FPS = 60;
   [super dealloc];
 }
 
-- (NSString *) name
-{
-  return _name;
-}
-
-- (void) setName: (NSString *)name
-{
-  ASSIGNCOPY(_name, name);
-}
-
 - (BOOL) acceptsFirstResponder
 {
   return YES;
@@ -218,7 +257,7 @@ const NSInteger FPS = 60;
   [_player draw];
 }
 
-- (void) keyEvent: (NSEvent *)event on: (BOOL)newState
+- (void) keyEvent: (NSEvent *)event pressed: (BOOL)newState
 {
   BOOL      handled = NO;
   NSString *characters;
@@ -256,12 +295,20 @@ const NSInteger FPS = 60;
 
 - (void) keyDown: (NSEvent *)event
 {
-  [self keyEvent: event on: YES];
+  [self keyEvent: event pressed: YES];
 }
 
 - (void) keyUp: (NSEvent *)event
 {
-  [self keyEvent: event on: NO];
+  [self keyEvent: event pressed: NO];
+}
+
+- (BOOL) anyKeyPressed;
+{
+  return _keyState.up == YES
+         || _keyState.down == YES
+         || _keyState.left == YES
+         || _keyState.right == YES;
 }
 
 - (void) step: (NSTimer *)timer
