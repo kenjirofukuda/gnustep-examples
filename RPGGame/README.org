@@ -1,0 +1,7 @@
+#+TITLE: RPGGame
+
+* RPGGame
+
+this application is copy of RyiSnow's playlist implement by GNUstep (Objective-C).
+
+[[https://www.youtube.com/playlist?list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq][How to Make a 2D Game in Java ]]
