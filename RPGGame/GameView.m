@@ -9,6 +9,72 @@ const NSInteger MAX_SCREEN_COL = 16;
 const NSInteger MAX_SCREEN_ROW = 12;
 const NSInteger SCREEN_WIDTH = TILE_SIZE * MAX_SCREEN_COL;
 const NSInteger SCREEN_HEIGHT = TILE_SIZE * MAX_SCREEN_ROW;
+const NSInteger FPS = 60;
+
+@interface Entity : NSObject
+{
+  NSInteger _x;
+  NSInteger _y;
+  NSInteger _speed;
+}
+@end
+
+
+@implementation Entity
+@end
+
+
+@interface Player : Entity
+{
+  GameView *_view;
+  KeyState *_keyState;
+}
+- (instancetype) initWithView: (GameView *)view keyState: (KeyState *)keyState;
+- (void) setDefaultValues;
+- (void) update;
+- (void) draw;
+@end
+
+@implementation Player
+- (instancetype) initWithView: (GameView *)view keyState: (KeyState *)keyState
+{
+  self = [super init];
+  if (self != nil)
+    {
+      _view = view;
+      _keyState = keyState;
+      [self setDefaultValues];
+    }
+  return self;
+}
+
+- (void) setDefaultValues
+{
+  _x = 100;
+  _y = 100;
+  _speed = 4;
+}
+
+- (void) update
+{
+  if (_keyState->up == YES)
+    _y += _speed;
+  if (_keyState->down == YES)
+    _y -= _speed;
+  if (_keyState->left == YES)
+    _x -= _speed;
+  if (_keyState->right == YES)
+    _x += _speed;
+}
+
+- (void) draw
+{
+  NSRect bounds = NSMakeRect(_x, _y, TILE_SIZE, TILE_SIZE);
+  [[NSColor whiteColor] set];
+  NSRectFill(bounds);
+}
+
+@end
 
 @implementation GameView
 - (instancetype) initWithFrame: (NSRect)frameRect
@@ -17,8 +83,7 @@ const NSInteger SCREEN_HEIGHT = TILE_SIZE * MAX_SCREEN_ROW;
   if (self != nil)
     {
       NSDebugLog(@"- (instancetype) initWithFrame: (NSRect)frameRect");
-      _player.bounds = NSMakeRect(100, 100, TILE_SIZE, TILE_SIZE);
-      _player.speed = 4;
+      _player = [[Player alloc] initWithView: self keyState: &_keyState];
     }
   return self;
 }
@@ -26,6 +91,7 @@ const NSInteger SCREEN_HEIGHT = TILE_SIZE * MAX_SCREEN_ROW;
 - (void) dealloc
 {
   RELEASE(_timer);
+  RELEASE(_player);
   RELEASE(_name);
   [super dealloc];
 }
@@ -54,29 +120,18 @@ const NSInteger SCREEN_HEIGHT = TILE_SIZE * MAX_SCREEN_ROW;
 {
   [super drawRect: rect];
   NSRect frameRect = [self bounds];
-  // NSAffineTransform *xform = [NSAffineTransform transform];
-  // [xform translateXBy: 0.0 yBy: frameRect.size.height];
-  // [xform scaleXBy: 1.0 yBy: -1.0];
-  // [xform concat];
 
   [[NSColor blackColor] set];
   NSRectFill(frameRect);
   [[NSColor whiteColor] set];
-  // [NSBezierPath strokeLineFromPoint: NSMakePoint(0, 0)
-  //                           toPoint: NSMakePoint(frameRect.size.width,
-  //                                                frameRect.size.height)];
-  NSRectFill(_player.bounds);
-
+  [_player draw];
 }
-
 
 - (void) keyEvent: (NSEvent *)event on: (BOOL)newState
 {
   BOOL      handled = NO;
   NSString *characters;
   unichar   keyChar = 0;
-
-  // NSDebugLog(@"event: %@", event);
 
   characters = [event charactersIgnoringModifiers];
   if ([characters length] == 1)
@@ -120,16 +175,7 @@ const NSInteger SCREEN_HEIGHT = TILE_SIZE * MAX_SCREEN_ROW;
 
 - (void) step: (NSTimer *)timer
 {
-  NSDate *currentDate = [NSDate date];
-  if (_keyState.up == YES)
-    _player.bounds.origin.y += _player.speed;
-  if (_keyState.down == YES)
-    _player.bounds.origin.y -= _player.speed;
-  if (_keyState.left == YES)
-    _player.bounds.origin.x -= _player.speed;
-  if (_keyState.right == YES)
-    _player.bounds.origin.x += _player.speed;
-  // NSDebugLog(@"step: %@", currentDate);
+  [_player update];
   [self setNeedsDisplay: YES];
 }
 
@@ -137,14 +183,12 @@ const NSInteger SCREEN_HEIGHT = TILE_SIZE * MAX_SCREEN_ROW;
 {
   NSDebugLog(@"startStepping: %@", sender);
   [self setFrameSize: NSMakeSize(SCREEN_WIDTH, SCREEN_HEIGHT)];
-  _timer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / 60.0
+  _timer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / FPS
                                             target: self
                                           selector: @selector(step:)
                                           userInfo: nil
                                            repeats: YES];
   RETAIN(_timer);
-
-  // [[NSRunLoop mainRunLoop] addTimer: _timer forMode: NSRunLoopCommonModes];
 }
 
 @end

@@ -5,11 +5,11 @@
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
 
-typedef struct Player
+typedef struct GPlayer
 {
   NSRect bounds;
   NSInteger speed;
-} Player;
+} GPlayer;
 
 typedef struct KeyState
 {
@@ -19,12 +19,13 @@ typedef struct KeyState
   BOOL right;
 } KeyState;
 
+@class Player;
 
 @interface GameView : NSView
 {
   NSString *_name;
   NSTimer *_timer;
-  Player _player;
+  Player *_player;
   KeyState _keyState;
   NSUInteger _drawCount;
 
