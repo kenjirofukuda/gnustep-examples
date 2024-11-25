@@ -5,19 +5,29 @@
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
 
+typedef struct Player
+{
+  NSRect bounds;
+  NSInteger speed;
+} Player;
 
-// extern NSInteger ORIGINAL_TILE_SIZE;
-// extern NSInteger SCALE;
-// extern NSInteger TILE_SIZE;
-// extern NSInteger MAX_SCREEN_COL;
-// extern NSInteger MAX_SCREEN_ROW;
-// extern NSInteger SCREEN_WIDTH;
-// extern NSInteger SCREEN_HEIGHT;
+typedef struct KeyState
+{
+  BOOL up;
+  BOOL down;
+  BOOL left;
+  BOOL right;
+} KeyState;
+
 
 @interface GameView : NSView
 {
   NSString *_name;
   NSTimer *_timer;
+  Player _player;
+  KeyState _keyState;
+  NSUInteger _drawCount;
+
 }
 - (instancetype) initWithFrame: (NSRect)frameRect;
 - (void) dealloc;
@@ -27,6 +37,8 @@
 - (BOOL) acceptsFirstMouse: (NSEvent *)event;
 - (void) drawRect: (NSRect)rect;
 - (void) step: (NSTimer *)timer;
+- (void) keyDown: (NSEvent *)theEvent;
+- (void) keyUp: (NSEvent *)theEvent;
 
 - (IBAction) startStepping: (id)sender;
 
