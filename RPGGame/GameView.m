@@ -96,18 +96,9 @@ const NSInteger FPS = 60;
   _direction = @"down";
 }
 
-- (NSImage *) _imageOfResource: (NSString *)name inDirectory: (NSString *)subpath
-{
-  return  [[NSImage alloc]
-           initWithContentsOfFile: [[NSBundle mainBundle]
-                                           pathForResource: name
-                                                    ofType: @"png"
-                                               inDirectory: subpath]];
-}
-
 - (NSImage *) _imageOfResource: (NSString *)name
 {
-  return [self _imageOfResource: name inDirectory: @"Walking-sprites"];
+  return [_view imageOfResource: name inDirectory: @"Walking-sprites"];
 }
 
 - (void) _loadImages
@@ -205,29 +196,114 @@ const NSInteger FPS = 60;
     }
   if (image != nil)
     {
-      NSRect imageRect;
-      NSRect drawRect;
-
-      imageRect.origin = NSMakePoint(0, 0);
-      imageRect.size = [image size];
-      drawRect.origin = NSMakePoint(_x, _y);
-      drawRect.size = NSMakeSize(TILE_SIZE, TILE_SIZE);
-
-      [image drawInRect: drawRect
-               fromRect: imageRect
-              operation: NSCompositeSourceOver
-               fraction: 1.0];
+      [_view drawImage: image x: _x y: _y];
     }
   else
     {
-      // error occured fallbuck!!!
+      // error occurred fallback!!!
       NSRect bounds = NSMakeRect(_x, _y, TILE_SIZE, TILE_SIZE);
       [[NSColor whiteColor] set];
       NSRectFill(bounds);
     }
 }
+@end
+
+@interface Tile : NSObject
+{
+  NSImage *_image;
+  BOOL _collision;
+}
+- (instancetype) init;
+- (void) dealloc;
+- (void) setImage: (NSImage *)image;
+- (NSImage *) image;
 
 @end
+
+@implementation Tile
+- (instancetype) init
+{
+  self = [super init];
+  if (self != nil)
+    {
+      _collision = false;
+    }
+  return self;
+}
+
+- (void) dealloc
+{
+  RELEASE(_image);
+  DEALLOC;
+}
+
+- (void) setImage: (NSImage *)image
+{
+  ASSIGN(_image, image);
+}
+
+- (NSImage *) image
+{
+  return _image;
+}
+
+@end
+
+@interface TileManager : NSObject
+{
+  GameView *_view;
+  Tile *_tiles[3];
+}
+- (instancetype) initWithView: (GameView *)view;
+- (void) dellaoc;
+- (void) draw;
+@end
+
+@implementation TileManager
+- (instancetype) initWithView: (GameView *)view
+{
+  self = [super init];
+  if (self != nil)
+    {
+      _view = view;
+      bzero(_tiles, sizeof(_tiles));
+      [self _loadTileImages];
+    }
+  return self;
+}
+
+- (void) dellaoc
+{
+  RELEASE(_tiles[0]);
+  RELEASE(_tiles[1]);
+  RELEASE(_tiles[2]);
+  DEALLOC;
+}
+
+- (void) _loadTileImages;
+{
+  _tiles[0] = [[Tile alloc] init];
+  [_tiles[0] setImage: [self _imageOfResource: @"grass"]];
+  _tiles[1] = [[Tile alloc] init];
+  [_tiles[1] setImage: [self _imageOfResource: @"wall"]];
+  _tiles[2] = [[Tile alloc] init];
+  [_tiles[2] setImage: [self _imageOfResource: @"water"]];
+}
+
+- (NSImage *) _imageOfResource: (NSString *)name
+{
+  return [_view imageOfResource: name inDirectory: @"Tiles"];
+}
+
+- (void) draw
+{
+  [_view drawImage: [_tiles[0] image]  x: 0 y: 0];
+  [_view drawImage: [_tiles[1] image]  x: 48 y: 0];
+  [_view drawImage: [_tiles[2] image]  x: 96 y: 0];
+}
+
+@end
+
 
 @implementation GameView
 - (instancetype) initWithFrame: (NSRect)frameRect
@@ -237,6 +313,7 @@ const NSInteger FPS = 60;
     {
       NSDebugLog(@"- (instancetype) initWithFrame: (NSRect)frameRect");
       _player = [[Player alloc] initWithView: self keyState: &_keyState];
+      _tileManager = [[TileManager alloc] initWithView: self];
     }
   return self;
 }
@@ -244,8 +321,8 @@ const NSInteger FPS = 60;
 - (void) dealloc
 {
   RELEASE(_timer);
+  RELEASE(_tileManager);
   RELEASE(_player);
-  RELEASE(_name);
   [super dealloc];
 }
 
@@ -266,6 +343,7 @@ const NSInteger FPS = 60;
 
   [[NSColor blackColor] set];
   NSRectFill(frameRect);
+  [_tileManager draw];
   [[NSColor whiteColor] set];
   [_player draw];
 }
@@ -328,6 +406,37 @@ const NSInteger FPS = 60;
 {
   [_player update];
   [self setNeedsDisplay: YES];
+}
+
+
+- (NSImage *) imageOfResource: (NSString *)name inDirectory: (NSString *)subpath
+{
+  return  [[NSImage alloc]
+           initWithContentsOfFile: [[NSBundle mainBundle]
+                                           pathForResource: name
+                                                    ofType: @"png"
+                                               inDirectory: subpath]];
+}
+
+- (void) drawImage: image x: (CGFloat)x y: (CGFloat)y width: (CGFloat)width height: (CGFloat)height
+{
+  NSRect imageRect;
+  NSRect drawRect;
+
+  imageRect.origin = NSMakePoint(0, 0);
+  imageRect.size = [image size];
+  drawRect.origin = NSMakePoint(x, y);
+  drawRect.size = NSMakeSize(width, height);
+
+  [image drawInRect: drawRect
+           fromRect: imageRect
+          operation: NSCompositeSourceOver
+           fraction: 1.0];
+}
+
+- (void) drawImage: image x: (CGFloat)x y: (CGFloat)y
+{
+  [self drawImage: image x: x y: y width: TILE_SIZE height: TILE_SIZE];
 }
 
 - (IBAction) startStepping: (id)sender

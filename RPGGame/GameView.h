@@ -14,15 +14,15 @@ typedef struct KeyState
 } KeyState;
 
 @class Player;
+@class TileManager;
 
 @interface GameView : NSView
 {
-  NSString *_name;
   NSTimer *_timer;
   Player *_player;
   KeyState _keyState;
   NSUInteger _drawCount;
-
+  TileManager *_tileManager;
 }
 - (instancetype) initWithFrame: (NSRect)frameRect;
 - (void) dealloc;
@@ -34,6 +34,11 @@ typedef struct KeyState
 - (void) keyUp: (NSEvent *)theEvent;
 
 - (BOOL) anyKeyPressed;
+- (NSImage *) imageOfResource: (NSString *)name inDirectory: (NSString *)subpath;
+- (void) drawImage: image x: (CGFloat)x y: (CGFloat)y width: (CGFloat)width height: (CGFloat)height;
+- (void) drawImage: image x: (CGFloat)x y: (CGFloat)y;
+
+
 
 - (IBAction) startStepping: (id)sender;
 
