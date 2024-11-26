@@ -74,6 +74,7 @@ const NSInteger FPS = 60;
     }
   return self;
 }
+
 - (void) dealloc
 {
   RELEASE(_up1);
@@ -95,19 +96,31 @@ const NSInteger FPS = 60;
   _direction = @"down";
 }
 
-- (void) _loadImages
+- (NSImage *) _imageOfResource: (NSString *)name inDirectory: (NSString *)subpath
 {
-  NSBundle *bundle = [NSBundle mainBundle];
-  _up1 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_up_1"]];
-  _up2 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_up_2"]];
-  _down1 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_down_1"]];
-  _down2 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_down_2"]];
-  _left1 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_left_1"]];
-  _left2 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_left_2"]];
-  _right1 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_right_1"]];
-  _right2 = [[NSImage alloc] initWithContentsOfFile: [bundle pathForImageResource: @"boy_right_2"]];
+  return  [[NSImage alloc]
+           initWithContentsOfFile: [[NSBundle mainBundle]
+                                           pathForResource: name
+                                                    ofType: @"png"
+                                               inDirectory: subpath]];
 }
 
+- (NSImage *) _imageOfResource: (NSString *)name
+{
+  return [self _imageOfResource: name inDirectory: @"Walking-sprites"];
+}
+
+- (void) _loadImages
+{
+  _up1 = [self _imageOfResource: @"boy_up_1"];
+  _up2 = [self _imageOfResource: @"boy_up_2"];
+  _down1 = [self _imageOfResource: @"boy_down_1"];
+  _down2 = [self _imageOfResource: @"boy_down_2"];
+  _left1 = [self _imageOfResource: @"boy_left_1"];
+  _left2 = [self _imageOfResource: @"boy_left_2"];
+  _right1 = [self _imageOfResource: @"boy_right_1"];
+  _right2 = [self _imageOfResource: @"boy_right_2"];
+}
 
 - (void) update
 {

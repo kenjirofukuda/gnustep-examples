@@ -14,7 +14,7 @@ $(APP_NAME)_RESOURCE_FILES = \
   Menu-OSX.gsmarkup \
   Window.gsmarkup \
 
-$(APP_NAME)_RESOURCE_FILES += $(wildcard ./Resources/Walking-sprites/*.png)
+$(APP_NAME)_RESOURCE_FILES += Resources/Walking-sprites
 
 $(APP_NAME)_LOCALIZED_RESOURCE_FILES = \
   Window.strings
