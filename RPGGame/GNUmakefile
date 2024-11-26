@@ -16,6 +16,7 @@ $(APP_NAME)_RESOURCE_FILES = \
 
 $(APP_NAME)_RESOURCE_FILES += Resources/Walking-sprites
 $(APP_NAME)_RESOURCE_FILES += Resources/Tiles
+$(APP_NAME)_RESOURCE_FILES += Resources/Maps
 
 $(APP_NAME)_LOCALIZED_RESOURCE_FILES = \
   Window.strings

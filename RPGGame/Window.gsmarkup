@@ -9,8 +9,7 @@
 	          closable="no"
 	          resizable="no">
       <view instanceOf="GameView" id="gameView"
-            valign="expand" halign="expand"
-            width="640" height="480" >
+            valign="expand" halign="expand" >
 	    </view>
     </window>
   </objects>

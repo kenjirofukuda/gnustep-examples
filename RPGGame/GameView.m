@@ -253,6 +253,7 @@ const NSInteger FPS = 60;
 {
   GameView *_view;
   Tile *_tiles[3];
+  int *_mapTileNumbers;
 }
 - (instancetype) initWithView: (GameView *)view;
 - (void) dellaoc;
@@ -267,7 +268,9 @@ const NSInteger FPS = 60;
     {
       _view = view;
       bzero(_tiles, sizeof(_tiles));
+      _mapTileNumbers = malloc(MAX_SCREEN_COL * MAX_SCREEN_ROW * sizeof(int));
       [self _loadTileImages];
+      [self _loadMap: @"map01"];
     }
   return self;
 }
@@ -277,6 +280,7 @@ const NSInteger FPS = 60;
   RELEASE(_tiles[0]);
   RELEASE(_tiles[1]);
   RELEASE(_tiles[2]);
+  free(_mapTileNumbers);
   DEALLOC;
 }
 
@@ -289,6 +293,50 @@ const NSInteger FPS = 60;
   _tiles[2] = [[Tile alloc] init];
   [_tiles[2] setImage: [self _imageOfResource: @"water"]];
 }
+
+- (void) _loadMap: name;
+{
+  NSString *contents = [NSString stringWithContentsOfFile:
+                                   [[NSBundle mainBundle]
+                                     pathForResource: name
+                                              ofType: @"txt"
+                                         inDirectory: @"Maps"]];
+
+  NSMutableArray *lines = [NSMutableArray array];
+  [contents enumerateLinesUsingBlock: ^ (NSString *line, BOOL * stop)
+            {
+              NSString * trimed = [line stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+              if ([trimed length] != 0)
+                {
+                  [lines addObject: line];
+                }
+            }
+   ];
+  NSArray *reversedLines = [[lines reverseObjectEnumerator] allObjects];
+
+  int col = 0;
+  int row = 0;
+
+  while (col < MAX_SCREEN_COL && row < MAX_SCREEN_ROW)
+    {
+      NSString *line = [reversedLines objectAtIndex: row];
+      while (col < MAX_SCREEN_COL)
+        {
+          NSArray *items = [line componentsSeparatedByString: @" "];
+          for (NSString *item in items)
+            {
+              _mapTileNumbers[col + (row * MAX_SCREEN_COL)] = [item intValue];
+              col++;
+            }
+        }
+      if (col == MAX_SCREEN_COL)
+        {
+          col = 0;
+          row++;
+        }
+    }
+}
+
 
 - (NSImage *) _imageOfResource: (NSString *)name
 {
@@ -303,7 +351,11 @@ const NSInteger FPS = 60;
   int y = 0;
   while (col < MAX_SCREEN_COL && row < MAX_SCREEN_ROW)
     {
-      [_view drawImage: [_tiles[0] image]  x: x y: y];
+      int tileNumber = _mapTileNumbers[col + (row * MAX_SCREEN_COL)];
+      tileNumber = tileNumber > 2 ? 2 : tileNumber;
+      tileNumber = tileNumber < 0 ? 0 : tileNumber;
+
+      [_view drawImage: [_tiles[tileNumber] image]  x: x y: y];
       col++;
       x += TILE_SIZE;
       if (col == MAX_SCREEN_COL)
@@ -375,22 +427,22 @@ const NSInteger FPS = 60;
         {
         }
     }
-  if (!handled && [characters isEqual: @"w"])
+  if (! handled && [characters isEqual: @"w"])
     {
       _keyState.up = newState;
       handled = YES;
     }
-  if (!handled && [characters isEqual: @"s"])
+  if (! handled && [characters isEqual: @"s"])
     {
       _keyState.down = newState;
       handled = YES;
     }
-  if (!handled && [characters isEqual: @"a"])
+  if (! handled && [characters isEqual: @"a"])
     {
       _keyState.left = newState;
       handled = YES;
     }
-  if (!handled && [characters isEqual: @"d"])
+  if (! handled && [characters isEqual: @"d"])
     {
       _keyState.right = newState;
       handled = YES;
@@ -410,9 +462,9 @@ const NSInteger FPS = 60;
 - (BOOL) anyKeyPressed;
 {
   return _keyState.up == YES
-         || _keyState.down == YES
-         || _keyState.left == YES
-         || _keyState.right == YES;
+    || _keyState.down == YES
+    || _keyState.left == YES
+    || _keyState.right == YES;
 }
 
 - (void) step: (NSTimer *)timer
@@ -425,10 +477,10 @@ const NSInteger FPS = 60;
 - (NSImage *) imageOfResource: (NSString *)name inDirectory: (NSString *)subpath
 {
   return  [[NSImage alloc]
-           initWithContentsOfFile: [[NSBundle mainBundle]
-                                           pathForResource: name
-                                                    ofType: @"png"
-                                               inDirectory: subpath]];
+            initWithContentsOfFile: [[NSBundle mainBundle]
+                                      pathForResource: name
+                                               ofType: @"png"
+                                          inDirectory: subpath]];
 }
 
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y width: (CGFloat)width height: (CGFloat)height
@@ -456,6 +508,11 @@ const NSInteger FPS = 60;
 {
   NSDebugLog(@"startStepping: %@", sender);
   [self setFrameSize: NSMakeSize(SCREEN_WIDTH, SCREEN_HEIGHT)];
+  // https://stackoverflow.com/questions/10177882/resizing-nswindow-to-fit-child-nsview
+  [[self window] setContentSize: self.frame.size];
+  [[self window] setContentView: self];
+  [self setNeedsDisplay: YES];
+
   _timer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / FPS
                                             target: self
                                           selector: @selector(step:)
