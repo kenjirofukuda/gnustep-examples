@@ -9,12 +9,15 @@ const NSInteger MAX_SCREEN_COL = 16;
 const NSInteger MAX_SCREEN_ROW = 12;
 const NSInteger SCREEN_WIDTH = TILE_SIZE * MAX_SCREEN_COL;
 const NSInteger SCREEN_HEIGHT = TILE_SIZE * MAX_SCREEN_ROW;
+const NSInteger MAX_WORLD_COL = 50;
+const NSInteger MAX_WORLD_ROW = 50;
+const NSInteger WORLD_WIDTH = TILE_SIZE * MAX_WORLD_COL;
+const NSInteger WORLD_HEIGHT = TILE_SIZE * MAX_WORLD_ROW;
 const NSInteger FPS = 60;
 
 @interface Entity : NSObject
 {
-  NSInteger _x;
-  NSInteger _y;
+  NSPoint   _worldLoc;
   NSInteger _speed;
 
   NSImage *_up1;
@@ -32,6 +35,8 @@ const NSInteger FPS = 60;
 }
 
 - (instancetype) init;
+- (CGFloat) worldX;
+- (CGFloat) worldY;
 @end
 
 
@@ -47,6 +52,16 @@ const NSInteger FPS = 60;
   return self;
 }
 
+- (CGFloat) worldX
+{
+  return _worldLoc.x;
+}
+
+- (CGFloat) worldY
+{
+  return _worldLoc.y;
+}
+
 @end
 
 
@@ -54,11 +69,16 @@ const NSInteger FPS = 60;
 {
   GameView *_view;
   KeyState *_keyState;
+  NSPoint   _screenLoc;
 }
 - (instancetype) initWithView: (GameView *)view keyState: (KeyState *)keyState;
 - (void) dealloc;
 - (void) update;
 - (void) draw;
+- (CGFloat) screenX;
+- (CGFloat) screenY;
+- (NSRect) visibleBounds;
+- (NSRect) visibleTileBounds;
 @end
 
 @implementation Player
@@ -69,6 +89,9 @@ const NSInteger FPS = 60;
     {
       _view = view;
       _keyState = keyState;
+      _screenLoc = NSMakePoint(SCREEN_WIDTH / 2 - TILE_SIZE / 2,
+                               SCREEN_HEIGHT / 2 - TILE_SIZE / 2);
+
       [self _setDefaultValues];
       [self _loadImages];
     }
@@ -90,8 +113,7 @@ const NSInteger FPS = 60;
 
 - (void) _setDefaultValues
 {
-  _x = 100;
-  _y = 100;
+  _worldLoc = NSMakePoint(100 ,100);
   _speed = 4;
   _direction = @"down";
 }
@@ -113,6 +135,33 @@ const NSInteger FPS = 60;
   _right2 = [self _imageOfResource: @"boy_right_2"];
 }
 
+- (CGFloat) screenX
+{
+  return _screenLoc.x;
+}
+
+- (CGFloat) screenY
+{
+  return _screenLoc.y;
+}
+
+- (NSRect) visibleBounds
+{
+  return NSMakeRect(-_screenLoc.x + _worldLoc.x,
+                    -_screenLoc.y + _worldLoc.y,
+                    SCREEN_WIDTH, SCREEN_HEIGHT);
+}
+
+- (NSRect) visibleTileBounds
+{
+  NSRect bounds = [self visibleBounds];
+  CGFloat minX = ceil((NSMinX(bounds) - TILE_SIZE) / TILE_SIZE);
+  CGFloat minY = ceil((NSMinY(bounds) - TILE_SIZE) / TILE_SIZE);
+  CGFloat maxX = ceil((NSMaxX(bounds) + TILE_SIZE) / TILE_SIZE);
+  CGFloat maxY = ceil((NSMaxY(bounds) + TILE_SIZE) / TILE_SIZE);
+  return NSMakeRect(minX, minY, maxX - minX, maxY - minY);
+}
+
 - (void) update
 {
   if ([_view anyKeyPressed] == YES)
@@ -120,22 +169,22 @@ const NSInteger FPS = 60;
       if (_keyState->up == YES)
         {
           _direction = @"up";
-          _y += _speed;
+          _worldLoc.y += _speed;
         }
       if (_keyState->down == YES)
         {
           _direction = @"down";
-          _y -= _speed;
+          _worldLoc.y -= _speed;
         }
       if (_keyState->left == YES)
         {
           _direction = @"left";
-          _x -= _speed;
+          _worldLoc.x -= _speed;
         }
       if (_keyState->right == YES)
         {
           _direction = @"right";
-          _x += _speed;
+          _worldLoc.x += _speed;
         }
       _spliteCounter++;
       if (_spliteCounter > 10)
@@ -196,12 +245,12 @@ const NSInteger FPS = 60;
     }
   if (image != nil)
     {
-      [_view drawImage: image x: _x y: _y];
+      [_view drawImage: image x: _screenLoc.x y: _screenLoc.y];
     }
   else
     {
       // error occurred fallback!!!
-      NSRect bounds = NSMakeRect(_x, _y, TILE_SIZE, TILE_SIZE);
+      NSRect bounds = NSMakeRect(_screenLoc.y, _screenLoc.y, TILE_SIZE, TILE_SIZE);
       [[NSColor whiteColor] set];
       NSRectFill(bounds);
     }
@@ -252,7 +301,7 @@ const NSInteger FPS = 60;
 @interface TileManager : NSObject
 {
   GameView *_view;
-  Tile *_tiles[3];
+  NSMutableArray *_tiles;
   int *_mapTileNumbers;
 }
 - (instancetype) initWithView: (GameView *)view;
@@ -267,31 +316,32 @@ const NSInteger FPS = 60;
   if (self != nil)
     {
       _view = view;
-      bzero(_tiles, sizeof(_tiles));
-      _mapTileNumbers = malloc(MAX_SCREEN_COL * MAX_SCREEN_ROW * sizeof(int));
+      _tiles = [[NSMutableArray alloc] init];
+      size_t alloc_size = MAX_WORLD_COL * MAX_WORLD_ROW * sizeof(int);
+      _mapTileNumbers = malloc(alloc_size);
+      memset(_mapTileNumbers, 0, alloc_size);
       [self _loadTileImages];
-      [self _loadMap: @"map01"];
+      [self _loadMap: @"world01"];
     }
   return self;
 }
 
 - (void) dellaoc
 {
-  RELEASE(_tiles[0]);
-  RELEASE(_tiles[1]);
-  RELEASE(_tiles[2]);
+  RELEASE(_tiles);
   free(_mapTileNumbers);
   DEALLOC;
 }
 
 - (void) _loadTileImages;
 {
-  _tiles[0] = [[Tile alloc] init];
-  [_tiles[0] setImage: [self _imageOfResource: @"grass"]];
-  _tiles[1] = [[Tile alloc] init];
-  [_tiles[1] setImage: [self _imageOfResource: @"wall"]];
-  _tiles[2] = [[Tile alloc] init];
-  [_tiles[2] setImage: [self _imageOfResource: @"water"]];
+  for (NSString *name in
+       @[@"grass", @"wall", @"water", @"earth", @"tree", @"sand"])
+    {
+      Tile *tile = [[Tile alloc] init];
+      [tile setImage: [self _imageOfResource: name]];
+      [_tiles addObject: tile];
+    }
 }
 
 - (void) _loadMap: name;
@@ -305,7 +355,8 @@ const NSInteger FPS = 60;
   NSMutableArray *lines = [NSMutableArray array];
   [contents enumerateLinesUsingBlock: ^ (NSString *line, BOOL * stop)
             {
-              NSString * trimed = [line stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+              NSString *trimed = [line stringByTrimmingCharactersInSet:
+                                         [NSCharacterSet whitespaceCharacterSet]];
               if ([trimed length] != 0)
                 {
                   [lines addObject: line];
@@ -313,30 +364,18 @@ const NSInteger FPS = 60;
             }
    ];
   NSArray *reversedLines = [[lines reverseObjectEnumerator] allObjects];
-
-  int col = 0;
-  int row = 0;
-
-  while (col < MAX_SCREEN_COL && row < MAX_SCREEN_ROW)
+  for (int row = 0; row < MAX_WORLD_ROW; row++)
     {
       NSString *line = [reversedLines objectAtIndex: row];
-      while (col < MAX_SCREEN_COL)
+      NSArray *items = [line componentsSeparatedByString: @" "];
+      int col = 0;
+      for (NSString *item in items)
         {
-          NSArray *items = [line componentsSeparatedByString: @" "];
-          for (NSString *item in items)
-            {
-              _mapTileNumbers[col + (row * MAX_SCREEN_COL)] = [item intValue];
-              col++;
-            }
-        }
-      if (col == MAX_SCREEN_COL)
-        {
-          col = 0;
-          row++;
+          _mapTileNumbers[col + (row * MAX_WORLD_COL)] = [item intValue];
+          col++;
         }
     }
 }
-
 
 - (NSImage *) _imageOfResource: (NSString *)name
 {
@@ -345,25 +384,41 @@ const NSInteger FPS = 60;
 
 - (void) draw
 {
-  int col = 0;
-  int row = 0;
-  int x = 0;
-  int y = 0;
-  while (col < MAX_SCREEN_COL && row < MAX_SCREEN_ROW)
-    {
-      int tileNumber = _mapTileNumbers[col + (row * MAX_SCREEN_COL)];
-      tileNumber = tileNumber > 2 ? 2 : tileNumber;
-      tileNumber = tileNumber < 0 ? 0 : tileNumber;
+  NSRect tileBounds = [[_view player] visibleTileBounds];
+  NSRect allBounds = NSMakeRect(0, 0, MAX_WORLD_COL, MAX_WORLD_ROW);
+  tileBounds = NSIntersectionRect(tileBounds, allBounds);
+  // NSDebugLog(@"tile: %@", NSStringFromRect(tileBounds));
 
-      [_view drawImage: [_tiles[tileNumber] image]  x: x y: y];
-      col++;
-      x += TILE_SIZE;
-      if (col == MAX_SCREEN_COL)
+  int worldCol = (int) NSMinX(tileBounds);
+  int resetCol = worldCol;
+  int worldRow = (int) NSMinY(tileBounds);
+  int limitCol = (int) NSMaxX(tileBounds);
+  int limitRow = (int) NSMaxY(tileBounds);
+  // NSDebugLog(@"worldCol: %d", worldCol);
+  // NSDebugLog(@"worldRow: %d", worldRow);
+  // NSDebugLog(@"limitCol: %d", limitCol);
+  // NSDebugLog(@"limitRow: %d", limitRow);
+  // puts("");
+
+  for (; worldRow < limitRow; worldRow++)
+    {
+      for (worldCol = resetCol; worldCol < limitCol; worldCol++)
         {
-          col = 0;
-          x = 0;
-          row++;
-          y += TILE_SIZE;
+          int mapIndex = worldCol + (worldRow * MAX_WORLD_COL);
+          /* NSDebugLog(@"mapIndex: %d row: %d col: %d", mapIndex, worldRow, worldCol); */
+          int tileNumber = _mapTileNumbers[mapIndex];
+          tileNumber = tileNumber > 5 ? 5 : tileNumber;
+          tileNumber = tileNumber < 0 ? 0 : tileNumber;
+
+          CGFloat worldX = worldCol * TILE_SIZE;
+          CGFloat worldY = worldRow * TILE_SIZE;
+          CGFloat screenX =
+            worldX - [[_view player] worldX] + [[_view player] screenX];
+          CGFloat screenY =
+            worldY - [[_view player] worldY] + [[_view player] screenY];
+          [_view drawImage:[[_tiles objectAtIndex:tileNumber] image]
+                         x:screenX
+                         y:screenY];
         }
     }
 }
@@ -376,7 +431,6 @@ const NSInteger FPS = 60;
   self = [super initWithFrame: frameRect];
   if (self != nil)
     {
-      NSDebugLog(@"- (instancetype) initWithFrame: (NSRect)frameRect");
       _player = [[Player alloc] initWithView: self keyState: &_keyState];
       _tileManager = [[TileManager alloc] initWithView: self];
     }
@@ -388,7 +442,7 @@ const NSInteger FPS = 60;
   RELEASE(_timer);
   RELEASE(_tileManager);
   RELEASE(_player);
-  [super dealloc];
+  DEALLOC;
 }
 
 - (BOOL) acceptsFirstResponder
@@ -417,16 +471,8 @@ const NSInteger FPS = 60;
 {
   BOOL      handled = NO;
   NSString *characters;
-  unichar   keyChar = 0;
 
   characters = [event charactersIgnoringModifiers];
-  if ([characters length] == 1)
-    {
-      keyChar = [characters characterAtIndex: 0];
-      if (keyChar == NSHomeFunctionKey)
-        {
-        }
-    }
   if (! handled && [characters isEqual: @"w"])
     {
       _keyState.up = newState;
@@ -457,6 +503,11 @@ const NSInteger FPS = 60;
 - (void) keyUp: (NSEvent *)event
 {
   [self keyEvent: event pressed: NO];
+}
+
+- (Player *) player
+{
+  return _player;
 }
 
 - (BOOL) anyKeyPressed;

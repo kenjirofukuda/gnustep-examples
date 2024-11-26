@@ -33,6 +33,7 @@ typedef struct KeyState
 - (void) keyDown: (NSEvent *)theEvent;
 - (void) keyUp: (NSEvent *)theEvent;
 
+- (Player *) player;
 - (BOOL) anyKeyPressed;
 - (NSImage *) imageOfResource: (NSString *)name inDirectory: (NSString *)subpath;
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y width: (CGFloat)width height: (CGFloat)height;
