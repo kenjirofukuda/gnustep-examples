@@ -38,8 +38,6 @@ typedef struct KeyState
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y width: (CGFloat)width height: (CGFloat)height;
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y;
 
-
-
 - (IBAction) startStepping: (id)sender;
 
 @end

@@ -297,11 +297,24 @@ const NSInteger FPS = 60;
 
 - (void) draw
 {
-  [_view drawImage: [_tiles[0] image]  x: 0 y: 0];
-  [_view drawImage: [_tiles[1] image]  x: 48 y: 0];
-  [_view drawImage: [_tiles[2] image]  x: 96 y: 0];
+  int col = 0;
+  int row = 0;
+  int x = 0;
+  int y = 0;
+  while (col < MAX_SCREEN_COL && row < MAX_SCREEN_ROW)
+    {
+      [_view drawImage: [_tiles[0] image]  x: x y: y];
+      col++;
+      x += TILE_SIZE;
+      if (col == MAX_SCREEN_COL)
+        {
+          col = 0;
+          x = 0;
+          row++;
+          y += TILE_SIZE;
+        }
+    }
 }
-
 @end
 
 
