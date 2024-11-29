@@ -4,10 +4,14 @@ include $(GNUSTEP_MAKEFILES)/common.make
 
 APP_NAME = RPGGame
 $(APP_NAME)_OBJC_FILES = RPGGame.m \
-	GameView.m
+	GameView.m \
+	Entity.m \
+	Tile.m
 
 $(APP_NAME)_HEADER_FILES = \
-	GameView.h
+	GameView.h \
+	Entity.h \
+	Tile.h
 
 $(APP_NAME)_RESOURCE_FILES = \
   Menu-GNUstep.gsmarkup \
