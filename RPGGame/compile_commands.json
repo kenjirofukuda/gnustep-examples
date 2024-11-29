@@ -29,12 +29,12 @@
       "-I/usr/GNUstep/Local/Library/Headers",
       "-I/usr/GNUstep/System/Library/Headers",
       "-o",
-      "obj/RPGGame.obj/RPGGame.m.o",
-      "RPGGame.m"
+      "obj/RPGGame.obj/Sources/RPGGame.m.o",
+      "Sources/RPGGame.m"
     ],
     "directory": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame",
-    "file": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/RPGGame.m",
-    "output": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/obj/RPGGame.obj/RPGGame.m.o"
+    "file": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/Sources/RPGGame.m",
+    "output": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/obj/RPGGame.obj/Sources/RPGGame.m.o"
   },
   {
     "arguments": [
@@ -66,12 +66,12 @@
       "-I/usr/GNUstep/Local/Library/Headers",
       "-I/usr/GNUstep/System/Library/Headers",
       "-o",
-      "obj/RPGGame.obj/GameView.m.o",
-      "GameView.m"
+      "obj/RPGGame.obj/Sources/GameView.m.o",
+      "Sources/GameView.m"
     ],
     "directory": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame",
-    "file": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/GameView.m",
-    "output": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/obj/RPGGame.obj/GameView.m.o"
+    "file": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/Sources/GameView.m",
+    "output": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/obj/RPGGame.obj/Sources/GameView.m.o"
   },
   {
     "arguments": [
@@ -103,12 +103,12 @@
       "-I/usr/GNUstep/Local/Library/Headers",
       "-I/usr/GNUstep/System/Library/Headers",
       "-o",
-      "obj/RPGGame.obj/Entity.m.o",
-      "Entity.m"
+      "obj/RPGGame.obj/Sources/Checker.m.o",
+      "Sources/Checker.m"
     ],
     "directory": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame",
-    "file": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/Entity.m",
-    "output": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/obj/RPGGame.obj/Entity.m.o"
+    "file": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/Sources/Checker.m",
+    "output": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/obj/RPGGame.obj/Sources/Checker.m.o"
   },
   {
     "arguments": [
@@ -140,11 +140,48 @@
       "-I/usr/GNUstep/Local/Library/Headers",
       "-I/usr/GNUstep/System/Library/Headers",
       "-o",
-      "obj/RPGGame.obj/Tile.m.o",
-      "Tile.m"
+      "obj/RPGGame.obj/Sources/Entity.m.o",
+      "Sources/Entity.m"
     ],
     "directory": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame",
-    "file": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/Tile.m",
-    "output": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/obj/RPGGame.obj/Tile.m.o"
+    "file": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/Sources/Entity.m",
+    "output": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/obj/RPGGame.obj/Sources/Entity.m.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-DGNUSTEP",
+      "-DGNUSTEP_BASE_LIBRARY=1",
+      "-DGNU_GUI_LIBRARY=1",
+      "-DGNUSTEP_RUNTIME=1",
+      "-D_NONFRAGILE_ABI=1",
+      "-DGNUSTEP_BASE_LIBRARY=1",
+      "-fno-strict-aliasing",
+      "-fexceptions",
+      "-fobjc-exceptions",
+      "-D_NATIVE_OBJC_EXCEPTIONS",
+      "-pthread",
+      "-fPIC",
+      "-Wall",
+      "-DGSWARN",
+      "-DGSDIAGNOSE",
+      "-Wno-import",
+      "-g",
+      "-O2",
+      "-fobjc-runtime=gnustep-2.2",
+      "-fblocks",
+      "-fconstant-string-class=NSConstantString",
+      "-I.",
+      "-I/home/kenjiro/GNUstep/Library/Headers",
+      "-I/usr/GNUstep/Local/Library/Headers",
+      "-I/usr/GNUstep/System/Library/Headers",
+      "-o",
+      "obj/RPGGame.obj/Sources/Tile.m.o",
+      "Sources/Tile.m"
+    ],
+    "directory": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame",
+    "file": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/Sources/Tile.m",
+    "output": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/obj/RPGGame.obj/Sources/Tile.m.o"
   }
 ]

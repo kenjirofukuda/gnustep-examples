@@ -11,6 +11,8 @@
 }
 - (instancetype) init;
 - (void) dealloc;
+- (void) setCollision:(BOOL)state;
+- (BOOL) collision;
 - (void) setImage: (NSImage *)image;
 - (NSImage *) image;
 
@@ -25,6 +27,8 @@
 }
 - (instancetype) initWithView: (GameView *)view;
 - (void) dellaoc;
+- (NSArray *) tiles;
+- (int) tileNumberOfRow: (int)row col: (int)col;
 - (void) draw;
 @end
 

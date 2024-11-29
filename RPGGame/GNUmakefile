@@ -3,20 +3,22 @@
 include $(GNUSTEP_MAKEFILES)/common.make
 
 APP_NAME = RPGGame
-$(APP_NAME)_OBJC_FILES = RPGGame.m \
-	GameView.m \
-	Entity.m \
-	Tile.m
+$(APP_NAME)_OBJC_FILES = Sources/RPGGame.m \
+	Sources/GameView.m \
+	Sources/Checker.m \
+	Sources/Entity.m \
+	Sources/Tile.m
 
 $(APP_NAME)_HEADER_FILES = \
-	GameView.h \
-	Entity.h \
-	Tile.h
+	Sources/GameView.h \
+	Sources/Checker.h \
+	Sources/Entity.h \
+	Sources/Tile.h
 
 $(APP_NAME)_RESOURCE_FILES = \
   Menu-GNUstep.gsmarkup \
   Menu-OSX.gsmarkup \
-  Window.gsmarkup \
+  Window.gsmarkup
 
 $(APP_NAME)_RESOURCE_FILES += Resources/Walking-sprites
 $(APP_NAME)_RESOURCE_FILES += Resources/Tiles

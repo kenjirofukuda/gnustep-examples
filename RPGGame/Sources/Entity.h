@@ -20,14 +20,20 @@
   NSImage *_right1;
   NSImage *_right2;
   NSString *_direction;
-
   NSInteger _spliteCounter;
   NSInteger _spliteNumber;
+  NSRect _solidArea;
+  BOOL _collisionOn;
 }
 
 - (instancetype) init;
+- (NSString *) direction;
+- (CGFloat) speed;
 - (CGFloat) worldX;
 - (CGFloat) worldY;
+- (NSRect) solidArea;
+- (void) setSolidArea: (NSRect)area;
+- (void) setCollisionOn: (BOOL)state;
 @end
 
 @class GameView;

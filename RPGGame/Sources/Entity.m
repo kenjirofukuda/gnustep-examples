@@ -1,5 +1,7 @@
 // -*- mode: ObjC -*-
 #import <Foundation/Foundation.h>
+#import "GameView.h"
+#import "Checker.h"
 #import "Entity.h"
 
 @implementation Entity
@@ -7,14 +9,25 @@
 {
   if ((self = [super init]) != nil)
     {
-      // implement hear
+      _solidArea = NSMakeRect(0, 0, TILE_SIZE, TILE_SIZE);
+      _collisionOn = NO;
     }
   return self;
+}
+
+- (NSString *) direction
+{
+  return _direction;
 }
 
 - (void) dealloc
 {
   [super dealloc];
+}
+
+- (CGFloat) speed
+{
+  return _speed;
 }
 
 - (CGFloat) worldX
@@ -26,6 +39,22 @@
 {
   return _worldLoc.y;
 }
+
+- (NSRect) solidArea
+{
+  return _solidArea;
+}
+
+- (void) setSolidArea: (NSRect)area
+{
+  _solidArea  = area;
+}
+
+- (void) setCollisionOn: (BOOL)state;
+{
+  _collisionOn  = state;
+}
+
 @end
 
 @implementation Player
@@ -38,7 +67,7 @@
       _keyState = keyState;
       _screenLoc = NSMakePoint(SCREEN_WIDTH / 2 - TILE_SIZE / 2,
                                SCREEN_HEIGHT / 2 - TILE_SIZE / 2);
-
+      _solidArea = NSMakeRect(8, 0, TILE_SIZE - (8 + 8), TILE_SIZE - (8 + 8));
       [self _setDefaultValues];
       [self _loadImages];
     }
@@ -60,10 +89,12 @@
 
 - (void) _setDefaultValues
 {
-  _worldLoc = NSMakePoint(WORLD_WIDTH / 2 - TILE_SIZE / 2,
-                          WORLD_HEIGHT / 2 - TILE_SIZE / 2);
+  _worldLoc = NSMakePoint(TILE_SIZE * 23, WORLD_HEIGHT - (TILE_SIZE * 22));
+
   _speed = 4;
   _direction = @"down";
+  _spliteCounter = 0;
+  _spliteNumber = 1;
 }
 
 - (NSImage *) _imageOfResource: (NSString *)name
@@ -117,23 +148,36 @@
       if (_keyState->up == YES)
         {
           _direction = @"up";
-          _worldLoc.y += _speed;
         }
       if (_keyState->down == YES)
         {
           _direction = @"down";
-          _worldLoc.y -= _speed;
         }
       if (_keyState->left == YES)
         {
           _direction = @"left";
-          _worldLoc.x -= _speed;
         }
       if (_keyState->right == YES)
         {
           _direction = @"right";
-          _worldLoc.x += _speed;
         }
+      // CHECK TILE COLLISION
+      _collisionOn = NO;
+      [[_view collisionChecker] checkTile: self];
+
+      // IF COLLISION IS FALSE, PLAYER CAN MOVE
+      if (_collisionOn == NO)
+        {
+          if ([_direction isEqualToString: @"up"])
+            _worldLoc.y += _speed;
+          else if ([_direction isEqualToString: @"down"])
+            _worldLoc.y -= _speed;
+          else if ([_direction isEqualToString: @"left"])
+            _worldLoc.x -= _speed;
+          else if ([_direction isEqualToString: @"right"])
+            _worldLoc.x += _speed;
+        }
+
       _spliteCounter++;
       if (_spliteCounter > 10)
         {

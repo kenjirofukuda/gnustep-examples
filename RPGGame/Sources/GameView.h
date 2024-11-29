@@ -27,8 +27,22 @@ typedef struct KeyState
   BOOL right;
 } KeyState;
 
+typedef struct
+{
+  CGFloat xmin;
+  CGFloat ymin;
+  CGFloat xmax;
+  CGFloat ymax;
+} Bounds;
+
+extern NSRect NSRectFromBounds(Bounds bounds);
+extern Bounds BoundsFromNSRect(NSRect rect);
+extern Bounds BoundsDiv(Bounds bounds, CGFloat value);
+
+
 @class Player;
 @class TileManager;
+@class CollisionChecker;
 
 @interface GameView : NSView
 {
@@ -37,6 +51,7 @@ typedef struct KeyState
   KeyState _keyState;
   NSUInteger _drawCount;
   TileManager *_tileManager;
+  CollisionChecker *_collisionChecker;
 }
 - (instancetype) initWithFrame: (NSRect)frameRect;
 - (void) dealloc;
@@ -48,6 +63,8 @@ typedef struct KeyState
 - (void) keyUp: (NSEvent *)theEvent;
 
 - (Player *) player;
+- (TileManager *) tileManager;
+- (CollisionChecker *) collisionChecker;
 - (BOOL) anyKeyPressed;
 - (NSImage *) imageOfResource: (NSString *)name inDirectory: (NSString *)subpath;
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y width: (CGFloat)width height: (CGFloat)height;

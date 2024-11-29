@@ -1,6 +1,7 @@
 // -*- mode: ObjC -*-
 #import <Foundation/Foundation.h>
 #import "GameView.h"
+#import "Checker.h"
 #import "Entity.h"
 #import "Tile.h"
 
@@ -25,6 +26,7 @@ const NSInteger FPS = 60;
     {
       _player = [[Player alloc] initWithView: self keyState: &_keyState];
       _tileManager = [[TileManager alloc] initWithView: self];
+      _collisionChecker = [[CollisionChecker alloc] initWithView: self];
     }
   return self;
 }
@@ -33,6 +35,7 @@ const NSInteger FPS = 60;
 {
   RELEASE(_timer);
   RELEASE(_tileManager);
+  RELEASE(_collisionChecker);
   RELEASE(_player);
   DEALLOC;
 }
@@ -102,6 +105,16 @@ const NSInteger FPS = 60;
   return _player;
 }
 
+- (TileManager *) tileManager
+{
+  return _tileManager;
+}
+
+- (CollisionChecker *) collisionChecker
+{
+  return _collisionChecker;
+}
+
 - (BOOL) anyKeyPressed;
 {
   return _keyState.up == YES
@@ -165,5 +178,30 @@ const NSInteger FPS = 60;
 }
 
 @end
+
+NSRect NSRectFromBounds(Bounds bounds)
+{
+  return NSMakeRect(bounds.xmin, bounds.ymin, bounds.xmax - bounds.xmin, bounds.ymax - bounds.ymin);
+}
+
+Bounds BoundsFromNSRect(NSRect rect)
+{
+  Bounds result;
+  result.xmin = NSMinX(rect);
+  result.ymin = NSMinY(rect);
+  result.xmax = NSMaxX(rect);
+  result.ymax = NSMaxY(rect);
+  return result;
+}
+
+Bounds BoundsDiv(Bounds bounds, CGFloat value)
+{
+  Bounds result;
+  result.xmin = trunc(bounds.xmin / value);
+  result.ymin = trunc(bounds.ymin / value);
+  result.xmax = trunc(bounds.xmax / value);
+  result.ymax = trunc(bounds.ymax / value);
+  return result;
+}
 
 // vim: filetype=objc ts=2 sw=2 expandtab
