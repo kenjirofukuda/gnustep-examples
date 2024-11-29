@@ -124,20 +124,20 @@
   return _screenLoc.y;
 }
 
-- (NSRect) visibleBounds
+- (NSRect) visibleRect
 {
   return NSMakeRect(-_screenLoc.x + _worldLoc.x,
                     -_screenLoc.y + _worldLoc.y,
                     SCREEN_WIDTH, SCREEN_HEIGHT);
 }
 
-- (NSRect) visibleTileBounds
+- (NSRect) visibleTileRect
 {
-  NSRect bounds = [self visibleBounds];
-  CGFloat minX = ceil((NSMinX(bounds) - TILE_SIZE) / TILE_SIZE);
-  CGFloat minY = ceil((NSMinY(bounds) - TILE_SIZE) / TILE_SIZE);
-  CGFloat maxX = ceil((NSMaxX(bounds) + TILE_SIZE) / TILE_SIZE);
-  CGFloat maxY = ceil((NSMaxY(bounds) + TILE_SIZE) / TILE_SIZE);
+  NSRect rect = [self visibleRect];
+  CGFloat minX = ceil((NSMinX(rect) - TILE_SIZE) / TILE_SIZE);
+  CGFloat minY = ceil((NSMinY(rect) - TILE_SIZE) / TILE_SIZE);
+  CGFloat maxX = ceil((NSMaxX(rect) + TILE_SIZE) / TILE_SIZE);
+  CGFloat maxY = ceil((NSMaxY(rect) + TILE_SIZE) / TILE_SIZE);
   return NSMakeRect(minX, minY, maxX - minX, maxY - minY);
 }
 
@@ -242,9 +242,9 @@
   else
     {
       // error occurred fallback!!!
-      NSRect bounds = NSMakeRect(_screenLoc.y, _screenLoc.y, TILE_SIZE, TILE_SIZE);
+      NSRect rect = NSMakeRect(_screenLoc.y, _screenLoc.y, TILE_SIZE, TILE_SIZE);
       [[NSColor whiteColor] set];
-      NSRectFill(bounds);
+      NSRectFill(rect);
     }
 }
 @end

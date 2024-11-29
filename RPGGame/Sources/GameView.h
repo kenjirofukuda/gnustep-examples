@@ -19,8 +19,20 @@ extern const NSInteger WORLD_WIDTH;
 extern const NSInteger WORLD_HEIGHT;
 extern const NSInteger FPS;
 
-typedef struct KeyState
+typedef enum
 {
+  Up = 0,
+  Down = 1,
+  Left = 2,
+  Right = 3
+} Direction;
+
+typedef struct {
+  Direction direction;
+  NSPoint   vec;
+} DirectionEntry;
+
+typedef struct KeyState {
   BOOL up;
   BOOL down;
   BOOL left;

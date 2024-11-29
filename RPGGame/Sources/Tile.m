@@ -141,18 +141,14 @@
 
 - (void) draw
 {
-  NSRect tileBounds = [[_view player] visibleTileBounds];
-  NSRect allBounds = NSMakeRect(0, 0, MAX_WORLD_COL, MAX_WORLD_ROW);
-  tileBounds = NSIntersectionRect(tileBounds, allBounds);
-  int worldCol = (int) NSMinX(tileBounds);
-  int resetCol = worldCol;
-  int worldRow = (int) NSMinY(tileBounds);
-  int limitCol = (int) NSMaxX(tileBounds);
-  int limitRow = (int) NSMaxY(tileBounds);
+  NSRect tileRect = [[_view player] visibleTileRect];
+  NSRect allRect = NSMakeRect(0, 0, MAX_WORLD_COL, MAX_WORLD_ROW);
+  tileRect = NSIntersectionRect(tileRect, allRect);
+  Bounds visibleBounds = BoundsFromNSRect(tileRect);
 
-  for (; worldRow < limitRow; worldRow++)
+  for (int worldRow = (int) visibleBounds.ymin; worldRow < (int) visibleBounds.ymax; worldRow++)
     {
-      for (worldCol = resetCol; worldCol < limitCol; worldCol++)
+      for (int worldCol = (int) visibleBounds.xmin; worldCol < (int) visibleBounds.xmax; worldCol++)
         {
           int tileNumber = [self tileNumberOfRow: worldRow col: worldCol];
           tileNumber = tileNumber > 5 ? 5 : tileNumber;

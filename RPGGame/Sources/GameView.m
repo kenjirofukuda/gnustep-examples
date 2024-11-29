@@ -18,6 +18,16 @@ const NSInteger WORLD_WIDTH = TILE_SIZE * MAX_WORLD_COL;
 const NSInteger WORLD_HEIGHT = TILE_SIZE * MAX_WORLD_ROW;
 const NSInteger FPS = 60;
 
+// *INDENT-OFF*
+DirectionEntry directions[4] =
+{
+  {Up,    { 0.0,   1.0}},
+  {Down,  { 0.0,  -1.0}},
+  {Left,  {-1.0,   0.0}},
+  {Right, { 1.0,   0.0}}
+};
+// *INDENT-ON*
+
 @implementation GameView
 - (instancetype) initWithFrame: (NSRect)frameRect
 {

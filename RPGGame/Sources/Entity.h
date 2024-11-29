@@ -50,8 +50,8 @@
 - (void) draw;
 - (CGFloat) screenX;
 - (CGFloat) screenY;
-- (NSRect) visibleBounds;
-- (NSRect) visibleTileBounds;
+- (NSRect) visibleRect;
+- (NSRect) visibleTileRect;
 @end
 
 #endif
