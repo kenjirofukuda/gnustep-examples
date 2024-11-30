@@ -19,6 +19,9 @@ extern const NSInteger WORLD_WIDTH;
 extern const NSInteger WORLD_HEIGHT;
 extern const NSInteger FPS;
 
+#define FLIPED_COL(x) ((x))
+#define FLIPED_ROW(x) (MAX_WORLD_ROW - (x) - 1)
+
 typedef enum
 {
   Up = 0,

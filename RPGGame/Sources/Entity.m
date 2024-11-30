@@ -94,7 +94,8 @@
 
 - (void) _setDefaultValues
 {
-  _worldLoc = NSMakePoint(TILE_SIZE * 23, WORLD_HEIGHT - (TILE_SIZE * 22));
+  _worldLoc = NSMakePoint(FLIPED_COL(23) * TILE_SIZE,
+                          FLIPED_ROW(21) * TILE_SIZE);
   _speed = 4;
   _direction = Down;
   _spliteCounter = 0;

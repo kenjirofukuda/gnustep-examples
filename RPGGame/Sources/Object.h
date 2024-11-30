@@ -32,6 +32,19 @@
 - (void) dealloc;
 @end
 
+@interface ObjDoor : SuperObject
+{
+}
+- (instancetype) initWithView: (GameView *)view;
+- (void) dealloc;
+@end
+
+@interface ObjChest : SuperObject
+{
+}
+- (instancetype) initWithView: (GameView *)view;
+- (void) dealloc;
+@end
 
 #endif
 // vim: filetype=objc ts=2 sw=2 expandtab

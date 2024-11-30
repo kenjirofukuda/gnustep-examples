@@ -11,12 +11,14 @@
     {
       _view = view;
       _collision = NO;
+      _image = nil;
     }
   return self;
 }
 
 - (void) dealloc
 {
+  TEST_RELEASE(_image);
   DEALLOC;
 }
 
@@ -40,6 +42,14 @@
   _worldLoc.y = value;
 }
 
+- (NSImage *) _imageOfResource:(NSString *)name
+{
+  NSImage *original = [_view imageOfResource: name inDirectory:@"Objects"];
+  NSImage *image = [_view scaledImage: original scale:SCALE];
+  RELEASE(original);
+  return image;
+}
+
 - (void) draw
 {
   CGFloat screenX =
@@ -59,21 +69,51 @@
   if (self != nil)
     {
       _name = @"Key";
-
-      NSImage *image = [view imageOfResource: @"key" inDirectory: @"Objects"];
-      _image = [view scaledImage: image scale: SCALE];
-      RELEASE(image);
+      _image = [self _imageOfResource: @"key"];
     }
   return self;
 }
 
 - (void) dealloc
 {
-  RELEASE(_image);
   DEALLOC;
 }
+@end
 
+@implementation ObjDoor
+- (instancetype) initWithView: (GameView *)view;
+{
+  self = [super initWithView: view];
+  if (self != nil)
+    {
+      _name = @"Door";
+      _image = [self _imageOfResource: @"door"];
+    }
+  return self;
+}
 
+- (void) dealloc
+{
+  DEALLOC;
+}
+@end
+
+@implementation ObjChest
+- (instancetype) initWithView: (GameView *)view;
+{
+  self = [super initWithView: view];
+  if (self != nil)
+    {
+      _name = @"Chest";
+      _image = [self _imageOfResource: @"chest"];
+    }
+  return self;
+}
+
+- (void) dealloc
+{
+  DEALLOC;
+}
 @end
 
 // vim: filetype=objc ts=2 sw=2 expandtab
