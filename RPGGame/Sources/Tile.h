@@ -25,6 +25,7 @@
   NSMutableArray *_tiles;
   int *_mapTileNumbers;
   BOOL _showsTileAddress;
+  NSDictionary *_tileAddressAttributes;
 }
 - (instancetype) initWithView: (GameView *)view;
 - (void) dellaoc;

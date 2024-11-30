@@ -24,6 +24,7 @@
   NSInteger _spliteNumber;
   NSRect _solidArea;
   BOOL _collisionOn;
+  BOOL _showsSolidArea;
 }
 
 - (instancetype) init;
@@ -34,6 +35,8 @@
 - (NSRect) solidArea;
 - (void) setSolidArea: (NSRect)area;
 - (void) setCollisionOn: (BOOL)state;
+- (BOOL) showsSolidArea;
+- (void) setShowsSolidArea: (BOOL) state;
 @end
 
 @class GameView;
@@ -44,7 +47,7 @@
   BOOL* _keyState;
   NSPoint   _screenLoc;
 }
-- (instancetype) initWithView: (GameView *)view keyState: (BOOL *)keyState;
+- (instancetype) initWithView: (GameView *)view keyState: (BOOL [])keyState;
 - (void) dealloc;
 - (void) update;
 - (void) draw;

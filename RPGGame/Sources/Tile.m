@@ -56,6 +56,7 @@
       _showsTileAddress = NO;
       [self _loadTileImages];
       [self _loadMap: @"world01"];
+      [self _setupTileAddressAttributes];
     }
   return self;
 }
@@ -63,6 +64,7 @@
 - (void) dellaoc
 {
   RELEASE(_tiles);
+  RELEASE(_tileAddressAttributes);
   free(_mapTileNumbers);
   DEALLOC;
 }
@@ -80,6 +82,15 @@
 - (void) setShowsTileAddress: (BOOL)state
 {
   _showsTileAddress = state;
+}
+
+- (void)_setupTileAddressAttributes {
+    NSFont *font = [NSFont systemFontOfSize: 8];
+    NSArray *keyArray = [NSArray arrayWithObjects: NSFontAttributeName, NSForegroundColorAttributeName, nil];
+    NSArray *valueArray = [NSArray arrayWithObjects: font, [NSColor blackColor], nil];
+
+    NSDictionary *fontDict = [NSDictionary dictionaryWithObjects: valueArray forKeys: keyArray];
+    ASSIGN(_tileAddressAttributes, fontDict);
 }
 
 - (void) _loadTileImages;
@@ -178,16 +189,11 @@
           if (showsTileAddress == YES)
             {
               NSString *info = [NSString stringWithFormat: @"(%d, %d)", worldCol, worldRow];
-              [_view drawString: info x: screenX y: screenY height: 8 color: [NSColor blackColor]];
+              [info drawAtPoint: NSMakePoint(screenX, screenY) withAttributes: _tileAddressAttributes];
             }
         }
     }
 }
-
-// - (int) tileNumberOfRow: (int)row col: (int)col
-// {
-//   return _mapTileNumbers[(row * MAX_WORLD_COL) + col];
-// }
 
 - (int) tileNumberOfCol: (int)col row: (int)row
 {

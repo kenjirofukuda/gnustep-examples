@@ -50,10 +50,20 @@
   _collisionOn  = state;
 }
 
+- (BOOL) showsSolidArea
+{
+  return _showsSolidArea;
+}
+
+- (void) setShowsSolidArea: (BOOL)state
+{
+  _showsSolidArea = state;
+}
+
 @end
 
 @implementation Player
-- (instancetype) initWithView: (GameView *)view keyState: (BOOL *)keyState
+- (instancetype) initWithView: (GameView *)view keyState: (BOOL [])keyState
 {
   self = [super init];
   if (self != nil)
@@ -173,7 +183,6 @@
 - (void) draw
 {
   NSImage *image = nil;
-
   if (_direction == Up)
     {
       if (_spliteNumber == 1)
@@ -228,6 +237,11 @@
       NSRect rect = NSMakeRect(_screenLoc.y, _screenLoc.y, TILE_SIZE, TILE_SIZE);
       [[NSColor whiteColor] set];
       NSRectFill(rect);
+    }
+  if (_showsSolidArea)
+    {
+      [[NSColor redColor] set];
+      NSFrameRect(NSOffsetRect(_solidArea, _screenLoc.x, _screenLoc.y));
     }
 }
 @end

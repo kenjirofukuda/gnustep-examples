@@ -97,6 +97,10 @@ DirectionEntry directions[4] =
     {
       [_tileManager setShowsTileAddress: ! [_tileManager showsTileAddress]];
     };
+  if ([characters isEqualToString: @"o"])
+    {
+      [_player setShowsSolidArea: ! [_player showsSolidArea]];
+    };
 }
 
 - (void) keyUp: (NSEvent *)event
