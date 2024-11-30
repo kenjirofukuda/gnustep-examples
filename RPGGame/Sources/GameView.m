@@ -4,6 +4,8 @@
 #import "Checker.h"
 #import "Entity.h"
 #import "Tile.h"
+#import "Object.h"
+#import "AssetSetter.h"
 
 const NSInteger ORIGINAL_TILE_SIZE = 16;
 const NSInteger SCALE = 3;
@@ -41,12 +43,16 @@ DirectionEntry directions[4] =
       _player = [[Player alloc] initWithView: self keyState: _keyState];
       _tileManager = [[TileManager alloc] initWithView: self];
       _collisionChecker = [[CollisionChecker alloc] initWithView: self];
+      _objects = [[NSMutableArray alloc] init];
+      _assetSetter = [[AssetSetter alloc] initWithView: self];
     }
   return self;
 }
 
 - (void) dealloc
 {
+  RELEASE(_assetSetter);
+  RELEASE(_objects);
   RELEASE(_timer);
   RELEASE(_tileManager);
   RELEASE(_collisionChecker);
@@ -71,9 +77,20 @@ DirectionEntry directions[4] =
 
   [[NSColor blackColor] set];
   NSRectFill(frameRect);
+
   [_tileManager draw];
-  [[NSColor whiteColor] set];
+  [self _drawSuperObjects];
   [_player draw];
+}
+
+- (void) _drawSuperObjects
+{
+  NSRect viewRect = [_player visibleRect];
+  for (SuperObject *obj in _objects)
+    {
+      if (NSIntersectsRect(viewRect, NSMakeRect([obj worldX], [obj worldY], TILE_SIZE, TILE_SIZE)) == YES)
+        [obj draw];
+    }
 }
 
 - (void) keyEvent: (NSEvent *)event pressed: (BOOL)newState
@@ -106,6 +123,16 @@ DirectionEntry directions[4] =
 - (void) keyUp: (NSEvent *)event
 {
   [self keyEvent: event pressed: NO];
+}
+
+- (void) setupGame
+{
+  [_assetSetter setObject];
+}
+
+- (void) addSuperObject: (SuperObject *)object
+{
+ [ _objects addObject: object];
 }
 
 - (Player *) player
@@ -218,6 +245,7 @@ DirectionEntry directions[4] =
   // https://stackoverflow.com/questions/10177882/resizing-nswindow-to-fit-child-nsview
   [[self window] setContentSize: self.frame.size];
   [[self window] setContentView: self];
+  [self setupGame];
   [self setNeedsDisplay: YES];
 
   _timer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / FPS

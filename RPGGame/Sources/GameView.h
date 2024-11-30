@@ -57,6 +57,8 @@ extern DirectionEntry directions[4];
 @class Player;
 @class TileManager;
 @class CollisionChecker;
+@class AssetSetter;
+@class SuperObject;
 
 @interface GameView : NSView
 {
@@ -67,6 +69,8 @@ extern DirectionEntry directions[4];
   TileManager *_tileManager;
   CollisionChecker *_collisionChecker;
   NSDictionary *_directionKeyTable;
+  NSMutableArray *_objects;
+  AssetSetter *_assetSetter;
 }
 - (instancetype) initWithFrame: (NSRect)frameRect;
 - (void) dealloc;
@@ -76,6 +80,9 @@ extern DirectionEntry directions[4];
 - (void) step: (NSTimer *)timer;
 - (void) keyDown: (NSEvent *)theEvent;
 - (void) keyUp: (NSEvent *)theEvent;
+
+- (void) setupGame;
+- (void) addSuperObject: (SuperObject *)object;
 
 - (Player *) player;
 - (TileManager *) tileManager;
