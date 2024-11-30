@@ -147,6 +147,35 @@ DirectionEntry directions[4] =
                                           inDirectory: subpath]];
 }
 
+- (NSImage *) scaledImage: (NSImage *)image scale: (CGFloat)scale
+{
+  // https://stackoverflow.com/questions/11876963/get-the-correct-image-width-and-height-of-an-nsimage
+  NSImageRep *rep = [[image representations] objectAtIndex: 0];
+  NSSize originalSize = NSMakeSize(rep.pixelsWide, rep.pixelsHigh);
+  NSSize scaledSize = originalSize;
+
+  scaledSize.width *= scale;
+  scaledSize.height *= scale;
+  NSImage *result = [[NSImage alloc] initWithSize: scaledSize];
+
+  [result lockFocus];
+
+  NSRect imageRect;
+  NSRect drawRect;
+  imageRect.origin = NSMakePoint(0, 0);
+  imageRect.size = originalSize;
+  drawRect.origin = NSMakePoint(0, 0);
+  drawRect.size = scaledSize;
+
+  [image drawInRect: drawRect
+           fromRect: imageRect
+          operation: NSCompositeSourceOver
+           fraction: 1.0];
+
+  [result unlockFocus];
+  return result;
+}
+
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y width: (CGFloat)width height: (CGFloat)height
 {
   NSRect imageRect;
@@ -185,7 +214,6 @@ DirectionEntry directions[4] =
 
 - (IBAction) startStepping: (id)sender
 {
-  NSDebugLog(@"startStepping: %@", sender);
   [self setFrameSize: NSMakeSize(SCREEN_WIDTH, SCREEN_HEIGHT)];
   // https://stackoverflow.com/questions/10177882/resizing-nswindow-to-fit-child-nsview
   [[self window] setContentSize: self.frame.size];

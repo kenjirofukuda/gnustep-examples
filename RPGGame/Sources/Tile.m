@@ -95,9 +95,14 @@
 
 - (void) _loadTileImages;
 {
+  NSDebugLog(@"%@", @"_loadTileImages");
   Tile *tile;
+  NSImage *image;
+
   tile = [[Tile alloc] init];
-  [tile setImage: [self _imageOfResource: @"grass"]];
+  image = [self _imageOfResource: @"grass"];
+  NSDebugLog(@"scaled size = %@", NSStringFromSize([image size]));
+  [tile setImage: image];
   [_tiles addObject: tile];
 
   tile = [[Tile alloc] init];
@@ -158,7 +163,10 @@
 
 - (NSImage *) _imageOfResource: (NSString *)name
 {
-  return [_view imageOfResource: name inDirectory: @"Tiles"];
+  NSImage *original = [_view imageOfResource: name inDirectory: @"Tiles"];
+  NSImage *image = [_view scaledImage: original scale: SCALE];
+  RELEASE(original);
+  return image;
 }
 
 - (void) draw
@@ -183,9 +191,8 @@
             worldX - [[_view player] worldX] + [[_view player] screenX];
           CGFloat screenY =
             worldY - [[_view player] worldY] + [[_view player] screenY];
-          [_view drawImage:[[_tiles objectAtIndex:tileNumber] image]
-                         x:screenX
-                         y:screenY];
+          [[[_tiles objectAtIndex: tileNumber] image] compositeToPoint: NSMakePoint(screenX, screenY)
+                                                             operation: NSCompositeSourceOver];
           if (showsTileAddress == YES)
             {
               NSString *info = [NSString stringWithFormat: @"(%d, %d)", worldCol, worldRow];

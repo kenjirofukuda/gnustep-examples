@@ -95,7 +95,6 @@
 - (void) _setDefaultValues
 {
   _worldLoc = NSMakePoint(TILE_SIZE * 23, WORLD_HEIGHT - (TILE_SIZE * 22));
-
   _speed = 4;
   _direction = Down;
   _spliteCounter = 0;
@@ -104,7 +103,10 @@
 
 - (NSImage *) _imageOfResource: (NSString *)name
 {
-  return [_view imageOfResource: name inDirectory: @"Walking-sprites"];
+  NSImage *original = [_view imageOfResource: name inDirectory: @"Walking-sprites"];
+  NSImage *image = [_view scaledImage: original scale: SCALE];
+  RELEASE(original);
+  return image;
 }
 
 - (void) _loadImages
@@ -229,7 +231,9 @@
     }
   if (image != nil)
     {
-      [_view drawImage: image x: _screenLoc.x y: _screenLoc.y];
+      [image compositeToPoint: _screenLoc
+                    operation: NSCompositeSourceOver];
+
     }
   else
     {

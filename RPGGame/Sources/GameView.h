@@ -82,6 +82,7 @@ extern DirectionEntry directions[4];
 - (CollisionChecker *) collisionChecker;
 - (BOOL) anyKeyPressed;
 - (NSImage *) imageOfResource: (NSString *)name inDirectory: (NSString *)subpath;
+- (NSImage *) scaledImage: (NSImage *)image scale: (CGFloat)scale;
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y width: (CGFloat)width height: (CGFloat)height;
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y;
 - (void) drawString: (NSString *)string
