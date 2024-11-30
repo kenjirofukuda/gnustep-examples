@@ -32,12 +32,14 @@ typedef struct {
   NSPoint   vec;
 } DirectionEntry;
 
-typedef struct KeyState {
-  BOOL up;
-  BOOL down;
-  BOOL left;
-  BOOL right;
-} KeyState;
+// typedef struct KeyState {
+//   BOOL up;
+//   BOOL down;
+//   BOOL left;
+//   BOOL right;
+// } KeyState;
+
+typedef BOOL KeyState[4];
 
 typedef struct
 {
@@ -50,7 +52,7 @@ typedef struct
 extern NSRect NSRectFromBounds(Bounds bounds);
 extern Bounds BoundsFromNSRect(NSRect rect);
 extern Bounds BoundsDiv(Bounds bounds, CGFloat value);
-
+extern DirectionEntry directions[4];
 
 @class Player;
 @class TileManager;
@@ -64,6 +66,7 @@ extern Bounds BoundsDiv(Bounds bounds, CGFloat value);
   NSUInteger _drawCount;
   TileManager *_tileManager;
   CollisionChecker *_collisionChecker;
+  NSDictionary *_directionKeyTable;
 }
 - (instancetype) initWithFrame: (NSRect)frameRect;
 - (void) dealloc;
@@ -81,6 +84,12 @@ extern Bounds BoundsDiv(Bounds bounds, CGFloat value);
 - (NSImage *) imageOfResource: (NSString *)name inDirectory: (NSString *)subpath;
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y width: (CGFloat)width height: (CGFloat)height;
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y;
+- (void) drawString: (NSString *)string
+                  x: (CGFloat)x
+                  y: (CGFloat)y
+             height: (CGFloat)height
+              color: (NSColor *)color;
+
 
 - (IBAction) startStepping: (id)sender;
 

@@ -24,11 +24,14 @@
   GameView *_view;
   NSMutableArray *_tiles;
   int *_mapTileNumbers;
+  BOOL _showsTileAddress;
 }
 - (instancetype) initWithView: (GameView *)view;
 - (void) dellaoc;
 - (NSArray *) tiles;
-- (int) tileNumberOfRow: (int)row col: (int)col;
+- (int) tileNumberOfCol: (int)col row: (int)row;
+- (BOOL) showsTileAddress;
+- (void) setShowsTileAddress: (BOOL) state;
 - (void) draw;
 @end
 

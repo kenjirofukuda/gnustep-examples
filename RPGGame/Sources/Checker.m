@@ -29,37 +29,37 @@
   int tile1 = -1;
   int tile2 = -1;
 
-  if ([[entity direction] isEqualToString: @"up"])
+  if ([entity direction] == Up)
     {
       entityTileAddress.ymax = (entityBounds.ymax + [entity speed]) / TILE_SIZE;
-      tile1 = [[_view tileManager] tileNumberOfRow: (int) entityTileAddress.ymax
-                                               col: (int) entityTileAddress.xmin];
-      tile2 = [[_view tileManager] tileNumberOfRow: (int) entityTileAddress.ymax
-                                               col: (int) entityTileAddress.xmax];
+      tile1 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmin
+                                               row: (int) entityTileAddress.ymax];
+      tile2 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmax
+                                               row: (int) entityTileAddress.ymax];
     }
-  else if ([[entity direction] isEqualToString: @"down"])
+  else if ([entity direction] == Down)
     {
       entityTileAddress.ymin = (entityBounds.ymin - [entity speed]) / TILE_SIZE;
-      tile1 = [[_view tileManager] tileNumberOfRow: (int) entityTileAddress.ymin
-                                               col: (int) entityTileAddress.xmin];
-      tile2 = [[_view tileManager] tileNumberOfRow: (int) entityTileAddress.ymin
-                                               col: (int) entityTileAddress.xmax];
+      tile1 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmin
+                                               row: (int) entityTileAddress.ymin];
+      tile2 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmax
+                                               row: (int) entityTileAddress.ymin];
     }
-  else if ([[entity direction] isEqualToString: @"left"])
+  else if ([entity direction] == Left)
     {
       entityTileAddress.xmin = (entityBounds.xmin - [entity speed]) / TILE_SIZE;
-      tile1 = [[_view tileManager] tileNumberOfRow: (int) entityTileAddress.ymax
-                                               col: (int) entityTileAddress.xmin];
-      tile2 = [[_view tileManager] tileNumberOfRow: (int) entityTileAddress.ymin
-                                               col: (int) entityTileAddress.xmin];
+      tile1 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmin
+                                               row: (int) entityTileAddress.ymax];
+      tile2 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmin
+                                               row: (int) entityTileAddress.ymin];
     }
-  else if ([[entity direction] isEqualToString: @"right"])
+  else if ([entity direction] == Right)
     {
       entityTileAddress.xmax = (entityBounds.xmax + [entity speed]) / TILE_SIZE;
-      tile1 = [[_view tileManager] tileNumberOfRow: (int) entityTileAddress.ymax
-                                               col: (int) entityTileAddress.xmax];
-      tile2 = [[_view tileManager] tileNumberOfRow: (int) entityTileAddress.ymin
-                                               col: (int) entityTileAddress.xmax];
+      tile1 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmax
+                                               row: (int) entityTileAddress.ymax];
+      tile2 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmax
+                                               row: (int) entityTileAddress.ymin];
     }
   else
     {
@@ -69,8 +69,6 @@
     {
       NSArray *tiles = [[_view tileManager] tiles];
 
-      // [entity setCollisionOn: (([[tiles objectAtIndex: tile1] collision] == YES
-      //                        || [[tiles objectAtIndex: tile2] collision] == YES)) ? YES : NO];
       [entity setCollisionOn: [[tiles objectAtIndex: tile1] collision]
                            || [[tiles objectAtIndex: tile2] collision]];
     }

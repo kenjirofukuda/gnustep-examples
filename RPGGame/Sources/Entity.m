@@ -15,14 +15,9 @@
   return self;
 }
 
-- (NSString *) direction
+- (Direction) direction
 {
   return _direction;
-}
-
-- (void) dealloc
-{
-  [super dealloc];
 }
 
 - (CGFloat) speed
@@ -58,7 +53,7 @@
 @end
 
 @implementation Player
-- (instancetype) initWithView: (GameView *)view keyState: (KeyState *)keyState
+- (instancetype) initWithView: (GameView *)view keyState: (BOOL *)keyState
 {
   self = [super init];
   if (self != nil)
@@ -92,7 +87,7 @@
   _worldLoc = NSMakePoint(TILE_SIZE * 23, WORLD_HEIGHT - (TILE_SIZE * 22));
 
   _speed = 4;
-  _direction = @"down";
+  _direction = Down;
   _spliteCounter = 0;
   _spliteNumber = 1;
 }
@@ -145,22 +140,15 @@
 {
   if ([_view anyKeyPressed] == YES)
     {
-      if (_keyState->up == YES)
+      for (int i = 0; i < 4; i++)
         {
-          _direction = @"up";
+          if (_keyState[i] == YES)
+            {
+              _direction = i;
+              break;
+            }
         }
-      if (_keyState->down == YES)
-        {
-          _direction = @"down";
-        }
-      if (_keyState->left == YES)
-        {
-          _direction = @"left";
-        }
-      if (_keyState->right == YES)
-        {
-          _direction = @"right";
-        }
+
       // CHECK TILE COLLISION
       _collisionOn = NO;
       [[_view collisionChecker] checkTile: self];
@@ -168,14 +156,9 @@
       // IF COLLISION IS FALSE, PLAYER CAN MOVE
       if (_collisionOn == NO)
         {
-          if ([_direction isEqualToString: @"up"])
-            _worldLoc.y += _speed;
-          else if ([_direction isEqualToString: @"down"])
-            _worldLoc.y -= _speed;
-          else if ([_direction isEqualToString: @"left"])
-            _worldLoc.x -= _speed;
-          else if ([_direction isEqualToString: @"right"])
-            _worldLoc.x += _speed;
+          DirectionEntry de = directions[_direction];
+          _worldLoc.x += _speed * de.vec.x;
+          _worldLoc.y += _speed * de.vec.y;
         }
 
       _spliteCounter++;
@@ -191,7 +174,7 @@
 {
   NSImage *image = nil;
 
-  if ([_direction isEqualToString: @"up"])
+  if (_direction == Up)
     {
       if (_spliteNumber == 1)
         {
@@ -202,7 +185,7 @@
           image = _up2;
         }
     }
-  else if ([_direction isEqualToString: @"down"])
+  else if (_direction == Down)
     {
       if (_spliteNumber == 1)
         {
@@ -213,7 +196,7 @@
           image = _down2;
         }
     }
-  else if ([_direction isEqualToString: @"left"])
+  else if (_direction == Left)
     {
       if (_spliteNumber == 1)
         {
@@ -224,7 +207,7 @@
           image = _left2;
         }
     }
-  else if ([_direction isEqualToString: @"right"])
+  else if (_direction == Right)
     {
       if (_spliteNumber == 1)
         {

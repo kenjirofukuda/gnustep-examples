@@ -57,13 +57,6 @@
   NSDebugLog(@"gameView: %@", gameView);
   [gameView startStepping: self];
 }
-
-// - (IBAction) startStepping: (id)sender
-// {
-//   NSDebugLog(@"startStepping: %@", sender);  
-// }
-
-
 @end
 
 int main (int argc, const char **argv)

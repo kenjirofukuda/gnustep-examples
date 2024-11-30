@@ -19,7 +19,7 @@
   NSImage *_left2;
   NSImage *_right1;
   NSImage *_right2;
-  NSString *_direction;
+  Direction _direction;
   NSInteger _spliteCounter;
   NSInteger _spliteNumber;
   NSRect _solidArea;
@@ -27,7 +27,7 @@
 }
 
 - (instancetype) init;
-- (NSString *) direction;
+- (Direction) direction;
 - (CGFloat) speed;
 - (CGFloat) worldX;
 - (CGFloat) worldY;
@@ -41,10 +41,10 @@
 @interface Player : Entity
 {
   GameView *_view;
-  KeyState *_keyState;
+  BOOL* _keyState;
   NSPoint   _screenLoc;
 }
-- (instancetype) initWithView: (GameView *)view keyState: (KeyState *)keyState;
+- (instancetype) initWithView: (GameView *)view keyState: (BOOL *)keyState;
 - (void) dealloc;
 - (void) update;
 - (void) draw;

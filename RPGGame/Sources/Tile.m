@@ -53,6 +53,7 @@
       size_t alloc_size = MAX_WORLD_COL * MAX_WORLD_ROW * sizeof(int);
       _mapTileNumbers = malloc(alloc_size);
       memset(_mapTileNumbers, 0, alloc_size);
+      _showsTileAddress = NO;
       [self _loadTileImages];
       [self _loadMap: @"world01"];
     }
@@ -69,6 +70,16 @@
 - (NSArray *) tiles
 {
   return _tiles;
+}
+
+- (BOOL) showsTileAddress
+{
+  return _showsTileAddress;
+}
+
+- (void) setShowsTileAddress: (BOOL)state
+{
+  _showsTileAddress = state;
 }
 
 - (void) _loadTileImages;
@@ -145,12 +156,13 @@
   NSRect allRect = NSMakeRect(0, 0, MAX_WORLD_COL, MAX_WORLD_ROW);
   tileRect = NSIntersectionRect(tileRect, allRect);
   Bounds visibleBounds = BoundsFromNSRect(tileRect);
+  BOOL showsTileAddress = [self showsTileAddress];
 
   for (int worldRow = (int) visibleBounds.ymin; worldRow < (int) visibleBounds.ymax; worldRow++)
     {
       for (int worldCol = (int) visibleBounds.xmin; worldCol < (int) visibleBounds.xmax; worldCol++)
         {
-          int tileNumber = [self tileNumberOfRow: worldRow col: worldCol];
+          int tileNumber = [self tileNumberOfCol: worldCol row: worldRow];
           tileNumber = tileNumber > 5 ? 5 : tileNumber;
           tileNumber = tileNumber < 0 ? 0 : tileNumber;
 
@@ -163,11 +175,21 @@
           [_view drawImage:[[_tiles objectAtIndex:tileNumber] image]
                          x:screenX
                          y:screenY];
+          if (showsTileAddress == YES)
+            {
+              NSString *info = [NSString stringWithFormat: @"(%d, %d)", worldCol, worldRow];
+              [_view drawString: info x: screenX y: screenY height: 8 color: [NSColor blackColor]];
+            }
         }
     }
 }
 
-- (int) tileNumberOfRow: (int)row col: (int)col
+// - (int) tileNumberOfRow: (int)row col: (int)col
+// {
+//   return _mapTileNumbers[(row * MAX_WORLD_COL) + col];
+// }
+
+- (int) tileNumberOfCol: (int)col row: (int)row
 {
   return _mapTileNumbers[(row * MAX_WORLD_COL) + col];
 }

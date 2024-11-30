@@ -34,7 +34,11 @@ DirectionEntry directions[4] =
   self = [super initWithFrame: frameRect];
   if (self != nil)
     {
-      _player = [[Player alloc] initWithView: self keyState: &_keyState];
+      _keyState[Up] = NO;
+      _keyState[Down] = NO;
+      _keyState[Left] = NO;
+      _keyState[Right] = NO;
+      _player = [[Player alloc] initWithView: self keyState: _keyState];
       _tileManager = [[TileManager alloc] initWithView: self];
       _collisionChecker = [[CollisionChecker alloc] initWithView: self];
     }
@@ -74,35 +78,25 @@ DirectionEntry directions[4] =
 
 - (void) keyEvent: (NSEvent *)event pressed: (BOOL)newState
 {
-  BOOL      handled = NO;
-  NSString *characters;
-
-  characters = [event charactersIgnoringModifiers];
-  if (! handled && [characters isEqual: @"w"])
-    {
-      _keyState.up = newState;
-      handled = YES;
-    }
-  if (! handled && [characters isEqual: @"s"])
-    {
-      _keyState.down = newState;
-      handled = YES;
-    }
-  if (! handled && [characters isEqual: @"a"])
-    {
-      _keyState.left = newState;
-      handled = YES;
-    }
-  if (! handled && [characters isEqual: @"d"])
-    {
-      _keyState.right = newState;
-      handled = YES;
-    }
+  NSString *characters = [event charactersIgnoringModifiers];
+  if ([characters isEqualToString: @"w"])
+    _keyState[Up] = newState;
+  else if ([characters isEqualToString: @"s"])
+    _keyState[Down] = newState;
+  else if ([characters isEqualToString: @"a"])
+    _keyState[Left] = newState;
+  else if ([characters isEqualToString: @"d"])
+    _keyState[Right] = newState;
 }
 
 - (void) keyDown: (NSEvent *)event
 {
   [self keyEvent: event pressed: YES];
+  NSString *characters = [event charactersIgnoringModifiers];
+  if ([characters isEqualToString: @"i"])
+    {
+      [_tileManager setShowsTileAddress: ! [_tileManager showsTileAddress]];
+    };
 }
 
 - (void) keyUp: (NSEvent *)event
@@ -127,10 +121,10 @@ DirectionEntry directions[4] =
 
 - (BOOL) anyKeyPressed;
 {
-  return _keyState.up == YES
-    || _keyState.down == YES
-    || _keyState.left == YES
-    || _keyState.right == YES;
+  return _keyState[Up] == YES
+    || _keyState[Down] == YES
+    || _keyState[Left] == YES
+    || _keyState[Right] == YES;
 }
 
 - (void) step: (NSTimer *)timer
@@ -168,6 +162,21 @@ DirectionEntry directions[4] =
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y
 {
   [self drawImage: image x: x y: y width: TILE_SIZE height: TILE_SIZE];
+}
+
+- (void) drawString: (NSString *)string
+                   x: (CGFloat)x
+                   y: (CGFloat)y
+              height: (CGFloat)height
+               color: (NSColor *)color
+{
+    NSFont *font = [NSFont systemFontOfSize: height];
+    NSArray *keyArray = [NSArray arrayWithObjects: NSFontAttributeName, NSForegroundColorAttributeName, nil];
+    NSArray *valueArray = [NSArray arrayWithObjects: font,  color, nil];
+
+    NSDictionary *fontDict = [NSDictionary dictionaryWithObjects: valueArray forKeys: keyArray];
+    NSPoint drawLocation = NSMakePoint(x, y);
+    [string drawAtPoint: drawLocation withAttributes: fontDict];
 }
 
 - (IBAction) startStepping: (id)sender
