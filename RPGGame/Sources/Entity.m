@@ -221,6 +221,11 @@
             }
           NSDebugLog(@"Key: %d", _hasKey);
         }
+      else if ([[object name] isEqualToString: @"Boots"])
+        {
+          _speed += 2;
+          [[_view objects] removeObject: object];
+        }
     }
 }
 

@@ -56,6 +56,11 @@
   [obj setWorldX: FLIPED_COL(10) * TILE_SIZE];
   [obj setWorldY: FLIPED_ROW( 7) * TILE_SIZE];
   [_view addSuperObject: obj];
+
+  obj = [[ObjBoots alloc] initWithView: _view];
+  [obj setWorldX: FLIPED_COL(37) * TILE_SIZE];
+  [obj setWorldY: FLIPED_ROW(42) * TILE_SIZE];
+  [_view addSuperObject: obj];
 }
 
 @end

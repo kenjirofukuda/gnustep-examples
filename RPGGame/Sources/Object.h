@@ -26,7 +26,6 @@
 - (void) setWorldY: (CGFloat)value;
 - (NSRect) worldSolidArea;
 
-
 - (void) draw;
 @end
 
@@ -45,6 +44,13 @@
 @end
 
 @interface ObjChest : SuperObject
+{
+}
+- (instancetype) initWithView: (GameView *)view;
+- (void) dealloc;
+@end
+
+@interface ObjBoots : SuperObject
 {
 }
 - (instancetype) initWithView: (GameView *)view;

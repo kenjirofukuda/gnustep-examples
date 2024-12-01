@@ -133,4 +133,22 @@
 }
 @end
 
+@implementation ObjBoots
+- (instancetype) initWithView: (GameView *)view;
+{
+  self = [super initWithView: view];
+  if (self != nil)
+    {
+      _name = @"Boots";
+      _image = [self _imageOfResource: @"boots"];
+    }
+  return self;
+}
+
+- (void) dealloc
+{
+  DEALLOC;
+}
+@end
+
 // vim: filetype=objc ts=2 sw=2 expandtab
