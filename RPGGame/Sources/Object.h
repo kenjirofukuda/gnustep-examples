@@ -18,6 +18,7 @@
 - (instancetype) initWithView: (GameView *)view;
 - (void) dealloc;
 
+- (NSString *) name;
 - (BOOL) collision;
 - (CGFloat) worldX;
 - (void) setWorldX: (CGFloat)value;

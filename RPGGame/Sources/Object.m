@@ -23,6 +23,11 @@
   DEALLOC;
 }
 
+- (NSString *) name
+{
+  return _name;
+}
+
 - (BOOL) collision
 {
   return _collision;
@@ -99,6 +104,7 @@
     {
       _name = @"Door";
       _image = [self _imageOfResource: @"door"];
+      _collision = YES;
     }
   return self;
 }

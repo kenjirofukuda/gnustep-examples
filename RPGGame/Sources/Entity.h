@@ -48,6 +48,7 @@
   GameView *_view;
   BOOL* _keyState;
   NSPoint   _screenLoc;
+  BOOL _hasKey;
 }
 - (instancetype) initWithView: (GameView *)view keyState: (BOOL [])keyState;
 - (void) dealloc;

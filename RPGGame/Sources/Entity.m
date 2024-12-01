@@ -87,6 +87,7 @@
       _screenLoc = NSMakePoint(SCREEN_WIDTH / 2 - TILE_SIZE / 2,
                                SCREEN_HEIGHT / 2 - TILE_SIZE / 2);
       _solidArea = NSMakeRect(8, 0, TILE_SIZE - (8 + 8), TILE_SIZE - (8 + 8));
+      _hasKey = 0;
       [self _setDefaultValues];
       [self _loadImages];
     }
@@ -205,7 +206,21 @@
 {
   if (object != nil)
     {
-      [[_view objects] removeObject: object];
+      if ([[object name] isEqualToString: @"Key"])
+        {
+          _hasKey++;
+          [[_view objects] removeObject: object];
+          NSDebugLog(@"Key: %d", _hasKey);
+        }
+      else if ([[object name] isEqualToString: @"Door"])
+        {
+          if (_hasKey > 0)
+            {
+              [[_view objects] removeObject: object];
+              _hasKey--;
+            }
+          NSDebugLog(@"Key: %d", _hasKey);
+        }
     }
 }
 
