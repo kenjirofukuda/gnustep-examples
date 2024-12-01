@@ -12,10 +12,18 @@
   GameView *_view;
   NSFont *_monospace40;
   NSImage *_keyImage;
+  BOOL _messageOn;
+  NSString *_message;
+  NSInteger _messageCounter;
+  BOOL _gameFinished;
 }
 - (instancetype) initWithView: (GameView *)view;
 - (void) dealloc;
 
+- (BOOL) gameFinished;
+- (void) setGameFinished: (BOOL) state;
+
+- (void) showMessage: (NSString *) text;
 - (void) draw;
 @end
 

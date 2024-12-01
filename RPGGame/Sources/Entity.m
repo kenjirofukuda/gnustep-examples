@@ -2,6 +2,7 @@
 #import <Foundation/Foundation.h>
 #import "GameView.h"
 #import "Checker.h"
+#import "UI.h"
 #import "Entity.h"
 
 @implementation Entity
@@ -216,7 +217,7 @@
           _hasKey++;
           [_view playSoundIndex: 1];
           [[_view objects] removeObject: object];
-          NSDebugLog(@"Key: %d", _hasKey);
+          [[_view ui] showMessage: @"You got a key!"];
         }
       else if ([[object name] isEqualToString: @"Door"])
         {
@@ -224,15 +225,27 @@
             {
               [_view playSoundIndex: 3];
               [[_view objects] removeObject: object];
+              [[_view ui] showMessage: @"You opend the door!"];
               _hasKey--;
             }
-          NSDebugLog(@"Key: %d", _hasKey);
+          else
+            {
+              [[_view ui] showMessage: @"You need a key!"];
+            }
         }
       else if ([[object name] isEqualToString: @"Boots"])
         {
           [_view playSoundIndex: 2];
-          _speed += 2;
           [[_view objects] removeObject: object];
+          [[_view ui] showMessage: @"Speed up!"];
+          _speed += 2;
+        }
+      else if ([[object name] isEqualToString: @"Chest"])
+        {
+          [[_view ui] setGameFinished: YES];
+          [_view stopMusic];
+          [_view playSoundIndex: 4];
+          _speed += 2;
         }
     }
 }
