@@ -45,6 +45,20 @@
   _solidArea  = area;
 }
 
+- (NSRect) worldSolidArea
+{
+  return NSOffsetRect(_solidArea, _worldLoc.x, _worldLoc.y);
+}
+
+- (NSRect) peekStepedSolidArea
+{
+  NSRect area = [self worldSolidArea];
+  DirectionEntry de = directions[_direction];
+  CGFloat offsetX = _speed * de.vec.x;
+  CGFloat offsetY = _speed * de.vec.y;
+  return NSOffsetRect(area, offsetX, offsetY);
+}
+
 - (void) setCollisionOn: (BOOL)state;
 {
   _collisionOn  = state;
@@ -166,6 +180,10 @@
       _collisionOn = NO;
       [[_view collisionChecker] checkTile: self];
 
+      // CHECK OBJECT COLLISION
+      SuperObject* obj = [[_view collisionChecker] checkObject: self isPlayer: true];
+      [self _pickupObject: obj];
+
       // IF COLLISION IS FALSE, PLAYER CAN MOVE
       if (_collisionOn == NO)
         {
@@ -180,6 +198,14 @@
           _spliteNumber = (_spliteNumber == 1) ? 2 : 1;
           _spliteCounter = 0;
         }
+    }
+}
+
+- (void) _pickupObject: (SuperObject *)object
+{
+  if (object != nil)
+    {
+      [[_view objects] removeObject: object];
     }
 }
 

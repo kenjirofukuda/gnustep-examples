@@ -32,6 +32,7 @@ typedef enum
 
 typedef struct {
   Direction direction;
+  NSString *name;
   NSPoint   vec;
 } DirectionEntry;
 
@@ -85,6 +86,7 @@ extern DirectionEntry directions[4];
 - (void) keyUp: (NSEvent *)theEvent;
 
 - (void) setupGame;
+- (NSMutableArray *) objects;
 - (void) addSuperObject: (SuperObject *)object;
 
 - (Player *) player;

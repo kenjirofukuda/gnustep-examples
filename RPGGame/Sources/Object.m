@@ -12,6 +12,7 @@
       _view = view;
       _collision = NO;
       _image = nil;
+      _solidArea = NSMakeRect(0, 0, TILE_SIZE, TILE_SIZE);
     }
   return self;
 }
@@ -20,6 +21,11 @@
 {
   TEST_RELEASE(_image);
   DEALLOC;
+}
+
+- (BOOL) collision
+{
+  return _collision;
 }
 
 - (CGFloat) worldX
@@ -40,6 +46,11 @@
 - (void) setWorldY: (CGFloat)value
 {
   _worldLoc.y = value;
+}
+
+- (NSRect) worldSolidArea
+{
+  return NSOffsetRect(_solidArea, _worldLoc.x, _worldLoc.y);
 }
 
 - (NSImage *) _imageOfResource:(NSString *)name
@@ -105,7 +116,7 @@
   if (self != nil)
     {
       _name = @"Chest";
-      _image = [self _imageOfResource: @"chest"];
+      _image = [self _imageOfResource: @"chest (OLD)"];
     }
   return self;
 }

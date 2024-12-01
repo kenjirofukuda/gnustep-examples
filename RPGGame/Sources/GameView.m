@@ -23,10 +23,10 @@ const NSInteger FPS = 60;
 // *INDENT-OFF*
 DirectionEntry directions[4] =
 {
-  {Up,    { 0.0,   1.0}},
-  {Down,  { 0.0,  -1.0}},
-  {Left,  {-1.0,   0.0}},
-  {Right, { 1.0,   0.0}}
+  {Up,    @"up",    { 0.0,   1.0}},
+  {Down,  @"down",  { 0.0,  -1.0}},
+  {Left,  @"left",  {-1.0,   0.0}},
+  {Right, @"right", { 1.0,   0.0}}
 };
 // *INDENT-ON*
 
@@ -128,6 +128,11 @@ DirectionEntry directions[4] =
 - (void) setupGame
 {
   [_assetSetter setObject];
+}
+
+- (NSMutableArray *) objects
+{
+  return _objects;
 }
 
 - (void) addSuperObject: (SuperObject *)object

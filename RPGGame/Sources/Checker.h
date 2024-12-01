@@ -6,6 +6,7 @@
 
 @class GameView;
 @class Entity;
+@class SuperObject;
 
 @interface CollisionChecker : NSObject
 {
@@ -14,6 +15,7 @@
 - (instancetype) initWithView: (GameView *) view;
 - (void) dealloc;
 - (void) checkTile: (Entity *) entity;
+- (SuperObject *) checkObject: (Entity *)entity isPlayer: (BOOL)isPlayer;
 @end
 
 #endif

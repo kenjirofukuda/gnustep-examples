@@ -13,14 +13,18 @@
   NSString *_name;
   BOOL _collision;
   NSPoint _worldLoc;
+  NSRect _solidArea;
 }
 - (instancetype) initWithView: (GameView *)view;
 - (void) dealloc;
 
+- (BOOL) collision;
 - (CGFloat) worldX;
 - (void) setWorldX: (CGFloat)value;
 - (CGFloat) worldY;
 - (void) setWorldY: (CGFloat)value;
+- (NSRect) worldSolidArea;
+
 
 - (void) draw;
 @end

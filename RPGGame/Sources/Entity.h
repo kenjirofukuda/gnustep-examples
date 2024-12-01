@@ -34,6 +34,8 @@
 - (CGFloat) worldY;
 - (NSRect) solidArea;
 - (void) setSolidArea: (NSRect)area;
+- (NSRect) worldSolidArea;
+- (NSRect) peekStepedSolidArea;
 - (void) setCollisionOn: (BOOL)state;
 - (BOOL) showsSolidArea;
 - (void) setShowsSolidArea: (BOOL) state;

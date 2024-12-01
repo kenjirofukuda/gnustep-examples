@@ -95,13 +95,11 @@
 
 - (void) _loadTileImages;
 {
-  NSDebugLog(@"%@", @"_loadTileImages");
   Tile *tile;
   NSImage *image;
 
   tile = [[Tile alloc] init];
   image = [self _imageOfResource: @"grass"];
-  NSDebugLog(@"scaled size = %@", NSStringFromSize([image size]));
   [tile setImage: image];
   [_tiles addObject: tile];
 
