@@ -9,7 +9,8 @@ $(APP_NAME)_OBJC_FILES = Sources/RPGGame.m \
 	Sources/Entity.m \
 	Sources/Tile.m \
 	Sources/Object.m \
-	Sources/AssetSetter.m
+	Sources/AssetSetter.m \
+	Sources/Sound.m
 
 $(APP_NAME)_HEADER_FILES = \
 	Sources/GameView.h \
@@ -17,7 +18,8 @@ $(APP_NAME)_HEADER_FILES = \
 	Sources/Entity.h \
 	Sources/Tile.h \
 	Sources/Object.h \
-	Sources/AssetSetter.h
+	Sources/AssetSetter.h \
+	Sources/Sound.h
 
 $(APP_NAME)_RESOURCE_FILES = \
   Menu-GNUstep.gsmarkup \
@@ -28,6 +30,7 @@ $(APP_NAME)_RESOURCE_FILES += Resources/Walking-sprites
 $(APP_NAME)_RESOURCE_FILES += Resources/Tiles
 $(APP_NAME)_RESOURCE_FILES += Resources/Maps
 $(APP_NAME)_RESOURCE_FILES += Resources/Objects
+$(APP_NAME)_RESOURCE_FILES += Resources/Sounds
 
 $(APP_NAME)_LOCALIZED_RESOURCE_FILES = \
   Window.strings

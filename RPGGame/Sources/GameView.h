@@ -15,8 +15,6 @@ extern const NSInteger SCREEN_WIDTH;
 extern const NSInteger SCREEN_HEIGHT;
 extern const NSInteger MAX_WORLD_COL;
 extern const NSInteger MAX_WORLD_ROW;
-extern const NSInteger WORLD_WIDTH;
-extern const NSInteger WORLD_HEIGHT;
 extern const NSInteger FPS;
 
 #define FLIPED_COL(x) ((x))
@@ -63,6 +61,7 @@ extern DirectionEntry directions[4];
 @class CollisionChecker;
 @class AssetSetter;
 @class SuperObject;
+@class Sound;
 
 @interface GameView : NSView
 {
@@ -75,6 +74,8 @@ extern DirectionEntry directions[4];
   NSDictionary *_directionKeyTable;
   NSMutableArray *_objects;
   AssetSetter *_assetSetter;
+  Sound *_sound;
+  Sound *_music;
 }
 - (instancetype) initWithFrame: (NSRect)frameRect;
 - (void) dealloc;
@@ -89,10 +90,19 @@ extern DirectionEntry directions[4];
 - (NSMutableArray *) objects;
 - (void) addSuperObject: (SuperObject *)object;
 
+- (Sound *) music;
+- (void) playMusic;
+- (void) stopMusic;
+
+- (Sound *) sound;
+- (void) playSoundIndex: (NSInteger) index;
+- (void) stopSound;
+
 - (Player *) player;
 - (TileManager *) tileManager;
 - (CollisionChecker *) collisionChecker;
 - (BOOL) anyKeyPressed;
+
 - (NSImage *) imageOfResource: (NSString *)name inDirectory: (NSString *)subpath;
 - (NSImage *) scaledImage: (NSImage *)image scale: (CGFloat)scale;
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y width: (CGFloat)width height: (CGFloat)height;
@@ -102,7 +112,6 @@ extern DirectionEntry directions[4];
                   y: (CGFloat)y
              height: (CGFloat)height
               color: (NSColor *)color;
-
 
 - (IBAction) startStepping: (id)sender;
 

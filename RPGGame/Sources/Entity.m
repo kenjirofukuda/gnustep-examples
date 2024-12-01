@@ -209,6 +209,7 @@
       if ([[object name] isEqualToString: @"Key"])
         {
           _hasKey++;
+          [_view playSoundIndex: 1];
           [[_view objects] removeObject: object];
           NSDebugLog(@"Key: %d", _hasKey);
         }
@@ -216,6 +217,7 @@
         {
           if (_hasKey > 0)
             {
+              [_view playSoundIndex: 3];
               [[_view objects] removeObject: object];
               _hasKey--;
             }
@@ -223,6 +225,7 @@
         }
       else if ([[object name] isEqualToString: @"Boots"])
         {
+          [_view playSoundIndex: 2];
           _speed += 2;
           [[_view objects] removeObject: object];
         }

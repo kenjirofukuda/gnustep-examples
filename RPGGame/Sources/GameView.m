@@ -6,6 +6,7 @@
 #import "Tile.h"
 #import "Object.h"
 #import "AssetSetter.h"
+#import "Sound.h"
 
 const NSInteger ORIGINAL_TILE_SIZE = 16;
 const NSInteger SCALE = 3;
@@ -16,8 +17,6 @@ const NSInteger SCREEN_WIDTH = TILE_SIZE * MAX_SCREEN_COL;
 const NSInteger SCREEN_HEIGHT = TILE_SIZE * MAX_SCREEN_ROW;
 const NSInteger MAX_WORLD_COL = 50;
 const NSInteger MAX_WORLD_ROW = 50;
-const NSInteger WORLD_WIDTH = TILE_SIZE * MAX_WORLD_COL;
-const NSInteger WORLD_HEIGHT = TILE_SIZE * MAX_WORLD_ROW;
 const NSInteger FPS = 60;
 
 // *INDENT-OFF*
@@ -45,12 +44,16 @@ DirectionEntry directions[4] =
       _collisionChecker = [[CollisionChecker alloc] initWithView: self];
       _objects = [[NSMutableArray alloc] init];
       _assetSetter = [[AssetSetter alloc] initWithView: self];
+      _sound = [[Sound alloc] init];
+      _music = [[Sound alloc] init];
     }
   return self;
 }
 
 - (void) dealloc
 {
+  RELEASE(_music);
+  RELEASE(_sound);
   RELEASE(_assetSetter);
   RELEASE(_objects);
   RELEASE(_timer);
@@ -128,6 +131,7 @@ DirectionEntry directions[4] =
 - (void) setupGame
 {
   [_assetSetter setObject];
+  [self playMusic];
 }
 
 - (NSMutableArray *) objects
@@ -138,6 +142,39 @@ DirectionEntry directions[4] =
 - (void) addSuperObject: (SuperObject *)object
 {
  [ _objects addObject: object];
+}
+
+- (Sound *) sound
+{
+  return _sound;
+}
+
+- (Sound *) music
+{
+  return _music;
+}
+
+- (void) playMusic
+{
+  [_music setFileIndex: 0];
+  [_music loop];
+  [_music play];
+}
+
+- (void) stopMusic
+{
+  [_music stop];
+}
+
+- (void) playSoundIndex: (NSInteger) index
+{
+  [_sound setFileIndex: index];
+  [_sound play];
+}
+
+- (void) stopSound
+{
+  [_sound stop];
 }
 
 - (Player *) player
