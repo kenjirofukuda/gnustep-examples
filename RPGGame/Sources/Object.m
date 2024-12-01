@@ -28,6 +28,11 @@
   return _name;
 }
 
+- (NSImage *) image
+{
+  return _image;
+}
+
 - (BOOL) collision
 {
   return _collision;

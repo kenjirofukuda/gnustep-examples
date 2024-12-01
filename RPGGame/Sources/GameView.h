@@ -62,6 +62,7 @@ extern DirectionEntry directions[4];
 @class AssetSetter;
 @class SuperObject;
 @class Sound;
+@class UI;
 
 @interface GameView : NSView
 {
@@ -71,6 +72,7 @@ extern DirectionEntry directions[4];
   NSUInteger _drawCount;
   TileManager *_tileManager;
   CollisionChecker *_collisionChecker;
+  UI *_ui;
   NSDictionary *_directionKeyTable;
   NSMutableArray *_objects;
   AssetSetter *_assetSetter;
@@ -101,6 +103,7 @@ extern DirectionEntry directions[4];
 - (Player *) player;
 - (TileManager *) tileManager;
 - (CollisionChecker *) collisionChecker;
+- (UI *) ui;
 - (BOOL) anyKeyPressed;
 
 - (NSImage *) imageOfResource: (NSString *)name inDirectory: (NSString *)subpath;

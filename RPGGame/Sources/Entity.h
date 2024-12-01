@@ -54,6 +54,7 @@
 - (void) dealloc;
 - (void) update;
 - (void) draw;
+- (int) hasKey;
 - (CGFloat) screenX;
 - (CGFloat) screenY;
 - (NSRect) visibleRect;

@@ -5,6 +5,8 @@
 このアプリケーションはRyiSnowさんのプレイリスト
 に習って GNUstep (Objective-C)で実装しているものです。
 
+GNUstep の入門段階であり、素材としてこの講習を模倣することで理解を深めていきたいと思っています。
+
 - プレイリスト :: [[https://www.youtube.com/playlist?list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq][How to Make a 2D Game in Java ]]
 
 Resources/フォルダ内のすべての画像、音声はRyiSnowさんの公開されている素材を使用しています。
@@ -67,3 +69,19 @@ Objective-C 2.0 の機能を一部採用しているので gobjc には対応し
 私は、ドット表記によるプロパティ表現が好きではありません。
 構造体との違いを意識するためにもこの紛らわしい表記は避けています。（今のところ）
 
+* 進捗状況
+
+- [X] #1 [[https://www.youtube.com/watch?v=om59cwR7psI&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=1&t=14s&pp=iAQB][The MechaniThe Mechanism of 2D Games]]
+- [X] #2 [[https://www.youtube.com/watch?v=VpH33Uw-_0E&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=2&t=1674s&pp=iAQB][Game Loop and Key Input]]
+- [X] #3 [[https://www.youtube.com/watch?v=wT9uNGzMEM4&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=3&t=2s&pp=iAQB][Sprites and Animation]]
+- [X] #4 [[https://www.youtube.com/watch?v=ugzxCcpoSdE&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=5&t=1357s&pp=iAQB][Drawing Tiles]]
+- [X] #5 [[https://www.youtube.com/watch?v=Ny_YHoTYcxo&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=6&t=1271s&pp=iAQB][World and Camera]]
+- [X] #6 [[https://www.youtube.com/watch?v=oPzPpUcDiYY&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=7&t=734s&pp=iAQB][Collision Detection]]
+- [X] #7 [[https://www.youtube.com/watch?v=xYtXz34IJdY&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=8&t=14s&pp=iAQB][Object Placement]]
+- [X] #8 [[https://www.youtube.com/watch?v=srvDSypsJL0&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=9&t=7s&pp=iAQB][Object Interaction]]
+- [X] #9 [[https://www.youtube.com/watch?v=nUHh_J2Acy8&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=10&t=7s&pp=iAQB][Sound]]
+- [ ] #10 [[https://www.youtube.com/watch?v=0yD5iT8ObCs&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=11&t=286s&pp=iAQB][The First Game Done (UI)]]
+- [ ] #11 [[https://www.youtube.com/watch?v=fZLfJSXs0BU&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=13&t=83s&pp=iAQB][Improving Rendering Performance]]
+...
+- [ ] #56 [[https://www.youtube.com/watch?v=9czCgoBstn8&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=62&pp=iAQB][Cutscene]]
+- [ ] #Final [[https://www.youtube.com/watch?v=9jjWFjGAjRM&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=63&pp=iAQB][Ending]]

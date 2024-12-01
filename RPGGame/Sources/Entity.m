@@ -137,6 +137,11 @@
   _right2 = [self _imageOfResource: @"boy_right_2"];
 }
 
+- (int) hasKey
+{
+  return _hasKey;
+}
+
 - (CGFloat) screenX
 {
   return _screenLoc.x;

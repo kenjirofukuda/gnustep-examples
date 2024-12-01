@@ -19,6 +19,7 @@
 - (void) dealloc;
 
 - (NSString *) name;
+- (NSImage *) image;
 - (BOOL) collision;
 - (CGFloat) worldX;
 - (void) setWorldX: (CGFloat)value;

@@ -10,7 +10,8 @@ $(APP_NAME)_OBJC_FILES = Sources/RPGGame.m \
 	Sources/Tile.m \
 	Sources/Object.m \
 	Sources/AssetSetter.m \
-	Sources/Sound.m
+	Sources/Sound.m \
+	Sources/UI.m
 
 $(APP_NAME)_HEADER_FILES = \
 	Sources/GameView.h \
@@ -19,7 +20,8 @@ $(APP_NAME)_HEADER_FILES = \
 	Sources/Tile.h \
 	Sources/Object.h \
 	Sources/AssetSetter.h \
-	Sources/Sound.h
+	Sources/Sound.h \
+	Sources/UI.h
 
 $(APP_NAME)_RESOURCE_FILES = \
   Menu-GNUstep.gsmarkup \

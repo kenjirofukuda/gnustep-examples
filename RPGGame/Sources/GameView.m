@@ -7,6 +7,7 @@
 #import "Object.h"
 #import "AssetSetter.h"
 #import "Sound.h"
+#import "UI.h"
 
 const NSInteger ORIGINAL_TILE_SIZE = 16;
 const NSInteger SCALE = 3;
@@ -42,6 +43,7 @@ DirectionEntry directions[4] =
       _player = [[Player alloc] initWithView: self keyState: _keyState];
       _tileManager = [[TileManager alloc] initWithView: self];
       _collisionChecker = [[CollisionChecker alloc] initWithView: self];
+      _ui = [[UI alloc] initWithView: self];
       _objects = [[NSMutableArray alloc] init];
       _assetSetter = [[AssetSetter alloc] initWithView: self];
       _sound = [[Sound alloc] init];
@@ -52,6 +54,7 @@ DirectionEntry directions[4] =
 
 - (void) dealloc
 {
+  RELEASE(_ui);
   RELEASE(_music);
   RELEASE(_sound);
   RELEASE(_assetSetter);
@@ -84,6 +87,7 @@ DirectionEntry directions[4] =
   [_tileManager draw];
   [self _drawSuperObjects];
   [_player draw];
+  [_ui draw];
 }
 
 - (void) _drawSuperObjects
@@ -190,6 +194,11 @@ DirectionEntry directions[4] =
 - (CollisionChecker *) collisionChecker
 {
   return _collisionChecker;
+}
+
+- (UI *) ui
+{
+  return _ui;
 }
 
 - (BOOL) anyKeyPressed;

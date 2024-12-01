@@ -96,34 +96,38 @@
 - (void) _loadTileImages;
 {
   Tile *tile;
-  NSImage *image;
 
   tile = [[Tile alloc] init];
-  image = [self _imageOfResource: @"grass"];
-  [tile setImage: image];
+  [tile setImage: [self _imageOfResource: @"grass"]];
   [_tiles addObject: tile];
+  RELEASE(tile);
 
   tile = [[Tile alloc] init];
   [tile setImage: [self _imageOfResource: @"wall"]];
   [tile setCollision: YES];
   [_tiles addObject: tile];
+  RELEASE(tile);
 
   tile = [[Tile alloc] init];
   [tile setImage: [self _imageOfResource: @"water"]];
   [_tiles addObject: tile];
+  RELEASE(tile);
 
   tile = [[Tile alloc] init];
   [tile setImage: [self _imageOfResource: @"earth"]];
   [_tiles addObject: tile];
+  RELEASE(tile);
 
   tile = [[Tile alloc] init];
   [tile setImage: [self _imageOfResource: @"tree"]];
   [_tiles addObject: tile];
+  RELEASE(tile);
   [tile setCollision: YES];
 
   tile = [[Tile alloc] init];
   [tile setImage: [self _imageOfResource: @"sand"]];
   [_tiles addObject: tile];
+  RELEASE(tile);
 }
 
 - (void) _loadMap: name;
@@ -164,7 +168,7 @@
   NSImage *original = [_view imageOfResource: name inDirectory: @"Tiles"];
   NSImage *image = [_view scaledImage: original scale: SCALE];
   RELEASE(original);
-  return image;
+  return AUTORELEASE(image);
 }
 
 - (void) draw

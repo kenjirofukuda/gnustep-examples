@@ -294,5 +294,42 @@
     "directory": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame",
     "file": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/Sources/Sound.m",
     "output": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/obj/RPGGame.obj/Sources/Sound.m.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-DGNUSTEP",
+      "-DGNUSTEP_BASE_LIBRARY=1",
+      "-DGNU_GUI_LIBRARY=1",
+      "-DGNUSTEP_RUNTIME=1",
+      "-D_NONFRAGILE_ABI=1",
+      "-DGNUSTEP_BASE_LIBRARY=1",
+      "-fno-strict-aliasing",
+      "-fexceptions",
+      "-fobjc-exceptions",
+      "-D_NATIVE_OBJC_EXCEPTIONS",
+      "-pthread",
+      "-fPIC",
+      "-Wall",
+      "-DGSWARN",
+      "-DGSDIAGNOSE",
+      "-Wno-import",
+      "-g",
+      "-O2",
+      "-fobjc-runtime=gnustep-2.2",
+      "-fblocks",
+      "-fconstant-string-class=NSConstantString",
+      "-I.",
+      "-I/home/kenjiro/GNUstep/Library/Headers",
+      "-I/usr/GNUstep/Local/Library/Headers",
+      "-I/usr/GNUstep/System/Library/Headers",
+      "-o",
+      "obj/RPGGame.obj/Sources/UI.m.o",
+      "Sources/UI.m"
+    ],
+    "directory": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame",
+    "file": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/Sources/UI.m",
+    "output": "/home/kenjiro/Documents/github/kenjirofukuda/gnustep-examples/RPGGame/obj/RPGGame.obj/Sources/UI.m.o"
   }
 ]
