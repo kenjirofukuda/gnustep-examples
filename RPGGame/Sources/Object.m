@@ -60,7 +60,7 @@
 
 - (NSImage *) _imageOfResource:(NSString *)name
 {
-  NSImage *original = [_view imageOfResource: name inDirectory:@"Objects"];
+  NSImage *original = [_view imageOfResource: name inDirectory: @"Objects"];
   NSImage *image = [_view scaledImage: original scale:SCALE];
   RELEASE(original);
   return image;
