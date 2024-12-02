@@ -49,7 +49,7 @@
   if (self != nil)
     {
       _view = view;
-      _tiles = [[NSMutableArray alloc] init];
+      _tiles = [[NSMutableArray alloc] initWithCapacity: 6];
       size_t alloc_size = MAX_WORLD_COL * MAX_WORLD_ROW * sizeof(int);
       _mapTileNumbers = malloc(alloc_size);
       memset(_mapTileNumbers, 0, alloc_size);
@@ -92,38 +92,27 @@
 
 - (void) _loadTileImages;
 {
+  NSDebugLog(@"%@", @"_loadTileImages");
+
+  [self _setupAtIndex: 0 name: @"grass" collision: NO];
+  [self _setupAtIndex: 1 name: @"wall"  collision: YES];
+  [self _setupAtIndex: 2 name: @"water" collision: YES];
+  [self _setupAtIndex: 3 name: @"earth" collision: NO];
+  [self _setupAtIndex: 4 name: @"tree"  collision: YES];
+  [self _setupAtIndex: 5 name: @"sand"  collision: NO];
+}
+
+- (void) _setupAtIndex: (NSInteger)index
+                name: (NSString *)name
+           collision: (BOOL)state
+{
+  NSDebugLog(@"%@", @"_startAtIndex:name:collision");
   Tile *tile;
 
   tile = [[Tile alloc] init];
-  [tile setImage: [self _imageOfResource: @"grass"]];
-  [_tiles addObject: tile];
-  RELEASE(tile);
-
-  tile = [[Tile alloc] init];
-  [tile setImage: [self _imageOfResource: @"wall"]];
-  [tile setCollision: YES];
-  [_tiles addObject: tile];
-  RELEASE(tile);
-
-  tile = [[Tile alloc] init];
-  [tile setImage: [self _imageOfResource: @"water"]];
-  [_tiles addObject: tile];
-  RELEASE(tile);
-
-  tile = [[Tile alloc] init];
-  [tile setImage: [self _imageOfResource: @"earth"]];
-  [_tiles addObject: tile];
-  RELEASE(tile);
-
-  tile = [[Tile alloc] init];
-  [tile setImage: [self _imageOfResource: @"tree"]];
-  [_tiles addObject: tile];
-  RELEASE(tile);
-  [tile setCollision: YES];
-
-  tile = [[Tile alloc] init];
-  [tile setImage: [self _imageOfResource: @"sand"]];
-  [_tiles addObject: tile];
+  [tile setImage: [self _imageOfResource: name]];
+  [tile setCollision: state];
+  _tiles[index] = tile;
   RELEASE(tile);
 }
 
