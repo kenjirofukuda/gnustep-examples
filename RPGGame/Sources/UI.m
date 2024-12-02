@@ -20,6 +20,7 @@
       _message = @"";
       _messageCounter = 0;
       _gameFinished = NO;
+      _playTime = 0.0;
     }
   return self;
 }
@@ -50,34 +51,64 @@
 - (void) draw
 {
   if (_gameFinished == YES)
-    {
-      {
-        NSFont *font = [NSFont systemFontOfSize:40];
-        NSArray *keyArray =
-          [NSArray arrayWithObjects: NSFontAttributeName,
-                   NSForegroundColorAttributeName, nil];
-        NSArray *valueArray =
-          [NSArray arrayWithObjects:font, [NSColor whiteColor], nil];
-        NSDictionary *fontDict = [NSDictionary dictionaryWithObjects: valueArray
-                                                             forKeys: keyArray];
-
-        NSString *text = @"You found the treasure!";
-        NSSize textSize = [text sizeWithAttributes: fontDict];
-        NSSize screenSize = NSMakeSize(SCREEN_WIDTH, SCREEN_HEIGHT);
-        NSPoint loc = NSMakePoint((screenSize.width - textSize.width) / 2,
-                                  (screenSize.height - textSize.height) / 2);
-        NSRect drawBounds;
-        drawBounds.origin = loc;
-        drawBounds.size = textSize;
-        [text drawInRect: drawBounds withAttributes: fontDict];
-      }
-      // TODO: continue
-      // https://youtu.be/0yD5iT8ObCs?list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&t=1568
-    }
+    [self _drawGameEnd];
   else
-    {
-      [self _drawGameALive];
-    }
+    [self _drawGameALive];
+}
+
+- (void) _drawGameEnd
+{
+  {
+    NSFont *font = [NSFont systemFontOfSize: 40];
+    NSDictionary *fontDict = @{ NSFontAttributeName: font,
+                                NSForegroundColorAttributeName: [NSColor whiteColor] };
+
+    NSString *text = @"You found the treasure!";
+    NSSize textSize = [text sizeWithAttributes: fontDict];
+    NSSize screenSize = NSMakeSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+    NSPoint loc = NSMakePoint((screenSize.width - textSize.width) / 2,
+                              (screenSize.height / 2) + TILE_SIZE * 3);
+
+    NSRect drawBounds;
+    drawBounds.origin = loc;
+    drawBounds.size = textSize;
+
+    [text drawInRect: drawBounds withAttributes: fontDict];
+  }
+  {
+    NSFont *font = [NSFont systemFontOfSize: 40];
+    NSDictionary *fontDict = @{ NSFontAttributeName: font,
+                                NSForegroundColorAttributeName: [NSColor whiteColor] };
+
+    NSString *text = [NSString stringWithFormat: @"Your Time is : %.2f", _playTime];
+    NSSize textSize = [text sizeWithAttributes: fontDict];
+    NSSize screenSize = NSMakeSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+    NSPoint loc = NSMakePoint((screenSize.width - textSize.width) / 2,
+                              (screenSize.height / 2) - TILE_SIZE * 4);
+
+    NSRect drawBounds;
+    drawBounds.origin = loc;
+    drawBounds.size = textSize;
+
+    [text drawInRect: drawBounds withAttributes: fontDict];
+  }
+  {
+    NSFont *font = [NSFont boldSystemFontOfSize: 80];
+    NSDictionary *fontDict = @{ NSFontAttributeName: font,
+                                NSForegroundColorAttributeName: [NSColor yellowColor] };
+
+    NSString *text = @"Congratulations!";
+    NSSize textSize = [text sizeWithAttributes: fontDict];
+    NSSize screenSize = NSMakeSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+    NSPoint loc = NSMakePoint((screenSize.width - textSize.width) / 2,
+                              (screenSize.height / 2) - TILE_SIZE * 3);
+
+    NSRect drawBounds;
+    drawBounds.origin = loc;
+    drawBounds.size = textSize;
+
+    [text drawInRect: drawBounds withAttributes: fontDict];
+  }
 }
 
 - (void) _drawGameALive
@@ -90,7 +121,16 @@
 
   NSString *info = [NSString stringWithFormat: @"x %d", [[_view player] hasKey]];
   [_view drawString: info
-                  x: 74 y: SCREEN_HEIGHT - 75
+                  x: 74
+                  y: SCREEN_HEIGHT - 75
+             height: 40
+              color: [NSColor whiteColor]];
+
+  _playTime += 1.0 / 60.0;
+  NSString *time = [NSString stringWithFormat: @"Time: %.2f", _playTime];
+  [_view drawString: time
+                  x: TILE_SIZE * 11
+                  y: SCREEN_HEIGHT - 75
              height: 40
               color: [NSColor whiteColor]];
 

@@ -84,13 +84,10 @@
   _showsTileAddress = state;
 }
 
-- (void)_setupTileAddressAttributes {
-    NSFont *font = [NSFont systemFontOfSize: 8];
-    NSArray *keyArray = [NSArray arrayWithObjects: NSFontAttributeName, NSForegroundColorAttributeName, nil];
-    NSArray *valueArray = [NSArray arrayWithObjects: font, [NSColor blackColor], nil];
-
-    NSDictionary *fontDict = [NSDictionary dictionaryWithObjects: valueArray forKeys: keyArray];
-    ASSIGN(_tileAddressAttributes, fontDict);
+- (void) _setupTileAddressAttributes {
+    NSDictionary *fontDict = @{ NSFontAttributeName: [NSFont systemFontOfSize: 8],
+                                NSForegroundColorAttributeName: [NSColor blackColor] };
+   ASSIGN(_tileAddressAttributes, fontDict);
 }
 
 - (void) _loadTileImages;

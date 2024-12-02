@@ -213,6 +213,10 @@ DirectionEntry directions[4] =
 {
   [_player update];
   [self setNeedsDisplay: YES];
+  if ([_ui gameFinished] == YES)
+    {
+      [timer invalidate];
+    }
 }
 
 
@@ -282,10 +286,9 @@ DirectionEntry directions[4] =
                color: (NSColor *)color
 {
     NSFont *font = [NSFont systemFontOfSize: height];
-    NSArray *keyArray = [NSArray arrayWithObjects: NSFontAttributeName, NSForegroundColorAttributeName, nil];
-    NSArray *valueArray = [NSArray arrayWithObjects: font,  color, nil];
+    NSDictionary *fontDict = @{ NSFontAttributeName: font,
+                                NSForegroundColorAttributeName: color };
 
-    NSDictionary *fontDict = [NSDictionary dictionaryWithObjects: valueArray forKeys: keyArray];
     NSPoint drawLocation = NSMakePoint(x, y);
     [string drawAtPoint: drawLocation withAttributes: fontDict];
 }

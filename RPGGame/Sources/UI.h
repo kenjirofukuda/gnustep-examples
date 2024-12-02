@@ -16,6 +16,7 @@
   NSString *_message;
   NSInteger _messageCounter;
   BOOL _gameFinished;
+  double _playTime;
 }
 - (instancetype) initWithView: (GameView *)view;
 - (void) dealloc;

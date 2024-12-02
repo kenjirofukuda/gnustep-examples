@@ -245,7 +245,6 @@
           [[_view ui] setGameFinished: YES];
           [_view stopMusic];
           [_view playSoundIndex: 4];
-          _speed += 2;
         }
     }
 }
