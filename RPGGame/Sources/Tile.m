@@ -21,7 +21,7 @@
   DEALLOC;
 }
 
-- (void) setCollision:(BOOL)state
+- (void) setCollision: (BOOL)state
 {
   _collision = state;
 }
@@ -55,7 +55,7 @@
       memset(_mapTileNumbers, 0, alloc_size);
       _showsTileAddress = NO;
       [self _loadTileImages];
-      [self _loadMap: @"world01"];
+      [self _loadMap: @"worldV2"];
       [self _setupTileAddressAttributes];
     }
   return self;
@@ -93,20 +93,31 @@
 - (void) _loadTileImages;
 {
   NSDebugLog(@"%@", @"_loadTileImages");
-
-  [self _setupAtIndex: 0 name: @"grass" collision: NO];
-  [self _setupAtIndex: 1 name: @"wall"  collision: YES];
-  [self _setupAtIndex: 2 name: @"water" collision: YES];
-  [self _setupAtIndex: 3 name: @"earth" collision: NO];
-  [self _setupAtIndex: 4 name: @"tree"  collision: YES];
-  [self _setupAtIndex: 5 name: @"sand"  collision: NO];
+  // skip one digit number
+  for (int i = 0; i <= 9; i++)
+    [self _setupAtIndex: i name: @"grass00"  collision: NO];
+  [self _setupAtIndex: 10 name: @"grass00" collision: NO];
+  [self _setupAtIndex: 11 name: @"grass01" collision: NO];
+  for (int i = 0; i <= 13; i++)
+    {
+      NSString *name = [NSString stringWithFormat: @"water%02d", i];
+      [self _setupAtIndex: 12 + i name: name collision: YES];
+    }
+  for (int i = 0; i <= 12; i++)
+    {
+      NSString *name = [NSString stringWithFormat: @"road%02d", i];
+      [self _setupAtIndex: 26 + i name: name collision: NO];
+    }
+  [self _setupAtIndex: 39 name: @"earth" collision: NO];
+  [self _setupAtIndex: 40 name: @"wall"  collision: YES];
+  [self _setupAtIndex: 41 name: @"tree"  collision: YES];
 }
 
 - (void) _setupAtIndex: (NSInteger)index
                 name: (NSString *)name
            collision: (BOOL)state
 {
-  NSDebugLog(@"%@", @"_startAtIndex:name:collision");
+  NSDebugLog(@"_startAtIndex: %ld name: %@ collision: %@", index, name, (state ? @"YES" : @"NO"));
   Tile *tile;
 
   tile = [[Tile alloc] init];
@@ -170,7 +181,7 @@
       for (int worldCol = (int) visibleBounds.xmin; worldCol < (int) visibleBounds.xmax; worldCol++)
         {
           int tileNumber = [self tileNumberOfCol: worldCol row: worldRow];
-          tileNumber = tileNumber > 5 ? 5 : tileNumber;
+          tileNumber = tileNumber > 41 ? 41 : tileNumber;
           tileNumber = tileNumber < 0 ? 0 : tileNumber;
 
           CGFloat worldX = worldCol * TILE_SIZE;
