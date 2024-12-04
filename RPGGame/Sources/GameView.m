@@ -118,13 +118,11 @@ DirectionEntry directions[4] =
   [self keyEvent: event pressed: YES];
   NSString *characters = [event charactersIgnoringModifiers];
   if ([characters isEqualToString: @"i"])
-    {
-      [_tileManager setShowsTileAddress: ! [_tileManager showsTileAddress]];
-    };
+    [_tileManager setShowsTileAddress: ! [_tileManager showsTileAddress]];
   if ([characters isEqualToString: @"o"])
-    {
-      [_player setShowsSolidArea: ! [_player showsSolidArea]];
-    };
+    [_player setShowsSolidArea: ! [_player showsSolidArea]];
+  if ([characters isEqualToString: @"p"])
+    _gameState = _gameState == playState ? pauseState : playState;
 }
 
 - (void) keyUp: (NSEvent *)event
@@ -136,6 +134,7 @@ DirectionEntry directions[4] =
 {
   [_assetSetter setObject];
   [self playMusic];
+  _gameState = playState;
 }
 
 - (NSMutableArray *) objects
@@ -181,6 +180,11 @@ DirectionEntry directions[4] =
   [_sound stop];
 }
 
+- (GameState) gameState
+{
+  return _gameState;
+}
+
 - (Player *) player
 {
   return _player;
@@ -211,7 +215,11 @@ DirectionEntry directions[4] =
 
 - (void) step: (NSTimer *)timer
 {
-  [_player update];
+  if (_gameState == playState)
+    [_player update];
+  if (_gameState == pauseState)
+    ; // nothing
+
   [self setNeedsDisplay: YES];
   if ([_ui gameFinished] == YES)
     {

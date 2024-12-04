@@ -10,8 +10,8 @@
 @interface UI : NSObject
 {
   GameView *_view;
-  NSFont *_monospace40;
-  NSImage *_keyImage;
+  NSFont *_system40;
+  // NSImage *_keyImage;
   BOOL _messageOn;
   NSString *_message;
   NSInteger _messageCounter;

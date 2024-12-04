@@ -22,24 +22,23 @@ extern const NSInteger FPS;
 
 typedef enum
 {
+  playState = 1,
+  pauseState = 2
+} GameState;
+
+typedef enum {
   Up = 0,
   Down = 1,
   Left = 2,
   Right = 3
 } Direction;
 
-typedef struct {
+typedef struct
+{
   Direction direction;
   NSString *name;
   NSPoint   vec;
 } DirectionEntry;
-
-// typedef struct KeyState {
-//   BOOL up;
-//   BOOL down;
-//   BOOL left;
-//   BOOL right;
-// } KeyState;
 
 typedef BOOL KeyState[4];
 
@@ -78,6 +77,7 @@ extern DirectionEntry directions[4];
   AssetSetter *_assetSetter;
   Sound *_sound;
   Sound *_music;
+  GameState _gameState;
 }
 - (instancetype) initWithFrame: (NSRect)frameRect;
 - (void) dealloc;
@@ -100,6 +100,7 @@ extern DirectionEntry directions[4];
 - (void) playSoundIndex: (NSInteger) index;
 - (void) stopSound;
 
+- (GameState) gameState;
 - (Player *) player;
 - (TileManager *) tileManager;
 - (CollisionChecker *) collisionChecker;

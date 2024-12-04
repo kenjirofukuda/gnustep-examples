@@ -21,54 +21,6 @@
 
 - (void) setObject
 {
-  SuperObject *obj;
-  obj = [[ObjKey alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(23) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW( 7) * TILE_SIZE];
-  [_view addSuperObject: obj];
-  RELEASE(obj);
-
-  obj = [[ObjKey alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(23) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW(40) * TILE_SIZE];
-  [_view addSuperObject: obj];
-  RELEASE(obj);
-
-  obj = [[ObjKey alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(38) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW( 8) * TILE_SIZE];
-  [_view addSuperObject: obj];
-  RELEASE(obj);
-
-  obj = [[ObjDoor alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(10) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW(11) * TILE_SIZE];
-  [_view addSuperObject: obj];
-  RELEASE(obj);
-
-  obj = [[ObjDoor alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL( 8) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW(28) * TILE_SIZE];
-  [_view addSuperObject: obj];
-  RELEASE(obj);
-
-  obj = [[ObjDoor alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(12) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW(22) * TILE_SIZE];
-  [_view addSuperObject: obj];
-  RELEASE(obj);
-
-  obj = [[ObjChest alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(10) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW( 7) * TILE_SIZE];
-  [_view addSuperObject: obj];
-  RELEASE(obj);
-
-  obj = [[ObjBoots alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(37) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW(42) * TILE_SIZE];
-  [_view addSuperObject: obj];
-  RELEASE(obj);
 }
 
 @end

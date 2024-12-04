@@ -88,7 +88,6 @@
       _screenLoc = NSMakePoint(SCREEN_WIDTH / 2 - TILE_SIZE / 2,
                                SCREEN_HEIGHT / 2 - TILE_SIZE / 2);
       _solidArea = NSMakeRect(8, 0, TILE_SIZE - (8 + 8), TILE_SIZE - (8 + 8));
-      _hasKey = 0;
       [self _setDefaultValues];
       [self _loadImages];
     }
@@ -136,11 +135,6 @@
   _left2 = [self _imageOfResource: @"boy_left_2"];
   _right1 = [self _imageOfResource: @"boy_right_1"];
   _right2 = [self _imageOfResource: @"boy_right_2"];
-}
-
-- (int) hasKey
-{
-  return _hasKey;
 }
 
 - (CGFloat) screenX
@@ -212,40 +206,7 @@
 {
   if (object != nil)
     {
-      if ([[object name] isEqualToString: @"Key"])
-        {
-          _hasKey++;
-          [_view playSoundIndex: 1];
-          [[_view objects] removeObject: object];
-          [[_view ui] showMessage: @"You got a key!"];
-        }
-      else if ([[object name] isEqualToString: @"Door"])
-        {
-          if (_hasKey > 0)
-            {
-              [_view playSoundIndex: 3];
-              [[_view objects] removeObject: object];
-              [[_view ui] showMessage: @"You opend the door!"];
-              _hasKey--;
-            }
-          else
-            {
-              [[_view ui] showMessage: @"You need a key!"];
-            }
-        }
-      else if ([[object name] isEqualToString: @"Boots"])
-        {
-          [_view playSoundIndex: 2];
-          [[_view objects] removeObject: object];
-          [[_view ui] showMessage: @"Speed up!"];
-          _speed += 2;
-        }
-      else if ([[object name] isEqualToString: @"Chest"])
-        {
-          [[_view ui] setGameFinished: YES];
-          [_view stopMusic];
-          [_view playSoundIndex: 4];
-        }
+      ;
     }
 }
 
