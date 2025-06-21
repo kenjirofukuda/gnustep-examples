@@ -79,7 +79,8 @@ I'm avoiding this confusing notation to be aware of the difference with structur
 - [X] #10 [[https://www.youtube.com/watch?v=0yD5iT8ObCs&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=11&t=286s&pp=iAQB][The First Game Done (UI)]]
 - [ ] #11 [[https://www.youtube.com/watch?v=fZLfJSXs0BU&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=13&t=83s&pp=iAQB][Improving Rendering Performance]]
 - [X] #12 [[https://www.youtube.com/watch?v=GoZbZC81u7Y&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=14&t=25s&pp=iAQB][New Pixel Art]]
-- [ ] #13 [[https://www.youtube.com/watch?v=WcYIEJGIEdQ&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=15&pp=iAQB][Game State]]
+- [X] #13 [[https://www.youtube.com/watch?v=WcYIEJGIEdQ&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=15&pp=iAQB][Game State]]
+- [X] #14 [[https://www.youtube.com/watch?v=yomRN8izknM&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=16][NPC]]
 ...
 - [ ] #56 [[https://www.youtube.com/watch?v=9czCgoBstn8&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=62&pp=iAQB][Cutscene]]
 - [ ] #Final [[https://www.youtube.com/watch?v=9jjWFjGAjRM&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=63&pp=iAQB][Ending]]
