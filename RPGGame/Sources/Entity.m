@@ -6,12 +6,21 @@
 #import "Entity.h"
 
 @implementation Entity
-- (instancetype) init
+- (instancetype) initWithView: (GameView *)view
 {
   if ((self = [super init]) != nil)
     {
+      _view = view;
       _solidArea = NSMakeRect(0, 0, TILE_SIZE, TILE_SIZE);
       _collisionOn = NO;
+      _worldLoc = NSMakePoint(FLIPED_COL(0) * TILE_SIZE,
+                              FLIPED_ROW(0) * TILE_SIZE);
+      _screenLoc = NSMakePoint(SCREEN_WIDTH / 2 - TILE_SIZE / 2,
+                               SCREEN_HEIGHT / 2 - TILE_SIZE / 2);
+      _speed = 1;
+      _direction = Down;
+      _spliteCounter = 0;
+      _spliteNumber = 1;
     }
   return self;
 }
@@ -24,6 +33,16 @@
 - (CGFloat) speed
 {
   return _speed;
+}
+
+- (void) setWorldX: (CGFloat)value
+{
+  _worldLoc.x = value;
+}
+
+- (void) setWorldY: (CGFloat)value
+{
+  _worldLoc.y = value;
 }
 
 - (CGFloat) worldX
@@ -75,18 +94,104 @@
   _showsSolidArea = state;
 }
 
-@end
+- (NSImage *) _imageOfResource: (NSString *)name inDirectory: (NSString *)subDirectory
+{
+  NSImage *original = [_view imageOfResource: name inDirectory: subDirectory];
+  NSImage *image = [_view scaledImage: original scale: SCALE];
+  RELEASE(original);
+  return image;
+}
+
+- (void) action
+{
+}
+
+- (void) update
+{
+}
+
+- (void) drawAt: (NSPoint) pos
+{
+  NSImage *image = nil;
+  if (_direction == Up)
+    {
+      if (_spliteNumber == 1)
+        {
+          image = _up1;
+        }
+      if (_spliteNumber == 2)
+        {
+          image = _up2;
+        }
+    }
+  else if (_direction == Down)
+    {
+      if (_spliteNumber == 1)
+        {
+          image = _down1;
+        }
+      if (_spliteNumber == 2)
+        {
+          image = _down2;
+        }
+    }
+  else if (_direction == Left)
+    {
+      if (_spliteNumber == 1)
+        {
+          image = _left1;
+        }
+      if (_spliteNumber == 2)
+        {
+          image = _left2;
+        }
+    }
+  else if (_direction == Right)
+    {
+      if (_spliteNumber == 1)
+        {
+          image = _right1;
+        }
+      if (_spliteNumber == 2)
+        {
+          image = _right2;
+        }
+    }
+  if (image != nil)
+    {
+      [image compositeToPoint: pos
+                    operation: NSCompositeSourceOver];
+
+    }
+  else
+    {
+      // error occurred fallback!!!
+      NSRect rect = NSMakeRect(pos.y, pos.y, TILE_SIZE, TILE_SIZE);
+      [[NSColor whiteColor] set];
+      NSRectFill(rect);
+    }
+  if (_showsSolidArea)
+    {
+      [[NSColor redColor] set];
+      NSFrameRect(NSOffsetRect(_solidArea, pos.x, pos.y));
+    }
+}
+
+- (void) draw
+{
+  [self drawAt: _screenLoc];
+}
+
+
+@end // Entiry
 
 @implementation Player
 - (instancetype) initWithView: (GameView *)view keyState: (BOOL [])keyState
 {
-  self = [super init];
+  self = [super initWithView: view];
   if (self != nil)
     {
-      _view = view;
       _keyState = keyState;
-      _screenLoc = NSMakePoint(SCREEN_WIDTH / 2 - TILE_SIZE / 2,
-                               SCREEN_HEIGHT / 2 - TILE_SIZE / 2);
       _solidArea = NSMakeRect(8, 0, TILE_SIZE - (8 + 8), TILE_SIZE - (8 + 8));
       _hasKey = 0;
       [self _setDefaultValues];
@@ -120,10 +225,7 @@
 
 - (NSImage *) _imageOfResource: (NSString *)name
 {
-  NSImage *original = [_view imageOfResource: name inDirectory: @"Walking-sprites"];
-  NSImage *image = [_view scaledImage: original scale: SCALE];
-  RELEASE(original);
-  return image;
+  return [self _imageOfResource: name inDirectory: @"Walking-sprites"];
 }
 
 - (void) _loadImages
@@ -191,6 +293,11 @@
       SuperObject* obj = [[_view collisionChecker] checkObject: self isPlayer: true];
       [self _pickupObject: obj];
 
+      // CHECK NPC or MONSTER COLLISION
+      Entity* ent = [[_view collisionChecker] checkEntity: self entities: [_view npcs]];
+      [self _interactNPC: ent];
+
+
       // IF COLLISION IS FALSE, PLAYER CAN MOVE
       if (_collisionOn == NO)
         {
@@ -249,72 +356,108 @@
     }
 }
 
-- (void) draw
+- (void) _interactNPC: (Entity *)entity
 {
-  NSImage *image = nil;
-  if (_direction == Up)
+  if (entity != nil)
     {
-      if (_spliteNumber == 1)
-        {
-          image = _up1;
-        }
-      if (_spliteNumber == 2)
-        {
-          image = _up2;
-        }
-    }
-  else if (_direction == Down)
-    {
-      if (_spliteNumber == 1)
-        {
-          image = _down1;
-        }
-      if (_spliteNumber == 2)
-        {
-          image = _down2;
-        }
-    }
-  else if (_direction == Left)
-    {
-      if (_spliteNumber == 1)
-        {
-          image = _left1;
-        }
-      if (_spliteNumber == 2)
-        {
-          image = _left2;
-        }
-    }
-  else if (_direction == Right)
-    {
-      if (_spliteNumber == 1)
-        {
-          image = _right1;
-        }
-      if (_spliteNumber == 2)
-        {
-          image = _right2;
-        }
-    }
-  if (image != nil)
-    {
-      [image compositeToPoint: _screenLoc
-                    operation: NSCompositeSourceOver];
-
-    }
-  else
-    {
-      // error occurred fallback!!!
-      NSRect rect = NSMakeRect(_screenLoc.y, _screenLoc.y, TILE_SIZE, TILE_SIZE);
-      [[NSColor whiteColor] set];
-      NSRectFill(rect);
-    }
-  if (_showsSolidArea)
-    {
-      [[NSColor redColor] set];
-      NSFrameRect(NSOffsetRect(_solidArea, _screenLoc.x, _screenLoc.y));
+      NSLog(@"You are hitting an NPC!");
     }
 }
-@end
+
+
+@end // Player
+
+
+@implementation NPCOldMan
+- (instancetype) initWithView: (GameView *)view
+{
+  self = [super initWithView: view];
+  if (self != nil)
+    {
+      _worldLoc = NSMakePoint(FLIPED_COL(21) * TILE_SIZE,
+                              FLIPED_ROW(21) * TILE_SIZE);
+      _direction = Down;
+      _speed = 1.0;
+      _actionLockCounter = 0;
+      [self _loadImages];
+    }
+  return self;
+}
+
+- (NSImage *) _imageOfResource: (NSString *)name
+{
+  return [self _imageOfResource: name inDirectory: @"NPC"];
+}
+
+- (void) _loadImages
+{
+  _up1 = [self _imageOfResource: @"oldman_up_1"];
+  _up2 = [self _imageOfResource: @"oldman_up_2"];
+  _down1 = [self _imageOfResource: @"oldman_down_1"];
+  _down2 = [self _imageOfResource: @"oldman_down_2"];
+  _left1 = [self _imageOfResource: @"oldman_left_1"];
+  _left2 = [self _imageOfResource: @"oldman_left_2"];
+  _right1 = [self _imageOfResource: @"oldman_right_1"];
+  _right2 = [self _imageOfResource: @"oldman_right_2"];
+}
+
+- (void) action
+{
+  _actionLockCounter++;
+  if (_actionLockCounter == 120)
+    {
+      uint32_t i = arc4random() % 101;
+      if (i <= 25)
+        _direction = Up;
+      if (i > 25 && i <= 50)
+        _direction = Down;
+      if (i > 50 && i <= 75)
+        _direction = Left;
+      if (i > 75 && i <= 100)
+        _direction = Down;
+      _actionLockCounter = 0;
+    }
+}
+
+- (void) update
+{
+  [self action];
+
+  // CHECK TILE COLLISION
+  _collisionOn = NO;
+  [[_view collisionChecker] checkTile: self];
+  [[_view collisionChecker] checkObject: self isPlayer: NO];
+  [[_view collisionChecker] checkPlayer: self];
+
+
+  // IF COLLISION IS FALSE, PLAYER CAN MOVE
+  if (_collisionOn == NO)
+    {
+      DirectionEntry de = directions[_direction];
+      _worldLoc.x += _speed * de.vec.x;
+      _worldLoc.y += _speed * de.vec.y;
+    }
+
+  _spliteCounter++;
+  if (_spliteCounter > 10)
+    {
+      _spliteNumber = (_spliteNumber == 1) ? 2 : 1;
+      _spliteCounter = 0;
+    }
+
+}
+
+- (void) draw
+{
+  CGFloat screenX =
+    _worldLoc.x - [[_view player] worldX] + [[_view player] screenX];
+  CGFloat screenY =
+    _worldLoc.y - [[_view player] worldY] + [[_view player] screenY];
+  [self drawAt: NSMakePoint(screenX, screenY)];
+}
+
+
+@end // NPCOldMan
+
 
 // vim: filetype=objc ts=2 sw=2 expandtab

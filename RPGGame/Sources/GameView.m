@@ -45,6 +45,7 @@ DirectionEntry directions[4] =
       _collisionChecker = [[CollisionChecker alloc] initWithView: self];
       _ui = [[UI alloc] initWithView: self];
       _objects = [[NSMutableArray alloc] init];
+      _npcs = [[NSMutableArray alloc] init];
       _assetSetter = [[AssetSetter alloc] initWithView: self];
       _sound = [[Sound alloc] init];
       _music = [[Sound alloc] init];
@@ -58,6 +59,7 @@ DirectionEntry directions[4] =
   RELEASE(_music);
   RELEASE(_sound);
   RELEASE(_assetSetter);
+  RELEASE(_npcs);
   RELEASE(_objects);
   RELEASE(_timer);
   RELEASE(_tileManager);
@@ -86,6 +88,7 @@ DirectionEntry directions[4] =
 
   [_tileManager draw];
   [self _drawSuperObjects];
+  [self _drawNPCObjects];
   [_player draw];
   [_ui draw];
 }
@@ -97,6 +100,16 @@ DirectionEntry directions[4] =
     {
       if (NSIntersectsRect(viewRect, NSMakeRect([obj worldX], [obj worldY], TILE_SIZE, TILE_SIZE)) == YES)
         [obj draw];
+    }
+}
+
+- (void) _drawNPCObjects
+{
+  NSRect viewRect = [_player visibleRect];
+  for (Entity *ent in _npcs)
+    {
+      if (NSIntersectsRect(viewRect, NSMakeRect([ent worldX], [ent worldY], TILE_SIZE, TILE_SIZE)) == YES)
+        [ent draw];
     }
 }
 
@@ -133,6 +146,7 @@ DirectionEntry directions[4] =
 - (void) setupGame
 {
   [_assetSetter setObject];
+  [_assetSetter setNPC];
   [self playMusic];
   _gameState = playState;
 }
@@ -142,9 +156,19 @@ DirectionEntry directions[4] =
   return _objects;
 }
 
+- (NSMutableArray *) npcs
+{
+  return _npcs;
+}
+
 - (void) addSuperObject: (SuperObject *)object
 {
  [ _objects addObject: object];
+}
+
+- (void) addNPCObject: (Entity *)object
+{
+ [ _npcs addObject: object];
 }
 
 - (Sound *) sound
@@ -216,7 +240,13 @@ DirectionEntry directions[4] =
 - (void) step: (NSTimer *)timer
 {
   if (_gameState == playState)
-    [_player update];
+    {
+      [_player update];
+      for (Entity *ent in _npcs)
+        {
+          [ent update];
+        }
+    }
   if (_gameState == pauseState)
     ; // nothing
 

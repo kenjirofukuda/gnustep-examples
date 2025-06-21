@@ -60,6 +60,7 @@ extern DirectionEntry directions[4];
 @class CollisionChecker;
 @class AssetSetter;
 @class SuperObject;
+@class Entity;
 @class Sound;
 @class UI;
 
@@ -74,6 +75,7 @@ extern DirectionEntry directions[4];
   UI *_ui;
   NSDictionary *_directionKeyTable;
   NSMutableArray *_objects;
+  NSMutableArray *_npcs;
   AssetSetter *_assetSetter;
   Sound *_sound;
   Sound *_music;
@@ -90,7 +92,9 @@ extern DirectionEntry directions[4];
 
 - (void) setupGame;
 - (NSMutableArray *) objects;
+- (NSMutableArray *) npcs;
 - (void) addSuperObject: (SuperObject *)object;
+- (void) addNPCObject: (Entity *)object;
 
 - (Sound *) music;
 - (void) playMusic;

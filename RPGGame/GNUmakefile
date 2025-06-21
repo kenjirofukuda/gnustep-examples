@@ -33,6 +33,7 @@ $(APP_NAME)_RESOURCE_FILES += Resources/Tiles
 $(APP_NAME)_RESOURCE_FILES += Resources/Maps
 $(APP_NAME)_RESOURCE_FILES += Resources/Objects
 $(APP_NAME)_RESOURCE_FILES += Resources/Sounds
+$(APP_NAME)_RESOURCE_FILES += Resources/NPC
 
 $(APP_NAME)_LOCALIZED_RESOURCE_FILES = \
   Window.strings

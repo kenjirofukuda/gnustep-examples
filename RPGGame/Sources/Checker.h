@@ -15,7 +15,10 @@
 - (instancetype) initWithView: (GameView *) view;
 - (void) dealloc;
 - (void) checkTile: (Entity *) entity;
-- (SuperObject *) checkObject: (Entity *)entity isPlayer: (BOOL)isPlayer;
+- (SuperObject *) checkObject: (Entity *) entity isPlayer: (BOOL) isPlayer;
+- (Entity *) checkEntity: (Entity *) entity entities: (NSArray *) targets;
+- (void) checkPlayer: (Entity *) entity;
+
 @end
 
 #endif

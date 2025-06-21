@@ -3,6 +3,7 @@
 #import "AssetSetter.h"
 #import "GameView.h"
 #import "Object.h"
+#import "Entity.h"
 
 @implementation AssetSetter
 - (instancetype) initWithView: (GameView *)view
@@ -62,6 +63,16 @@
   [obj setWorldY: FLIPED_ROW(42) * TILE_SIZE];
   [_view addSuperObject: obj];
 }
+
+- (void) setNPC
+{
+  Entity *obj;
+  obj = [[NPCOldMan alloc] initWithView: _view];
+  [obj setWorldX: FLIPED_COL(21) * TILE_SIZE];
+  [obj setWorldY: FLIPED_ROW(21) * TILE_SIZE];
+  [_view addNPCObject: obj];
+}
+
 
 @end
 

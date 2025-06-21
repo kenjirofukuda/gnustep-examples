@@ -8,6 +8,7 @@
 GNUstep の入門段階であり、素材としてこの講習を模倣することで理解を深めていきたいと思っています。
 
 - プレイリスト :: [[https://www.youtube.com/playlist?list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq][How to Make a 2D Game in Java ]]
+- リソース :: [[https://drive.google.com/drive/folders/1OBRM8M3qCNAfJDCaldg62yFMiyFaKgYx][Blue Boy Adventure]]
 
 Resources/フォルダ内のすべての画像、音声はRyiSnowさんの公開されている素材を使用しています。
 
@@ -84,6 +85,8 @@ Objective-C 2.0 の機能を一部採用しているので gobjc には対応し
 - [ ] #11 [[https://www.youtube.com/watch?v=fZLfJSXs0BU&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=13&t=83s&pp=iAQB][Improving Rendering Performance]]
 - [X] #12 [[https://www.youtube.com/watch?v=GoZbZC81u7Y&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=14&t=25s&pp=iAQB][New Pixel Art]]
 - [ ] #13 [[https://www.youtube.com/watch?v=WcYIEJGIEdQ&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=15&pp=iAQB][Game State]]
+- [ ] #14 [[https://www.youtube.com/watch?v=yomRN8izknM&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=16][NPC]]
+
 ...
 - [ ] #56 [[https://www.youtube.com/watch?v=9czCgoBstn8&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=62&pp=iAQB][Cutscene]]
 - [ ] #Final [[https://www.youtube.com/watch?v=9jjWFjGAjRM&list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&index=63&pp=iAQB][Ending]]

@@ -6,7 +6,7 @@
 #import "Checker.h"
 
 @implementation CollisionChecker
-- (instancetype) initWithView: (GameView *)view
+- (instancetype) initWithView: (GameView *) view
 {
   if ((self = [super init]) != nil)
     {
@@ -21,7 +21,7 @@
   DEALLOC;
 }
 
-- (void) checkTile: (Entity *)entity
+- (void) checkTile: (Entity *) entity
 {
   Bounds entityBounds =
     BoundsFromNSRect(NSOffsetRect([entity solidArea], [entity worldX], [entity worldY]));
@@ -70,11 +70,11 @@
       NSArray *tiles = [[_view tileManager] tiles];
 
       [entity setCollisionOn: [[tiles objectAtIndex: tile1] collision]
-                           || [[tiles objectAtIndex: tile2] collision]];
+              || [[tiles objectAtIndex: tile2] collision]];
     }
 }
 
-- (SuperObject *) checkObject: (Entity *)entity isPlayer: (BOOL)isPlayer
+- (SuperObject *) checkObject: (Entity *) entity isPlayer: (BOOL) isPlayer
 {
   SuperObject *result = nil;
   NSRect entityArea = [entity peekStepedSolidArea];
@@ -97,6 +97,36 @@
     }
   return result;
 }
+
+
+- (Entity *) checkEntity: (Entity *) entity entities: (NSArray *) targets
+{
+  Entity *result = nil;
+  NSRect entityArea = [entity peekStepedSolidArea];
+
+  for (Entity *obj in targets)
+    {
+      NSRect objArea = [obj worldSolidArea];
+      if (NSIntersectsRect(entityArea, objArea))
+        {
+          [entity setCollisionOn: YES];
+          result = obj;
+          break;
+        }
+    }
+  return result;
+}
+
+- (void) checkPlayer: (Entity *) entity
+{
+  NSRect playerArea = [[_view player] worldSolidArea];
+  NSRect entityArea = [entity peekStepedSolidArea];
+  if (NSIntersectsRect(entityArea, playerArea))
+    {
+      [entity setCollisionOn: YES];
+    }
+}
+
 
 @end
 

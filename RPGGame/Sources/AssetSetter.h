@@ -14,6 +14,8 @@
 - (void) dealloc;
 
 - (void) setObject;
+- (void) setNPC;
+
 @end
 
 #endif

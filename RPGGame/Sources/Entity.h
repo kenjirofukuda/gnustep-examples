@@ -6,9 +6,13 @@
 
 #import "GameView.h"
 
+@class GameView;
+
 @interface Entity : NSObject
 {
+  GameView *_view;
   NSPoint   _worldLoc;
+  NSPoint   _screenLoc;
   NSInteger _speed;
 
   NSImage *_up1;
@@ -27,11 +31,13 @@
   BOOL _showsSolidArea;
 }
 
-- (instancetype) init;
+- (instancetype) initWithView: (GameView *)view;
 - (Direction) direction;
 - (CGFloat) speed;
 - (CGFloat) worldX;
+- (void) setWorldX: (CGFloat)value;
 - (CGFloat) worldY;
+- (void) setWorldY: (CGFloat)value;
 - (NSRect) solidArea;
 - (void) setSolidArea: (NSRect)area;
 - (NSRect) worldSolidArea;
@@ -39,27 +45,40 @@
 - (void) setCollisionOn: (BOOL)state;
 - (BOOL) showsSolidArea;
 - (void) setShowsSolidArea: (BOOL) state;
-@end
+- (void) action;
+- (void) update;
+- (void) draw;
+- (NSImage *) _imageOfResource: (NSString *)name inDirectory: (NSString *)subDirectory;
 
-@class GameView;
+@end // Entity
+
 
 @interface Player : Entity
 {
-  GameView *_view;
   BOOL* _keyState;
-  NSPoint   _screenLoc;
   BOOL _hasKey;
 }
 - (instancetype) initWithView: (GameView *)view keyState: (BOOL [])keyState;
 - (void) dealloc;
 - (void) update;
-- (void) draw;
 - (int) hasKey;
 - (CGFloat) screenX;
 - (CGFloat) screenY;
 - (NSRect) visibleRect;
 - (NSRect) visibleTileRect;
-@end
+@end // Player
+
+
+@interface NPCOldMan : Entity
+{
+  int _actionLockCounter;
+}
+- (instancetype) initWithView: (GameView *)view;
+- (void) action;
+- (void) update;
+@end // NPCOldMan
+
+
 
 #endif
 // vim: filetype=objc ts=2 sw=2 expandtab
