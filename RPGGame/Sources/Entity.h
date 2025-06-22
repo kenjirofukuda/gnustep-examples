@@ -23,15 +23,19 @@
   NSImage *_left2;
   NSImage *_right1;
   NSImage *_right2;
+
   Direction _direction;
   NSInteger _spliteCounter;
   NSInteger _spliteNumber;
   NSRect _solidArea;
   BOOL _collisionOn;
   BOOL _showsSolidArea;
+  NSMutableArray *_dialogs;
+  NSUInteger _dialogIndex;
 }
 
 - (instancetype) initWithView: (GameView *)view;
+- (void) dealloc;
 - (Direction) direction;
 - (CGFloat) speed;
 - (CGFloat) worldX;
@@ -45,6 +49,8 @@
 - (void) setCollisionOn: (BOOL)state;
 - (BOOL) showsSolidArea;
 - (void) setShowsSolidArea: (BOOL) state;
+
+- (void) speak;
 - (void) action;
 - (void) update;
 - (void) draw;
@@ -59,7 +65,6 @@
   BOOL _hasKey;
 }
 - (instancetype) initWithView: (GameView *)view keyState: (BOOL [])keyState;
-- (void) dealloc;
 - (void) update;
 - (int) hasKey;
 - (CGFloat) screenX;

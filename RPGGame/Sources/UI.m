@@ -18,6 +18,7 @@
       // ASSIGN(_keyImage, [key image]);
       _messageOn = NO;
       _message = @"";
+      _dialog = @"";
       _messageCounter = 0;
       _gameFinished = NO;
       _playTime = 0.0;
@@ -27,6 +28,7 @@
 
 - (void) dealloc
 {
+  RELEASE(_dialog);
   RELEASE(_message);
   RELEASE(_system40);
   DEALLOC;
@@ -46,6 +48,12 @@
 {
   _messageOn = YES;
   ASSIGNCOPY(_message, text);
+}
+
+- (void) setDialog: (NSString *) text
+{
+  ASSIGNCOPY(_dialog, text);
+  NSLog(@"_dialog = %@", _dialog);
 }
 
 - (void) draw
@@ -91,12 +99,6 @@
 
 - (void) _drawGameALive
 {
-  // [_view drawImage: _keyImage
-  //                x: TILE_SIZE / 2
-  //                y: SCREEN_HEIGHT - TILE_SIZE - TILE_SIZE / 2
-  //            width: TILE_SIZE
-  //           height: TILE_SIZE];
-
   if ([_view gameState] == playState)
     {
       // Do playState stuff later
@@ -105,6 +107,11 @@
   if ([_view gameState] == pauseState)
     {
       [self _drawPauseScreen];
+    }
+
+  if ([_view gameState] == dialogState)
+    {
+      [self _drawDialogScreen];
     }
 
   _playTime += 1.0 / 60.0;
@@ -153,6 +160,45 @@
   drawBounds.size = textSize;
   return drawBounds;
 }
+
+- (void) _drawDialogScreen
+{
+  NSRect bounds;
+  bounds.origin.x = TILE_SIZE * 2;
+  bounds.origin.y = SCREEN_HEIGHT - TILE_SIZE / 2;
+  bounds.size.width = SCREEN_WIDTH - (TILE_SIZE * 4);
+  bounds.size.height = TILE_SIZE * 4;
+  bounds.origin.y -= bounds.size.height;
+
+  [self _drawSubWindow: bounds];
+  bounds.origin.x += TILE_SIZE;
+  bounds.origin.y = SCREEN_HEIGHT - ((TILE_SIZE / 2) + TILE_SIZE);
+  [_view drawString: _dialog
+                  x: bounds.origin.x
+                  y: bounds.origin.y
+             height: 32
+              color: [NSColor whiteColor]];
+
+}
+
+- (void) _drawSubWindow: (NSRect) bounds
+{
+  [[[NSColor blackColor] colorWithAlphaComponent: (210.0 / 255.0)] set];
+  id path1 = [NSBezierPath bezierPathWithRoundedRect: bounds
+                                            xRadius: 35.0
+                                            yRadius: 35.0];
+  [path1 closePath];
+  [path1 fill];
+
+  [[NSColor whiteColor] set];
+  id path2 = [NSBezierPath bezierPathWithRoundedRect: NSInsetRect(bounds, 5, 5)
+                                             xRadius: 30.0
+                                             yRadius: 30.0];
+  [path2 setLineWidth: 5.0];
+  [path2 closePath];
+  [path2 stroke];
+}
+
 @end
 
 // vim: filetype=objc ts=2 sw=2 expandtab

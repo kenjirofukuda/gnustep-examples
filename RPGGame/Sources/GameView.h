@@ -23,14 +23,17 @@ extern const NSInteger FPS;
 typedef enum
 {
   playState = 1,
-  pauseState = 2
+  pauseState = 2,
+  dialogState = 3
 } GameState;
 
-typedef enum {
+typedef enum
+{
   Up = 0,
   Down = 1,
   Left = 2,
-  Right = 3
+  Right = 3,
+  Enter = 4
 } Direction;
 
 typedef struct
@@ -40,7 +43,7 @@ typedef struct
   NSPoint   vec;
 } DirectionEntry;
 
-typedef BOOL KeyState[4];
+typedef BOOL KeyState[5];
 
 typedef struct
 {
@@ -53,6 +56,8 @@ typedef struct
 extern NSRect NSRectFromBounds(Bounds bounds);
 extern Bounds BoundsFromNSRect(NSRect rect);
 extern Bounds BoundsDiv(Bounds bounds, CGFloat value);
+extern Direction ReverseDirection(Direction direction);
+
 extern DirectionEntry directions[4];
 
 @class Player;
@@ -105,11 +110,14 @@ extern DirectionEntry directions[4];
 - (void) stopSound;
 
 - (GameState) gameState;
+- (void) setGameState: (GameState) newState;
 - (Player *) player;
 - (TileManager *) tileManager;
 - (CollisionChecker *) collisionChecker;
 - (UI *) ui;
 - (BOOL) anyKeyPressed;
+- (BOOL) enterKeyPressed;
+- (void) resetEnterKeyPressed;
 
 - (NSImage *) imageOfResource: (NSString *)name inDirectory: (NSString *)subpath;
 - (NSImage *) scaledImage: (NSImage *)image scale: (CGFloat)scale;

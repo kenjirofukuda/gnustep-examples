@@ -21,8 +21,25 @@
       _direction = Down;
       _spliteCounter = 0;
       _spliteNumber = 1;
+      _up1 = _up2 = _down1 = _down2 = _left1 = _left2 = _right1 = _right2 = nil;
+      _dialogs = [[NSMutableArray alloc] init];
+      [self _setupDialog];
     }
   return self;
+}
+
+- (void) dealloc
+{
+  RELEASE(_dialogs);
+  TEST_RELEASE(_up1);
+  TEST_RELEASE(_up2);
+  TEST_RELEASE(_down1);
+  TEST_RELEASE(_down2);
+  TEST_RELEASE(_left1);
+  TEST_RELEASE(_left2);
+  TEST_RELEASE(_right1);
+  TEST_RELEASE(_right2);
+  DEALLOC;
 }
 
 - (Direction) direction
@@ -94,19 +111,16 @@
   _showsSolidArea = state;
 }
 
-- (NSImage *) _imageOfResource: (NSString *)name inDirectory: (NSString *)subDirectory
+- (void) speak
 {
-  NSImage *original = [_view imageOfResource: name inDirectory: subDirectory];
-  NSImage *image = [_view scaledImage: original scale: SCALE];
-  RELEASE(original);
-  return image;
+
 }
 
 - (void) action
 {
 }
 
-- (void) update
+- (void) update // Entity
 {
 }
 
@@ -182,6 +196,21 @@
   [self drawAt: _screenLoc];
 }
 
+- (void) _setupDialog
+{
+  [_dialogs addObject: @"Hellow led."];
+
+}
+
+
+- (NSImage *) _imageOfResource: (NSString *)name inDirectory: (NSString *)subDirectory
+{
+  NSImage *original = [_view imageOfResource: name inDirectory: subDirectory];
+  NSImage *image = [_view scaledImage: original scale: SCALE];
+  RELEASE(original);
+  return image;
+}
+
 
 @end // Entiry
 
@@ -198,19 +227,6 @@
       [self _loadImages];
     }
   return self;
-}
-
-- (void) dealloc
-{
-  RELEASE(_up1);
-  RELEASE(_up2);
-  RELEASE(_down1);
-  RELEASE(_down2);
-  RELEASE(_left1);
-  RELEASE(_left2);
-  RELEASE(_right1);
-  RELEASE(_right2);
-  DEALLOC;
 }
 
 - (void) _setDefaultValues
@@ -272,7 +288,7 @@
   return NSMakeRect(minX, minY, maxX - minX, maxY - minY);
 }
 
-- (void) update
+- (void) update // Player
 {
   if ([_view anyKeyPressed] == YES)
     {
@@ -353,14 +369,23 @@
           [_view stopMusic];
           [_view playSoundIndex: 4];
         }
+      else
+        {
+          NSLog(@"Error Pickup = %@", [object name]);
+        }
+
     }
 }
 
-- (void) _interactNPC: (Entity *)entity
+- (void) _interactNPC: (Entity *) entity
 {
-  if (entity != nil)
+  if (entity == nil)
+    return;
+  if ([_view enterKeyPressed] == YES)
     {
-      NSLog(@"You are hitting an NPC!");
+      [_view setGameState: dialogState];
+      [entity speak];
+      [_view resetEnterKeyPressed];
     }
 }
 
@@ -380,8 +405,15 @@
       _speed = 1.0;
       _actionLockCounter = 0;
       [self _loadImages];
+      [self _setupDialog];
     }
   return self;
+}
+
+- (void) dealloc
+{
+  RELEASE(_dialogs);
+  DEALLOC;
 }
 
 - (NSImage *) _imageOfResource: (NSString *)name
@@ -414,12 +446,12 @@
       if (i > 50 && i <= 75)
         _direction = Left;
       if (i > 75 && i <= 100)
-        _direction = Down;
+        _direction = Right;
       _actionLockCounter = 0;
     }
 }
 
-- (void) update
+- (void) update // NPCPldMan
 {
   [self action];
 
@@ -456,6 +488,26 @@
   [self drawAt: NSMakePoint(screenX, screenY)];
 }
 
+- (void) speak
+{
+  if ([_dialogs count] == 0)
+    return;
+  if (_dialogIndex > [_dialogs count])
+    {
+      _dialogIndex = 0;
+    }
+  [[_view ui] setDialog: [_dialogs objectAtIndex: _dialogIndex]];
+  _dialogIndex++;
+  _direction = ReverseDirection([[_view player] direction]);
+}
+
+- (void) _setupDialog
+{
+  [_dialogs addObject: @"Hellow led."];
+  [_dialogs addObject: @"So you've come to this island to find the tresure?"];
+  [_dialogs addObject: @"I used to be a great wizard but now... I'm a bit too old for taking an adventure."];
+  [_dialogs addObject: @"Well, good luck on you."];
+}
 
 @end // NPCOldMan
 

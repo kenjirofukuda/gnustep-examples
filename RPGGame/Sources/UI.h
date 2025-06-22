@@ -17,14 +17,16 @@
   NSInteger _messageCounter;
   BOOL _gameFinished;
   double _playTime;
+  NSString *_dialog;
 }
-- (instancetype) initWithView: (GameView *)view;
+- (instancetype) initWithView: (GameView *) view;
 - (void) dealloc;
 
 - (BOOL) gameFinished;
 - (void) setGameFinished: (BOOL) state;
 
 - (void) showMessage: (NSString *) text;
+- (void) setDialog: (NSString *) text;
 - (void) draw;
 @end
 

@@ -40,6 +40,7 @@ DirectionEntry directions[4] =
       _keyState[Down] = NO;
       _keyState[Left] = NO;
       _keyState[Right] = NO;
+      _keyState[Enter] = NO;
       _player = [[Player alloc] initWithView: self keyState: _keyState];
       _tileManager = [[TileManager alloc] initWithView: self];
       _collisionChecker = [[CollisionChecker alloc] initWithView: self];
@@ -124,18 +125,36 @@ DirectionEntry directions[4] =
     _keyState[Left] = newState;
   else if ([characters isEqualToString: @"d"])
     _keyState[Right] = newState;
+  else if ((event.keyCode == 36) || (event.keyCode == 104))
+    _keyState[Enter] = newState;
 }
 
 - (void) keyDown: (NSEvent *)event
 {
-  [self keyEvent: event pressed: YES];
   NSString *characters = [event charactersIgnoringModifiers];
-  if ([characters isEqualToString: @"i"])
-    [_tileManager setShowsTileAddress: ! [_tileManager showsTileAddress]];
-  if ([characters isEqualToString: @"o"])
-    [_player setShowsSolidArea: ! [_player showsSolidArea]];
-  if ([characters isEqualToString: @"p"])
-    _gameState = _gameState == playState ? pauseState : playState;
+  [self keyEvent: event pressed: YES];
+  if (_gameState == playState)
+    {
+      if ([characters isEqualToString: @"i"])
+        [_tileManager setShowsTileAddress: ! [_tileManager showsTileAddress]];
+      if ([characters isEqualToString: @"o"])
+        [_player setShowsSolidArea: ! [_player showsSolidArea]];
+      if ([characters isEqualToString: @"p"])
+        _gameState = pauseState;
+    }
+  else if (_gameState == pauseState)
+    {
+      if ([characters isEqualToString: @"p"])
+        _gameState = playState;
+    }
+  else if (_gameState == dialogState)
+    {
+      if ((event.keyCode == 36) || (event.keyCode == 104))
+        {
+          _keyState[Enter] = YES;
+          _gameState = playState;
+        }
+    }
 }
 
 - (void) keyUp: (NSEvent *)event
@@ -209,6 +228,12 @@ DirectionEntry directions[4] =
   return _gameState;
 }
 
+- (void) setGameState: (GameState) newState
+{
+  _gameState = newState;
+}
+
+
 - (Player *) player
 {
   return _player;
@@ -235,6 +260,16 @@ DirectionEntry directions[4] =
     || _keyState[Down] == YES
     || _keyState[Left] == YES
     || _keyState[Right] == YES;
+}
+
+- (BOOL) enterKeyPressed
+{
+  return _keyState[Enter];
+}
+
+- (void) resetEnterKeyPressed
+{
+ _keyState[Enter] = NO;
 }
 
 - (void) step: (NSTimer *)timer
@@ -373,6 +408,19 @@ Bounds BoundsDiv(Bounds bounds, CGFloat value)
   result.xmax = trunc(bounds.xmax / value);
   result.ymax = trunc(bounds.ymax / value);
   return result;
+}
+
+Direction ReverseDirection(Direction direction)
+{
+  if (direction == Up)
+    return Down;
+  else if (direction == Down)
+    return Up;
+  else if (direction == Left)
+    return Right;
+  else if (direction == Right)
+    return Left;
+  return direction;
 }
 
 // vim: filetype=objc ts=2 sw=2 expandtab
