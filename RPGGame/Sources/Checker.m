@@ -6,7 +6,7 @@
 #import "Checker.h"
 
 @implementation CollisionChecker
-- (instancetype) initWithView: (GameView *) view
+- (instancetype) initWithView: (GameView *)view
 {
   if ((self = [super init]) != nil)
     {
@@ -21,7 +21,7 @@
   DEALLOC;
 }
 
-- (void) checkTile: (Entity *) entity
+- (void) checkTile: (Entity *)entity
 {
   Bounds entityBounds =
     BoundsFromNSRect(NSOffsetRect([entity solidArea], [entity worldX], [entity worldY]));
@@ -74,7 +74,7 @@
     }
 }
 
-- (SuperObject *) checkObject: (Entity *) entity isPlayer: (BOOL) isPlayer
+- (SuperObject *) checkObject: (Entity *)entity isPlayer: (BOOL)isPlayer
 {
   SuperObject *result = nil;
   NSRect entityArea = [entity peekStepedSolidArea];
@@ -99,7 +99,7 @@
 }
 
 
-- (Entity *) checkEntity: (Entity *) entity entities: (NSArray *) targets
+- (Entity *) checkEntity: (Entity *)entity entities: (NSArray *)targets
 {
   Entity *result = nil;
   NSRect entityArea = [entity peekStepedSolidArea];
@@ -117,7 +117,7 @@
   return result;
 }
 
-- (void) checkPlayer: (Entity *) entity
+- (void) checkPlayer: (Entity *)entity
 {
   NSRect playerArea = [[_view player] worldSolidArea];
   NSRect entityArea = [entity peekStepedSolidArea];

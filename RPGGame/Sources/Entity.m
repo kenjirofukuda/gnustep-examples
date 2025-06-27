@@ -22,15 +22,15 @@
       _spliteCounter = 0;
       _spliteNumber = 1;
       _up1 = _up2 = _down1 = _down2 = _left1 = _left2 = _right1 = _right2 = nil;
-      _dialogs = [[NSMutableArray alloc] init];
-      [self _setupDialog];
+      _dialogues = [[NSMutableArray alloc] init];
+      [self _setupDialogue];
     }
   return self;
 }
 
 - (void) dealloc
 {
-  RELEASE(_dialogs);
+  RELEASE(_dialogues);
   TEST_RELEASE(_up1);
   TEST_RELEASE(_up2);
   TEST_RELEASE(_down1);
@@ -196,9 +196,9 @@
   [self drawAt: _screenLoc];
 }
 
-- (void) _setupDialog
+- (void) _setupDialogue
 {
-  [_dialogs addObject: @"Hellow led."];
+  [_dialogues addObject: @"Hellow led."];
 
 }
 
@@ -246,12 +246,12 @@
 
 - (void) _loadImages
 {
-  _up1 = [self _imageOfResource: @"boy_up_1"];
-  _up2 = [self _imageOfResource: @"boy_up_2"];
-  _down1 = [self _imageOfResource: @"boy_down_1"];
-  _down2 = [self _imageOfResource: @"boy_down_2"];
-  _left1 = [self _imageOfResource: @"boy_left_1"];
-  _left2 = [self _imageOfResource: @"boy_left_2"];
+  _up1    = [self _imageOfResource: @"boy_up_1"];
+  _up2    = [self _imageOfResource: @"boy_up_2"];
+  _down1  = [self _imageOfResource: @"boy_down_1"];
+  _down2  = [self _imageOfResource: @"boy_down_2"];
+  _left1  = [self _imageOfResource: @"boy_left_1"];
+  _left2  = [self _imageOfResource: @"boy_left_2"];
   _right1 = [self _imageOfResource: @"boy_right_1"];
   _right2 = [self _imageOfResource: @"boy_right_2"];
 }
@@ -383,7 +383,7 @@
     return;
   if ([_view enterKeyPressed] == YES)
     {
-      [_view setGameState: dialogState];
+      [_view setGameState: dialogueState];
       [entity speak];
       [_view resetEnterKeyPressed];
     }
@@ -405,14 +405,14 @@
       _speed = 1.0;
       _actionLockCounter = 0;
       [self _loadImages];
-      [self _setupDialog];
+      [self _setupDialogue];
     }
   return self;
 }
 
 - (void) dealloc
 {
-  RELEASE(_dialogs);
+  RELEASE(_dialogues);
   DEALLOC;
 }
 
@@ -423,12 +423,12 @@
 
 - (void) _loadImages
 {
-  _up1 = [self _imageOfResource: @"oldman_up_1"];
-  _up2 = [self _imageOfResource: @"oldman_up_2"];
-  _down1 = [self _imageOfResource: @"oldman_down_1"];
-  _down2 = [self _imageOfResource: @"oldman_down_2"];
-  _left1 = [self _imageOfResource: @"oldman_left_1"];
-  _left2 = [self _imageOfResource: @"oldman_left_2"];
+  _up1    = [self _imageOfResource: @"oldman_up_1"];
+  _up2    = [self _imageOfResource: @"oldman_up_2"];
+  _down1  = [self _imageOfResource: @"oldman_down_1"];
+  _down2  = [self _imageOfResource: @"oldman_down_2"];
+  _left1  = [self _imageOfResource: @"oldman_left_1"];
+  _left2  = [self _imageOfResource: @"oldman_left_2"];
   _right1 = [self _imageOfResource: @"oldman_right_1"];
   _right2 = [self _imageOfResource: @"oldman_right_2"];
 }
@@ -490,23 +490,23 @@
 
 - (void) speak
 {
-  if ([_dialogs count] == 0)
+  if ([_dialogues count] == 0)
     return;
-  if (_dialogIndex > [_dialogs count])
+  if (_dialogueIndex > [_dialogues count])
     {
-      _dialogIndex = 0;
+      _dialogueIndex = 0;
     }
-  [[_view ui] setDialog: [_dialogs objectAtIndex: _dialogIndex]];
-  _dialogIndex++;
+  [[_view ui] setDialogue: [_dialogues objectAtIndex: _dialogueIndex]];
+  _dialogueIndex++;
   _direction = ReverseDirection([[_view player] direction]);
 }
 
-- (void) _setupDialog
+- (void) _setupDialogue
 {
-  [_dialogs addObject: @"Hellow led."];
-  [_dialogs addObject: @"So you've come to this island to find the tresure?"];
-  [_dialogs addObject: @"I used to be a great wizard but now... I'm a bit too old for taking an adventure."];
-  [_dialogs addObject: @"Well, good luck on you."];
+  [_dialogues addObject: @"Hellow led."];
+  [_dialogues addObject: @"So you've come to this island to find the tresure?"];
+  [_dialogues addObject: @"I used to be a great wizard but now... I'm a bit too old for taking an adventure."];
+  [_dialogues addObject: @"Well, good luck on you."];
 }
 
 @end // NPCOldMan

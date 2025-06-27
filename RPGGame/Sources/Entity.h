@@ -30,8 +30,8 @@
   NSRect _solidArea;
   BOOL _collisionOn;
   BOOL _showsSolidArea;
-  NSMutableArray *_dialogs;
-  NSUInteger _dialogIndex;
+  NSMutableArray *_dialogues;
+  NSUInteger _dialogueIndex;
 }
 
 - (instancetype) initWithView: (GameView *)view;

@@ -24,7 +24,7 @@ typedef enum
 {
   playState = 1,
   pauseState = 2,
-  dialogState = 3
+  dialogueState = 3
 } GameState;
 
 typedef enum
@@ -106,11 +106,11 @@ extern DirectionEntry directions[4];
 - (void) stopMusic;
 
 - (Sound *) sound;
-- (void) playSoundIndex: (NSInteger) index;
+- (void) playSoundIndex: (NSInteger)index;
 - (void) stopSound;
 
 - (GameState) gameState;
-- (void) setGameState: (GameState) newState;
+- (void) setGameState: (GameState)newState;
 - (Player *) player;
 - (TileManager *) tileManager;
 - (CollisionChecker *) collisionChecker;

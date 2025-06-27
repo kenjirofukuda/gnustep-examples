@@ -11,7 +11,7 @@
 }
 - (instancetype) init;
 - (void) dealloc;
-- (void) setCollision:(BOOL)state;
+- (void) setCollision: (BOOL)state;
 - (BOOL) collision;
 - (void) setImage: (NSImage *)image;
 - (NSImage *) image;
@@ -32,7 +32,7 @@
 - (NSArray *) tiles;
 - (int) tileNumberOfCol: (int)col row: (int)row;
 - (BOOL) showsTileAddress;
-- (void) setShowsTileAddress: (BOOL) state;
+- (void) setShowsTileAddress: (BOOL)state;
 - (void) draw;
 @end
 

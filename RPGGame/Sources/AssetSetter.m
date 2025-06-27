@@ -73,7 +73,6 @@
   [_view addNPCObject: obj];
 }
 
-
 @end
 
 // vim: filetype=objc ts=2 sw=2 expandtab

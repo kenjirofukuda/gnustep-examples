@@ -125,7 +125,7 @@ DirectionEntry directions[4] =
     _keyState[Left] = newState;
   else if ([characters isEqualToString: @"d"])
     _keyState[Right] = newState;
-  else if ((event.keyCode == 36) || (event.keyCode == 104))
+  else if ([event keyCode] == 36 || [event keyCode] == 104)
     _keyState[Enter] = newState;
 }
 
@@ -147,9 +147,9 @@ DirectionEntry directions[4] =
       if ([characters isEqualToString: @"p"])
         _gameState = playState;
     }
-  else if (_gameState == dialogState)
+  else if (_gameState == dialogueState)
     {
-      if ((event.keyCode == 36) || (event.keyCode == 104))
+      if ([event keyCode] == 36 || [event keyCode] == 104)
         {
           _keyState[Enter] = YES;
           _gameState = playState;
@@ -212,7 +212,7 @@ DirectionEntry directions[4] =
   [_music stop];
 }
 
-- (void) playSoundIndex: (NSInteger) index
+- (void) playSoundIndex: (NSInteger)index
 {
   [_sound setFileIndex: index];
   [_sound play];
@@ -228,7 +228,7 @@ DirectionEntry directions[4] =
   return _gameState;
 }
 
-- (void) setGameState: (GameState) newState
+- (void) setGameState: (GameState)newState
 {
   _gameState = newState;
 }

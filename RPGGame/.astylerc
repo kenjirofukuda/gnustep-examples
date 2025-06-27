@@ -5,6 +5,7 @@ pad-oper
 unpad-paren
 pad-header
 pad-method-prefix
+pad-param-type
 pad-return-type
 unpad-param-type
 align-method-colon
