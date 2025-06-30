@@ -23,43 +23,38 @@
 
 - (void) checkTile: (Entity *)entity
 {
-  Bounds entityBounds =
-    BoundsFromNSRect(NSOffsetRect([entity solidArea], [entity worldX], [entity worldY]));
+  Bounds entityBounds = BoundsFromNSRect([entity peekSteppedSolidArea]);
   Bounds entityTileAddress = BoundsDiv(entityBounds, TILE_SIZE);
   int tile1 = -1;
   int tile2 = -1;
 
   if ([entity direction] == Up)
     {
-      entityTileAddress.ymax = (entityBounds.ymax + [entity speed]) / TILE_SIZE;
-      tile1 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmin
-                                               row: (int) entityTileAddress.ymax];
-      tile2 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmax
-                                               row: (int) entityTileAddress.ymax];
+      tile1 = [[_view tileManager] tileNumberOfCol: (int) BoundsLeft(entityTileAddress)
+                                               row: (int) BoundsTop(entityTileAddress)];
+      tile2 = [[_view tileManager] tileNumberOfCol: (int) BoundsRight(entityTileAddress)
+                                               row: (int) BoundsTop(entityTileAddress)];
     }
   else if ([entity direction] == Down)
     {
-      entityTileAddress.ymin = (entityBounds.ymin - [entity speed]) / TILE_SIZE;
-      tile1 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmin
-                                               row: (int) entityTileAddress.ymin];
-      tile2 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmax
-                                               row: (int) entityTileAddress.ymin];
+      tile1 = [[_view tileManager] tileNumberOfCol: (int) BoundsLeft(entityTileAddress)
+                                               row: (int) BoundsBottom(entityTileAddress)];
+      tile2 = [[_view tileManager] tileNumberOfCol: (int) BoundsRight(entityTileAddress)
+                                               row: (int) BoundsBottom(entityTileAddress)];
     }
   else if ([entity direction] == Left)
     {
-      entityTileAddress.xmin = (entityBounds.xmin - [entity speed]) / TILE_SIZE;
-      tile1 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmin
-                                               row: (int) entityTileAddress.ymax];
-      tile2 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmin
-                                               row: (int) entityTileAddress.ymin];
+      tile1 = [[_view tileManager] tileNumberOfCol: (int) BoundsLeft(entityTileAddress)
+                                               row: (int) BoundsTop(entityTileAddress)];
+      tile2 = [[_view tileManager] tileNumberOfCol: (int) BoundsLeft(entityTileAddress)
+                                               row: (int) BoundsBottom(entityTileAddress)];
     }
   else if ([entity direction] == Right)
     {
-      entityTileAddress.xmax = (entityBounds.xmax + [entity speed]) / TILE_SIZE;
-      tile1 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmax
-                                               row: (int) entityTileAddress.ymax];
-      tile2 = [[_view tileManager] tileNumberOfCol: (int) entityTileAddress.xmax
-                                               row: (int) entityTileAddress.ymin];
+      tile1 = [[_view tileManager] tileNumberOfCol: (int) BoundsRight(entityTileAddress)
+                                               row: (int) BoundsTop(entityTileAddress)];
+      tile2 = [[_view tileManager] tileNumberOfCol: (int) BoundsRight(entityTileAddress)
+                                               row: (int) BoundsBottom(entityTileAddress)];
     }
   else
     {
@@ -68,16 +63,17 @@
   if (tile1 >= 0 && tile2 >= 0)
     {
       NSArray *tiles = [[_view tileManager] tiles];
-
+      /* INDENT-OFF */
       [entity setCollisionOn: [[tiles objectAtIndex: tile1] collision]
-              || [[tiles objectAtIndex: tile2] collision]];
+                           || [[tiles objectAtIndex: tile2] collision]];
+      /* INDENT-OFF */
     }
 }
 
 - (SuperObject *) checkObject: (Entity *)entity isPlayer: (BOOL)isPlayer
 {
   SuperObject *result = nil;
-  NSRect entityArea = [entity peekStepedSolidArea];
+  NSRect entityArea = [entity peekSteppedSolidArea];
 
   for (SuperObject *obj in [_view objects])
     {
@@ -91,6 +87,8 @@
           if (isPlayer == YES)
             {
               result = obj;
+              NSDebugLog(@"objects = %@", [_view objects]);
+              NSDebugLog(@"obj = %@", obj);
               break;
             }
         }
@@ -102,7 +100,7 @@
 - (Entity *) checkEntity: (Entity *)entity entities: (NSArray *)targets
 {
   Entity *result = nil;
-  NSRect entityArea = [entity peekStepedSolidArea];
+  NSRect entityArea = [entity peekSteppedSolidArea];
 
   for (Entity *obj in targets)
     {
@@ -120,7 +118,7 @@
 - (void) checkPlayer: (Entity *)entity
 {
   NSRect playerArea = [[_view player] worldSolidArea];
-  NSRect entityArea = [entity peekStepedSolidArea];
+  NSRect entityArea = [entity peekSteppedSolidArea];
   if (NSIntersectsRect(entityArea, playerArea))
     {
       [entity setCollisionOn: YES];

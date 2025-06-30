@@ -17,8 +17,14 @@ extern const NSInteger MAX_WORLD_COL;
 extern const NSInteger MAX_WORLD_ROW;
 extern const NSInteger FPS;
 
-#define FLIPED_COL(x) ((x))
-#define FLIPED_ROW(x) (MAX_WORLD_ROW - (x) - 1)
+#define TOPLEFT_ORIGIN
+
+#define FLIPPED_COL(v) ((v))
+#ifdef TOPLEFT_ORIGIN
+#define FLIPPED_ROW(v) ((v))
+#else
+#define FLIPPED_ROW(v) (MAX_WORLD_ROW - (v) - 1)
+#endif
 
 typedef enum
 {
@@ -53,9 +59,14 @@ typedef struct
   CGFloat ymax;
 } Bounds;
 
+extern NSString *NSStringFromBounds(Bounds aBounds);
 extern NSRect NSRectFromBounds(Bounds bounds);
 extern Bounds BoundsFromNSRect(NSRect rect);
 extern Bounds BoundsDiv(Bounds bounds, CGFloat value);
+extern CGFloat BoundsTop(Bounds bounds);
+extern CGFloat BoundsLeft(Bounds bounds);
+extern CGFloat BoundsBottom(Bounds bounds);
+extern CGFloat BoundsRight(Bounds bounds);
 extern Direction ReverseDirection(Direction direction);
 
 extern DirectionEntry directions[4];
@@ -119,6 +130,7 @@ extern DirectionEntry directions[4];
 - (BOOL) enterKeyPressed;
 - (void) resetEnterKeyPressed;
 
+- (NSPoint) calcCompositePoint: (NSImage *)image position: (NSPoint) position;
 - (NSImage *) imageOfResource: (NSString *)name inDirectory: (NSString *)subpath;
 - (NSImage *) scaledImage: (NSImage *)image scale: (CGFloat)scale;
 - (void) drawImage: image x: (CGFloat)x y: (CGFloat)y width: (CGFloat)width height: (CGFloat)height;

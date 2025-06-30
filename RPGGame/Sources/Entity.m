@@ -13,10 +13,10 @@
       _view = view;
       _solidArea = NSMakeRect(0, 0, TILE_SIZE, TILE_SIZE);
       _collisionOn = NO;
-      _worldLoc = NSMakePoint(FLIPED_COL(0) * TILE_SIZE,
-                              FLIPED_ROW(0) * TILE_SIZE);
-      _screenLoc = NSMakePoint(SCREEN_WIDTH / 2 - TILE_SIZE / 2,
-                               SCREEN_HEIGHT / 2 - TILE_SIZE / 2);
+      _worldLoc = NSMakePoint(FLIPPED_COL(0) * TILE_SIZE,
+                              FLIPPED_ROW(0) * TILE_SIZE);
+      _screenLoc = NSMakePoint(SCREEN_WIDTH / 2.0 - TILE_SIZE / 2.0,
+                               SCREEN_HEIGHT / 2.0 - TILE_SIZE / 2.0);
       _speed = 1;
       _direction = Down;
       _spliteCounter = 0;
@@ -87,7 +87,7 @@
   return NSOffsetRect(_solidArea, _worldLoc.x, _worldLoc.y);
 }
 
-- (NSRect) peekStepedSolidArea
+- (NSRect) peekSteppedSolidArea
 {
   NSRect area = [self worldSolidArea];
   DirectionEntry de = directions[_direction];
@@ -127,6 +127,7 @@
 - (void) drawAt: (NSPoint) pos
 {
   NSImage *image = nil;
+
   if (_direction == Up)
     {
       if (_spliteNumber == 1)
@@ -173,7 +174,7 @@
     }
   if (image != nil)
     {
-      [image compositeToPoint: pos
+      [image compositeToPoint: [_view calcCompositePoint: image position: pos]
                     operation: NSCompositeSourceOver];
 
     }
@@ -188,6 +189,8 @@
     {
       [[NSColor redColor] set];
       NSFrameRect(NSOffsetRect(_solidArea, pos.x, pos.y));
+      [[NSColor greenColor] set];
+      NSFrameRect([self peekSteppedSolidArea]);
     }
 }
 
@@ -207,6 +210,7 @@
 {
   NSImage *original = [_view imageOfResource: name inDirectory: subDirectory];
   NSImage *image = [_view scaledImage: original scale: SCALE];
+
   RELEASE(original);
   return image;
 }
@@ -221,7 +225,11 @@
   if (self != nil)
     {
       _keyState = keyState;
+#ifdef TOPLEFT_ORIGIN
+      _solidArea = NSMakeRect(8, 16, TILE_SIZE - (8 + 8), TILE_SIZE - (8 + 8));
+#else
       _solidArea = NSMakeRect(8, 0, TILE_SIZE - (8 + 8), TILE_SIZE - (8 + 8));
+#endif
       _hasKey = 0;
       [self _setDefaultValues];
       [self _loadImages];
@@ -231,8 +239,8 @@
 
 - (void) _setDefaultValues
 {
-  _worldLoc = NSMakePoint(FLIPED_COL(23) * TILE_SIZE,
-                          FLIPED_ROW(21) * TILE_SIZE);
+  _worldLoc = NSMakePoint(FLIPPED_COL(23) * TILE_SIZE,
+                          FLIPPED_ROW(21) * TILE_SIZE);
   _speed = 4;
   _direction = Down;
   _spliteCounter = 0;
@@ -389,7 +397,6 @@
     }
 }
 
-
 @end // Player
 
 
@@ -399,8 +406,8 @@
   self = [super initWithView: view];
   if (self != nil)
     {
-      _worldLoc = NSMakePoint(FLIPED_COL(21) * TILE_SIZE,
-                              FLIPED_ROW(21) * TILE_SIZE);
+      _worldLoc = NSMakePoint(FLIPPED_COL(21) * TILE_SIZE,
+                              FLIPPED_ROW(21) * TILE_SIZE);
       _direction = Down;
       _speed = 1.0;
       _actionLockCounter = 0;

@@ -77,8 +77,13 @@
     _worldLoc.x - [[_view player] worldX] + [[_view player] screenX];
   CGFloat screenY =
     _worldLoc.y - [[_view player] worldY] + [[_view player] screenY];
-  [_image compositeToPoint: NSMakePoint(screenX, screenY)
-                 operation: NSCompositeSourceOver];
+  [_image
+      compositeToPoint: [_view calcCompositePoint: _image
+                                        position: NSMakePoint(screenX, screenY)]
+             operation: NSCompositeSourceOver];
+  [[NSColor grayColor] set];
+  NSFrameRect(NSMakeRect(screenX, screenY, [_image size].width, [_image size].height));
+
 }
 
 @end

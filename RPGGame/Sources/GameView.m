@@ -8,6 +8,7 @@
 #import "AssetSetter.h"
 #import "Sound.h"
 #import "UI.h"
+#import <Foundation/NSGeometry.h>
 
 const NSInteger ORIGINAL_TILE_SIZE = 16;
 const NSInteger SCALE = 3;
@@ -21,10 +22,14 @@ const NSInteger MAX_WORLD_ROW = 50;
 const NSInteger FPS = 60;
 
 // *INDENT-OFF*
-DirectionEntry directions[4] =
-{
+DirectionEntry directions[4] = {
+#ifdef TOPLEFT_ORIGIN
+  {Up,    @"up",    { 0.0,  -1.0}},
+  {Down,  @"down",  { 0.0,   1.0}},
+#else
   {Up,    @"up",    { 0.0,   1.0}},
   {Down,  @"down",  { 0.0,  -1.0}},
+#endif
   {Left,  @"left",  {-1.0,   0.0}},
   {Right, @"right", { 1.0,   0.0}}
 };
@@ -69,6 +74,15 @@ DirectionEntry directions[4] =
   DEALLOC;
 }
 
+- (BOOL) isFlipped
+{
+#ifdef TOPLEFT_ORIGIN
+  return YES;
+#else
+  return NO;
+#endif
+}
+
 - (BOOL) acceptsFirstResponder
 {
   return YES;
@@ -92,6 +106,8 @@ DirectionEntry directions[4] =
   [self _drawNPCObjects];
   [_player draw];
   [_ui draw];
+  [[NSColor blueColor] set];
+  NSFrameRect(NSMakeRect(0, 0, TILE_SIZE, TILE_SIZE));
 }
 
 - (void) _drawSuperObjects
@@ -292,6 +308,17 @@ DirectionEntry directions[4] =
     }
 }
 
+- (NSPoint) calcCompositePoint: (NSImage *)image position: (NSPoint)position
+{
+if ([self isFlipped] == YES)
+  {
+    return NSMakePoint(position.x, position.y + [image size].height);
+  }
+else
+  {
+    return position;
+  }
+}
 
 - (NSImage *) imageOfResource: (NSString *)name inDirectory: (NSString *)subpath
 {
@@ -321,7 +348,7 @@ DirectionEntry directions[4] =
   imageRect.size = originalSize;
   drawRect.origin = NSMakePoint(0, 0);
   drawRect.size = scaledSize;
-
+  [[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationNone];
   [image drawInRect: drawRect
            fromRect: imageRect
           operation: NSCompositeSourceOver
@@ -338,7 +365,7 @@ DirectionEntry directions[4] =
 
   imageRect.origin = NSMakePoint(0, 0);
   imageRect.size = [image size];
-  drawRect.origin = NSMakePoint(x, y);
+  drawRect.origin = [self calcCompositePoint: image position: NSMakePoint(x, y)];
   drawRect.size = NSMakeSize(width, height);
 
   [image drawInRect: drawRect
@@ -385,6 +412,14 @@ DirectionEntry directions[4] =
 
 @end
 
+NSString *NSStringFromBounds(Bounds aBounds)
+{
+  return [NSString stringWithFormat:
+          @"{{xmin = %g; ymin = %g}, {xmax = %g; ymax = %g}}",
+          aBounds.xmin, aBounds.ymin, aBounds.xmax, aBounds.ymax ];
+}
+
+
 NSRect NSRectFromBounds(Bounds bounds)
 {
   return NSMakeRect(bounds.xmin, bounds.ymin, bounds.xmax - bounds.xmin, bounds.ymax - bounds.ymin);
@@ -408,6 +443,34 @@ Bounds BoundsDiv(Bounds bounds, CGFloat value)
   result.xmax = trunc(bounds.xmax / value);
   result.ymax = trunc(bounds.ymax / value);
   return result;
+}
+
+CGFloat BoundsTop(Bounds bounds)
+{
+#ifdef TOPLEFT_ORIGIN
+  return bounds.ymin;
+#else
+  return bounds.ymax;
+#endif
+}
+
+CGFloat BoundsLeft(Bounds bounds)
+{
+  return bounds.xmin;
+}
+
+CGFloat BoundsBottom(Bounds bounds)
+{
+#ifdef TOPLEFT_ORIGIN
+  return bounds.ymax;
+#else
+  return bounds.ymin;
+#endif
+}
+
+CGFloat BoundsRight(Bounds bounds)
+{
+  return bounds.xmax;
 }
 
 Direction ReverseDirection(Direction direction)

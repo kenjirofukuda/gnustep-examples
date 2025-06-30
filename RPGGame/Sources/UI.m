@@ -68,19 +68,30 @@
 {
   NSDictionary *fontDict = @{ NSFontAttributeName: _system40,
                               NSForegroundColorAttributeName: [NSColor whiteColor] };
+  CGFloat y;
 
   {
     NSString *text = @"You found the treasure!";
+#ifdef TOPLEFT_ORIGIN
+    y = (SCREEN_HEIGHT / 2.0) - TILE_SIZE * 3;
+#else
+    y = (SCREEN_HEIGHT / 2.0) + TILE_SIZE * 3;
+#endif
     NSRect drawBounds = [self _boundsForCenteredText: text
-                                                   y: (SCREEN_HEIGHT / 2.0) + TILE_SIZE * 3
+                                                   y: y
                                           attributes: fontDict];
 
     [text drawInRect: drawBounds withAttributes: fontDict];
   }
   {
     NSString *text = [NSString stringWithFormat: @"Your Time is : %.2f", _playTime];
+#ifdef TOPLEFT_ORIGIN
+    y = (SCREEN_HEIGHT / 2.0) + TILE_SIZE * 4;
+#else
+    y = (SCREEN_HEIGHT / 2.0) - TILE_SIZE * 4;
+#endif
     NSRect drawBounds = [self _boundsForCenteredText: text
-                                                   y: (SCREEN_HEIGHT / 2.0) - TILE_SIZE * 4
+                                                   y: y
                                           attributes: fontDict];
     [text drawInRect: drawBounds withAttributes: fontDict];
   }
@@ -90,8 +101,13 @@
                                 NSForegroundColorAttributeName: [NSColor yellowColor] };
 
     NSString *text = @"Congratulations!";
+#ifdef TOPLEFT_ORIGIN
+    y = (SCREEN_HEIGHT / 2.0) + TILE_SIZE * 2;
+#else
+    y = (SCREEN_HEIGHT / 2.0) - TILE_SIZE * 3;
+#endif
     NSRect drawBounds = [self _boundsForCenteredText: text
-                                                   y: (SCREEN_HEIGHT / 2.0) - TILE_SIZE * 3
+                                                   y: y
                                           attributes: fontDict];
     [text drawInRect: drawBounds withAttributes: fontDict];
   }
@@ -99,6 +115,7 @@
 
 - (void) _drawGameALive
 {
+  CGFloat y;
   if ([_view gameState] == playState)
     {
       // Do playState stuff later
@@ -115,18 +132,28 @@
     }
 
   _playTime += 1.0 / 60.0;
-  NSString *time = [NSString stringWithFormat: @"Time: %.2f", _playTime];
+  NSString *time = [NSString stringWithFormat:@"Time: %.2f", _playTime];
+#ifdef TOPLEFT_ORIGIN
+  y = 75;
+#else
+  y = SCREEN_HEIGHT - 75;
+#endif
   [_view drawString: time
                   x: TILE_SIZE * 11
-                  y: SCREEN_HEIGHT - 75
+                  y: y
              height: 40
               color: [NSColor whiteColor]];
 
   if (_messageOn == YES)
     {
+#ifdef TOPLEFT_ORIGIN
+      y = TILE_SIZE * 5;
+#else
+      y = SCREEN_HEIGHT - TILE_SIZE * 5;
+#endif
       [_view drawString: _message
                       x: TILE_SIZE / 2.0
-                      y: SCREEN_HEIGHT - TILE_SIZE * 5
+                      y: y
                  height: 30
                   color: [NSColor whiteColor]];
       _messageCounter++;
@@ -144,8 +171,11 @@
                               NSForegroundColorAttributeName: [NSColor whiteColor] };
 
   NSString *text = @"PAUSED";
+  CGFloat y;
+
+  y = SCREEN_HEIGHT / 2.0;
   NSRect drawBounds = [self _boundsForCenteredText: text
-                                                 y: SCREEN_HEIGHT / 2.0
+                                                 y: y
                                         attributes: fontDict];
   [text drawInRect: drawBounds withAttributes: fontDict];
 }
@@ -165,14 +195,22 @@
 {
   NSRect bounds;
   bounds.origin.x = TILE_SIZE * 2;
+#ifdef TOPLEFT_ORIGIN
+  bounds.origin.y = TILE_SIZE / 2.0;
+#else
   bounds.origin.y = SCREEN_HEIGHT - TILE_SIZE / 2.0;
+  bounds.origin.y -= bounds.size.height;
+#endif
   bounds.size.width = SCREEN_WIDTH - (TILE_SIZE * 4);
   bounds.size.height = TILE_SIZE * 4;
-  bounds.origin.y -= bounds.size.height;
 
   [self _drawSubWindow: bounds];
   bounds.origin.x += TILE_SIZE;
+#ifdef TOPLEFT_ORIGIN
+  bounds.origin.y = (TILE_SIZE / 2.0) + TILE_SIZE;
+#else
   bounds.origin.y = SCREEN_HEIGHT - ((TILE_SIZE / 2.0) + TILE_SIZE);
+#endif
   [_view drawString: _dialogue
                   x: bounds.origin.x
                   y: bounds.origin.y

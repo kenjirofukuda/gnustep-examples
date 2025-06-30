@@ -146,10 +146,18 @@
                 }
             }
    ];
-  NSArray *reversedLines = [[lines reverseObjectEnumerator] allObjects];
+  NSArray *finalLines;
+  if ([_view isFlipped] == YES)
+    {
+      finalLines = lines;
+    }
+  else
+    {
+      finalLines = [[lines reverseObjectEnumerator] allObjects];
+    }
   for (int row = 0; row < MAX_WORLD_ROW; row++)
     {
-      NSString *line = [reversedLines objectAtIndex: row];
+      NSString *line = [finalLines objectAtIndex: row];
       NSArray *items = [line componentsSeparatedByString: @" "];
       int col = 0;
       for (NSString *item in items)
@@ -190,12 +198,26 @@
             worldX - [[_view player] worldX] + [[_view player] screenX];
           CGFloat screenY =
             worldY - [[_view player] worldY] + [[_view player] screenY];
-          [[[_tiles objectAtIndex: tileNumber] image] compositeToPoint: NSMakePoint(screenX, screenY)
-                                                             operation: NSCompositeSourceOver];
+          NSImage *tileImage = [[_tiles objectAtIndex:tileNumber] image];
+          [tileImage compositeToPoint: [_view calcCompositePoint: tileImage position: NSMakePoint(screenX, screenY)]
+                            operation: NSCompositeSourceOver];
           if (showsTileAddress == YES)
             {
-              NSString *info = [NSString stringWithFormat: @"(%d, %d)", worldCol, worldRow];
-              [info drawAtPoint: NSMakePoint(screenX, screenY) withAttributes: _tileAddressAttributes];
+              if ([_view isFlipped] == YES)
+                {
+                  NSString *info = [NSString stringWithFormat: @"(%d, %d)", worldCol, worldRow];
+                  [info drawAtPoint: NSMakePoint(screenX, screenY)
+                     withAttributes: _tileAddressAttributes];
+                }
+              else
+                {
+                  NSString *info1 = [NSString stringWithFormat: @"(%d, %d)", worldCol, worldRow];
+                  [info1 drawAtPoint: NSMakePoint(screenX, screenY)
+                     withAttributes: _tileAddressAttributes];
+                  NSString *info2 = [NSString stringWithFormat: @"(%d, %d)", worldCol, (int) FLIPPED_ROW(worldRow)];
+                  [info2 drawAtPoint: NSMakePoint(screenX, screenY + 10)
+                     withAttributes: _tileAddressAttributes];
+                }
             }
         }
     }

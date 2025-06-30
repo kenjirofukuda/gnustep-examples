@@ -24,43 +24,43 @@
 {
   SuperObject *obj;
   obj = [[ObjKey alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(23) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW( 7) * TILE_SIZE];
+  [obj setWorldX: FLIPPED_COL(23) * TILE_SIZE];
+  [obj setWorldY: FLIPPED_ROW( 7) * TILE_SIZE];
   [_view addSuperObject: obj];
 
   obj = [[ObjKey alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(23) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW(40) * TILE_SIZE];
+  [obj setWorldX: FLIPPED_COL(23) * TILE_SIZE];
+  [obj setWorldY: FLIPPED_ROW(40) * TILE_SIZE];
   [_view addSuperObject: obj];
 
   obj = [[ObjKey alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(38) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW( 8) * TILE_SIZE];
+  [obj setWorldX: FLIPPED_COL(38) * TILE_SIZE];
+  [obj setWorldY: FLIPPED_ROW( 8) * TILE_SIZE];
   [_view addSuperObject: obj];
 
   obj = [[ObjDoor alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(10) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW(11) * TILE_SIZE];
+  [obj setWorldX: FLIPPED_COL(10) * TILE_SIZE];
+  [obj setWorldY: FLIPPED_ROW(12) * TILE_SIZE];
   [_view addSuperObject: obj];
 
   obj = [[ObjDoor alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL( 8) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW(28) * TILE_SIZE];
+  [obj setWorldX: FLIPPED_COL( 8) * TILE_SIZE];
+  [obj setWorldY: FLIPPED_ROW(29) * TILE_SIZE];
   [_view addSuperObject: obj];
 
   obj = [[ObjDoor alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(12) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW(22) * TILE_SIZE];
+  [obj setWorldX: FLIPPED_COL(12) * TILE_SIZE];
+  [obj setWorldY: FLIPPED_ROW(23) * TILE_SIZE];
   [_view addSuperObject: obj];
 
   obj = [[ObjChest alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(10) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW( 7) * TILE_SIZE];
+  [obj setWorldX: FLIPPED_COL(10) * TILE_SIZE];
+  [obj setWorldY: FLIPPED_ROW( 8) * TILE_SIZE];
   [_view addSuperObject: obj];
 
   obj = [[ObjBoots alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(37) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW(42) * TILE_SIZE];
+  [obj setWorldX: FLIPPED_COL(37) * TILE_SIZE];
+  [obj setWorldY: FLIPPED_ROW(42) * TILE_SIZE];
   [_view addSuperObject: obj];
 }
 
@@ -68,8 +68,8 @@
 {
   Entity *obj;
   obj = [[NPCOldMan alloc] initWithView: _view];
-  [obj setWorldX: FLIPED_COL(21) * TILE_SIZE];
-  [obj setWorldY: FLIPED_ROW(21) * TILE_SIZE];
+  [obj setWorldX: FLIPPED_COL(21) * TILE_SIZE];
+  [obj setWorldY: FLIPPED_ROW(21) * TILE_SIZE];
   [_view addNPCObject: obj];
 }
 
