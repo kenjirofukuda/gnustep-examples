@@ -1,0 +1,20 @@
+#+title: gnustep-examples
+#+author: kenjirofukuda@gmail.com
+#+options: toc:nil num:nil ^:nil ^:{}
+#+HTML_HEAD_EXTRA: <style> .figure p {text-align: left;}</style>
+#+HTML_HEAD_EXTRA: <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
+
+* GNUstepビルド補足
+
+** eglot による clangd LSPサーバーにて コード補完
+
+make-dot-ccls.sh コマンドを実行してカレントディレクトリに .ccls を作成する
+#+begin_src bash :dir (file-name-directory (buffer-file-name))
+  make-dot-ccls.sh
+#+end_src
+
+compile-commands.jsonを作成する。
+#+begin_src bash :dir (file-name-directory (buffer-file-name))
+  bear -- make 
+#+end_src
+

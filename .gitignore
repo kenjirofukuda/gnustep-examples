@@ -5,6 +5,11 @@
 **/.ccls
 **/.ccls-cache/*
 
+**/obj/
+**/compile_commands.json
+**/*.app/
+
+.vscode/
 
 # sbt specific
 dist/*
